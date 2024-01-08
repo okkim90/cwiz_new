@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Generator" content="KIC">
+    <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Description" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <title>코리아인스트루먼트(주) 교정관리 시스템</title>
+
+    <!-- 기존 cms css -->
+    <link rel="stylesheet" type="text/css" href="../skin/basic/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../skin/basic/css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../skin/basic/css/admin.css?v=64336ec212b71">
+    <link rel="stylesheet" type="text/css" href="../skin/basic/css/jquery.treeview.css">
+    <link rel="stylesheet" type="text/css" href="../skin/basic/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../skin/basic/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../skin/basic/css/fullcalendar.css">
+    <!--// 기존 cms css -->
+
+    <!-- 신규 css -->
+    <script src="https://kit.fontawesome.com/aa5544e91b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <!--// 신규 css -->
+</head>
+<body>
+    <div id="skip-nav">
+        <a href="#container"></a>
+    </div>
+    <main class="container">
+        <div class="join_info">
+            <div class="join_info_tit">
+                <h1 class="tit">교정관리 시스템 서비스 신청</h1>
+                <p class="desc">KIC 교정관리 시스템 서비스 신청 절차에 대해 안내 드립니다.</p>
+            </div>
+            <ul class="join_info_step">
+                <li class="join_info_step_item">
+                    <div class="ico_box">
+                        <i class="fa-solid fa-headset"></i>
+                        <i class="fa-solid fa-chevron-right i-arrow"></i>
+                    </div>   
+                    <div class="txt_box">교정관리 시스템 <br> 이용 문의</div>
+                </li>
+                <li class="join_info_step_item">
+                    <div class="ico_box">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <i class="fa-solid fa-chevron-right i-arrow"></i>
+                    </div>
+                    <div class="txt_box">신청서 작성</div>
+                </li>
+                <li class="join_info_step_item">
+                    <div class="ico_box">
+                        <i class="fa-solid fa-list-check"></i>
+                        <i class="fa-solid fa-chevron-right i-arrow"></i>
+                    </div>
+                    <div class="txt_box">신청서 검토</div>
+                </li>
+                <li class="join_info_step_item">
+                    <div class="ico_box"><i class="fa-solid fa-desktop"></i></div>
+                    <div class="txt_box">서비스 오픈</div>
+                </li>
+            </ul>
+            <p class="join_info_txt">
+                KIC 교정관리 시스템 서비스 신청 하시면 본사 검토 후 서비스 오픈드립니다. <br> 무료로 이용 가능하십니다. 
+            </p>
+            <p class="join_info_txt">
+                상담문의 <br>
+                1600-4245
+            </p>
+            <p class="join_info_txt">
+                오전 08:30 ~ 오후 05:30 <br>
+                (토, 일, 공휴일 제외)
+            </p>
+        </div>
+        <div class="join_form">
+            <h2 class="join_form_tit">교정관리 시스템 서비스 신청</h2>
+            <p class="msg_required"><i class="fa-solid fa-star-of-life ico_required"></i> 표시는 필수 기재 항목입니다.</p>
+            <form action="">
+                <div class="join_form_sec">
+                    <h3 class="join_form_tit_s">사업자 정보</h3>
+                    <div class="join_form_item">
+                        <label class="tit"><i class="fa-solid fa-star-of-life ico_required"></i> 사업자번호</label>
+                        <div class="b_num_wrap"> 
+                            <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="앞 3자리" class="f_input ty_mid b_num1" maxlength="3" required>
+                            <span class="dash">-</span>
+                            <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="중간 2자리" class="f_input ty_mid b_num2"  maxlength="2" required>
+                            <span class="dash">-</span>
+                            <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="마지막 5자리" class="f_input ty_mid b_num3"  maxlength="5" required>
+                            <button type="button" class="f_btn ty_mid _key">중복확인</button>
+                        </div>
+                        <p class="msg_feedback ty_true">사용 가능한 사업자번호 입니다.</p>
+                        <p class="msg_feedback ty_false">중복된 사업자번호가 존재합니다.</p>
+                    </div>
+                    <div class="join_form_item">
+                        <label class="tit"><i class="fa-solid fa-star-of-life ico_required"></i> 회사명</label>
+                        <input type="text" placeholder="회사명을 입력해주세요." class="f_input ty_mid w100" required>
+                    </div>
+                    <div class="join_form_item">
+                        <label class="tit"><i class="fa-solid fa-star-of-life ico_required"></i> 주소</label>
+                        <div class="address_set">
+                            <input type="text" name="" placeholder="우편번호" class="f_input ty_mid ty_address_num" readonly="" required>
+                            <button type="button" onclick="" class="f_btn ty_mid _key">우편번호 찾기</button>
+                        </div>
+                        <div class="address_set">
+                            <input type="text" name="" class="f_input ty_mid w100" readonly="" required>
+                        </div>
+                        <div class="address_set">
+                            <input type="text" name="" placeholder="나머지 주소를 입력해주세요." class="f_input ty_mid w100"  required>
+                        </div>
+                    </div>
+                    <div class="join_form_item">
+                        <label class="tit"><i class="fa-solid fa-star-of-life ico_required"></i> 회사 전화번호</label>
+                        <input type="tel" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="" class="f_input ty_mid w100" placeholder="&quot;-&quot; 제외하고 숫자만 입력해주세요">
+                    </div>
+                </div>
+                <div class="join_form_sec">
+                    <h3 class="join_form_tit_s">담당자 정보</h3>
+                    <div class="join_form_item">
+                        <label for="" class="tit"><i class="fa-solid fa-star-of-life ico_required"></i> 담당자명</label>
+                        <input type="text" placeholder="담당자명을 입력해주세요." class="f_input ty_mid w100" required>
+                    </div>
+                    <div class="join_form_item">
+                        <label for="" class="tit"><i class="fa-solid fa-star-of-life ico_required"></i> 담당자 연락처</label>
+                        <input type="tel" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="m_mobile" class="f_input ty_mid w100" placeholder="&quot;-&quot; 제외하고 숫자만 입력해주세요" maxlength="11"  required>
+                    </div>
+                    <div class="join_form_item">
+                        <label for="" class="tit"><i class="fa-solid fa-star-of-life ico_required"></i> 이메일</label>
+                        <div class="f_input_box">
+                            <input type="email" placeholder="이메일을 입력해주세요." class="f_input ty_mid w100" required>
+                            <button type="button" class="f_btn ty_mid _key">중복확인</button>
+                        </div>
+                        <p class="msg_feedback ty_true">사용 가능한 이메일 입니다.</p>
+                        <p class="msg_feedback ty_false">중복된 이메일이 존재합니다.</p>
+                    </div>
+                </div>
+                <ul class="join_form_agree">
+                    <li class="join_form_agree_item">
+                        <label>
+                            <input type="checkbox" class="f_chk ty_big" required>
+                            이용약관 동의 <span class="fc_red">(필수)</span> 
+                        </label>
+                        <a href="https://www.kic21.co.kr/about/service" target="_blank" class="f_btn ty_small2 _key">전문보기</a>
+                    </li>
+                    <li class="join_form_agree_item">
+                        <label>
+                            <input type="checkbox" class="f_chk ty_big" required>
+                            개인정보 수집 및 이용 동의 <span class="fc_red">(필수)</span> 
+                        </label>
+                        <a href="https://www.kic21.co.kr/about/person" target="_blank" class="f_btn ty_small2 _key">전문보기</a>
+                    </li>
+                </ul>
+                <div class="join_form_btns">
+                    <input type="submit" value="신청하기" class="f_btn ty_big _key">
+                    <button type="button" class="f_btn ty_big _lightGrey">취소</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!--footer-->
+        <footer class="footer">
+            <!-- <div class="footer_top">
+                <div class="inner">
+                    <ul class="footer_top_nav ">
+                        <li><a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a></li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="footer_logo">
+                <img src="../assets/images/common/logo_footer.svg" alt="KIC 코리아인스트루먼트(주)">
+            </div>
+            <div class="footer_info">
+                <ul class="footer_info_list">
+                    <li>코리아인스트루먼트(주)</li>
+                    <li><span class="bar"></span>사업자등록번호 : 101-81-45861</li>
+                    <li><span class="bar"></span>대표이사 : 정재호</li>
+                </ul>
+                <p class="copy">Copyright@KIC, Korea Instrument All Rights Reserved.</p>
+                <div class="contact">
+                    <b><i class="fa-solid fa-phone"></i> CONTACT US</b> 
+                    <span class="bar"></span>
+                    <span>1600 - 4245</span>
+                </div>
+            </div>
+            <div class="footer_right">
+                <div class="footer_right_btns">
+                    <a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a>
+                    <span class="bar"></span>
+                    <a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a>
+                </div>
+                <div class="footer_right_branch">
+                    <button class="btn_trigger">코리아인스트루먼트(주) 지점안내</button>
+                    <ul class="branch_list">
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=0" target="_blank">코리아인스트루먼트(주) 서울본사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=1" target="_blank">코리아인스트루먼트(주) 부산지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=2" target="_blank">코리아인스트루먼트(주) 대전지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=3" target="_blank">코리아인스트루먼트(주) 가평지안</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!--//footer-->
+</body>
+</html>

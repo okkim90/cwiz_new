@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Generator" content="KIC">
+    <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Description" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <title>교정마법사 CWIZ - CALIBRATION WIZARD</title>
+    <script src="https://kit.fontawesome.com/aa5544e91b.js" crossorigin="anonymous" ></script>
+    <script src="../assets/js/jquery-3.1.1.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/datepicker.css">
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+    <link rel="stylesheet" href="../assets/css/insa.css">
+    
+</head>
+<body>
+    <div id="skip-nav">
+        <a href="#container"></a>
+    </div>
+    
+    <div id="wrap" class="grid-container">
+        <!-- header -->
+        <header class="header">
+            <h1 class="logo"><a href=""><img src="../assets/images/common/logo.svg" alt=""></a></h1>
+            <div class="h_util">
+                <div class="h_util_sec h_user">
+                    <i class="fa-solid fa-user"></i><a href="" class="user_name">홍길동</a> 님 
+                </div>
+                <div class="h_util_sec h_branch">
+                    <a href="" class="h_branch_current"><i class="fa-solid fa-building"></i>코리아인스트먼트(주) 서울본사</a> 
+                </div>
+                <div class="h_util_sec h_btns">
+                    <!--[D] 알림(종) 활성화  'on' class 추가-->
+                    <button type="button" class="h_btn ty_notice on" onclick="f_alert_open();">
+                        <i class="fa-solid fa-bell"></i>
+                    </button>
+                    <a href="" class="h_btn ty_logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </div>
+                <div class="f_alert_box">
+                    <div class="f_alert_top">
+                        <h2 class="tit">알림</h2>
+                        <label class="f_toggle ml10">
+                            <input type="checkbox" class="alert_chk" onchange="f_alert_chk(this)" >
+                            <span class="slider">
+                                <div class="slider_txt false">전체</div>
+                                <div class="slider_txt true">미확인</div>
+                            </span>
+                        </label>
+                        <button type="button" class="f_alert_close ml_auto" onclick="f_alert_close()">
+                            <span class="blind">팝업 닫기</span>
+                        </button>
+                    </div>
+                    <ul class="f_alert_list">
+                        <!--[D] 이미 읽은 상태일 경우 'read' class 추가-->
+                        <li class="f_alert_item ">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 공지알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_notice.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item read">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 교정결과 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_cal.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item ">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 교정예정일 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_due.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item ">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 견적요청 승인 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_estimate.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item read">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 공지알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_notice.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 견적요청 승인 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_estimate.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item read">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 견적요청 승인 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_estimate.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!--// header -->
+        <!-- nav -->
+        <aside class="sidenav">
+
+            <button type="button" class="btn_nav_toggle"><i class="fa-solid fa-chevron-left"></i></button>
+            <!--[D] 회사로고 없을경우-->
+            <div class="sidenav_top">
+                <div class="msg_box">
+                    안녕하세요. <br>
+                    <b>(주)피엔케이피부임상연구센터</b> <br> 
+                    <b>김영술</b>님
+                </div>
+                <button type="button" class="btn_add_logo"  onclick="open_popup('pop_logo')">
+                    <i class="fa-solid fa-image"></i>
+                </button>
+            </div>
+            
+
+            <!--[D] 회사로고 있는 경우-->
+            <div class="sidenav_top">
+                <div class="img_box">
+                    <img src="../assets/images/common/Tesla_logo.png" alt="">
+                </div>
+                <button type="button" class="btn_add_logo" onclick="open_popup('pop_logo')">
+                    <i class="fa-solid fa-image"></i>
+                </button>
+            </div>
+
+            <div class="layer_popup pop_logo" onclick="close_popup(this)">
+                <div class="layer_popup_inner">
+                    <div class="layer_popup_cont ty_small">
+                        <button type="button" class="close_popup" onclick="close_popup(this)">
+                            <span class="blind">팝업 닫기</span>
+                        </button>
+                        <div class="sub_tit">
+                            <h1 class="tit1">로고 이미지 등록</h1>
+                        </div>
+                        <form action="">
+                            <!--[D] 이미지 첨부 전 -->
+                            <div class="img_box ty_upload ty_logo">
+                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
+                                <label for="upload_eq_img" class="btn_img_upluad">
+                                    <i class="fa-solid fa-image"></i>
+                                    <p>이미지 첨부하기 (260 x 90)</p>
+                                </label>
+                            </div>
+                            <!--// [D] 이미지 첨부 전 -->
+                            
+                            <br><!--[D] 개발시 삭제-->
+
+                             <!--[D] 이미지 첨부 후 -->
+                            <div class="img_box ty_upload ty_logo">
+                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
+                                <div class="img_box_edit">
+                                    <label for="upload_eq_img" class="img_box_edit_btn"><i class="fa-solid fa-rotate"></i><span class="blind">수정</span></label>
+                                    <button type="button" class="img_box_edit_btn"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button>
+                                </div>
+                                <img src="../assets/images/common/Tesla_logo.png" alt="">
+                            </div>  
+                            <!--[D] 이미지 첨부 후 -->                
+                            <div class="btn_set mt20 taC">
+                                <input type="submit" class="f_btn ty_small _key w_80" value="등록">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <ul class="nav">
+                <li class="nav_item ">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu1"></i>교정이력</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2 ">교정 접수 내역</a></li>
+                            <li><a href="" class="btn_dep2">교정 결과 조회</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu2"></i>교정 단가 조회</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">교정 단가 조회</a></li>
+                        </ul>
+                    </div>       
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu3"></i>견적 요청</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">견적 요청 조회</a></li>
+                            <li><a href="" class="btn_dep2">견적 요청</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu4"></i>마이 페이지</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">내 정보</a></li>
+                            <li><a href="" class="btn_dep2">우리 장비</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item on">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu5"></i>고객 지원</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2 on">공지사항</a></li>
+                            <li><a href="" class="btn_dep2">자료실</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu6"></i>관리자</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">회원 관리</a></li>
+                            <li><a href="" class="btn_dep2">공지사항 관리</a></li>
+                            <li><a href="" class="btn_dep2">자료실 관리</a></li>
+                        </ul>
+                    </div>                 
+                </li>
+            </ul>
+        </aside>
+        <!-- // nav -->
+
+        <!--container-->
+        <main id="container" class="container">
+            <div id="contents" class="contents">
+                <a href="javascript:history.back()" class="btn_back"><span class="blind">뒤로가기</span></a>
+                <!-- [D] breadcrumb -->
+                <nav class="breadcrumb_area">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb_item">
+                            <a href="/">
+                                <i class="fa-solid fa-house"></i>
+                                <span class="blind">home</span>
+                            </a>
+                        </li>
+                        <li class="breadcrumb_item" >
+                            고객지원
+                        </li>
+                        <li class="breadcrumb_item" >
+                            공지사항
+                        </li>
+                    </ol>
+                </nav>
+                <!--// [D] breadcrumb -->
+                <div class="sub_tit">
+                    <h1 class="tit1">조직관리</h1>
+                </div>
+                <div class="insa_container">
+                    <div class="btn_insa_top1">
+                        <a href="/kic21.co.kr/insa/manage/orgmanage/org_excel_regist_form" class="weakblue">
+                            <span class="sms_plus"></span> 일괄 등록
+                        </a>
+                    </div>
+                    <ol id="orgMapHeader" class="org_map_header">
+                        <li style="display: list-item;">레벨1</li>
+                        <li style="display: list-item;">레벨2</li>
+                        <li style="display: list-item;">레벨3</li>
+                        <li style="display: list-item;">레벨4</li>
+                        <li style="display: list-item;">레벨5</li>
+                    </ol>
+
+                    <ol id="orgMap" class="org_map">
+                        <li class="1depth">
+                            <div class="wrap1" style="z-index:0;" data-real-depth="1" data-parent-no="13989" depth="0" no="13990" loc="2"
+                                childs="61" no_depth="0" ori_name="코리아인스트루먼트(주)"><span class="name" title="코리아인스트루먼트(주)">코리아인스트루먼트(주)</span>
+                                <div class="menu"><a href="javascript:void(0)" class="people" onclick="orgmanage.member(13990)">173</a><a
+                                        href="javascript:void(0)" class="menu_all"><span class="sub" style="display:none;"><span
+                                                class="ggori"></span><span class="ss v1">하위조직 생성</span></span></a></div>
+                                <div class="move_group"><a href="javascript:void(0)" class="left"></a><a href="javascript:void(0)"
+                                        class="right"></a><a href="javascript:void(0)" class="top"></a><a href="javascript:void(0)"
+                                        class="bottom"></a></div>
+                                <div class="name_modify" style="display:none;"><input type="text"><a href="javascript:void(0)"
+                                        class="btn_enter"></a></div>
+                            </div>
+                            <ol>
+                                <li>
+                                    <div class="wrap1" style="z-index:0;" data-real-depth="2" data-parent-no="13990" depth="1" no="14980"
+                                        loc="3" childs="32" no_depth="0" ori_name="서울본사"><span class="name" title="서울본사">서울본사</span>
+                                        <div class="menu"><a href="javascript:void(0)" class="people"
+                                                onclick="orgmanage.member(14980)">100</a><a href="javascript:void(0)" class="menu_all"><span
+                                                    class="sub" style="display:none;"><span class="ggori"></span><span class="ss v1">하위조직
+                                                        생성</span><span class="ss v2" onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                        class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                        <div class="move_group"><a href="javascript:void(0)" class="left"></a><a href="javascript:void(0)"
+                                                class="right"></a><a href="javascript:void(0)" class="top"></a><a href="javascript:void(0)"
+                                                class="bottom"></a></div>
+                                        <div class="name_modify" style="display:none;"><input type="text"><a href="javascript:void(0)"
+                                                class="btn_enter"></a></div>
+                                    </div>
+                                    <ol>
+                                        <li>
+                                            <div class="wrap1" style="z-index:0;" data-real-depth="3" data-parent-no="14980" depth="2"
+                                                no="14981" loc="4" childs="7" no_depth="0" ori_name="경영관리팀"><span class="name"
+                                                    title="경영관리팀">경영관리팀</span>
+                                                <div class="menu"><a href="javascript:void(0)" class="people"
+                                                        onclick="orgmanage.member(14981)">10</a><a href="javascript:void(0)"
+                                                        class="menu_all"><span class="sub" style="display:none;"><span
+                                                                class="ggori"></span><span class="ss v1">하위조직 생성</span><span class="ss v2"
+                                                                onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                        href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                        class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                <div class="name_modify" style="display:none;"><input type="text"><a href="javascript:void(0)"
+                                                        class="btn_enter"></a></div>
+                                            </div>
+                                            <ol>
+                                                <li>
+                                                    <div class="wrap1" style="z-index:0;" data-real-depth="4" data-parent-no="14981" depth="3"
+                                                        no="16698" loc="5" childs="6" no_depth="0" ori_name="관리"><span class="name"
+                                                            title="관리">관리</span>
+                                                        <div class="menu"><a href="javascript:void(0)" class="people"
+                                                                onclick="orgmanage.member(16698)">6</a><a href="javascript:void(0)"
+                                                                class="menu_all"><span class="sub" style="display:none;"><span
+                                                                        class="ggori"></span><span class="ss v1">하위조직 생성</span><span
+                                                                        class="ss v2"
+                                                                        onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                        class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                        <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                                href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                                class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                        <div class="name_modify" style="display:none;"><input type="text"><a
+                                                                href="javascript:void(0)" class="btn_enter"></a></div>
+                                                    </div>
+                                                    <ol>
+                                                        <li>
+                                                            <div class="wrap1" style="z-index:0;" data-real-depth="4" data-parent-no="14981" depth="3"
+                                                                no="16698" loc="5" childs="6" no_depth="0" ori_name="관리"><span class="name"
+                                                                    title="관리">관리</span>
+                                                                <div class="menu"><a href="javascript:void(0)" class="people"
+                                                                        onclick="orgmanage.member(16698)">6</a><a href="javascript:void(0)"
+                                                                        class="menu_all"><span class="sub" style="display:none;"><span
+                                                                                class="ggori"></span><span class="ss v1">하위조직 생성</span><span
+                                                                                class="ss v2"
+                                                                                onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                                class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                                <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                                        href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                                        class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                                <div class="name_modify" style="display:none;"><input type="text"><a
+                                                                        href="javascript:void(0)" class="btn_enter"></a></div>
+                                                            </div>
+                                                        </li>
+                                                    </ol>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li>
+                                            <div class="wrap1" style="z-index:0;" data-real-depth="3" data-parent-no="14980" depth="2"
+                                                no="23205" loc="8" childs="9" no_depth="0" ori_name="IT서비스개발실"><span class="name"
+                                                    title="IT서비스개발실">IT서비스개발실</span>
+                                                <div class="menu"><a href="javascript:void(0)" class="people"
+                                                        onclick="orgmanage.member(23205)">8</a><a href="javascript:void(0)"
+                                                        class="menu_all"><span class="sub" style="display:none;"><span
+                                                                class="ggori"></span><span class="ss v1">하위조직 생성</span><span class="ss v2"
+                                                                onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                        href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                        class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                <div class="name_modify" style="display:none;"><input type="text"><a href="javascript:void(0)"
+                                                        class="btn_enter"></a></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="wrap1" style="z-index:0;" data-real-depth="3" data-parent-no="14980" depth="2"
+                                                no="14982" loc="10" childs="13" no_depth="0" ori_name="전략기획사업부"><span class="name"
+                                                    title="전략기획사업부">전략기획사업부</span>
+                                                <div class="menu"><a href="javascript:void(0)" class="people"
+                                                        onclick="orgmanage.member(14982)">4</a><a href="javascript:void(0)"
+                                                        class="menu_all"><span class="sub" style="display:none;"><span
+                                                                class="ggori"></span><span class="ss v1">하위조직 생성</span><span class="ss v2"
+                                                                onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                        href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                        class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                <div class="name_modify" style="display:none;"><input type="text"><a href="javascript:void(0)"
+                                                        class="btn_enter"></a></div>
+                                            </div>
+                                            <ol>
+                                                <li>
+                                                    <div class="wrap1" style="z-index:0;" data-real-depth="4" data-parent-no="14982" depth="3"
+                                                        no="14983" loc="11" childs="12" no_depth="0" ori_name="GMP"><span class="name"
+                                                            title="GMP">GMP</span>
+                                                        <div class="menu"><a href="javascript:void(0)" class="people"
+                                                                onclick="orgmanage.member(14983)">0</a><a href="javascript:void(0)"
+                                                                class="menu_all"><span class="sub" style="display:none;"><span
+                                                                        class="ggori"></span><span class="ss v1">하위조직 생성</span><span
+                                                                        class="ss v2"
+                                                                        onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                        class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                        <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                                href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                                class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                        <div class="name_modify" style="display:none;"><input type="text"><a
+                                                                href="javascript:void(0)" class="btn_enter"></a></div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li>
+                                            <div class="wrap1" style="z-index:0;" data-real-depth="3" data-parent-no="14980" depth="2"
+                                                no="14984" loc="14" childs="23" no_depth="0" ori_name="교정기술본부"><span class="name"
+                                                    title="교정기술본부">교정기술본부</span>
+                                                <div class="menu"><a href="javascript:void(0)" class="people"
+                                                        onclick="orgmanage.member(14984)">55</a><a href="javascript:void(0)"
+                                                        class="menu_all"><span class="sub" style="display:none;"><span
+                                                                class="ggori"></span><span class="ss v1">하위조직 생성</span><span class="ss v2"
+                                                                onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                        href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                        class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                <div class="name_modify" style="display:none;"><input type="text"><a href="javascript:void(0)"
+                                                        class="btn_enter"></a></div>
+                                            </div>
+                                            <ol>
+                                                <li>
+                                                    <div class="wrap1" style="z-index:0;" data-real-depth="4" data-parent-no="14984" depth="3"
+                                                        no="14985" loc="15" childs="16" no_depth="0" ori_name="전기표준팀"><span class="name"
+                                                            title="전기표준팀">전기표준팀</span>
+                                                        <div class="menu"><a href="javascript:void(0)" class="people"
+                                                                onclick="orgmanage.member(14985)">16</a><a href="javascript:void(0)"
+                                                                class="menu_all"><span class="sub" style="display:none;"><span
+                                                                        class="ggori"></span><span class="ss v1">하위조직 생성</span><span
+                                                                        class="ss v2"
+                                                                        onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                        class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                        <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                                href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                                class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                        <div class="name_modify" style="display:none;"><input type="text"><a
+                                                                href="javascript:void(0)" class="btn_enter"></a></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap1" style="z-index:0;" data-real-depth="4" data-parent-no="14984" depth="3"
+                                                        no="14986" loc="17" childs="18" no_depth="0" ori_name="온도표준팀"><span class="name"
+                                                            title="온도표준팀">온도표준팀</span>
+                                                        <div class="menu"><a href="javascript:void(0)" class="people"
+                                                                onclick="orgmanage.member(14986)">19</a><a href="javascript:void(0)"
+                                                                class="menu_all"><span class="sub" style="display:none;"><span
+                                                                        class="ggori"></span><span class="ss v1">하위조직 생성</span><span
+                                                                        class="ss v2"
+                                                                        onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                        class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                        <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                                href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                                class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                        <div class="name_modify" style="display:none;"><input type="text"><a
+                                                                href="javascript:void(0)" class="btn_enter"></a></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap1" style="z-index:0;" data-real-depth="4" data-parent-no="14984" depth="3"
+                                                        no="14987" loc="19" childs="20" no_depth="0" ori_name="역학표준팀"><span class="name"
+                                                            title="역학표준팀">역학표준팀</span>
+                                                        <div class="menu"><a href="javascript:void(0)" class="people"
+                                                                onclick="orgmanage.member(14987)">9</a><a href="javascript:void(0)"
+                                                                class="menu_all"><span class="sub" style="display:none;"><span
+                                                                        class="ggori"></span><span class="ss v1">하위조직 생성</span><span
+                                                                        class="ss v2"
+                                                                        onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                        class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                        <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                                href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                                class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                        <div class="name_modify" style="display:none;"><input type="text"><a
+                                                                href="javascript:void(0)" class="btn_enter"></a></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap1" style="z-index:0;" data-real-depth="4" data-parent-no="14984" depth="3"
+                                                        no="14988" loc="21" childs="22" no_depth="0" ori_name="길이표준팀"><span class="name"
+                                                            title="길이표준팀">길이표준팀</span>
+                                                        <div class="menu"><a href="javascript:void(0)" class="people"
+                                                                onclick="orgmanage.member(14988)">10</a><a href="javascript:void(0)"
+                                                                class="menu_all"><span class="sub" style="display:none;"><span
+                                                                        class="ggori"></span><span class="ss v1">하위조직 생성</span><span
+                                                                        class="ss v2"
+                                                                        onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                        class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                        <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                                href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                                class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                        <div class="name_modify" style="display:none;"><input type="text"><a
+                                                                href="javascript:void(0)" class="btn_enter"></a></div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li>
+                                            <div class="wrap1" style="z-index:0;" data-real-depth="3" data-parent-no="14980" depth="2"
+                                                no="14989" loc="24" childs="29" no_depth="0" ori_name="고객지원본부"><span class="name"
+                                                    title="고객지원본부">고객지원본부</span>
+                                                <div class="menu"><a href="javascript:void(0)" class="people"
+                                                        onclick="orgmanage.member(14989)">22</a><a href="javascript:void(0)"
+                                                        class="menu_all"><span class="sub" style="display:none;"><span
+                                                                class="ggori"></span><span class="ss v1">하위조직 생성</span><span class="ss v2"
+                                                                onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                        href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                        class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                <div class="name_modify" style="display:none;"><input type="text"><a href="javascript:void(0)"
+                                                        class="btn_enter"></a></div>
+                                            </div>
+                                            <ol>
+                                                <li>
+                                                    <div class="wrap1" style="z-index:0;" data-real-depth="4" data-parent-no="14989" depth="3"
+                                                        no="15391" loc="25" childs="26" no_depth="0" ori_name="고객지원팀"><span class="name"
+                                                            title="고객지원팀">고객지원팀</span>
+                                                        <div class="menu"><a href="javascript:void(0)" class="people"
+                                                                onclick="orgmanage.member(15391)">9</a><a href="javascript:void(0)"
+                                                                class="menu_all"><span class="sub" style="display:none;"><span
+                                                                        class="ggori"></span><span class="ss v1">하위조직 생성</span><span
+                                                                        class="ss v2"
+                                                                        onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                        class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                        <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                                href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                                class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                        <div class="name_modify" style="display:none;"><input type="text"><a
+                                                                href="javascript:void(0)" class="btn_enter"></a></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap1" style="z-index:0;" data-real-depth="4" data-parent-no="14989" depth="3"
+                                                        no="16655" loc="27" childs="28" no_depth="0" ori_name="기술영업팀"><span class="name"
+                                                            title="기술영업팀">기술영업팀</span>
+                                                        <div class="menu"><a href="javascript:void(0)" class="people"
+                                                                onclick="orgmanage.member(16655)">11</a><a href="javascript:void(0)"
+                                                                class="menu_all"><span class="sub" style="display:none;"><span
+                                                                        class="ggori"></span><span class="ss v1">하위조직 생성</span><span
+                                                                        class="ss v2"
+                                                                        onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                        class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                        <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                                href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                                class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                        <div class="name_modify" style="display:none;"><input type="text"><a
+                                                                href="javascript:void(0)" class="btn_enter"></a></div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li>
+                                            <div class="wrap1" style="z-index:0;" data-real-depth="3" data-parent-no="14980" depth="2"
+                                                no="14996" loc="30" childs="31" no_depth="0" ori_name="종로영업소"><span class="name"
+                                                    title="종로영업소">종로영업소</span>
+                                                <div class="menu"><a href="javascript:void(0)" class="people"
+                                                        onclick="orgmanage.member(14996)">1</a><a href="javascript:void(0)"
+                                                        class="menu_all"><span class="sub" style="display:none;"><span
+                                                                class="ggori"></span><span class="ss v1">하위조직 생성</span><span class="ss v2"
+                                                                onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                        href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                        class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                <div class="name_modify" style="display:none;"><input type="text"><a href="javascript:void(0)"
+                                                        class="btn_enter"></a></div>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <div class="wrap1" style="z-index:0;" data-real-depth="2" data-parent-no="13990" depth="1" no="14997"
+                                        loc="33" childs="38" no_depth="0" ori_name="대전지사"><span class="name" title="대전지사">대전지사</span>
+                                        <div class="menu"><a href="javascript:void(0)" class="people" onclick="orgmanage.member(14997)">23</a><a
+                                                href="javascript:void(0)" class="menu_all"><span class="sub" style="display:none;"><span
+                                                        class="ggori"></span><span class="ss v1">하위조직 생성</span><span class="ss v2"
+                                                        onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                        class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                        <div class="move_group"><a href="javascript:void(0)" class="left"></a><a href="javascript:void(0)"
+                                                class="right"></a><a href="javascript:void(0)" class="top"></a><a href="javascript:void(0)"
+                                                class="bottom"></a></div>
+                                        <div class="name_modify" style="display:none;"><input type="text"><a href="javascript:void(0)"
+                                                class="btn_enter"></a></div>
+                                    </div>
+                                    <ol>
+                                        <li>
+                                            <div class="wrap1" style="z-index:0;" data-real-depth="3" data-parent-no="14997" depth="2"
+                                                no="14998" loc="34" childs="35" no_depth="0" ori_name="고객지원팀"><span class="name"
+                                                    title="고객지원팀">고객지원팀</span>
+                                                <div class="menu"><a href="javascript:void(0)" class="people"
+                                                        onclick="orgmanage.member(14998)">4</a><a href="javascript:void(0)"
+                                                        class="menu_all"><span class="sub" style="display:none;"><span
+                                                                class="ggori"></span><span class="ss v1">하위조직 생성</span><span class="ss v2"
+                                                                onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                        href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                        class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                <div class="name_modify" style="display:none;"><input type="text"><a href="javascript:void(0)"
+                                                        class="btn_enter"></a></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="wrap1" style="z-index:0;" data-real-depth="3" data-parent-no="14997" depth="2"
+                                                no="14999" loc="36" childs="37" no_depth="0" ori_name="교정기술팀"><span class="name"
+                                                    title="교정기술팀">교정기술팀</span>
+                                                <div class="menu"><a href="javascript:void(0)" class="people"
+                                                        onclick="orgmanage.member(14999)">14</a><a href="javascript:void(0)"
+                                                        class="menu_all"><span class="sub" style="display:none;"><span
+                                                                class="ggori"></span><span class="ss v1">하위조직 생성</span><span class="ss v2"
+                                                                onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                        href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                        class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                <div class="name_modify" style="display:none;"><input type="text"><a href="javascript:void(0)"
+                                                        class="btn_enter"></a></div>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <div class="wrap1" style="z-index:0;" data-real-depth="2" data-parent-no="13990" depth="1" no="15000"
+                                        loc="39" childs="54" no_depth="0" ori_name="부산지사"><span class="name" title="부산지사">부산지사</span>
+                                        <div class="menu"><a href="javascript:void(0)" class="people" onclick="orgmanage.member(15000)">43</a><a
+                                                href="javascript:void(0)" class="menu_all"><span class="sub" style="display:none;"><span
+                                                        class="ggori"></span><span class="ss v1">하위조직 생성</span><span class="ss v2"
+                                                        onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                        class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                        <div class="move_group"><a href="javascript:void(0)" class="left"></a><a href="javascript:void(0)"
+                                                class="right"></a><a href="javascript:void(0)" class="top"></a><a href="javascript:void(0)"
+                                                class="bottom"></a></div>
+                                        <div class="name_modify" style="display:none;"><input type="text"><a href="javascript:void(0)"
+                                                class="btn_enter"></a></div>
+                                    </div>
+                                    <ol>
+                                        <li>
+                                            <div class="wrap1" style="z-index:0;" data-real-depth="3" data-parent-no="15000" depth="2"
+                                                no="15001" loc="40" childs="45" no_depth="0" ori_name="사업관리부"><span class="name"
+                                                    title="사업관리부">사업관리부</span>
+                                                <div class="menu"><a href="javascript:void(0)" class="people"
+                                                        onclick="orgmanage.member(15001)">13</a><a href="javascript:void(0)"
+                                                        class="menu_all"><span class="sub" style="display:none;"><span
+                                                                class="ggori"></span><span class="ss v1">하위조직 생성</span><span class="ss v2"
+                                                                onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                        href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                        class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                <div class="name_modify" style="display:none;"><input type="text"><a href="javascript:void(0)"
+                                                        class="btn_enter"></a></div>
+                                            </div>
+                                            <ol>
+                                                <li>
+                                                    <div class="wrap1" style="z-index:0;" data-real-depth="4" data-parent-no="15001" depth="3"
+                                                        no="15002" loc="41" childs="42" no_depth="0" ori_name="영업팀"><span class="name"
+                                                            title="영업팀">영업팀</span>
+                                                        <div class="menu"><a href="javascript:void(0)" class="people"
+                                                                onclick="orgmanage.member(15002)">6</a><a href="javascript:void(0)"
+                                                                class="menu_all"><span class="sub" style="display:none;"><span
+                                                                        class="ggori"></span><span class="ss v1">하위조직 생성</span><span
+                                                                        class="ss v2"
+                                                                        onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                        class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                        <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                                href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                                class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                        <div class="name_modify" style="display:none;"><input type="text"><a
+                                                                href="javascript:void(0)" class="btn_enter"></a></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap1" style="z-index:0;" data-real-depth="4" data-parent-no="15001" depth="3"
+                                                        no="15003" loc="43" childs="44" no_depth="0" ori_name="운영관리팀"><span class="name"
+                                                            title="운영관리팀">운영관리팀</span>
+                                                        <div class="menu"><a href="javascript:void(0)" class="people"
+                                                                onclick="orgmanage.member(15003)">7</a><a href="javascript:void(0)"
+                                                                class="menu_all"><span class="sub" style="display:none;"><span
+                                                                        class="ggori"></span><span class="ss v1">하위조직 생성</span><span
+                                                                        class="ss v2"
+                                                                        onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                        class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                        <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                                href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                                class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                        <div class="name_modify" style="display:none;"><input type="text"><a
+                                                                href="javascript:void(0)" class="btn_enter"></a></div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li>
+                                            <div class="wrap1" style="z-index:0;" data-real-depth="3" data-parent-no="15000" depth="2"
+                                                no="15004" loc="46" childs="53" no_depth="0" ori_name="교정기술본부"><span class="name"
+                                                    title="교정기술본부">교정기술본부</span>
+                                                <div class="menu"><a href="javascript:void(0)" class="people"
+                                                        onclick="orgmanage.member(15004)">29</a><a href="javascript:void(0)"
+                                                        class="menu_all"><span class="sub" style="display:none;"><span
+                                                                class="ggori"></span><span class="ss v1">하위조직 생성</span><span class="ss v2"
+                                                                onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                        href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                        class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                <div class="name_modify" style="display:none;"><input type="text"><a href="javascript:void(0)"
+                                                        class="btn_enter"></a></div>
+                                            </div>
+                                            <ol>
+                                                <li>
+                                                    <div class="wrap1" style="z-index:0;" data-real-depth="4" data-parent-no="15004" depth="3"
+                                                        no="15005" loc="47" childs="48" no_depth="0" ori_name="길이표준팀"><span class="name"
+                                                            title="길이표준팀">길이표준팀</span>
+                                                        <div class="menu"><a href="javascript:void(0)" class="people"
+                                                                onclick="orgmanage.member(15005)">9</a><a href="javascript:void(0)"
+                                                                class="menu_all"><span class="sub" style="display:none;"><span
+                                                                        class="ggori"></span><span class="ss v1">하위조직 생성</span><span
+                                                                        class="ss v2"
+                                                                        onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                        class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                        <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                                href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                                class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                        <div class="name_modify" style="display:none;"><input type="text"><a
+                                                                href="javascript:void(0)" class="btn_enter"></a></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap1" style="z-index:0;" data-real-depth="4" data-parent-no="15004" depth="3"
+                                                        no="15006" loc="49" childs="50" no_depth="0" ori_name="질량표준팀"><span class="name"
+                                                            title="질량표준팀">질량표준팀</span>
+                                                        <div class="menu"><a href="javascript:void(0)" class="people"
+                                                                onclick="orgmanage.member(15006)">9</a><a href="javascript:void(0)"
+                                                                class="menu_all"><span class="sub" style="display:none;"><span
+                                                                        class="ggori"></span><span class="ss v1">하위조직 생성</span><span
+                                                                        class="ss v2"
+                                                                        onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                        class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                        <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                                href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                                class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                        <div class="name_modify" style="display:none;"><input type="text"><a
+                                                                href="javascript:void(0)" class="btn_enter"></a></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap1" style="z-index:0;" data-real-depth="4" data-parent-no="15004" depth="3"
+                                                        no="15007" loc="51" childs="52" no_depth="0" ori_name="전기/온도표준팀"><span class="name"
+                                                            title="전기/온도표준팀">전기/온도표준팀</span>
+                                                        <div class="menu"><a href="javascript:void(0)" class="people"
+                                                                onclick="orgmanage.member(15007)">11</a><a href="javascript:void(0)"
+                                                                class="menu_all"><span class="sub" style="display:none;"><span
+                                                                        class="ggori"></span><span class="ss v1">하위조직 생성</span><span
+                                                                        class="ss v2"
+                                                                        onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                                        class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                                        <div class="move_group"><a href="javascript:void(0)" class="left"></a><a
+                                                                href="javascript:void(0)" class="right"></a><a href="javascript:void(0)"
+                                                                class="top"></a><a href="javascript:void(0)" class="bottom"></a></div>
+                                                        <div class="name_modify" style="display:none;"><input type="text"><a
+                                                                href="javascript:void(0)" class="btn_enter"></a></div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <div class="wrap1" style="z-index:0;" data-real-depth="2" data-parent-no="13990" depth="1" no="15008"
+                                        loc="55" childs="56" no_depth="0" ori_name="기술연구소"><span class="name" title="기술연구소">기술연구소</span>
+                                        <div class="menu"><a href="javascript:void(0)" class="people" onclick="orgmanage.member(15008)">2</a><a
+                                                href="javascript:void(0)" class="menu_all"><span class="sub" style="display:none;"><span
+                                                        class="ggori"></span><span class="ss v1">하위조직 생성</span><span class="ss v2"
+                                                        onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                        class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                        <div class="move_group"><a href="javascript:void(0)" class="left"></a><a href="javascript:void(0)"
+                                                class="right"></a><a href="javascript:void(0)" class="top"></a><a href="javascript:void(0)"
+                                                class="bottom"></a></div>
+                                        <div class="name_modify" style="display:none;"><input type="text"><a href="javascript:void(0)"
+                                                class="btn_enter"></a></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wrap1" style="z-index:0;" data-real-depth="2" data-parent-no="13990" depth="1" no="15009"
+                                        loc="57" childs="58" no_depth="0" ori_name="측정표준원"><span class="name" title="측정표준원">측정표준원</span>
+                                        <div class="menu"><a href="javascript:void(0)" class="people" onclick="orgmanage.member(15009)">0</a><a
+                                                href="javascript:void(0)" class="menu_all"><span class="sub" style="display:none;"><span
+                                                        class="ggori"></span><span class="ss v1">하위조직 생성</span><span class="ss v2"
+                                                        onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                        class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                        <div class="move_group"><a href="javascript:void(0)" class="left"></a><a href="javascript:void(0)"
+                                                class="right"></a><a href="javascript:void(0)" class="top"></a><a href="javascript:void(0)"
+                                                class="bottom"></a></div>
+                                        <div class="name_modify" style="display:none;"><input type="text"><a href="javascript:void(0)"
+                                                class="btn_enter"></a></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wrap1" style="z-index:0;" data-real-depth="2" data-parent-no="13990" depth="1" no="24864"
+                                        loc="59" childs="60" no_depth="0" ori_name="가평지안캠핑장"><span class="name" title="가평지안캠핑장">가평지안캠핑장</span>
+                                        <div class="menu"><a href="javascript:void(0)" class="people" onclick="orgmanage.member(24864)">2</a><a
+                                                href="javascript:void(0)" class="menu_all"><span class="sub" style="display:none;"><span
+                                                        class="ggori"></span><span class="ss v1">하위조직 생성</span><span class="ss v2"
+                                                        onclick="orgmanage.moveToSubNodeLayer(this)">이동</span><span
+                                                        class="ss v4">순서변경</span><span class="ss v3">삭제</span></span></a></div>
+                                        <div class="move_group"><a href="javascript:void(0)" class="left"></a><a href="javascript:void(0)"
+                                                class="right"></a><a href="javascript:void(0)" class="top"></a><a href="javascript:void(0)"
+                                                class="bottom"></a></div>
+                                        <div class="name_modify" style="display:none;"><input type="text"><a href="javascript:void(0)"
+                                                class="btn_enter"></a></div>
+                                    </div>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </main>
+        <!--//container-->
+        <!--footer-->
+        <footer class="footer">
+            <!-- <div class="footer_top">
+                <div class="inner">
+                    <ul class="footer_top_nav ">
+                        <li><a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a></li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="footer_logo">
+                <img src="../assets/images/common/logo_footer.svg" alt="KIC 코리아인스트루먼트(주)">
+            </div>
+            <div class="footer_info">
+                <ul class="footer_info_list">
+                    <li>코리아인스트루먼트(주)</li>
+                    <li><span class="bar"></span>사업자등록번호 : 101-81-45861</li>
+                    <li><span class="bar"></span>대표이사 : 정재호</li>
+                </ul>
+                <p class="copy">Copyright@KIC, Korea Instrument All Rights Reserved.</p>
+                <div class="contact">
+                    <b><i class="fa-solid fa-phone"></i> CONTACT US</b> 
+                    <span class="bar"></span>
+                    <span>1600 - 4245</span>
+                </div>
+            </div>
+            <div class="footer_right">
+                <div class="footer_right_btns">
+                    <a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a>
+                    <span class="bar"></span>
+                    <a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a>
+                </div>
+                <div class="footer_right_branch">
+                    <button class="btn_trigger">코리아인스트루먼트(주) 지점안내</button>
+                    <ul class="branch_list">
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=0" target="_blank">코리아인스트루먼트(주) 서울본사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=1" target="_blank">코리아인스트루먼트(주) 부산지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=2" target="_blank">코리아인스트루먼트(주) 대전지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=3" target="_blank">코리아인스트루먼트(주) 가평지안</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!--//footer-->
+    </div>
+    <script>
+        
+
+
+
+
+        /* 조직도 헤더 노출 함수 */
+        var MAX_ORG_DEPTH = 11;
+
+        var orgmap = {
+            orgMapHeaderShow : function() {
+                $('#orgMapHeader').children('li').hide();
+                
+                var maxDepth = 1;
+                $('#orgMap').find('div.wrap1').each(function(k, v){
+                    var depth = $(v).data('realDepth');
+                    if(depth >= maxDepth){
+                        maxDepth = depth;
+                    }
+                })
+                
+                $('#orgMapHeader').children('li:lt(' + maxDepth + ')').show();
+            }
+        }
+
+        $(function(){
+            /* 조직명 수정 */
+            $(document).on('mouseover', '#orgMap .wrap1[ext_key] .name', function(e){
+                if($('#officeapi').length){
+                    $(this).css('background', '#e8ecef');
+                }
+            });
+            $(document).on('click', '#orgMap .wrap1 .name', function() {
+                if($(this).closest('.wrap1[ext_key]').length && $('#officeapi').length){
+                    return;
+                }
+                $(this).parent('.wrap1').find('.name_modify').fadeIn(200);
+                $(this).parent('.wrap1').find('.name_modify').children('input[type=text]').attr({'value' : $(this).text() });
+                $(this).parent('.wrap1').find('.name_modify').children('input[type=text]').select();
+            });
+            $(document).on('keydown', '#orgMap .wrap1 .name_modify>input[type=text]', function(e) {
+                
+                // 이권능 추가
+                $(this).closest('.wrap1').addClass('modified_name');
+                // 이권능 추가 끝
+                
+                if(e.keyCode==13) {
+                    $(this).next('a').click();
+                }
+            });
+            $(document).on('blur', '#orgMap .wrap1 .name_modify>input[type=text]', function(e) {
+                $(this).next('a').click();
+            });
+            $(document).on('click', '#orgMap .wrap1 .name_modify>a.btn_enter', function() {
+                var nowInputBoxText = $(this).prev('input[type=text]').val();
+                console.log(nowInputBoxText);
+                $(this).closest('.wrap1').children('.name').text(nowInputBoxText);
+                $(this).parent('.name_modify').hide();
+                
+                // 이권능 추가
+                if($(this).closest('.wrap1').hasClass('modified_name')){
+                    //orgmanage.setNodeName(this);
+                    $(this).closest('.wrap1').removeClass('modified_name');
+                }
+                // 이권능 추가 끝
+            });
+
+            /* ... 메뉴 열기/닫기 */
+            $(document).on('focus', '#orgMap .wrap1 .menu_all', function(e) {
+                $(this).children('.sub').show();
+                $(this).closest('.wrap1').css({'z-index' : '1'}).focus();
+            });
+
+            $(document).on('blur', '#orgMap .wrap1 .menu_all', function(e) {
+                $('#orgMap .wrap1 .menu_all .sub').hide();
+                $(this).closest('.wrap1').css({'z-index' : '0'});
+            });
+
+            /* 생성 */
+            $(document).on('mousedown', '#orgMap .ss.v1', function() {
+                // 이권능 수정
+                orgmanage.addNode($(this));
+            });
+
+            /* 삭제 */
+            $(document).on('mousedown', '.ss.v3', function(e) {
+                // 이권능 수정
+                orgmanage.removeChecker(e, this);
+            });
+
+            /* 이동 버튼 디스플레이 */
+            $(document).on('click', '.move_group>a', function(e) {
+                $(this).closest('.wrap1').find('.ss.v4').click();
+            });
+
+            /* 이동 버튼 */
+            $(document).on('click', '.ss.v4', function(e) {
+                $(this).parent('.sub').hide();
+
+                $(this).closest('.wrap1').css({'z-index' : '0'});
+                $(this).closest('.wrap1').children('.move_group').find('a').show();
+                
+                
+                $(this).closest('.wrap1').css({'z-index' : '1'}).focus();
+                $(this).closest('.menu').next('.move_group').show();
+                
+                var div_parent = $(this).closest('div.wrap1');
+                var ol_parent = $(this).closest('ol');
+                
+                var top_tf = true;
+                var bottom_tf = true;
+                var right_tf = true;
+                var left_tf = true;
+
+                // 오른쪽 이동 버튼 제한
+                var max_child_depth = $(this).closest('.wrap1').data('realDepth');
+                $(this).closest('li').find('ol .wrap1').each(function(k, v){
+                    var depth = $(v).data('realDepth');
+                    if(max_child_depth <= depth){
+                        max_child_depth = depth;
+                    }
+                });
+
+                if(max_child_depth >= MAX_ORG_DEPTH){
+                    $(this).closest('.menu').next('.move_group').children('.right').hide();
+                    right_tf = false;
+                }
+                // 왼쪽 이동 버튼 제한
+                if (!ol_parent.prev('div').hasClass('noDepth')) {
+                    $(this).closest('.menu').next('.move_group').children('.left').hide();
+                    left_tf = false;
+                }
+
+                var no = $(this).closest('.wrap1').attr('no');
+                var parent_no = $(this).closest('.wrap1').data('parentNo');
+                var parent = $(this).parents('li:has(div.wrap1[no="' + parent_no + '"]):first');
+                
+                // 위로 이동 버튼 제한
+                if(parent.children('ol').children('li:has(div.wrap1[no="' + no + '"])').prev('li').length === 0){
+                    $(this).closest('.menu').next('.move_group').children('.top').hide();
+                    top_tf = false;
+                }
+                // 아래로 이동 버튼 제한
+                if(parent.children('ol').children('li:has(div.wrap1[no="' + no + '"])').next('li').length === 0){
+                    $(this).closest('.menu').next('.move_group').children('.bottom').hide();
+                    bottom_tf = false;
+                }
+                
+                if(top_tf === false && bottom_tf === false && right_tf === false && left_tf === false){
+                    alert('이동할 수 없습니다.');
+                }
+                
+                    return false;
+                });
+
+            /* Top Button */
+            $(document).on('click', '.move_group>.top', function() {
+                
+                // 이권능 수정
+                orgmanage.moveNode($(this));
+            });
+
+            /* Bottom Button */
+            $(document).on('click', '.move_group>.bottom', function() {
+                
+                // 이권능 수정
+                orgmanage.moveNode($(this));
+            });
+
+            /* Left Button */
+            $(document).on('click', '.move_group>.left', function() {
+                orgmanage.moveNode($(this));
+            });
+
+            /* Right Button */
+            $(document).on('click', '.move_group>.right', function() {
+                orgmanage.moveNode($(this));
+            });
+
+            // 바탕화면 클릭시 이동 버튼 제거
+            $(document).on('click', '.content_inbox', function(e){
+                $('.wrap1>.move_group').find('a').show();
+                $('.wrap1>.move_group').hide();
+            });
+        });
+    </script>
+</body>
+</html>

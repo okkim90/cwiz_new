@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Generator" content="KIC">
+    <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Description" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <title>교정마법사 CWIZ - CALIBRATION WIZARD</title>
+    <script src="https://kit.fontawesome.com/aa5544e91b.js" crossorigin="anonymous" ></script>
+    <script src="../assets/js/jquery-3.1.1.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/datepicker.css">
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+</head>
+<body>
+    <div id="skip-nav">
+        <a href="#container"></a>
+    </div>
+    
+    <div id="wrap" class="grid-container">
+        <!-- header -->
+        <header class="header">
+            <h1 class="logo"><a href=""><img src="../assets/images/common/logo.svg" alt=""></a></h1>
+            <div class="h_util">
+                <div class="h_util_sec h_user">
+                    <i class="fa-solid fa-user"></i><a href="" class="user_name">홍길동</a> 님 
+                </div>
+                <div class="h_util_sec h_branch">
+                    <span class="h_branch_current"><i class="fa-solid fa-building"></i>코리아인스트먼트(주) 서울본사<i class="fa-solid fa-circle-chevron-down ico_arrow"></i></span>
+                    <ul class="h_branch_list">
+                        <li class="h_branch_item"><a href=""><i class="fa-solid fa-building"></i>코리아인스트먼트(주) 부산지사</a></li>
+                        <li class="h_branch_item"><a href=""><i class="fa-solid fa-building"></i>코리아인스트먼트(주) 대전지사</a></li>
+                    </ul>
+                </div>
+                <div class="h_util_sec h_btns">
+                    
+                    <!--[D] 알림(종) 활성화  'on' class 추가-->
+                    <a href="" class="h_btn ty_notice on">
+                        <i class="fa-regular fa-bell"></i>
+                    </a>
+                    <a href="" class="h_btn ty_logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </div>
+            </div>
+        </header>
+        <!--// header -->
+        <!-- nav -->
+        <aside class="sidenav">
+
+            <button type="button" class="btn_nav_toggle"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="c_info">
+                <h1 class="logo"><img src="../assets/images/common/logo_test.webp" alt=""></h1>
+                <p class="name">(주)누누티비</p>
+            </div>
+            
+            <ul class="nav">
+                <li class="nav_item on">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu1"></i>교정이력</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2 on">교정 접수 내역</a></li>
+                            <li><a href="" class="btn_dep2">교정 결과 조회</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu2"></i>교정 단가 조회</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">교정 단가 조회</a></li>
+                        </ul>
+                    </div>       
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu3"></i>견적 요청</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">견적 요청 조회</a></li>
+                            <li><a href="" class="btn_dep2">견적 요청</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu4"></i>마이 페이지</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">내 정보</a></li>
+                            <li><a href="" class="btn_dep2">우리 장비</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu5"></i>고객 지원</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">공지사항</a></li>
+                            <li><a href="" class="btn_dep2">자료실</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu6"></i>관리자</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">회원 관리</a></li>
+                            <li><a href="" class="btn_dep2">공지사항 관리</a></li>
+                            <li><a href="" class="btn_dep2">자료실 관리</a></li>
+                        </ul>
+                    </div>                 
+                </li>
+            </ul>
+        </aside>
+        <!-- // nav -->
+
+        <!--container-->
+        <main id="container" class="container">
+            <!--탭 네비게이션-->
+            <!-- [D] tab_nav_toggle 클릭시 tab_nav 토글 -->
+            <div id="tab_nav" class="tab_nav">
+                
+                <div class="tab_nav_list">
+                    <div class="swiper-wrapper">
+                        <div class="tab_nav_item swiper-slide on">
+                            <button type="button" class="tab_nav_link ty_main" onclick="tab_load(this)"><i class="fa-solid fa-house"></i></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">전체 조회</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide ">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정접수 처리 수량</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">기준정보</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">업체별 금액&수량 비교</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">전체 조회</a>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정접수 처리 수량</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">기준정보</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">업체별 금액&수량 비교</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">전체 조회</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정접수 처리 수량</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">기준정보</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">업체별 금액&수량 비교</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">전체 조회</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정접수 처리 수량</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">기준정보</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">업체별 금액&수량 비교</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">전체 조회</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide ">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">교정접수 처리 수량</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">기준정보</button>
+                            <button class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                        <div class="tab_nav_item swiper-slide">
+                            <button type="button" class="tab_nav_link" onclick="tab_load(this)">업체별 금액&수량 비교</button>
+                            <button type="button" class="del_item" onclick="del_tap(this)"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab_nav_ctrl">
+                    <button type="button" class="tab_nav_ctrl_btn tab_nav_prev"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button type="button" class="tab_nav_ctrl_btn tab_nav_next"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <!--//탭 네비게이션-->
+
+            <div id="contents" class="contents">
+                
+                <h1 class="tit1 mb20">TITLE1 대타이틀 대타이틀 대타이틀 (22px)</h1>
+                <h2 class="tit2 mb15">TITKE2 중타이틀 중타이틀 중타이틀 (18px)</h2>
+                <h3 class="tit3 mb10">TITKE3 소타이틀 소타이틀 소타이틀 (16px)</h3>
+
+                <section class="sec">
+                    <div class="sec_tit">
+                        <h2 class="tit2">Key Colors</h2>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; border-radius: 10px; overflow: hidden;">
+                        <div style="height: 200px; width: calc((100%/3)*2); display: flex; justify-content: center; align-items: center; color: #fff;" class="bg_key">#FF7A00</div>                    
+                        <div style="width: calc((100%/3)); display: flex; justify-content: center; align-items: center; color: #fff;" class="bg_solidGrey">#393939</div>                    
+                        <div style="height: 100px; display: flex; justify-content: center; align-items: center; flex: 1; color: #fff;" class="bg_lightGrey">#AAAAAA</div>   
+                        <div style="height: 100px; display: flex; justify-content: center; align-items: center; flex: 1; color: #fff;" class="bg_line">#DDD</div>                 
+                        <div style=" display: flex; justify-content: center; align-items: center; flex: 1; color: #000;" class="bg_bg_grey">#EFEFEF</div>                    
+                        <div style=" display: flex; justify-content: center; align-items: center; flex: 1; color: #000;" class="bg_bg">#F9F9F9</div>                                      
+                    </div>
+                </section>
+                <section class="sec">
+                    <div class="sec_tit">
+                        <h2 class="tit2">Buttons size & type</h2>
+                    </div>
+                    <div class="btn_set ai_c mt10">
+                        <strong class="w_150">.ty_big (height:50px)</strong><br>
+                        <button class="f_btn ty_big _key">BUTTON</button>
+                        <button class="f_btn ty_big _key_ol">BUTTON</button>
+                        <button class="f_btn ty_big _key_op">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_c mt10">
+                        <strong class="w_150">.ty_mid (height:36px)</strong><br>
+                        <button class="f_btn ty_mid _key">BUTTON</button>
+                        <button class="f_btn ty_mid _key_ol">BUTTON</button>
+                        <button class="f_btn ty_mid _key_op">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_c mt10">
+                        <strong class="w_150">.ty_s_mid (height:32px)</strong><br>
+                        <button class="f_btn ty_s_mid _key">BUTTON</button>
+                        <button class="f_btn ty_s_mid _key_ol">BUTTON</button>
+                        <button class="f_btn ty_s_mid _key_op">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_c mt10">
+                        <strong class="w_150">.ty_small (height:28px)</strong><br>
+                        <button class="f_btn ty_small _key">BUTTON</button>
+                        <button class="f_btn ty_small _key_ol">BUTTON</button>
+                        <button class="f_btn ty_small _key_op">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_c mt10">
+                        <strong class="w_150">.ty_xsmall (height:22px)</strong><br>
+                        <button class="f_btn ty_xsmall _key">BUTTON</button>
+                        <button class="f_btn ty_xsmall _key_ol">BUTTON</button>
+                        <button class="f_btn ty_xsmall _key_op">BUTTON</button>
+                    </div>
+                </section>
+                <section class="sec">
+                    <div class="sec_tit">
+                        <h2 class="tit2">Round buttons size & type</h2>
+                    </div>
+                    <div class="btn_set ai_c mt10">
+                        <strong class="w_150">.ty_big (height:50px)</strong><br>
+                        <button class="f_btn ty_big _round _key">BUTTON</button>
+                        <button class="f_btn ty_big _round _key_ol">BUTTON</button>
+                        <button class="f_btn ty_big _round _key_op">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_c mt10">
+                        <strong class="w_150">.ty_mid (height:36px)</strong><br>
+                        <button class="f_btn ty_mid _round _key">BUTTON</button>
+                        <button class="f_btn ty_mid _round _key_ol">BUTTON</button>
+                        <button class="f_btn ty_mid _round _key_op">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_c mt10">
+                        <strong class="w_150">.ty_s_mid (height:32px)</strong><br>
+                        <button class="f_btn ty_s_mid _round _key">BUTTON</button>
+                        <button class="f_btn ty_s_mid _round _key_ol">BUTTON</button>
+                        <button class="f_btn ty_s_mid _round _key_op">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_c mt10">
+                        <strong class="w_150">.ty_small (height:28px)</strong><br>
+                        <button class="f_btn ty_small _round _key">BUTTON</button>
+                        <button class="f_btn ty_small _round _key_ol">BUTTON</button>
+                        <button class="f_btn ty_small _round _key_op">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_c mt10">
+                        <strong class="w_150">.ty_xsmall (height:22px)</strong><br>
+                        <button class="f_btn ty_xsmall _round _key">BUTTON</button>
+                        <button class="f_btn ty_xsmall _round _key_ol">BUTTON</button>
+                        <button class="f_btn ty_xsmall _round _key_op">BUTTON</button>
+                        <a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
+                    </div>
+                </section>
+                <section class="sec">
+                    <div class="sec_tit">
+                        <h2 class="tit2">Buttons various colors </h2>
+                    </div>
+                    <div class="btn_set ai_b">
+                        <button class="f_btn ty_big _key">BUTTON</button>
+                        <button class="f_btn ty_mid _key">BUTTON</button>
+                        <button class="f_btn ty_s_mid _key">BUTTON</button>
+                        <button class="f_btn ty_small _key">BUTTON</button>
+                        <button class="f_btn ty_xsmall _key">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_b mt10">
+                        <button class="f_btn ty_big _key_ol">BUTTON</button>
+                        <button class="f_btn ty_mid _key_ol">BUTTON</button>
+                        <button class="f_btn ty_s_mid _key_ol">BUTTON</button>
+                        <button class="f_btn ty_small _key_ol">BUTTON</button>
+                        <button class="f_btn ty_xsmall _key_ol">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_b mt10">
+                        <button class="f_btn ty_big _key_op">BUTTON</button>
+                        <button class="f_btn ty_mid _key_op">BUTTON</button>
+                        <button class="f_btn ty_s_mid _key_op">BUTTON</button>
+                        <button class="f_btn ty_small _key_op">BUTTON</button>
+                        <button class="f_btn ty_xsmall _key_op">BUTTON</button>
+                    </div>
+                    <br>
+                    <div class="btn_set ai_b">
+                        <button class="f_btn ty_big _blue">BUTTON</button>
+                        <button class="f_btn ty_mid _blue">BUTTON</button>
+                        <button class="f_btn ty_s_mid _blue">BUTTON</button>
+                        <button class="f_btn ty_small _blue">BUTTON</button>
+                        <button class="f_btn ty_xsmall _blue">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_b mt10">
+                        <button class="f_btn ty_big _blue_ol">BUTTON</button>
+                        <button class="f_btn ty_mid _blue_ol">BUTTON</button>
+                        <button class="f_btn ty_s_mid _blue_ol">BUTTON</button>
+                        <button class="f_btn ty_small _blue_ol">BUTTON</button>
+                        <button class="f_btn ty_xsmall _blue_ol">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_b mt10">
+                        <button class="f_btn ty_big _blue_op">BUTTON</button>
+                        <button class="f_btn ty_mid _blue_op">BUTTON</button>
+                        <button class="f_btn ty_s_mid _blue_op">BUTTON</button>
+                        <button class="f_btn ty_small _blue_op">BUTTON</button>
+                        <button class="f_btn ty_xsmall _blue_op">BUTTON</button>
+                    </div>
+                    <br>
+                    <div class="btn_set ai_b">
+                        <button class="f_btn ty_big _sky">BUTTON</button>
+                        <button class="f_btn ty_mid _sky">BUTTON</button>
+                        <button class="f_btn ty_s_mid _sky">BUTTON</button>
+                        <button class="f_btn ty_small _sky">BUTTON</button>
+                        <button class="f_btn ty_xsmall _sky">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_b mt10">
+                        <button class="f_btn ty_big _sky_ol">BUTTON</button>
+                        <button class="f_btn ty_mid _sky_ol">BUTTON</button>
+                        <button class="f_btn ty_s_mid _sky_ol">BUTTON</button>
+                        <button class="f_btn ty_small _sky_ol">BUTTON</button>
+                        <button class="f_btn ty_xsmall _sky_ol">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_b mt10">
+                        <button class="f_btn ty_big _sky_op">BUTTON</button>
+                        <button class="f_btn ty_mid _sky_op">BUTTON</button>
+                        <button class="f_btn ty_s_mid _sky_op">BUTTON</button>
+                        <button class="f_btn ty_small _sky_op">BUTTON</button>
+                        <button class="f_btn ty_xsmall _sky_op">BUTTON</button>
+                    </div>
+                    <br>
+                    <div class="btn_set ai_b">
+                        <button class="f_btn ty_big _red">BUTTON</button>
+                        <button class="f_btn ty_mid _red">BUTTON</button>
+                        <button class="f_btn ty_s_mid _red">BUTTON</button>
+                        <button class="f_btn ty_small _red">BUTTON</button>
+                        <button class="f_btn ty_xsmall _red">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_b mt10">
+                        <button class="f_btn ty_big _red_ol">BUTTON</button>
+                        <button class="f_btn ty_mid _red_ol">BUTTON</button>
+                        <button class="f_btn ty_s_mid _red_ol">BUTTON</button>
+                        <button class="f_btn ty_small _red_ol">BUTTON</button>
+                        <button class="f_btn ty_xsmall _red_ol">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_b mt10">
+                        <button class="f_btn ty_big _red_op">BUTTON</button>
+                        <button class="f_btn ty_mid _red_op">BUTTON</button>
+                        <button class="f_btn ty_s_mid _red_op">BUTTON</button>
+                        <button class="f_btn ty_small _red_op">BUTTON</button>
+                        <button class="f_btn ty_xsmall _red_op">BUTTON</button>
+                    </div>
+                    <br>
+                    <div class="btn_set ai_b">
+                        <button class="f_btn ty_big _lblue">BUTTON</button>
+                        <button class="f_btn ty_mid _lblue">BUTTON</button>
+                        <button class="f_btn ty_s_mid _lblue">BUTTON</button>
+                        <button class="f_btn ty_small _lblue">BUTTON</button>
+                        <button class="f_btn ty_xsmall _lblue">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_b mt10">
+                        <button class="f_btn ty_big _lblue_ol">BUTTON</button>
+                        <button class="f_btn ty_mid _lblue_ol">BUTTON</button>
+                        <button class="f_btn ty_s_mid _lblue_ol">BUTTON</button>
+                        <button class="f_btn ty_small _lblue_ol">BUTTON</button>
+                        <button class="f_btn ty_xsmall _lblue_ol">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_b mt10">
+                        <button class="f_btn ty_big _lblue_op">BUTTON</button>
+                        <button class="f_btn ty_mid _lblue_op">BUTTON</button>
+                        <button class="f_btn ty_s_mid _lblue_op">BUTTON</button>
+                        <button class="f_btn ty_small _lblue_op">BUTTON</button>
+                        <button class="f_btn ty_xsmall _lblue_op">BUTTON</button>
+                    </div>
+                    <br>
+                    <div class="btn_set ai_b">
+                        <button class="f_btn ty_big _green">BUTTON</button>
+                        <button class="f_btn ty_mid _green">BUTTON</button>
+                        <button class="f_btn ty_s_mid _green">BUTTON</button>
+                        <button class="f_btn ty_small _green">BUTTON</button>
+                        <button class="f_btn ty_xsmall _green">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_b mt10">
+                        <button class="f_btn ty_big _green_ol">BUTTON</button>
+                        <button class="f_btn ty_mid _green_ol">BUTTON</button>
+                        <button class="f_btn ty_s_mid _green_ol">BUTTON</button>
+                        <button class="f_btn ty_small _green_ol">BUTTON</button>
+                        <button class="f_btn ty_xsmall _green_ol">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_b mt10">
+                        <button class="f_btn ty_big _green_op">BUTTON</button>
+                        <button class="f_btn ty_mid _green_op">BUTTON</button>
+                        <button class="f_btn ty_s_mid _green_op">BUTTON</button>
+                        <button class="f_btn ty_small _green_op">BUTTON</button>
+                        <button class="f_btn ty_xsmall _green_op">BUTTON</button>
+                    </div>
+                    <br>
+                    <div class="btn_set ai_b">
+                        <button class="f_btn ty_big _yellow">BUTTON</button>
+                        <button class="f_btn ty_mid _yellow">BUTTON</button>
+                        <button class="f_btn ty_s_mid _yellow">BUTTON</button>
+                        <button class="f_btn ty_small _yellow">BUTTON</button>
+                        <button class="f_btn ty_xsmall _yellow">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_b mt10">
+                        <button class="f_btn ty_big _yellow_ol">BUTTON</button>
+                        <button class="f_btn ty_mid _yellow_ol">BUTTON</button>
+                        <button class="f_btn ty_s_mid _yellow_ol">BUTTON</button>
+                        <button class="f_btn ty_small _yellow_ol">BUTTON</button>
+                        <button class="f_btn ty_xsmall _yellow_ol">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_b mt10">
+                        <button class="f_btn ty_big _yellow_op">BUTTON</button>
+                        <button class="f_btn ty_mid _yellow_op">BUTTON</button>
+                        <button class="f_btn ty_s_mid _yellow_op">BUTTON</button>
+                        <button class="f_btn ty_small _yellow_op">BUTTON</button>
+                        <button class="f_btn ty_xsmall _yellow_op">BUTTON</button>
+                    </div>
+                    <br>
+                    <div class="btn_set ai_b">
+                        <button class="f_btn ty_big _purple">BUTTON</button>
+                        <button class="f_btn ty_mid _purple">BUTTON</button>
+                        <button class="f_btn ty_s_mid _purple">BUTTON</button>
+                        <button class="f_btn ty_small _purple">BUTTON</button>
+                        <button class="f_btn ty_xsmall _purple">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_b mt10">
+                        <button class="f_btn ty_big _purple_ol">BUTTON</button>
+                        <button class="f_btn ty_mid _purple_ol">BUTTON</button>
+                        <button class="f_btn ty_s_mid _purple_ol">BUTTON</button>
+                        <button class="f_btn ty_small _purple_ol">BUTTON</button>
+                        <button class="f_btn ty_xsmall _purple_ol">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_b mt10">
+                        <button class="f_btn ty_big _purple_op">BUTTON</button>
+                        <button class="f_btn ty_mid _purple_op">BUTTON</button>
+                        <button class="f_btn ty_s_mid _purple_op">BUTTON</button>
+                        <button class="f_btn ty_small _purple_op">BUTTON</button>
+                        <button class="f_btn ty_xsmall _purple_op">BUTTON</button>
+                    </div>
+                    <br>
+                    <div class="btn_set ai_b">
+                        <button class="f_btn ty_big _lightGrey">BUTTON</button>
+                        <button class="f_btn ty_mid _lightGrey">BUTTON</button>
+                        <button class="f_btn ty_s_mid _lightGrey">BUTTON</button>
+                        <button class="f_btn ty_small _lightGrey">BUTTON</button>
+                        <button class="f_btn ty_xsmall _lightGrey">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_b mt10">
+                        <button class="f_btn ty_big _lightGrey_ol">BUTTON</button>
+                        <button class="f_btn ty_mid _lightGrey_ol">BUTTON</button>
+                        <button class="f_btn ty_s_mid _lightGrey_ol">BUTTON</button>
+                        <button class="f_btn ty_small _lightGrey_ol">BUTTON</button>
+                        <button class="f_btn ty_xsmall _lightGrey_ol">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_b mt10">
+                        <button class="f_btn ty_big _lightGrey_op">BUTTON</button>
+                        <button class="f_btn ty_mid _lightGrey_op">BUTTON</button>
+                        <button class="f_btn ty_s_mid _lightGrey_op">BUTTON</button>
+                        <button class="f_btn ty_small _lightGrey_op">BUTTON</button>
+                        <button class="f_btn ty_xsmall _lightGrey_op">BUTTON</button>
+                    </div>
+                    <br>
+                    <div class="btn_set ai_b">
+                        <button class="f_btn ty_big _solidGrey">BUTTON</button>
+                        <button class="f_btn ty_mid _solidGrey">BUTTON</button>
+                        <button class="f_btn ty_s_mid _solidGrey">BUTTON</button>
+                        <button class="f_btn ty_small _solidGrey">BUTTON</button>
+                        <button class="f_btn ty_xsmall _solidGrey">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_b mt10">
+                        <button class="f_btn ty_big _solidGrey_ol">BUTTON</button>
+                        <button class="f_btn ty_mid _solidGrey_ol">BUTTON</button>
+                        <button class="f_btn ty_s_mid _solidGrey_ol">BUTTON</button>
+                        <button class="f_btn ty_small _solidGrey_ol">BUTTON</button>
+                        <button class="f_btn ty_xsmall _solidGrey_ol">BUTTON</button>
+                    </div>
+                    <div class="btn_set ai_b mt10">
+                        <button class="f_btn ty_big _solidGrey_op">BUTTON</button>
+                        <button class="f_btn ty_mid _solidGrey_op">BUTTON</button>
+                        <button class="f_btn ty_s_mid _solidGrey_op">BUTTON</button>
+                        <button class="f_btn ty_small _solidGrey_op">BUTTON</button>
+                        <button class="f_btn ty_xsmall _solidGrey_op">BUTTON</button>
+                    </div>
+                </section>
+                <section class="sec">
+                    <div class="sec_tit">
+                        <h2 class="tit">Buttons disabled</h2>
+                    </div>
+                    <div class="btn_set ai_b">
+                        <button class="f_btn ty_big _key disable">BUTTON</button>
+                        <button class="f_btn ty_mid _key disable">BUTTON</button>
+                        <button class="f_btn ty_s_mid _key disable">BUTTON</button>
+                        <button class="f_btn ty_small2 _key disable">BUTTON</button>
+                        <button class="f_btn ty_small _key disable">BUTTON</button>
+                    </div>
+                </section>
+                <section class="sec">
+                    <div class="sec_tit">
+                        <h2 class="tit2">Cards</h2>
+                    </div>
+                    <ul class="card_list col_6">
+                        <li class="card_item col_item">
+                            <a href="" class="card_inner">
+                                <div class="img_box">
+                                    <img src="https://picsum.photos/400" alt="">
+                                </div>
+                                <div class="txt_box">
+                                    <div class="card_item_info">
+                                        <div class="date"><i class="fa-solid fa-calendar-days"></i>2023-04-19</div>
+                                        <div class="view"><i class="fa-solid fa-eye"></i>2,903</div>
+                                    </div>
+                                    <div class="tit t_hidden_2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid maxime corrupti accusamus! Minus porro quam molestiae laborum neque accusamus, sequi veritatis saepe nobis animi, blanditiis pariatur doloribus, quas sit quisquam.</div>
+                                    <div class="desc t_hidden_3">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ea molestiae illum corrupti nihil sint aliquid ipsum voluptatibus excepturi dolor.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="card_item col_item">
+                            <a href="" class="card_inner">
+                                <div class="img_box">
+                                    <img src="https://picsum.photos/400" alt="">
+                                </div>
+                                <div class="txt_box">
+                                    <div class="card_item_info">
+                                        <div class="date"><i class="fa-solid fa-calendar-days"></i>2023-04-19</div>
+                                        <div class="view"><i class="fa-solid fa-eye"></i>2,903</div>
+                                    </div>
+                                    <div class="tit t_hidden_2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid maxime corrupti accusamus! Minus porro quam molestiae laborum neque accusamus, sequi veritatis saepe nobis animi, blanditiis pariatur doloribus, quas sit quisquam.</div>
+                                    <div class="desc t_hidden_3">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ea molestiae illum corrupti nihil sint aliquid ipsum voluptatibus excepturi dolor.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="card_item col_item">
+                            <a href="" class="card_inner">
+                                <div class="img_box">
+                                    <img src="https://picsum.photos/400" alt="">
+                                </div>
+                                <div class="txt_box">
+                                    <div class="card_item_info">
+                                        <div class="date"><i class="fa-solid fa-calendar-days"></i>2023-04-19</div>
+                                        <div class="view"><i class="fa-solid fa-eye"></i>2,903</div>
+                                    </div>
+                                    <div class="tit t_hidden_2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid maxime corrupti accusamus! Minus porro quam molestiae laborum neque accusamus, sequi veritatis saepe nobis animi, blanditiis pariatur doloribus, quas sit quisquam.</div>
+                                    <div class="desc t_hidden_3">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ea molestiae illum corrupti nihil sint aliquid ipsum voluptatibus excepturi dolor.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="card_item col_item">
+                            <a href="" class="card_inner">
+                                <div class="img_box">
+                                    <img src="https://picsum.photos/400" alt="">
+                                </div>
+                                <div class="txt_box">
+                                    <div class="card_item_info">
+                                        <div class="date"><i class="fa-solid fa-calendar-days"></i>2023-04-19</div>
+                                        <div class="view"><i class="fa-solid fa-eye"></i>2,903</div>
+                                    </div>
+                                    <div class="tit t_hidden_2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid maxime corrupti accusamus! Minus porro quam molestiae laborum neque accusamus, sequi veritatis saepe nobis animi, blanditiis pariatur doloribus, quas sit quisquam.</div>
+                                    <div class="desc t_hidden_3">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ea molestiae illum corrupti nihil sint aliquid ipsum voluptatibus excepturi dolor.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="card_item col_item">
+                            <a href="" class="card_inner">
+                                <div class="img_box">
+                                    <img src="https://picsum.photos/400" alt="">
+                                </div>
+                                <div class="txt_box">
+                                    <div class="card_item_info">
+                                        <div class="date"><i class="fa-solid fa-calendar-days"></i>2023-04-19</div>
+                                        <div class="view"><i class="fa-solid fa-eye"></i>2,903</div>
+                                    </div>
+                                    <div class="tit t_hidden_2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid maxime corrupti accusamus! Minus porro quam molestiae laborum neque accusamus, sequi veritatis saepe nobis animi, blanditiis pariatur doloribus, quas sit quisquam.</div>
+                                    <div class="desc t_hidden_3">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ea molestiae illum corrupti nihil sint aliquid ipsum voluptatibus excepturi dolor.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="card_item col_item">
+                            <a href="" class="card_inner">
+                                <div class="img_box">
+                                    <img src="https://picsum.photos/400" alt="">
+                                </div>
+                                <div class="txt_box">
+                                    <div class="card_item_info">
+                                        <div class="date"><i class="fa-solid fa-calendar-days"></i>2023-04-19</div>
+                                        <div class="view"><i class="fa-solid fa-eye"></i>2,903</div>
+                                    </div>
+                                    <div class="tit t_hidden_2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid maxime corrupti accusamus! Minus porro quam molestiae laborum neque accusamus, sequi veritatis saepe nobis animi, blanditiis pariatur doloribus, quas sit quisquam.</div>
+                                    <div class="desc t_hidden_3">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ea molestiae illum corrupti nihil sint aliquid ipsum voluptatibus excepturi dolor.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="sec">
+                    <div class="sec_tit">
+                        <h2 class="tit2">Cards (no description)</h2>
+                    </div>
+                    <ul class="card_list col_6">
+                        <li class="card_item col_item">
+                            <a href="" class="card_inner">
+                                <div class="img_box">
+                                    <img src="https://picsum.photos/400" alt="">
+                                </div>
+                                <div class="txt_box">
+                                    <div class="card_item_info">
+                                        <div class="date"><i class="fa-solid fa-calendar-days"></i>2023-04-19</div>
+                                        <div class="view"><i class="fa-solid fa-eye"></i>2,903</div>
+                                    </div>
+                                    <div class="tit t_hidden_2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid maxime corrupti accusamus! Minus porro quam molestiae laborum neque accusamus, sequi veritatis saepe nobis animi, blanditiis pariatur doloribus, quas sit quisquam.</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="card_item col_item">
+                            <a href="" class="card_inner">
+                                <div class="img_box">
+                                    <img src="https://picsum.photos/400" alt="">
+                                </div>
+                                <div class="txt_box">
+                                    <div class="card_item_info">
+                                        <div class="date"><i class="fa-solid fa-calendar-days"></i>2023-04-19</div>
+                                        <div class="view"><i class="fa-solid fa-eye"></i>2,903</div>
+                                    </div>
+                                    <div class="tit t_hidden_2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid maxime corrupti accusamus! Minus porro quam molestiae laborum neque accusamus, sequi veritatis saepe nobis animi, blanditiis pariatur doloribus, quas sit quisquam.</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="card_item col_item">
+                            <a href="" class="card_inner">
+                                <div class="img_box">
+                                    <img src="https://picsum.photos/400" alt="">
+                                </div>
+                                <div class="txt_box">
+                                    <div class="card_item_info">
+                                        <div class="date"><i class="fa-solid fa-calendar-days"></i>2023-04-19</div>
+                                        <div class="view"><i class="fa-solid fa-eye"></i>2,903</div>
+                                    </div>
+                                    <div class="tit t_hidden_2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid maxime corrupti accusamus! Minus porro quam molestiae laborum neque accusamus, sequi veritatis saepe nobis animi, blanditiis pariatur doloribus, quas sit quisquam.</div>  
+                                </div>
+                            </a>
+                        </li>
+                        <li class="card_item col_item">
+                            <a href="" class="card_inner">
+                                <div class="img_box">
+                                    <img src="https://picsum.photos/400" alt="">
+                                </div>
+                                <div class="txt_box">
+                                    <div class="card_item_info">
+                                        <div class="date"><i class="fa-solid fa-calendar-days"></i>2023-04-19</div>
+                                        <div class="view"><i class="fa-solid fa-eye"></i>2,903</div>
+                                    </div>
+                                    <div class="tit t_hidden_2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid maxime corrupti accusamus! Minus porro quam molestiae laborum neque accusamus, sequi veritatis saepe nobis animi, blanditiis pariatur doloribus, quas sit quisquam.</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="card_item col_item">
+                            <a href="" class="card_inner">
+                                <div class="img_box">
+                                    <img src="https://picsum.photos/400" alt="">
+                                </div>
+                                <div class="txt_box">
+                                    <div class="card_item_info">
+                                        <div class="date"><i class="fa-solid fa-calendar-days"></i>2023-04-19</div>
+                                        <div class="view"><i class="fa-solid fa-eye"></i>2,903</div>
+                                    </div>
+                                    <div class="tit t_hidden_2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid maxime corrupti accusamus! Minus porro quam molestiae laborum neque accusamus, sequi veritatis saepe nobis animi, blanditiis pariatur doloribus, quas sit quisquam.</div> 
+                                </div>
+                            </a>
+                        </li>
+                        <li class="card_item col_item">
+                            <a href="" class="card_inner">
+                                <div class="img_box">
+                                    <img src="https://picsum.photos/400" alt="">
+                                </div>
+                                <div class="txt_box">
+                                    <div class="card_item_info">
+                                        <div class="date"><i class="fa-solid fa-calendar-days"></i>2023-04-19</div>
+                                        <div class="view"><i class="fa-solid fa-eye"></i>2,903</div>
+                                    </div>
+                                    <div class="tit t_hidden_2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid maxime corrupti accusamus! Minus porro quam molestiae laborum neque accusamus, sequi veritatis saepe nobis animi, blanditiis pariatur doloribus, quas sit quisquam.</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="sec">
+                    <div class="sec_tit">
+                        <h2 class="tit2">Paging</h2>
+                    </div>
+
+                    <div style="display: flex;">
+                        <div class="paging_wrap">
+                            <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
+                            <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
+                            <ul class="paging_list">
+                                <li><span class="paging_btn current">1</span></li>
+                                <li><a href="" class="paging_btn">2</a></li>
+                                <li><a href="" class="paging_btn">3</a></li>
+                                <li><a href="" class="paging_btn">4</a></li>
+                                <li><a href="" class="paging_btn">5</a></li>
+                            </ul>
+                            <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
+                            <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
+                        </div>
+                    </div>
+                    
+                </section>
+                <section class="sec">
+                    <div class="sec_tit">
+                        <h2 class="tit2">Checkbox toggle</h2>
+                    </div>
+                    <label class="f_toggle">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                    <label class="f_toggle">
+                        <input type="checkbox" checked>
+                        <span class="slider">
+                            <div class="slider_txt false">미승인</div>
+                            <div class="slider_txt true">승인</div>
+                        </span>
+                    </label>
+                </section>
+                <section class="sec">
+                    <div class="sec_tit">
+                        <h2 class="tit2">checkbox & radio</h2>
+                    </div>
+                    <div class="chk_list">
+                        <label class="chk_item"><input type="checkbox"> checkbox1</label>
+                        <label class="chk_item"><input type="checkbox"> checkbox2</label>
+                    </div>
+                    <br><br>
+                    <div class="chk_list">
+                        <label class="chk_item"><input type="radio" name="radio"> radiobox1</label>
+                        <label class="chk_item"><input type="radio" name="radio"> radiobox2</label>
+                        <label class="chk_item"><input type="radio" name="radio"> radiobox3</label>
+                    </div>
+                    
+                </section>
+                <section class="sec">
+                    <div class="sec_tit">
+                        <h2 class="tit2">Input text</h2>
+                    </div>
+                    <input type="text" class="f_input ty_big w_500" value="input big size">
+
+                    <br><br>
+
+                    <input type="text" class="f_input ty_mid w_500" value="input mid size">
+
+                    <br><br>
+
+                    <input type="text" class="f_input ty_small w_500" value="input small size">
+                </section>
+                
+                <section class="sec">
+                    <div class="sec_tit">
+                        <h2 class="tit2">Select</h2>
+                    </div>
+                    <select name="" id="" class="f_select ty_big w_500">
+                        <option value="">Select big size</option>
+                        <option value="">Select option</option>
+                        <option value="">Select option</option>
+                        <option value="">Select option</option>
+                        <option value="">Select option</option>
+                        <option value="">Select option</option>
+                    </select>
+
+                    <br><br>
+
+                    <select name="" id="" class="f_select ty_mid w_500">
+                        <option value="">Select mid size</option>
+                        <option value="">Select option</option>
+                        <option value="">Select option</option>
+                        <option value="">Select option</option>
+                        <option value="">Select option</option>
+                        <option value="">Select option</option>
+                    </select>
+
+                    <br><br>
+
+                    <select name="" id="" class="f_select ty_small w_500">
+                        <option value="">Select small size</option>
+                        <option value="">Select option</option>
+                        <option value="">Select option</option>
+                        <option value="">Select option</option>
+                        <option value="">Select option</option>
+                        <option value="">Select option</option>
+                    </select>
+                </section>
+                <section class="sec">
+                    <div class="sec_tit">
+                        <h2 class="tit2">Textarea</h2>
+                    </div>
+                    <textarea name="" id="" class="f_ta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, soluta quis! Quis, cum, consequatur adipisci nesciunt doloribus aspernatur, iusto sed rerum reprehenderit fugiat deserunt dolore quas! Omnis debitis deleniti id error, nisi sint similique porro soluta aut molestias eligendi commodi quidem consequatur cupiditate cum quisquam. Non dolor tenetur dolores recusandae.</textarea>
+                </section>
+
+                <section class="sec">
+                    <div class="sec_tit">
+                        <h2 class="tit2">FONT SIZE</h2>
+                    </div>
+                    <div class="fz_big"><b class="fc_key">Font-size (big) 20px</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, ea. Expedita est sint veritatis nesciunt ullam.</div>
+                    <br>
+                    <div class="fz_mid"><b class="fc_key">Font-size (middle) 16px</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, ea. Expedita est sint veritatis nesciunt ullam.</div>
+                    <br>
+                    <div class="fz_normal"><b class="fc_key">Font-size (normal) 13px</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, ea. Expedita est sint veritatis nesciunt ullam.</div>
+                    <br>
+                    <div class="fz_small"><b class="fc_key">Font-size (small) 12px</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, ea. Expedita est sint veritatis nesciunt ullam.</div>
+                </section>
+                <section class="sec">
+                    <div class="sec_tit">
+                        <h2 class="tit2">TABLE horizontal (ver: non-scroll)</h2>
+                    </div>  
+                    <div class="h_tbl_wrap">
+                        <table class="h_tbl">
+                            <!-- <colgroup>
+                                <col style="width: 50px;">
+                                <col style="width: 80px;">
+                                <col style="width: 50px;">
+                                <col style="width: 50px;">
+                                <col style="width: 60px;">
+                                <col>
+                                <col>
+                                <col>
+                                <col style="width: 90px;">
+                                <col style="width: 90px;">
+                                <col style="width: 70px;">
+                                <col style="width: 80px;">
+                                <col style="width: 90px;">
+                                <col style="width: 70px;">
+                                <col style="width: 70px;">
+                                <col style="width: 100px;">
+                            </colgroup> -->
+                            <thead>
+                                <tr>
+                                    <th class="th_fixed"><input type="checkbox"></th>
+                                    <th class="th_fixed">교정번호</th>
+                                    <th class="th_fixed">국문</th>
+                                    <th class="th_fixed">영문</th>
+                                    <th class="th_fixed">회원구분</th>
+                                    <th class="th_fixed">계측기명</th>
+                                    <th class="th_fixed">제조사</th>
+                                    <th class="th_fixed">형식</th>
+                                    <th class="th_fixed">기기번호</th>
+                                    <th class="th_fixed">접수일</th>
+                                    <th class="th_fixed">신청자</th>
+                                    <th class="th_fixed">현재상태</th>
+                                    <th class="th_fixed">완료일</th>
+                                    <th class="th_fixed">교정결과</th>
+                                    <th class="th_fixed">교정담당</th>
+                                    <th class="th_fixed">교정수수료</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <a class="btn_t_link" href="">2300001</a> 
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_red"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_blue"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <a class="btn_t_link" href="">2300001</a> 
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_red"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_blue"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <a class="btn_t_link" href="">2300001</a> 
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_red"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_blue"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <a class="btn_t_link" href="">2300001</a> 
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_red"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_blue"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <a class="btn_t_link" href="">2300001</a> 
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_red"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_blue"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <a class="btn_t_link" href="">2300001</a> 
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_red"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_blue"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <a class="btn_t_link" href="">2300001</a> 
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_red"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_blue"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <a class="btn_t_link" href="">2300001</a> 
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_red"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_blue"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <a class="btn_t_link" href="">2300001</a> 
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_red"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn_pdf fc_blue"><i class="fa-solid fa-file-pdf"></i></a>
+                                    </td>
+                                    <td>교정</td>
+                                    <td>피스톤식 피스톤식 부피계(디스펜서)</td>
+                                    <td>TECHNICAL TECHNICAL&TRY</td>
+                                    <td>200,123 (0.01) mm</td>
+                                    <td>3P7900141</td>
+                                    <td>2023-03-28</td>
+                                    <td>박박박</td>
+                                    <td>계산대기</td>
+                                    <td>2023-03-28</td>
+                                    <td>정상</td>
+                                    <td>김강강</td>
+                                    <td>19,000,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="sec">
+                    <div class="sec_tit">
+                        <h2 class="tit2">TABLE horizontal (ver: y-scroll)</h2>
+                    </div>  
+                    <div class="h_tbl_wrap y_scroll_area" style="max-height: 280px;">
+                        <table class="h_tbl">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>   
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="th_fixed">아이디 </th>
+                                    <th class="th_fixed">담당자명</th>
+                                    <th class="th_fixed">핸드폰</th>
+                                    <th class="th_fixed">회사명</th>
+                                    <th class="th_fixed">사업자번호</th>
+                                    <th class="th_fixed">신청일</th>
+                                    <th class="th_fixed">승인</th>
+                                    <th class="th_fixed">권한</th>
+                                    <th class="th_fixed">회원상태</th>
+                                    <th class="th_fixed">상세보기</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>gadegwge123</td>
+                                    <td>장원영</td>
+                                    <td>010-1234-1234</td>
+                                    <td>(주)동양산전엘리베이터</td>
+                                    <td>123-42-54567<a href="" class="btn_down ml5"><span class="blind">다운로드</span></a></td>
+                                    <td>2023-12-23</td>
+                                    <td>
+                                        <label class="f_toggle">
+                                            <input type="checkbox">
+                                            <span class="slider">
+                                                <div class="slider_txt false">미승인</div>
+                                                <div class="slider_txt true">승인</div>
+                                            </span>
+                                        </label>
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>미승인</td>
+                                    <td>
+                                        <a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>gadegwge123</td>
+                                    <td>장원영</td>
+                                    <td>010-1234-1234</td>
+                                    <td>(주)동양산전엘리베이터</td>
+                                    <td>123-42-54567<a href="" class="btn_down ml5"><span class="blind">다운로드</span></a></td>
+                                    <td>2023-12-23</td>
+                                    <td>
+                                        <label class="f_toggle">
+                                            <input type="checkbox">
+                                            <span class="slider">
+                                                <div class="slider_txt false">미승인</div>
+                                                <div class="slider_txt true">승인</div>
+                                            </span>
+                                        </label>
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>미승인</td>
+                                    <td>
+                                        <a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>gadegwge123</td>
+                                    <td>장원영</td>
+                                    <td>010-1234-1234</td>
+                                    <td>(주)동양산전엘리베이터</td>
+                                    <td>123-42-54567<a href="" class="btn_down ml5"><span class="blind">다운로드</span></a></td>
+                                    <td>2023-12-23</td>
+                                    <td>
+                                        <label class="f_toggle">
+                                            <input type="checkbox">
+                                            <span class="slider">
+                                                <div class="slider_txt false">미승인</div>
+                                                <div class="slider_txt true">승인</div>
+                                            </span>
+                                        </label>
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>미승인</td>
+                                    <td>
+                                        <a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>gadegwge123</td>
+                                    <td>장원영</td>
+                                    <td>010-1234-1234</td>
+                                    <td>(주)동양산전엘리베이터</td>
+                                    <td>123-42-54567<a href="" class="btn_down ml5"><span class="blind">다운로드</span></a></td>
+                                    <td>2023-12-23</td>
+                                    <td>
+                                        <label class="f_toggle">
+                                            <input type="checkbox">
+                                            <span class="slider">
+                                                <div class="slider_txt false">미승인</div>
+                                                <div class="slider_txt true">승인</div>
+                                            </span>
+                                        </label>
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>미승인</td>
+                                    <td>
+                                        <a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>gadegwge123</td>
+                                    <td>장원영</td>
+                                    <td>010-1234-1234</td>
+                                    <td>(주)동양산전엘리베이터</td>
+                                    <td>123-42-54567<a href="" class="btn_down ml5"><span class="blind">다운로드</span></a></td>
+                                    <td>2023-12-23</td>
+                                    <td>
+                                        <label class="f_toggle">
+                                            <input type="checkbox">
+                                            <span class="slider">
+                                                <div class="slider_txt false">미승인</div>
+                                                <div class="slider_txt true">승인</div>
+                                            </span>
+                                        </label>
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>미승인</td>
+                                    <td>
+                                        <a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>gadegwge123</td>
+                                    <td>장원영</td>
+                                    <td>010-1234-1234</td>
+                                    <td>(주)동양산전엘리베이터</td>
+                                    <td>123-42-54567<a href="" class="btn_down ml5"><span class="blind">다운로드</span></a></td>
+                                    <td>2023-12-23</td>
+                                    <td>
+                                        <label class="f_toggle">
+                                            <input type="checkbox">
+                                            <span class="slider">
+                                                <div class="slider_txt false">미승인</div>
+                                                <div class="slider_txt true">승인</div>
+                                            </span>
+                                        </label>
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>미승인</td>
+                                    <td>
+                                        <a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>gadegwge123</td>
+                                    <td>장원영</td>
+                                    <td>010-1234-1234</td>
+                                    <td>(주)동양산전엘리베이터</td>
+                                    <td>123-42-54567<a href="" class="btn_down ml5"><span class="blind">다운로드</span></a></td>
+                                    <td>2023-12-23</td>
+                                    <td>
+                                        <label class="f_toggle">
+                                            <input type="checkbox">
+                                            <span class="slider">
+                                                <div class="slider_txt false">미승인</div>
+                                                <div class="slider_txt true">승인</div>
+                                            </span>
+                                        </label>
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>미승인</td>
+                                    <td>
+                                        <a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>gadegwge123</td>
+                                    <td>장원영</td>
+                                    <td>010-1234-1234</td>
+                                    <td>(주)동양산전엘리베이터</td>
+                                    <td>123-42-54567<a href="" class="btn_down ml5"><span class="blind">다운로드</span></a></td>
+                                    <td>2023-12-23</td>
+                                    <td>
+                                        <label class="f_toggle">
+                                            <input type="checkbox">
+                                            <span class="slider">
+                                                <div class="slider_txt false">미승인</div>
+                                                <div class="slider_txt true">승인</div>
+                                            </span>
+                                        </label>
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>미승인</td>
+                                    <td>
+                                        <a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>gadegwge123</td>
+                                    <td>장원영</td>
+                                    <td>010-1234-1234</td>
+                                    <td>(주)동양산전엘리베이터</td>
+                                    <td>123-42-54567<a href="" class="btn_down ml5"><span class="blind">다운로드</span></a></td>
+                                    <td>2023-12-23</td>
+                                    <td>
+                                        <label class="f_toggle">
+                                            <input type="checkbox">
+                                            <span class="slider">
+                                                <div class="slider_txt false">미승인</div>
+                                                <div class="slider_txt true">승인</div>
+                                            </span>
+                                        </label>
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>미승인</td>
+                                    <td>
+                                        <a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="sec">
+                    <div class="sec_tit">
+                        <h2 class="tit2">TABLE vertical</h2>
+                    </div>
+                    <form action="">
+                        <div class="v_tbl_wrap">
+                            <table class="v_tbl">
+                                <tbody>
+                                    <colgroup>
+                                        <col style="width: 160px;">
+                                        <col>
+                                        <col style="width: 160px;">
+                                        <col>
+                                        <col style="width: 160px;">
+                                        <col>
+                                    </colgroup>
+                                    <tr>
+                                        <th>기간 조회</th>
+                                        <td colspan="5">
+                                            <div class="date_set">
+                                                <select name="" id="" class="f_select ty_small">
+                                                    <option value="">접수일</option>
+                                                    <option value="">기간 선택 2</option>
+                                                    <option value="">기간 선택 3</option>
+                                                    <option value="">기간 선택 4</option>
+                                                </select>
+                                                <input type="text" class="f_input ty_small inp_date date_start" readonly> ~
+                                                <input type="text" class="f_input ty_small inp_date date_end" readonly>
+                                                <button type="button" onclick="set_today(this);" class="f_btn ty_xsmall _round _red_op w_50">오늘</button>
+                                                <button type="button" onclick="set_7d(this)" class="f_btn ty_xsmall _round _key_op w_50">7일</button>
+                                                <button type="button" onclick="set_1m(this)" class="f_btn ty_xsmall _round _green_op w_50">1개월</button>
+                                                <button type="button" onclick="set_3m(this)" class="f_btn ty_xsmall _round _blue_op w_50">3개월</button>
+                                                <button type="button" onclick="set_1y(this)" class="f_btn ty_xsmall _round _purple_op w_50">1년</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>업체명</th>
+                                        <td><input type="text" class="f_input ty_small w_200"></td>
+                                        <th>신청자</th>
+                                        <td><input type="text" class="f_input ty_small w_200"></td>
+                                        <th>접수자</th>
+                                        <td><input type="text" class="f_input ty_small w_200"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>접수번호</th>
+                                        <td>
+                                            <input type="text" class="f_input ty_small w_100"> - <input type="text" class="f_input ty_small w_100">
+                                        </td>
+                                        <th>교정번호</th>
+                                        <td>
+                                            <input type="text" class="f_input ty_small w_100"> - <input type="text" class="f_input ty_small w_100">
+                                        </td>
+                                        <th>기기번호</th>
+                                        <td><input type="text" class="f_input ty_small w_200"></td>
+                                    </tr>
+                                    <tr >
+                                        <th>계측기명</th>
+                                        <td><input type="text" class="f_input ty_small w_200"></td>
+                                        <th>모델명</th>
+                                        <td><input type="text" class="f_input ty_small w_200"></td>
+                                        <th>관리번호</th>
+                                        <td><input type="text" class="f_input ty_small w_200"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>제조사</th>
+                                        <td><input type="text" class="f_input ty_small w_200"></td>
+                                        <th>주소</th>
+                                        <td><input type="text" class="f_input ty_small w_200"></td>
+                                        <th>비고</th>
+                                        <td><input type="text" class="f_input ty_small w_200"></td>
+                                    </tr>
+                                </tbody>
+                            </table> 
+                        </div>
+                        <div class="btn_set taC mt30">
+                            <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
+                            <button type="button" class="f_btn ty_mid _solidGrey w_100">초기화 <i class="fa-solid fa-arrows-rotate"></i></button>
+                            <button type="button" class="f_btn ty_mid _lightGrey w_100">상세검색 <i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                            <button type="button" class="f_btn ty_mid _lightGrey w_100">상세검색 <i class="fa-solid fa-magnifying-glass-minus"></i></button>
+                        </div>
+                    </form>
+                </section>
+                <section class="sec">
+                    <div class="sec_tit">
+                        <h2 class="tit2">History tab navigation</h2>
+                    </div>
+                    
+                </section>
+            </div>
+        </main>
+        <!--//container-->
+        <!--footer-->
+        <footer class="footer">
+            <!-- <div class="footer_top">
+                <div class="inner">
+                    <ul class="footer_top_nav ">
+                        <li><a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a></li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="footer_logo">
+                <img src="../assets/images/common/logo_footer.svg" alt="KIC 코리아인스트루먼트(주)">
+            </div>
+            <div class="footer_info">
+                <ul class="footer_info_list">
+                    <li>코리아인스트루먼트(주)</li>
+                    <li><span class="bar"></span>사업자등록번호 : 101-81-45861</li>
+                    <li><span class="bar"></span>대표이사 : 정재호</li>
+                </ul>
+                <p class="copy">Copyright@KIC, Korea Instrument All Rights Reserved.</p>
+                <div class="contact">
+                    <b><i class="fa-solid fa-phone"></i> CONTACT US</b> 
+                    <span class="bar"></span>
+                    <span>1600 - 4245</span>
+                </div>
+            </div>
+            <div class="footer_right">
+                <div class="footer_right_btns">
+                    <a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a>
+                    <span class="bar"></span>
+                    <a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a>
+                </div>
+                <div class="footer_right_branch">
+                    <button class="btn_trigger">코리아인스트루먼트(주) 지점안내</button>
+                    <ul class="branch_list">
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=0" target="_blank">코리아인스트루먼트(주) 서울본사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=1" target="_blank">코리아인스트루먼트(주) 부산지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=2" target="_blank">코리아인스트루먼트(주) 대전지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=3" target="_blank">코리아인스트루먼트(주) 가평지안</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!--//footer-->
+    </div>
+    
+</body>
+</html>

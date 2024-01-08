@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Generator" content="KIC">
+    <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Description" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <title>교정마법사 CWIZ - CALIBRATION WIZARD</title>
+    <script src="https://kit.fontawesome.com/aa5544e91b.js" crossorigin="anonymous" ></script>
+    <script src="../assets/js/jquery-3.1.1.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/datepicker.css">
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+</head>
+<body>
+    <div id="skip-nav">
+        <a href="#container"></a>
+    </div>
+    <main class="container">
+		<div class="join_wrap">
+			<div class="vid_bg">
+                <video class="vid_box" autoplay muted loop>
+                    <source src="../assets/images/common/sample_vid3.mp4" type="video/mp4" />
+                    Your browser is not supported!
+                </video>
+            </div>
+			<div class="join_box">
+                <div class="join_box_top">
+                    <div class="img_box">
+                        <img src="../assets/images/common/logo.png" alt="코리아인스투르먼트(주)">
+                    </div>
+                    <h1 class="tit">서비스 신청</h1>
+                </div>
+                
+                <form method="post" id="frm" action="" class="join_form">
+					<div class="join_form_tit">
+                        <h2 class="tit">담당자 정보</h2>
+                        <p class="tip"><i class="ico_required"></i> 표시는 필수 기재 항목입니다.</p>
+                    </div>
+                    <div class="join_form_sec">
+                        <div class="join_form_item">
+                            <label for="" class="tit"><i class="ico_required"></i> 아이디</label>
+                            <div class="f_input_box">
+                                <input type="email" placeholder="아이디를 입력해주세요." class="f_input ty_mid w100" required>
+                                <button type="button" class="f_btn ty_mid _key">중복확인</button>
+                            </div>
+                            <p class="msg_feedback ty_true">이용 가능한 아이디입니다.</p>
+                            <p class="msg_feedback ty_false">사용 중인 아이디가 있습니다. 다시 입력해 주세요.</p>
+                        </div>
+                        <div class="join_form_item">
+                            <label for="" class="tit"><i class="ico_required"></i> 비밀번호</label>
+                            <input type="password" placeholder="4~12자 이내, 영문 또는 영문+숫자" class="f_input ty_mid w100" required>
+                            <p class="msg_feedback ty_true">이용 가능한 비밀번호입니다.</p>
+                            <p class="msg_feedback ty_false">영문 또는 영문, 숫자를 조합하여 입력해 주세요. (4~12자)</p>
+                        </div>
+                        <div class="join_form_item">
+                            <label for="" class="tit"><i class="ico_required"></i> 비밀번호 확인</label>
+                            <input type="password" placeholder="비밀번호를 한번 더 입력해 주세요." class="f_input ty_mid w100" required>
+                            <p class="msg_feedback ty_true">비밀번호가 일치합니다.</p>
+                            <p class="msg_feedback ty_false">비밀번호가 일치하지 않습니다.</p>
+                        </div>
+                        <div class="join_form_item">
+                            <label for="" class="tit"><i class="ico_required"></i> 담당자명</label>
+                            <input type="text" placeholder="담당자명을 입력해주세요." class="f_input ty_mid w100" required>
+                        </div>
+                        <div class="join_form_item">
+                            <label for="" class="tit"><i class="ico_required"></i> 담당자 연락처</label>
+                            <div class="f_input_box">
+                                <input type="tel" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="m_mobile" class="f_input ty_mid w100" placeholder="&quot;-&quot; 제외하고 숫자만 입력해주세요" maxlength="11"  required>
+                                <button type="button" class="f_btn ty_mid _key">본인인증</button>
+                            </div>
+                            <p class="msg_feedback ty_true">본인 인증에 성공하였습니다.</p>
+                            <p class="msg_feedback ty_false">본인 인증은 필수입니다. 인증 이후 서비스 신청해 주세요.</p> 
+                        </div>
+                        <div class="join_form_item">
+                            <label for="" class="tit"><i class="ico_required"></i> 이메일</label>
+                            <div class="f_input_box">
+                                <input type="email" placeholder="이메일을 입력해주세요." class="f_input ty_mid w100" required>
+                                <button type="button" class="f_btn ty_mid _key">중복확인</button>
+                            </div>
+                            <p class="msg_feedback ty_true">이용 가능한 이메일입니다.</p>
+                            <p class="msg_feedback ty_false">사용 중인 이메일이 있습니다. 다시 입력해 주세요.</p>
+                        </div>
+                    </div>
+                    <ul class="join_form_agree">
+                        <li class="join_form_agree_item">
+                            <label>
+                                <input type="checkbox" class="f_chk ty_big" required>
+                                이용약관 동의 <span class="fc_red">(필수)</span> 
+                            </label>
+                            <a href="https://www.kic21.co.kr/about/service" target="_blank" class="f_btn ty_small _solidGrey">전문보기</a>
+                        </li>
+                        <li class="join_form_agree_item">
+                            <label>
+                                <input type="checkbox" class="f_chk ty_big" required>
+                                개인정보 수집 및 이용 동의 <span class="fc_red">(필수)</span> 
+                            </label>
+                            <a href="https://www.kic21.co.kr/about/person" target="_blank" class="f_btn ty_small _solidGrey">전문보기</a>
+                        </li>
+                    </ul>
+                    <div class="join_form_btns">
+                        <a href="join_intro.html" class="f_btn ty_big _lightGrey">취소</a>
+                        <input type="submit" value="신청하기" class="f_btn ty_big _key">
+                    </div>
+                </form>
+                <div class="join_bot">
+					<p class="msg_tel">시스템 이용 문의 : 1600-4245</p>
+				</div>
+            </div>
+		</div>
+    </main>
+    <!--footer-->
+        <footer class="footer">
+            <!-- <div class="footer_top">
+                <div class="inner">
+                    <ul class="footer_top_nav ">
+                        <li><a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a></li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="footer_logo">
+                <img src="../assets/images/common/logo_footer.svg" alt="KIC 코리아인스트루먼트(주)">
+            </div>
+            <div class="footer_info">
+                <ul class="footer_info_list">
+                    <li>코리아인스트루먼트(주)</li>
+                    <li><span class="bar"></span>사업자등록번호 : 101-81-45861</li>
+                    <li><span class="bar"></span>대표이사 : 정재호</li>
+                </ul>
+                <p class="copy">Copyright@KIC, Korea Instrument All Rights Reserved.</p>
+                <div class="contact">
+                    <b><i class="fa-solid fa-phone"></i> CONTACT US</b> 
+                    <span class="bar"></span>
+                    <span>1600 - 4245</span>
+                </div>
+            </div>
+            <div class="footer_right">
+                <div class="footer_right_btns">
+                    <a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a>
+                    <span class="bar"></span>
+                    <a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a>
+                </div>
+                <div class="footer_right_branch">
+                    <button class="btn_trigger">코리아인스트루먼트(주) 지점안내</button>
+                    <ul class="branch_list">
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=0" target="_blank">코리아인스트루먼트(주) 서울본사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=1" target="_blank">코리아인스트루먼트(주) 부산지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=2" target="_blank">코리아인스트루먼트(주) 대전지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=3" target="_blank">코리아인스트루먼트(주) 가평지안</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!--//footer-->
+</body>
+</html>

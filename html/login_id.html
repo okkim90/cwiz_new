@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Generator" content="KIC">
+    <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Description" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <title>교정마법사 CWIZ - CALIBRATION WIZARD</title>
+    <script src="https://kit.fontawesome.com/aa5544e91b.js" crossorigin="anonymous" ></script>
+    <script src="../assets/js/jquery-3.1.1.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/datepicker.css">
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+</head>
+<body>
+    <div id="skip-nav">
+        <a href="#container"></a>
+    </div>
+    <main class="container">
+		<div class="login_wrap">
+			<div class="vid_bg">
+                <video class="vid_box" autoplay muted loop>
+                    <source src="../assets/images/common/sample_vid3.mp4" type="video/mp4" />
+                    Your browser is not supported!
+                </video>
+            </div>
+			<div class="login_box">
+                <div class="login_box_top">
+                    <div class="img_box">
+                        <img src="../assets/images/common/logo.svg" alt="CWIZ">
+                    </div>
+                </div>
+                <div class="login_tab">
+                    <!--[D] 활성화 'on' class-->
+                    <a href="login_id.html" class="login_tab_item on">아이디 찾기</a>
+                    <a href="login_pw.html" class="login_tab_item">비밀번호 재설정</a>
+                </div>
+
+                <form method="post" id="frm" action="" class="login_form">
+					<label for="member_name" class="login_form_label">이름</label>
+                    <input type="text" name="member_name" id="member_name" placeholder="이름을 입력하세요." class="f_input w100" value="" required>
+                    <label for="member_tel" class="login_form_label">휴대폰 번호</label>
+                    <input type="tel"  name="member_tel" id="member_tel" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" class="f_input w100" placeholder="휴대폰 번호를 입력해주세요." maxlength="11"  required>
+                    <div class="btn_set ty_nowrap">
+                        <a href="login.html" class="f_btn ty_big _lightGrey w100">취소</a>
+                        <input type="submit" value="확인" class="f_btn ty_big _key w100">
+                    </div>
+                </form>
+				<div class="login_info_msg">
+                    <p>회원정보를 정확히 입력해 주세요.</p>
+                </div>
+				<div class="login_bot">
+					<p class="msg_tel">시스템 이용 문의 : 1600-4245</p>
+				</div>
+            </div>
+		</div>
+    </main>
+    <!--footer-->
+        <footer class="footer">
+            <!-- <div class="footer_top">
+                <div class="inner">
+                    <ul class="footer_top_nav ">
+                        <li><a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a></li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="footer_logo">
+                <img src="../assets/images/common/logo_footer.svg" alt="KIC 코리아인스트루먼트(주)">
+            </div>
+            <div class="footer_info">
+                <ul class="footer_info_list">
+                    <li>코리아인스트루먼트(주)</li>
+                    <li><span class="bar"></span>사업자등록번호 : 101-81-45861</li>
+                    <li><span class="bar"></span>대표이사 : 정재호</li>
+                </ul>
+                <p class="copy">Copyright@KIC, Korea Instrument All Rights Reserved.</p>
+                <div class="contact">
+                    <b><i class="fa-solid fa-phone"></i> CONTACT US</b> 
+                    <span class="bar"></span>
+                    <span>1600 - 4245</span>
+                </div>
+            </div>
+            <div class="footer_right">
+                <div class="footer_right_btns">
+                    <a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a>
+                    <span class="bar"></span>
+                    <a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a>
+                </div>
+                <div class="footer_right_branch">
+                    <button class="btn_trigger">코리아인스트루먼트(주) 지점안내</button>
+                    <ul class="branch_list">
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=0" target="_blank">코리아인스트루먼트(주) 서울본사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=1" target="_blank">코리아인스트루먼트(주) 부산지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=2" target="_blank">코리아인스트루먼트(주) 대전지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=3" target="_blank">코리아인스트루먼트(주) 가평지안</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!--//footer-->
+</body>
+</html>

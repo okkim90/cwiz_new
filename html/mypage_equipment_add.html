@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Generator" content="KIC">
+    <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Description" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <title>교정마법사 CWIZ - CALIBRATION WIZARD</title>
+    <script src="https://kit.fontawesome.com/aa5544e91b.js" crossorigin="anonymous" ></script>
+    <script src="../assets/js/jquery-3.1.1.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/datepicker.css">
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+</head>
+<body>
+    <div id="skip-nav">
+        <a href="#container"></a>
+    </div>
+    
+    <div id="wrap" class="grid-container">
+        <!-- header -->
+        <header class="header">
+            <h1 class="logo"><a href=""><img src="../assets/images/common/logo.svg" alt=""></a></h1>
+            <div class="h_util">
+                <div class="h_util_sec h_user">
+                    <i class="fa-solid fa-user"></i><a href="" class="user_name">홍길동</a> 님 
+                </div>
+                <div class="h_util_sec h_branch">
+                    <a href="" class="h_branch_current"><i class="fa-solid fa-building"></i>코리아인스트먼트(주) 서울본사</a> 
+                </div>
+                <div class="h_util_sec h_btns">
+                    <!--[D] 알림(종) 활성화  'on' class 추가-->
+                    <button type="button" class="h_btn ty_notice on" onclick="f_alert_open();">
+                        <i class="fa-solid fa-bell"></i>
+                    </button>
+                    <a href="" class="h_btn ty_logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </div>
+                <div class="f_alert_box">
+                    <div class="f_alert_top">
+                        <h2 class="tit">알림</h2>
+                        <label class="f_toggle ml10">
+                            <input type="checkbox" class="alert_chk" onchange="f_alert_chk(this)" >
+                            <span class="slider">
+                                <div class="slider_txt false">전체</div>
+                                <div class="slider_txt true">미확인</div>
+                            </span>
+                        </label>
+                        <button type="button" class="f_alert_close ml_auto" onclick="f_alert_close()">
+                            <span class="blind">팝업 닫기</span>
+                        </button>
+                    </div>
+                    <ul class="f_alert_list">
+                        <!--[D] 이미 읽은 상태일 경우 'read' class 추가-->
+                        <li class="f_alert_item ">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 공지알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_notice.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item read">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 교정결과 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_cal.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item ">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 교정예정일 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_due.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item ">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 견적요청 승인 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_estimate.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item read">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 공지알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_notice.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 견적요청 승인 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_estimate.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item read">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 견적요청 승인 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_estimate.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!--// header -->
+        <!-- nav -->
+        <aside class="sidenav">
+
+            <button type="button" class="btn_nav_toggle"><i class="fa-solid fa-chevron-left"></i></button>
+            <!--[D] 회사로고 없을경우-->
+            <div class="sidenav_top">
+                <div class="msg_box">
+                    안녕하세요. <br>
+                    <b>(주)피엔케이피부임상연구센터</b> <br> 
+                    <b>김영술</b>님
+                </div>
+                <button type="button" class="btn_add_logo"  onclick="open_popup('pop_logo')">
+                    <i class="fa-solid fa-image"></i>
+                </button>
+            </div>
+            
+
+            <!--[D] 회사로고 있는 경우-->
+            <div class="sidenav_top">
+                <div class="img_box">
+                    <img src="../assets/images/common/Tesla_logo.png" alt="">
+                </div>
+                <button type="button" class="btn_add_logo" onclick="open_popup('pop_logo')">
+                    <i class="fa-solid fa-image"></i>
+                </button>
+            </div>
+
+            <div class="layer_popup pop_logo" onclick="close_popup(this)">
+                <div class="layer_popup_inner">
+                    <div class="layer_popup_cont ty_small">
+                        <button type="button" class="close_popup" onclick="close_popup(this)">
+                            <span class="blind">팝업 닫기</span>
+                        </button>
+                        <div class="sub_tit">
+                            <h1 class="tit1">로고 이미지 등록</h1>
+                        </div>
+                        <form action="">
+                            <!--[D] 이미지 첨부 전 -->
+                            <div class="img_box ty_upload ty_logo">
+                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
+                                <label for="upload_eq_img" class="btn_img_upluad">
+                                    <i class="fa-solid fa-image"></i>
+                                    <p>이미지 첨부하기 (260 x 90)</p>
+                                </label>
+                            </div>
+                            <!--// [D] 이미지 첨부 전 -->
+                            
+                            <br><!--[D] 개발시 삭제-->
+
+                             <!--[D] 이미지 첨부 후 -->
+                            <div class="img_box ty_upload ty_logo">
+                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
+                                <div class="img_box_edit">
+                                    <label for="upload_eq_img" class="img_box_edit_btn"><i class="fa-solid fa-rotate"></i><span class="blind">수정</span></label>
+                                    <button type="button" class="img_box_edit_btn"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button>
+                                </div>
+                                <img src="../assets/images/common/Tesla_logo.png" alt="">
+                            </div>  
+                            <!--[D] 이미지 첨부 후 -->                
+                            <div class="btn_set mt20 taC">
+                                <input type="submit" class="f_btn ty_small _key w_80" value="등록">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <ul class="nav">
+                <li class="nav_item on">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu1"></i>교정이력</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2 on">교정 접수 내역</a></li>
+                            <li><a href="" class="btn_dep2">교정 결과 조회</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu2"></i>교정 단가 조회</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">교정 단가 조회</a></li>
+                        </ul>
+                    </div>       
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu3"></i>견적 요청</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">견적 요청 조회</a></li>
+                            <li><a href="" class="btn_dep2">견적 요청</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu4"></i>마이 페이지</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">내 정보</a></li>
+                            <li><a href="" class="btn_dep2">우리 장비</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu5"></i>고객 지원</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">공지사항</a></li>
+                            <li><a href="" class="btn_dep2">자료실</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu6"></i>관리자</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">회원 관리</a></li>
+                            <li><a href="" class="btn_dep2">공지사항 관리</a></li>
+                            <li><a href="" class="btn_dep2">자료실 관리</a></li>
+                        </ul>
+                    </div>                 
+                </li>
+            </ul>
+        </aside>
+        <!-- // nav -->
+
+        <!--container-->
+        <main id="container" class="container">
+            <div id="contents" class="contents">
+                <a href="javascript:history.back()" class="btn_back"><span class="blind">뒤로가기</span></a>
+                <!-- [D] breadcrumb -->
+                <nav class="breadcrumb_area">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb_item">
+                            <a href="/">
+                                <i class="fa-solid fa-house"></i>
+                                <span class="blind">home</span>
+                            </a>
+                        </li>
+                        <li class="breadcrumb_item" >
+                            <a href="#">마이페이지</a>
+                        </li>
+                        <li class="breadcrumb_item">
+                            우리 장비
+                        </li>
+                    </ol>
+                </nav>
+                <!--// [D] breadcrumb -->
+                <div class="sub_tit">
+                    <h1 class="tit1">우리 장비 등록</h1>
+                    <div class="sub_tit_btns btn_set">
+                        <button type="button" class="f_btn ty_mid _key_ol w_100" onclick="open_popup('pop_equipment_add')">+ 건별 등록</button>
+                    </div>
+                </div>
+                <form action="">
+                    <div class="v_tbl_wrap">
+                        <table class="v_tbl">
+                            <colgroup>
+                                <col style="width: 160px;">
+                                <col>
+                                <col style="width: 160px;">
+                                <col>
+                                <col style="width: 160px;">
+                                <col>
+                            </colgroup>
+                            <tbody> 
+                                <tr>
+                                    <th>계측기명</th>
+                                    <td><input type="text" class="f_input ty_small w_200 intDiv" disabled="disabled"></td>       
+                                    <th>제조사</th>
+                                    <td><input type="text" class="f_input ty_small w_200 intCompany" disabled="disabled"></td>   
+                                    <th>형식</th>
+                                    <td><input type="text" class="f_input ty_small w_200 intType" disabled="disabled"></td>    
+                                </tr>
+                            </tbody>
+                        </table> 
+                    </div>
+                    <div class="search_details_wrap on"><!-- [DEV] 상세검색 'on' class 로 활성화 -->
+                        <input type="hidden">
+                        <input type="hidden">
+                        <input type="hidden">
+                        <div class="search_details">
+                            <div class="search_details_sec dep1">
+                                <strong class="tit">교정분야</strong>
+                                <div class="list_wrap">
+                                    <ul class="list ulIntDiv">
+                                        <li><button type="button" class="item_option intDivItem on" val="406">RF측정</button></li>
+                                        <li><button type="button" class="item_option intDivItem" val="103">각도</button></li>
+                                        <li><button type="button" class="item_option intDivItem" val="210">경도</button></li>
+                                        <li><button type="button" class="item_option intDivItem" val="701">광도</button></li>
+                                        <li><button type="button" class="item_option intDivItem" val="702">광원 및 검출기</button></li>
+                                        <li><button type="button" class="item_option intDivItem" val="704">광통신</button></li>
+                                        <li><button type="button" class="item_option intDivItem" val="403">교류 및 교류전력</button></li>
+                                        <li><button type="button" class="item_option intDivItem" val="106">기타 길이 관련량</button></li>
+                                        <li><button type="button" class="item_option intDivItem" val="404">기타 직류 및 저주파측정</button></li>
+                                        <li><button type="button" class="item_option intDivItem" val="703">매질특성</button></li>
+                                        <li><button type="button" class="item_option intDivItem" val="902">메디컬 기준 측정 실험실</button></li>
+                                        <li><button type="button" class="item_option intDivItem" val="000">미확인</button></li>
+                                        <li><button type="button" class="item_option intDivItem" val="207">밀도</button></li>
+                                        <li><button type="button" class="item_option intDivItem" val="802">방사능</button></li>
+                                        <li><button type="button" class="item_option intDivItem" val="801">방사선</button></li>
+                                        <li><button type="button" class="item_option intDivItem" val="101">복사선의 주파수</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="search_details_sec dep2">
+                                <strong class="tit">제조사</strong>
+                                <div class="list_wrap">
+                                    <ul class="list ulIntCompany">
+                                        <li><button type="button" class="item_option intCompanyItem on" val="">전체</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="A.H.SYSTEM">A.H.SYSTEM</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="AARONIA AG">AARONIA AG</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="ADQANTESR">ADQANTESR</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="ADVANTEST">ADVANTEST</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="AEROFLEX">AEROFLEX</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="AGILENT">AGILENT</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="AGLIENT">AGLIENT</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="AMETEK">AMETEK</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="AMPLIFIER RESEARCH">AMPLIFIER RESEARCH</a>
+                                        </li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="AMPLIFIER RESERCH">AMPLIFIER RESERCH</a>
+                                        </li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="ANRITSU">ANRITSU</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="ATTEN">ATTEN</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="BIRD">BIRD</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="BK PRECISION">BK PRECISION</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="BOONTON">BOONTON</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="ECG-KOKUSAI">ECG-KOKUSAI</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="ED">ED</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="EIN">EIN</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="FAIRVIEW MICROWAVE">FAIRVIEW MICROWAVE</a>
+                                        </li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="FLUKE">FLUKE</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="FOSTMENT">FOSTMENT</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="GEN COMM">GEN COMM</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="GENCOMM">GENCOMM</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="GIGATRONICS">GIGATRONICS</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="GW INSTEK">GW INSTEK</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="GWINSTEK">GWINSTEK</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="H.P">H.P</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="HC">HC</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="HP">HP</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="HUBER+SUHNER">HUBER+SUHNER</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="HUNG CHANG">HUNG CHANG</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="IFR">IFR</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="JDSU">JDSU</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="JUNG JIN">JUNG JIN</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="JUNGJIN">JUNGJIN</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="KEYSIGHT">KEYSIGHT</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="KRYTAR">KRYTAR</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="LG">LG</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="LIGNEX1">LIGNEX1</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="MARCONI">MARCONI</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="MCL">MCL</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="MICRONIX">MICRONIX</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="MIK">MIK</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="MINI-CIRCUITS">MINI-CIRCUITS</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="MOTOROLA">MOTOROLA</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="NARDA">NARDA</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="NATIONAL">NATIONAL</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="NEX1">NEX1</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="NOISEKEN">NOISEKEN</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="NONE">NONE</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="PANASONIC">PANASONIC</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="PHILIPS">PHILIPS</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="PMM">PMM</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="PRIMA">PRIMA</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="PROTEK">PROTEK</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="PULSAR">PULSAR</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="R &amp; S">R &amp; S</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="R&amp;S">R&amp;S</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="R/S">R/S</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="RF ONE ELECTRONIC">RF ONE ELECTRONIC</a>
+                                        </li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="RF-LAMBDA">RF-LAMBDA</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="ROHDE ＆SCHWARZ">ROHDE ＆SCHWARZ</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="ROHDE&amp;SCHWARZ">ROHDE&amp;SCHWARZ</a>
+                                        </li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="ROHDE&amp;SCWARZ">ROHDE&amp;SCWARZ</a>
+                                        </li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="R＆S">R＆S</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="SIGLENT">SIGLENT</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="SMEM">SMEM</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="SRS">SRS</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="SRT">SRT</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="SRTechnology">SRTechnology</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="SURECOM">SURECOM</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="SUZHOU">SUZHOU</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="TEKTRONIX">TEKTRONIX</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="TELEWAVE">TELEWAVE</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="TERMALINE">TERMALINE</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="TESCOM">TESCOM</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="VAUNIX">VAUNIX</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="WEINSCHEL">WEINSCHEL</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="WERLATONE">WERLATONE</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="YOKOGAWA">YOKOGAWA</button></li>
+                                        <li><button type="button" class="item_option intCompanyItem" val="대양일렉콤">대양일렉콤</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="search_details_sec dep3">
+                                <strong class="tit">형식</strong>
+                                <div class="list_wrap">
+                                    <ul class="list ulIntModel">
+                                        <li><button type="button" class="item_option intTypeItem on" val="">전체</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="100A250A">100A250A</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="100B">100B</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="1080.9506K02">1080.9506K02</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="10C">10C</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="10E-800">10E-800</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="11683A">11683A</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="11722A">11722A</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="1851">1851</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="18N10W-10dB">18N10W-10dB</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="200W1000M7A">200W1000M7A</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="2023A">2023A</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="2026">2026</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="2026B">2026B</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="250A">250A</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="250H">250H</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="25A">25A</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="25D">25D</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="2712">2712</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="2769">2769</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="3010">3010</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="3201">3201</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="325LA">325LA</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="392.4017.04">392.4017.04</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="4022">4022</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="4024">4024</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="4027A10M">4027A10M</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="4034">4034</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="4195A">4195A</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="43">43</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="432B">432B</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="436A">436A</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="44A">44A</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="4500C">4500C</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="47-30-43">47-30-43</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="48-40-43">48-40-43</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="4901.19.A">4901.19.A</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="50-A-MFN-30dB">50-A-MFN-30dB</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="500-WA-MFN-30">500-WA-MFN-30</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="500-WT-FN">500-WT-FN</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="5000-EX">5000-EX</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="500H">500H</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="50A-MFN-30dB">50A-MFN-30dB</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="50C">50C</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="50H">50H</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="51071">51071</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="53-30-43">53-30-43</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="53-40-34">53-40-34</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="53-40-43">53-40-43</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="550L">550L</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="59318">59318</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="5D">5D</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="6060A">6060A</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="6062A">6062A</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="66-30-33">66-30-33</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="69047B">69047B</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="6N10W-10dB">6N10W-10dB</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="766-20">766-20</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="768-30">768-30</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="769-30">769-30</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="776B-30">776B-30</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="778D">778D</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="7802">7802</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="83620B">83620B</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="83624B">83624B</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="83630L">83630L</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="83712A">83712A</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="83752A">83752A</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="83752B">83752B</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="8447D">8447D</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="8447F">8447F</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="8449B">8449B</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="8477A">8477A</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="8481A">8481A</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="8481D">8481D</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="8487A">8487A</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="8490D-010">8490D-010</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="8490D-020">8490D-020</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="8490D-040">8490D-040</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="8493B 3dB">8493B 3dB</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="8493B 6dB">8493B 6dB</button></li>
+                                        <li><button type="button" class="item_option intTypeItem" val="8494B">8494B</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            $(function(){
+                                $('.item_option').on('click',function(){
+                                    $(this).parents('.list').find('.item_option').removeClass('on');
+                                    $(this).addClass('on');
+                                });
+                            });
+                        </script>
+                    </div>
+                    <div class="btn_set taC mt30">
+                        <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
+                        <button type="button" class="f_btn ty_mid _solidGrey w_100 btn_detail on">상세검색</button>
+                    </div>
+                    <script>
+                        $(function(){
+                            $('.btn_detail').on('click',function(){
+                                if($(this).hasClass('on')){
+                                    $(this).removeClass('on');
+                                    $('.search_details_wrap').removeClass('on');
+                                    $('.intDiv,.intCompany,.intType').attr('disabled',false);
+                                }else{
+                                    $(this).addClass('on');
+                                    $('.search_details_wrap').addClass('on');
+                                    $('.intDiv,.intCompany,.intType').val(null).attr('disabled',true);
+                                }
+                            });
+                        });
+                    </script>
+                </form>
+                <section class="sec">
+                    <form action="">
+                        <div class="tbl_area col2">
+                            <div class="tbl_wrap _left">
+                                <div class="sub_tit2">
+                                    <h2 class="tit4"><b>1. 계측기 목록 :</b> 1,000건</h2>
+                                    <div class="btn_set ml_auto">
+                                        <button type="button" class="f_btn ty_small _solidGrey w_60">선택 <i class="fa-solid fa-chevron-right"></i></button>
+                                    </div>
+                                </div>
+                                <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
+                                    <table class="h_tbl">
+                                        <colgroup>
+                                            <col style="width: 30px;">
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col style="width: 100px;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th class="th_fixed"><input type="checkbox"></th>
+                                                <th class="th_fixed">계측기명</th>
+                                                <th class="th_fixed">제조사</th>
+                                                <th class="th_fixed">형식</th>
+                                                <th class="th_fixed">수량</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>   
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td>내·외측 캘리퍼</td>
+                                                <td>TECHNICAL&TR</td>
+                                                <td>200 (0.01) mm</td>
+                                                <td>
+                                                    <div class="num_set">
+                                                        <button type="button" class="num_set_btn ty_down" onclick="num_down(this)"><span class="blind">up</span></button>
+                                                        <input type="number" class="f_input taC ty_xsmall w_40 " value="1">
+                                                        <button type="button" class="num_set_btn ty_up" onclick="num_up(this)"><span class="blind">down</span></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td>내·외측 캘리퍼</td>
+                                                <td>TECHNICAL&TR</td>
+                                                <td>200 (0.01) mm</td>
+                                                <td>
+                                                    <div class="num_set">
+                                                        <button type="button" class="num_set_btn ty_down" onclick="num_down(this)"><span class="blind">up</span></button>
+                                                        <input type="number" class="f_input taC ty_xsmall w_40 " value="1">
+                                                        <button type="button" class="num_set_btn ty_up" onclick="num_up(this)"><span class="blind">down</span></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td>내·외측 캘리퍼</td>
+                                                <td>TECHNICAL&TR</td>
+                                                <td>200 (0.01) mm</td>
+                                                <td>
+                                                    <div class="num_set">
+                                                        <button type="button" class="num_set_btn ty_down" onclick="num_down(this)"><span class="blind">up</span></button>
+                                                        <input type="number" class="f_input taC ty_xsmall w_40 " value="1">
+                                                        <button type="button" class="num_set_btn ty_up" onclick="num_up(this)"><span class="blind">down</span></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td>내·외측 캘리퍼</td>
+                                                <td>TECHNICAL&TR</td>
+                                                <td>200 (0.01) mm</td>
+                                                <td>
+                                                    <div class="num_set">
+                                                        <button type="button" class="num_set_btn ty_down" onclick="num_down(this)"><span class="blind">up</span></button>
+                                                        <input type="number" class="f_input taC ty_xsmall w_40 " value="1">
+                                                        <button type="button" class="num_set_btn ty_up" onclick="num_up(this)"><span class="blind">down</span></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td>내·외측 캘리퍼</td>
+                                                <td>TECHNICAL&TR</td>
+                                                <td>200 (0.01) mm</td>
+                                                <td>
+                                                    <div class="num_set">
+                                                        <button type="button" class="num_set_btn ty_down" onclick="num_down(this)"><span class="blind">up</span></button>
+                                                        <input type="number" class="f_input taC ty_xsmall w_40 " value="1">
+                                                        <button type="button" class="num_set_btn ty_up" onclick="num_up(this)"><span class="blind">down</span></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td>내·외측 캘리퍼</td>
+                                                <td>TECHNICAL&TR</td>
+                                                <td>200 (0.01) mm</td>
+                                                <td>
+                                                    <div class="num_set">
+                                                        <button type="button" class="num_set_btn ty_down" onclick="num_down(this)"><span class="blind">up</span></button>
+                                                        <input type="number" class="f_input taC ty_xsmall w_40 " value="1">
+                                                        <button type="button" class="num_set_btn ty_up" onclick="num_up(this)"><span class="blind">down</span></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5">
+                                                    <div class="no_result_box">
+                                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                                        <p class="mt10">계측기를 검색 해주세요.</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="paging_wrap mt20">
+                                    <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
+                                    <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
+                                    <ul class="paging_list">
+                                        <li><span class="paging_btn current">1</span></li>
+                                        <li><a href="" class="paging_btn">2</a></li>
+                                        <li><a href="" class="paging_btn">3</a></li>
+                                        <li><a href="" class="paging_btn">4</a></li>
+                                        <li><a href="" class="paging_btn">5</a></li>
+                                    </ul>
+                                    <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
+                                    <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
+                                </div>
+                            </div>
+                            <div class="tbl_wrap _right ">
+                                <div class="sub_tit2">
+                                    <h2 class="tit4"><b>2. 선택 계측기 :</b> 1,000건</h2>
+                                    
+                                </div>
+                                <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
+                                    <table class="h_tbl">
+                                        <colgroup>
+                                            <col>
+                                            <col> 
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th class="th_fixed">계측기명</th>
+                                                <th class="th_fixed">제조사</th>
+                                                <th class="th_fixed">형식</th>
+                                                <th class="th_fixed">기기번호</th>
+                                                <th class="th_fixed">관리번호</th>
+                                                <th class="th_fixed">교정대상</th>
+                                                <th class="th_fixed">삭제</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>내·외측 캘리퍼</td>
+                                                <td>TECHNICAL&TR</td>
+                                                <td>200 (0.01) mm</td>
+                                                <td><input type="text" class="f_input ty_xsmall w_80"></td>
+                                                <td><input type="text" class="f_input ty_xsmall w_80"></td>
+                                                <td>
+                                                    <select name="" id="" class="f_select ty_xsmall w_80">
+                                                        <option value="" selected disabled>선택</option>
+                                                        <option value="">교정대상</option>
+                                                        <option value="">교정제외</option>
+                                                        <option value="">자체교정</option>
+                                                    </select>
+                                                </td>
+                                                <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>내·외측 캘리퍼</td>
+                                                <td>TECHNICAL&TR</td>
+                                                <td>200 (0.01) mm</td>
+                                                <td><input type="text" class="f_input ty_xsmall w_80"></td>
+                                                <td><input type="text" class="f_input ty_xsmall w_80"></td>
+                                                <td>
+                                                    <select name="" id="" class="f_select ty_xsmall w_80">
+                                                        <option value="" selected disabled>선택</option>
+                                                        <option value="">교정대상</option>
+                                                        <option value="">교정제외</option>
+                                                        <option value="">자체교정</option>
+                                                    </select>
+                                                </td>
+                                                <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>내·외측 캘리퍼</td>
+                                                <td>TECHNICAL&TR</td>
+                                                <td>200 (0.01) mm</td>
+                                                <td><input type="text" class="f_input ty_xsmall w_80"></td>
+                                                <td><input type="text" class="f_input ty_xsmall w_80"></td>
+                                                <td>
+                                                    <select name="" id="" class="f_select ty_xsmall w_80">
+                                                        <option value="" selected disabled>선택</option>
+                                                        <option value="">교정대상</option>
+                                                        <option value="">교정제외</option>
+                                                        <option value="">자체교정</option>
+                                                    </select>
+                                                </td>
+                                                <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>내·외측 캘리퍼</td>
+                                                <td>TECHNICAL&TR</td>
+                                                <td>200 (0.01) mm</td>
+                                                <td><input type="text" class="f_input ty_xsmall w_80"></td>
+                                                <td><input type="text" class="f_input ty_xsmall w_80"></td>
+                                                <td>
+                                                    <select name="" id="" class="f_select ty_xsmall w_80">
+                                                        <option value="" selected disabled>선택</option>
+                                                        <option value="">교정대상</option>
+                                                        <option value="">교정제외</option>
+                                                        <option value="">자체교정</option>
+                                                    </select>
+                                                </td>
+                                                <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>내·외측 캘리퍼</td>
+                                                <td>TECHNICAL&TR</td>
+                                                <td>200 (0.01) mm</td>
+                                                <td><input type="text" class="f_input ty_xsmall w_80"></td>
+                                                <td><input type="text" class="f_input ty_xsmall w_80"></td>
+                                                <td>
+                                                    <select name="" id="" class="f_select ty_xsmall w_80">
+                                                        <option value="" selected disabled>선택</option>
+                                                        <option value="">교정대상</option>
+                                                        <option value="">교정제외</option>
+                                                        <option value="">자체교정</option>
+                                                    </select>
+                                                </td>
+                                                <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>내·외측 캘리퍼</td>
+                                                <td>TECHNICAL&TR</td>
+                                                <td>200 (0.01) mm</td>
+                                                <td><input type="text" class="f_input ty_xsmall w_80"></td>
+                                                <td><input type="text" class="f_input ty_xsmall w_80"></td>
+                                                <td>
+                                                    <select name="" id="" class="f_select ty_xsmall w_80">
+                                                        <option value="" selected disabled>선택</option>
+                                                        <option value="">교정대상</option>
+                                                        <option value="">교정제외</option>
+                                                        <option value="">자체교정</option>
+                                                    </select>
+                                                </td>
+                                                <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="7">
+                                                    <div class="no_result_box">
+                                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                                        <p class="mt10">계측기를 선택 해주세요.</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="btn_set taC mt20">
+                                    <input type="submit" class="f_btn ty_mid _key w_100" value="계측기 등록">
+                                </div>
+                            </div>
+                        </div>  
+                        
+                    </form>
+                </section>
+            </div>
+        </main>
+        <div class="layer_popup pop_equipment_add" onclick="close_popup(this)">
+            <div class="layer_popup_inner">
+                <div class="layer_popup_cont">
+                    <form action="">
+                        <button type="button" class="close_popup" onclick="close_popup(this)">
+                            <span class="blind">팝업 닫기</span>
+                        </button>
+                        <div class="sub_tit">
+                            <h1 class="tit1">우리 장비 등록</h1>
+                        </div>
+                        <section class="sec">
+                            <div class="eq_detail_top">
+                                <div class="img_box ty_eq">
+                                    <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
+                                    <!--[D] 이미지 첨부 전 -->
+                                    <label for="upload_eq_img" class="btn_img_upluad">
+                                        <i class="fa-solid fa-image"></i>
+                                        <p>사진 첨부하기 (260 x 180)</p>
+                                    </label>
+                                    <!--// [D] 이미지 첨부 전 -->
+                                </div>
+                                <div class="v_tbl_wrap  ml10">
+                                    <table class="v_tbl ty_big">
+                                        <colgroup>
+                                            <col style="width: 160px;">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>계측기명</th>
+                                                <td>
+                                                    <input type="text" class="f_input ty_mid w_300" placeholder="계측기명을 입력해주세요.">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>제조사</th>
+                                                <td>
+                                                    <input type="text" class="f_input ty_mid w_300" placeholder="제조사를 입력해주세요.">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>형식</th>
+                                                <td>
+                                                    <input type="text" class="f_input ty_mid w_300" placeholder="형식 입력해주세요.">
+                                                </td>
+                                            </tr>  
+                                        </tbody>
+                                    </table> 
+                                </div>
+                            </div>
+                        </section>
+                        <section class="sec mt20">
+                            <div class="eq_detail_top">
+                                <div class="img_box ty_eq">
+                                    <input type="file" id="upload_eq_img" class="input_file" accept="image/*">
+                                    <div class="img_box_edit">
+                                        <label for="upload_eq_img" class="img_box_edit_btn"><i class="fa-solid fa-rotate"></i><span class="blind">수정</span></label>
+                                        <button type="button" class="img_box_edit_btn"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button>
+                                    </div>
+                                    <img src="https://picsum.photos/260/180" alt="">
+                                </div>
+                                <div class="v_tbl_wrap  ml10">
+                                    <table class="v_tbl ty_big">
+                                        <colgroup>
+                                            <col style="width: 160px;">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>계측기명</th>
+                                                <td>
+                                                    <input type="text" class="f_input ty_mid w_300" placeholder="계측기명을 입력해주세요.">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>제조사</th>
+                                                <td>
+                                                    <input type="text" class="f_input ty_mid w_300" placeholder="제조사를 입력해주세요.">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>형식</th>
+                                                <td>
+                                                    <input type="text" class="f_input ty_mid w_300" placeholder="형식 입력해주세요.">
+                                                </td>
+                                            </tr>  
+                                        </tbody>
+                                    </table> 
+                                </div>
+                            </div>
+                        </section>
+                        <section class="sec mt20">
+                            <div class="v_tbl_wrap ">
+                                <table class="v_tbl ty_big">
+                                    <tbody>
+                                        <colgroup>
+                                            <col style="width: 160px;">
+                                            <col>
+                                            <col style="width: 160px;">
+                                            <col>                          
+                                        </colgroup>
+                                        <tr>
+                                            <th>기기번호</th>
+                                            <td><input type="text" class="f_input ty_mid w_200" placeholder="기기번호를 입력해주세요."></td>
+                                            <th>관리번호</th>
+                                            <td><input type="text" class="f_input ty_mid w_200" placeholder="관리번호를 입력해주세요."></td>
+                                        </tr>
+                                        <tr>
+                                            <th>구매일자</th>
+                                            <td><input type="text" class="f_input ty_mid inp_date w_200" readonly></td>
+                                            <th>구매금액</th>
+                                            <td><input type="number" class="f_input ty_mid w_200" placeholder="숫자만 입력해주세요."></td>
+                                        </tr>
+                                        <tr>
+                                            <th>교정대상</th>
+                                            <td>
+                                                <select name="" id="" class="f_select ty_mid w_200">
+                                                    <option value="">선택</option>
+                                                    <option value="">교정대상</option>
+                                                    <option value="">교정제외</option>
+                                                    <option value="">자체교정</option>
+                                                </select>
+                                            </td>
+                                            <th>교정대상</th>
+                                            <td>
+                                                <select name="" id="" class="f_select ty_mid w_200">
+                                                    <option value="">선택</option>
+                                                    <option value="">6개월</option>
+                                                    <option value="">1년</option>
+                                                    <option value="">1년 6개월</option>
+                                                    <option value="">2년</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>교정일자 및 결과</th>
+                                            <td colspan="3">
+                                                <div class="cal_history_item d_flex _gap10">
+                                                    <input type="text" class="f_input ty_mid inp_date w_200" readonly>
+                                                    <select name="" id="" class="f_select ty_mid w_200">
+                                                        <option value="">선택</option>
+                                                        <option value="">정상</option>
+                                                        <option value="">불량</option>
+                                                        <option value="">불가</option>
+                                                        <option value="">수리</option>
+                                                        <option value="">기타</option>
+                                                    </select>
+                                                    <button type="button" class="btn_add"><span class="blind">추가</span></button>
+                                                </div>
+                                                <div class="cal_history_item d_flex _gap10">
+                                                    <input type="text" class="f_input ty_mid inp_date w_200" readonly>
+                                                    <select name="" id="" class="f_select ty_mid w_200">
+                                                        <option value="">선택</option>
+                                                        <option value="">정상</option>
+                                                        <option value="">불량</option>
+                                                        <option value="">불가</option>
+                                                        <option value="">수리</option>
+                                                        <option value="">기타</option>
+                                                    </select>
+                                                    <button type="button" class="btn_del"><span class="blind">추가</span></button>
+                                                </div>
+                                                <div class="cal_history_item d_flex _gap10">
+                                                    <input type="text" class="f_input ty_mid inp_date w_200" readonly>
+                                                    <select name="" id="" class="f_select ty_mid w_200">
+                                                        <option value="">선택</option>
+                                                        <option value="">정상</option>
+                                                        <option value="">불량</option>
+                                                        <option value="">불가</option>
+                                                        <option value="">수리</option>
+                                                        <option value="">기타</option>
+                                                    </select>
+                                                    <button type="button" class="btn_del"><span class="blind">추가</span></button>
+                                                </div>
+                                            </td>
+                                        </tr>    
+                                        <tr>
+                                            <th>메모</th>
+                                            <td colspan="3">
+                                                <textarea name="" id="" class="f_ta ty_mid"></textarea>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table> 
+                            </div>
+                        </section>
+                        <div class="btn_set taC mt30">
+                            <input type="submit" value="등록" class="f_btn ty_mid _key w_100">
+                            <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="reset(this)">초기화 <i class="fa-solid fa-arrows-rotate"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--//container-->
+        <!--footer-->
+        <footer class="footer">
+            <!-- <div class="footer_top">
+                <div class="inner">
+                    <ul class="footer_top_nav ">
+                        <li><a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a></li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="footer_logo">
+                <img src="../assets/images/common/logo_footer.svg" alt="KIC 코리아인스트루먼트(주)">
+            </div>
+            <div class="footer_info">
+                <ul class="footer_info_list">
+                    <li>코리아인스트루먼트(주)</li>
+                    <li><span class="bar"></span>사업자등록번호 : 101-81-45861</li>
+                    <li><span class="bar"></span>대표이사 : 정재호</li>
+                </ul>
+                <p class="copy">Copyright@KIC, Korea Instrument All Rights Reserved.</p>
+                <div class="contact">
+                    <b><i class="fa-solid fa-phone"></i> CONTACT US</b> 
+                    <span class="bar"></span>
+                    <span>1600 - 4245</span>
+                </div>
+            </div>
+            <div class="footer_right">
+                <div class="footer_right_btns">
+                    <a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a>
+                    <span class="bar"></span>
+                    <a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a>
+                </div>
+                <div class="footer_right_branch">
+                    <button class="btn_trigger">코리아인스트루먼트(주) 지점안내</button>
+                    <ul class="branch_list">
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=0" target="_blank">코리아인스트루먼트(주) 서울본사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=1" target="_blank">코리아인스트루먼트(주) 부산지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=2" target="_blank">코리아인스트루먼트(주) 대전지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=3" target="_blank">코리아인스트루먼트(주) 가평지안</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!--//footer-->
+    </div>
+    
+</body>
+</html>

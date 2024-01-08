@@ -1,0 +1,32 @@
+.tabs {
+    display: flex;
+    border-bottom: 1px solid $c_line;
+    border-left: 1px solid $c_line;
+    margin-bottom: 20px;
+    &_item {
+        border-right: 1px solid $c_line;
+        border-top: 1px solid $c_line;
+        flex: 0.1;
+        &.on {
+            background-color: $c_key;
+            color: #fff;
+            font-weight: bold;
+        }
+    }
+    &_btn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 20px;
+        height: 36px;
+        font-size: 14px;
+    }
+    &_cont {
+        display: none;
+        &.on {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Generator" content="KIC">
+    <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Description" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <title>교정마법사 CWIZ - CALIBRATION WIZARD</title>
+    <script src="https://kit.fontawesome.com/aa5544e91b.js" crossorigin="anonymous" ></script>
+    <script src="../assets/js/jquery-3.1.1.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/datepicker.css">
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+</head>
+<body>
+    <div id="skip-nav">
+        <a href="#container"></a>
+    </div>
+    <main class="container">
+        <div class="join_info">
+            <div class="vid_bg">
+                <video class="vid_box" autoplay muted loop>
+                    <source src="../assets/images/common/sample_vid3.mp4" type="video/mp4" />
+                    Your browser is not supported!
+                </video>
+            </div>
+            <div class="join_info_inner">
+                <div class="join_info_tit">
+                    <h1 class="tit"><img src="../assets/images/common/logo.png" alt=""> 서비스 안내</h1>
+                    <p class="desc">C-Wiz 서비스 신청 절차에 대해 안내 드립니다.</p>
+                </div>
+                <ul class="join_info_step">
+                    <li class="join_info_step_item">
+                        <div class="ico_box fc_key">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-chevron-right i-arrow"></i>
+                        </div>
+                        <div class="txt_box">신청서 작성</div>
+                    </li>
+                    <li class="join_info_step_item">
+                        <div class="ico_box fc_key">
+                            <i class="fa-solid fa-list-check"></i>
+                            <i class="fa-solid fa-chevron-right i-arrow"></i>
+                        </div>
+                        <div class="txt_box">신청서 검토</div>
+                    </li>
+                    <li class="join_info_step_item">
+                        <div class="ico_box fc_key"><i class="fa-solid fa-desktop"></i></div>
+                        <div class="txt_box">서비스 오픈</div>
+                    </li>
+                </ul>
+                <div class="join_info_txt mt60">
+                    <p><i class="fa-solid fa-star fc_key"></i>  서비스 신청 시 사업자등록증 첨부는 필수입니다.</p>
+                    <p><i class="fa-solid fa-star fc_key"></i>  회원 승인 이후 서비스 이용이 가능합니다.</p>
+                </div>
+                <div class="join_info_btn ">
+                    <a href="join_step1.html" class="f_btn ty_big _key w100">C-WIZ 신청하기</a>
+                </div>
+                <div class="join_info_bot">
+                    <div class="join_info_cs">
+                        <strong class="tit">상담문의</strong>
+                        <div class="txt_box">
+                            <p><i class="fa-solid fa-phone mr6"></i>1600-4245</p>
+                            <p><i class="fa-solid fa-clock mr6"></i>오전 08:30 ~ 오후 05:30 (토, 일, 공휴일 제외)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--footer-->
+        <footer class="footer">
+            <!-- <div class="footer_top">
+                <div class="inner">
+                    <ul class="footer_top_nav ">
+                        <li><a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a></li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="footer_logo">
+                <img src="../assets/images/common/logo_footer.svg" alt="KIC 코리아인스트루먼트(주)">
+            </div>
+            <div class="footer_info">
+                <ul class="footer_info_list">
+                    <li>코리아인스트루먼트(주)</li>
+                    <li><span class="bar"></span>사업자등록번호 : 101-81-45861</li>
+                    <li><span class="bar"></span>대표이사 : 정재호</li>
+                </ul>
+                <p class="copy">Copyright@KIC, Korea Instrument All Rights Reserved.</p>
+                <div class="contact">
+                    <b><i class="fa-solid fa-phone"></i> CONTACT US</b> 
+                    <span class="bar"></span>
+                    <span>1600 - 4245</span>
+                </div>
+            </div>
+            <div class="footer_right">
+                <div class="footer_right_btns">
+                    <a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a>
+                    <span class="bar"></span>
+                    <a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a>
+                </div>
+                <div class="footer_right_branch">
+                    <button class="btn_trigger">코리아인스트루먼트(주) 지점안내</button>
+                    <ul class="branch_list">
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=0" target="_blank">코리아인스트루먼트(주) 서울본사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=1" target="_blank">코리아인스트루먼트(주) 부산지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=2" target="_blank">코리아인스트루먼트(주) 대전지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=3" target="_blank">코리아인스트루먼트(주) 가평지안</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!--//footer-->
+</body>
+</html>
