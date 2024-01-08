@@ -20,13 +20,13 @@
   color: #fff;
 }
 .f_btn._key:hover {
-  background-color: #d66600;
-  border-color: #d66600;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  background-color: #f07300;
+  border-color: #f07300;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 .f_btn._key:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._key_ol {
   transition: all 0.1s ease-in-out;
@@ -43,8 +43,8 @@
   color: #fff;
 }
 .f_btn._key_ol:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._key_op {
   transition: all 0.1s ease-in-out;
@@ -53,11 +53,11 @@
   color: #FF7A00;
 }
 .f_btn._key_op:hover {
-  background-color: rgba(255, 122, 0, 0.3);
+  background-color: rgba(255, 122, 0, 0.2);
 }
 .f_btn._key_op:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 
 .f_tag._key {
@@ -95,13 +95,13 @@
   color: #fff;
 }
 .f_btn._key2:hover {
-  background-color: #ab6625;
-  border-color: #ab6625;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  background-color: #c07329;
+  border-color: #c07329;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 .f_btn._key2:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._key2_ol {
   transition: all 0.1s ease-in-out;
@@ -118,8 +118,8 @@
   color: #fff;
 }
 .f_btn._key2_ol:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._key2_op {
   transition: all 0.1s ease-in-out;
@@ -128,11 +128,11 @@
   color: #cd7a2c;
 }
 .f_btn._key2_op:hover {
-  background-color: rgba(205, 122, 44, 0.3);
+  background-color: rgba(205, 122, 44, 0.2);
 }
 .f_btn._key2_op:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 
 .f_tag._key2 {
@@ -170,13 +170,13 @@
   color: #fff;
 }
 .f_btn._key3:hover {
-  background-color: #e98425;
-  border-color: #e98425;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  background-color: #ec913c;
+  border-color: #ec913c;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 .f_btn._key3:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._key3_ol {
   transition: all 0.1s ease-in-out;
@@ -193,8 +193,8 @@
   color: #fff;
 }
 .f_btn._key3_ol:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._key3_op {
   transition: all 0.1s ease-in-out;
@@ -203,11 +203,11 @@
   color: #ed994a;
 }
 .f_btn._key3_op:hover {
-  background-color: rgba(237, 153, 74, 0.3);
+  background-color: rgba(237, 153, 74, 0.2);
 }
 .f_btn._key3_op:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 
 .f_tag._key3 {
@@ -245,13 +245,13 @@
   color: #fff;
 }
 .f_btn._key4:hover {
-  background-color: #252525;
-  border-color: #252525;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  background-color: #313131;
+  border-color: #313131;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 .f_btn._key4:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._key4_ol {
   transition: all 0.1s ease-in-out;
@@ -268,8 +268,8 @@
   color: #fff;
 }
 .f_btn._key4_ol:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._key4_op {
   transition: all 0.1s ease-in-out;
@@ -278,11 +278,11 @@
   color: #393939;
 }
 .f_btn._key4_op:hover {
-  background-color: rgba(57, 57, 57, 0.3);
+  background-color: rgba(57, 57, 57, 0.2);
 }
 .f_btn._key4_op:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 
 .f_tag._key4 {
@@ -320,13 +320,13 @@
   color: #fff;
 }
 .f_btn._key5:hover {
-  background-color: #969696;
-  border-color: #969696;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  background-color: #a2a2a2;
+  border-color: #a2a2a2;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 .f_btn._key5:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._key5_ol {
   transition: all 0.1s ease-in-out;
@@ -343,8 +343,8 @@
   color: #fff;
 }
 .f_btn._key5_ol:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._key5_op {
   transition: all 0.1s ease-in-out;
@@ -353,11 +353,11 @@
   color: #aaa;
 }
 .f_btn._key5_op:hover {
-  background-color: rgba(170, 170, 170, 0.3);
+  background-color: rgba(170, 170, 170, 0.2);
 }
 .f_btn._key5_op:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 
 .f_tag._key5 {
@@ -395,13 +395,13 @@
   color: #fff;
 }
 .f_btn._key6:hover {
-  background-color: #dbdbdb;
-  border-color: #dbdbdb;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  background-color: #e7e7e7;
+  border-color: #e7e7e7;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 .f_btn._key6:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._key6_ol {
   transition: all 0.1s ease-in-out;
@@ -418,8 +418,8 @@
   color: #fff;
 }
 .f_btn._key6_ol:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._key6_op {
   transition: all 0.1s ease-in-out;
@@ -428,11 +428,11 @@
   color: #EFEFEF;
 }
 .f_btn._key6_op:hover {
-  background-color: rgba(239, 239, 239, 0.3);
+  background-color: rgba(239, 239, 239, 0.2);
 }
 .f_btn._key6_op:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 
 .f_tag._key6 {
@@ -470,13 +470,13 @@
   color: #fff;
 }
 .f_btn._line:hover {
-  background-color: #c9c9c9;
-  border-color: #c9c9c9;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  background-color: #d5d5d5;
+  border-color: #d5d5d5;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 .f_btn._line:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._line_ol {
   transition: all 0.1s ease-in-out;
@@ -493,8 +493,8 @@
   color: #fff;
 }
 .f_btn._line_ol:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._line_op {
   transition: all 0.1s ease-in-out;
@@ -503,11 +503,11 @@
   color: #DDDDDD;
 }
 .f_btn._line_op:hover {
-  background-color: rgba(221, 221, 221, 0.3);
+  background-color: rgba(221, 221, 221, 0.2);
 }
 .f_btn._line_op:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 
 .f_tag._line {
@@ -545,13 +545,13 @@
   color: #fff;
 }
 .f_btn._bg:hover {
-  background-color: #e5e5e5;
-  border-color: #e5e5e5;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  background-color: #f1f1f1;
+  border-color: #f1f1f1;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 .f_btn._bg:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._bg_ol {
   transition: all 0.1s ease-in-out;
@@ -568,8 +568,8 @@
   color: #fff;
 }
 .f_btn._bg_ol:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._bg_op {
   transition: all 0.1s ease-in-out;
@@ -578,11 +578,11 @@
   color: #F9F9F9;
 }
 .f_btn._bg_op:hover {
-  background-color: rgba(249, 249, 249, 0.3);
+  background-color: rgba(249, 249, 249, 0.2);
 }
 .f_btn._bg_op:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 
 .f_tag._bg {
@@ -620,13 +620,13 @@
   color: #fff;
 }
 .f_btn._bg_grey:hover {
-  background-color: #dbdbdb;
-  border-color: #dbdbdb;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  background-color: #e7e7e7;
+  border-color: #e7e7e7;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 .f_btn._bg_grey:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._bg_grey_ol {
   transition: all 0.1s ease-in-out;
@@ -643,8 +643,8 @@
   color: #fff;
 }
 .f_btn._bg_grey_ol:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._bg_grey_op {
   transition: all 0.1s ease-in-out;
@@ -653,11 +653,11 @@
   color: #EFEFEF;
 }
 .f_btn._bg_grey_op:hover {
-  background-color: rgba(239, 239, 239, 0.3);
+  background-color: rgba(239, 239, 239, 0.2);
 }
 .f_btn._bg_grey_op:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 
 .f_tag._bg_grey {
@@ -695,13 +695,13 @@
   color: #fff;
 }
 .f_btn._blue:hover {
-  background-color: #0070d6;
-  border-color: #0070d6;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  background-color: #007df0;
+  border-color: #007df0;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 .f_btn._blue:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._blue_ol {
   transition: all 0.1s ease-in-out;
@@ -718,8 +718,8 @@
   color: #fff;
 }
 .f_btn._blue_ol:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._blue_op {
   transition: all 0.1s ease-in-out;
@@ -728,11 +728,11 @@
   color: #0085FF;
 }
 .f_btn._blue_op:hover {
-  background-color: rgba(0, 133, 255, 0.3);
+  background-color: rgba(0, 133, 255, 0.2);
 }
 .f_btn._blue_op:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 
 .f_tag._blue {
@@ -770,13 +770,13 @@
   color: #fff;
 }
 .f_btn._navy:hover {
-  background-color: #004584;
-  border-color: #004584;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  background-color: #00529e;
+  border-color: #00529e;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 .f_btn._navy:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._navy_ol {
   transition: all 0.1s ease-in-out;
@@ -793,8 +793,8 @@
   color: #fff;
 }
 .f_btn._navy_ol:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._navy_op {
   transition: all 0.1s ease-in-out;
@@ -803,11 +803,11 @@
   color: #005AAD;
 }
 .f_btn._navy_op:hover {
-  background-color: rgba(0, 90, 173, 0.3);
+  background-color: rgba(0, 90, 173, 0.2);
 }
 .f_btn._navy_op:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 
 .f_tag._navy {
@@ -845,13 +845,13 @@
   color: #fff;
 }
 .f_btn._sky:hover {
-  background-color: #8aa2e7;
-  border-color: #8aa2e7;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  background-color: #9fb3eb;
+  border-color: #9fb3eb;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 .f_btn._sky:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._sky_ol {
   transition: all 0.1s ease-in-out;
@@ -868,8 +868,8 @@
   color: #fff;
 }
 .f_btn._sky_ol:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._sky_op {
   transition: all 0.1s ease-in-out;
@@ -878,11 +878,11 @@
   color: #acbdee;
 }
 .f_btn._sky_op:hover {
-  background-color: rgba(172, 189, 238, 0.3);
+  background-color: rgba(172, 189, 238, 0.2);
 }
 .f_btn._sky_op:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 
 .f_tag._sky {
@@ -920,13 +920,13 @@
   color: #fff;
 }
 .f_btn._red:hover {
-  background-color: #ff3333;
-  border-color: #ff3333;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  background-color: #ff4d4d;
+  border-color: #ff4d4d;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 .f_btn._red:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._red_ol {
   transition: all 0.1s ease-in-out;
@@ -943,8 +943,8 @@
   color: #fff;
 }
 .f_btn._red_ol:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._red_op {
   transition: all 0.1s ease-in-out;
@@ -953,11 +953,11 @@
   color: #FF5C5C;
 }
 .f_btn._red_op:hover {
-  background-color: rgba(255, 92, 92, 0.3);
+  background-color: rgba(255, 92, 92, 0.2);
 }
 .f_btn._red_op:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 
 .f_tag._red {
@@ -995,13 +995,13 @@
   color: #fff;
 }
 .f_btn._lblue:hover {
-  background-color: #3bb1fb;
-  border-color: #3bb1fb;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  background-color: #54bbfc;
+  border-color: #54bbfc;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 .f_btn._lblue:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._lblue_ol {
   transition: all 0.1s ease-in-out;
@@ -1018,8 +1018,8 @@
   color: #fff;
 }
 .f_btn._lblue_ol:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._lblue_op {
   transition: all 0.1s ease-in-out;
@@ -1028,11 +1028,11 @@
   color: #63c1fc;
 }
 .f_btn._lblue_op:hover {
-  background-color: rgba(99, 193, 252, 0.3);
+  background-color: rgba(99, 193, 252, 0.2);
 }
 .f_btn._lblue_op:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 
 .f_tag._lblue {
@@ -1070,13 +1070,13 @@
   color: #fff;
 }
 .f_btn._orange:hover {
-  background-color: #d66600;
-  border-color: #d66600;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  background-color: #f07300;
+  border-color: #f07300;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 .f_btn._orange:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._orange_ol {
   transition: all 0.1s ease-in-out;
@@ -1093,8 +1093,8 @@
   color: #fff;
 }
 .f_btn._orange_ol:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._orange_op {
   transition: all 0.1s ease-in-out;
@@ -1103,11 +1103,11 @@
   color: #FF7A00;
 }
 .f_btn._orange_op:hover {
-  background-color: rgba(255, 122, 0, 0.3);
+  background-color: rgba(255, 122, 0, 0.2);
 }
 .f_btn._orange_op:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 
 .f_tag._orange {
@@ -1145,13 +1145,13 @@
   color: #fff;
 }
 .f_btn._green:hover {
-  background-color: #195434;
-  border-color: #195434;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  background-color: #1f6840;
+  border-color: #1f6840;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 .f_btn._green:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._green_ol {
   transition: all 0.1s ease-in-out;
@@ -1168,8 +1168,8 @@
   color: #fff;
 }
 .f_btn._green_ol:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._green_op {
   transition: all 0.1s ease-in-out;
@@ -1178,11 +1178,11 @@
   color: #227447;
 }
 .f_btn._green_op:hover {
-  background-color: rgba(34, 116, 71, 0.3);
+  background-color: rgba(34, 116, 71, 0.2);
 }
 .f_btn._green_op:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 
 .f_tag._green {
@@ -1220,13 +1220,13 @@
   color: #fff;
 }
 .f_btn._yellow:hover {
-  background-color: #dda600;
-  border-color: #dda600;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  background-color: #f7b900;
+  border-color: #f7b900;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 .f_btn._yellow:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._yellow_ol {
   transition: all 0.1s ease-in-out;
@@ -1243,8 +1243,8 @@
   color: #fff;
 }
 .f_btn._yellow_ol:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._yellow_op {
   transition: all 0.1s ease-in-out;
@@ -1253,11 +1253,11 @@
   color: #ffc107;
 }
 .f_btn._yellow_op:hover {
-  background-color: rgba(255, 193, 7, 0.3);
+  background-color: rgba(255, 193, 7, 0.2);
 }
 .f_btn._yellow_op:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 
 .f_tag._yellow {
@@ -1295,13 +1295,13 @@
   color: #fff;
 }
 .f_btn._purple:hover {
-  background-color: #5a0dff;
-  border-color: #5a0dff;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  background-color: #6c27ff;
+  border-color: #6c27ff;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 .f_btn._purple:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._purple_ol {
   transition: all 0.1s ease-in-out;
@@ -1318,8 +1318,8 @@
   color: #fff;
 }
 .f_btn._purple_ol:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._purple_op {
   transition: all 0.1s ease-in-out;
@@ -1328,11 +1328,11 @@
   color: #7636FF;
 }
 .f_btn._purple_op:hover {
-  background-color: rgba(118, 54, 255, 0.3);
+  background-color: rgba(118, 54, 255, 0.2);
 }
 .f_btn._purple_op:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 
 .f_tag._purple {
@@ -1370,13 +1370,13 @@
   color: #fff;
 }
 .f_btn._lightGrey:hover {
-  background-color: #969696;
-  border-color: #969696;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  background-color: #a2a2a2;
+  border-color: #a2a2a2;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 .f_btn._lightGrey:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._lightGrey_ol {
   transition: all 0.1s ease-in-out;
@@ -1393,8 +1393,8 @@
   color: #fff;
 }
 .f_btn._lightGrey_ol:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._lightGrey_op {
   transition: all 0.1s ease-in-out;
@@ -1403,11 +1403,11 @@
   color: #aaa;
 }
 .f_btn._lightGrey_op:hover {
-  background-color: rgba(170, 170, 170, 0.3);
+  background-color: rgba(170, 170, 170, 0.2);
 }
 .f_btn._lightGrey_op:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 
 .f_tag._lightGrey {
@@ -1445,13 +1445,13 @@
   color: #fff;
 }
 .f_btn._solidGrey:hover {
-  background-color: #252525;
-  border-color: #252525;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  background-color: #313131;
+  border-color: #313131;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 .f_btn._solidGrey:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._solidGrey_ol {
   transition: all 0.1s ease-in-out;
@@ -1468,8 +1468,8 @@
   color: #fff;
 }
 .f_btn._solidGrey_ol:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 .f_btn._solidGrey_op {
   transition: all 0.1s ease-in-out;
@@ -1478,11 +1478,11 @@
   color: #393939;
 }
 .f_btn._solidGrey_op:hover {
-  background-color: rgba(57, 57, 57, 0.3);
+  background-color: rgba(57, 57, 57, 0.2);
 }
 .f_btn._solidGrey_op:active {
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-  transform: scale(0.97);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
 }
 
 .f_tag._solidGrey {
@@ -7675,7 +7675,7 @@ tr:last-child .status_box_date {
   background-position: center center;
   background-size: cover;
   opacity: 0.6;
-  filter: blur(1px);
+  filter: blur(3px);
 }
 .login_box {
   position: relative;
@@ -7852,6 +7852,7 @@ tr:last-child .status_box_date {
 
 .join_info {
   color: #222;
+  background-color: #666;
   padding: 80px 0;
 }
 .join_info .vid_bg {
@@ -7860,12 +7861,12 @@ tr:last-child .status_box_date {
   width: 100%;
   left: 0;
   top: 0;
-}
-.join_info .vid_bg .vid_box {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background-image: url(../images/common/login_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.6;
+  filter: blur(3px);
 }
 .join_info_inner {
   max-width: 700px;
@@ -8138,7 +8139,7 @@ tr:last-child .status_box_date {
   align-items: center;
   justify-content: center;
   position: relative;
-  background-color: #fff;
+  background-color: #666;
   box-sizing: border-box;
   padding: 50px;
 }
@@ -8156,12 +8157,12 @@ tr:last-child .status_box_date {
   width: 100%;
   left: 0;
   top: 0;
-}
-.join_wrap .vid_bg .vid_box {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background-image: url(../images/common/login_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.6;
+  filter: blur(3px);
 }
 .join_box {
   position: relative;

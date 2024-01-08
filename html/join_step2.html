@@ -27,12 +27,7 @@
     </div>
     <main class="container">
 		<div class="join_wrap">
-			<div class="vid_bg">
-                <video class="vid_box" autoplay muted loop>
-                    <source src="../assets/images/common/sample_vid3.mp4" type="video/mp4" />
-                    Your browser is not supported!
-                </video>
-            </div>
+			<div class="vid_bg"></div>
 			<div class="join_box">
                 <div class="join_box_top">
                     <div class="img_box">
@@ -50,49 +45,44 @@
                         <div class="join_form_item">
                             <label class="tit"><i class="ico_required"></i> 사업자번호</label>
                             <div class="b_num_wrap"> 
-                                <input type="text" placeholder="앞 3자리" value="123" class="f_input ty_mid b_num1" maxlength="3" readonly required>
+                                <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="앞 3자리" class="f_input ty_mid b_num1" maxlength="3" required>
                                 <span class="dash">-</span>
-                                <input type="text"  placeholder="중간 2자리" value="55" class="f_input ty_mid b_num2"  maxlength="2" readonly required>
+                                <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="중간 2자리" class="f_input ty_mid b_num2"  maxlength="2" required>
                                 <span class="dash">-</span>
-                                <input type="text" placeholder="마지막 5자리"  value="76578" class="f_input ty_mid b_num3"  maxlength="5" readonly required>
-                            </div>  
-                        </div>
-                        <div class="join_form_item">
-                            <label class="tit"><i class="ico_required"></i> 사업자등록증</label>
-                            <div class="file_wrap">
-                                <div class="file_set">
-                                    <div class="file_box">
-                                        <input type="file" class="f_hidden" onchange="select_file(this)" value="파일경로.파일명" required>
-                                        <input type="text" class="f_input ty_mid" placeholder="PDF 또는 이미지 파일 형태만 첨부 가능합니다." onclick=" open_file(this)" readonly>
-                                        <button type="button" class="btn_del" onclick=" del_file(this)"><span class="blind">파일삭제</span></button>
-                                    </div>
+                                <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="마지막 5자리" class="f_input ty_mid b_num3"  maxlength="5" required>
+                                <button type="button" class="f_btn ty_mid _key w_70">조회</button>
+                            </div>
+
+                            <!-- [D] 사업자등록번호 검색 전-->
+                            <div class="b_num_result mt10">
+                                <div class="no_result_box">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <p class="mt10">사업자 번호 조회 이후 서비스 신청이 가능합니다.</p> 
                                 </div>
                             </div>
-                        </div>
-                        <div class="join_form_item">
-                            <label class="tit"><i class="ico_required"></i> 회사명</label>
-                            <input type="text" class="f_input ty_mid w100" value="코리아인스트루먼트(주)" required readonly>
-                        </div>
-                        <div class="join_form_item">
-                            <label class="tit"><i class="ico_required"></i> 대표자명</label>
-                            <input type="text" class="f_input ty_mid w100" required>
-                        </div>
-                        <div class="join_form_item">
-                            <label class="tit"><i class="ico_required"></i> 주소</label>
-                            <div class="address_set">
-                                <input type="text" name="" placeholder="우편번호" class="f_input ty_mid ty_address_num" readonly="" required>
-                                <button type="button" onclick="" class="f_btn ty_mid _key">우편번호 찾기</button>
+
+                            <!-- [D] 사업자등록번호 검색 결과 X -->
+                            <div class="b_num_result mt10">
+                                <div class="no_result_box">
+                                    <i class="fa-solid fa-face-sad-tear"></i>
+                                    <p class="mt10">가입정보가 없습니다. <br> 해당 사업자 번호로 가입을 진행을 원하시면 다음을 클릭해 주세요.</p> 
+                                </div>
                             </div>
-                            <div class="address_set">
-                                <input type="text" name="" class="f_input ty_mid w100" readonly="" required>
+
+                            <!-- [D] 사업자등록번호 검색 결과 O -->
+                            <div class="b_num_result mt10">
+                                <ul class="b_num_list">
+                                    <li><label class="b_num_label"><input type="radio" name="b_num"><div class="b_num_name">코리아인스투르먼트(주)</div></label></li>
+                                    <li><label class="b_num_label"><input type="radio" name="b_num"><div class="b_num_name">이상한코리아인스투르먼트(주)</div></label></li>
+                                    <li><label class="b_num_label"><input type="radio" name="b_num"><div class="b_num_name">화려한코리아인스투르먼트(주)</div></label></li>
+                                    <li><label class="b_num_label"><input type="radio" name="b_num"><div class="b_num_name">큰일난코리아인스투르먼트(주)</div></label></li>
+                                    <li><label class="b_num_label"><input type="radio" name="b_num"><div class="b_num_name">(주)교정요정</div></label></li>
+                                    <li><label class="b_num_label"><input type="radio" name="b_num"><div class="b_num_name">이상한코리아인스투르먼트(주)</div></label></li>
+                                    <li><label class="b_num_label"><input type="radio" name="b_num"><div class="b_num_name">화려한코리아인스투르먼트(주)</div></label></li>
+                                    <li><label class="b_num_label"><input type="radio" name="b_num"><div class="b_num_name">큰일난코리아인스투르먼트(주)</div></label></li>
+                                    <li><label class="b_num_label"><input type="radio" name="b_num"><div class="b_num_name">(주)교정요정</div></label></li>
+                                </ul>
                             </div>
-                            <div class="address_set">
-                                <input type="text" name="" placeholder="나머지 주소를 입력해주세요." class="f_input ty_mid w100"  required>
-                            </div>
-                        </div>
-                        <div class="join_form_item">
-                            <label class="tit"><i class="ico_required"></i> 회사 전화번호</label>
-                            <input type="tel" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="" class="f_input ty_mid w100" placeholder="&quot;-&quot; 제외하고 숫자만 입력해주세요">
                         </div>
                     </div>
                     <div class="join_form_btns">

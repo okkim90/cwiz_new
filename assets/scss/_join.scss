@@ -2,7 +2,7 @@
     &_info {
         color: #222;
         //background-color: $c_line;
-        //background-color: #fff;
+        background-color: #666;
         // background-color: $c_key;
         // background: $c_key;
         // background: radial-gradient(circle, rgba($c_key,1) 0%, rgb(149, 70, 0) 100%);
@@ -15,11 +15,12 @@
             width: 100%;
             left: 0;
             top: 0;
-            .vid_box {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
+            background-image: url(../images/common/login_bg.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            opacity: 0.6;
+            filter: blur(3px);
         }
         &_inner {
             max-width: 700px;
@@ -308,7 +309,7 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        background-color: #fff;
+        background-color: #666;
         box-sizing: border-box;
         padding: 50px;
         &::before {
@@ -327,11 +328,12 @@
             width: 100%;
             left: 0;
             top: 0;
-            .vid_box {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
+            background-image: url(../images/common/login_bg.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            opacity: 0.6;
+            filter: blur(3px);
         }
         
     }

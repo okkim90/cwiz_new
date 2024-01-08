@@ -51,13 +51,13 @@ $fz: (
     border-color: $bd;
     color: #fff;
     &:hover {
-        background-color: darken( $bg, 8%);
-        border-color: darken($bd, 8%);
-        box-shadow: 0 2px 3px rgba(#000, 0.3);
+        background-color: darken( $bg, 3%);
+        border-color: darken($bd, 3%);
+        box-shadow: 0 2px 3px rgba(#000, 0.2);
     }
     &:active {
-        box-shadow: inset 0 0 4px rgba(#000, 0.3);
-        transform: scale(0.97);
+        box-shadow: inset 0 0 4px rgba(#000, 0.2);
+        transform: scale(0.98);
     }
 }
 
@@ -67,12 +67,12 @@ $fz: (
     border-color: $bd;
     color: $color;
     &:hover {
-        background-color: rgba($color, .3); 
+        background-color: rgba($color, .2); 
         //color: #fff;
     }
     &:active {
-        box-shadow: inset 0 0 4px rgba(#000, 0.3);
-        transform: scale(0.97);
+        box-shadow: inset 0 0 4px rgba(#000, 0.2);
+        transform: scale(0.98);
     }
 }
 
@@ -90,8 +90,8 @@ $fz: (
         color: #fff;
     }
     &:active {
-        box-shadow: inset 0 0 4px rgba(#000, 0.3);
-        transform: scale(0.97);
+        box-shadow: inset 0 0 4px rgba(#000, 0.2);
+        transform: scale(0.98);
     }
 }
 
