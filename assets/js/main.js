@@ -575,3 +575,14 @@ function tabs(target, idx){
         e.classList.remove('on')
     })
 }
+
+
+const ellipsisTooltip = document.querySelectorAll('.t_ellipsis1');
+
+ellipsisTooltip.forEach((e)=>{
+    e.addEventListener('mouseenter',function(){
+        if(e.offsetWidth < e.scrollWidth){
+            e.setAttribute('title',e.textContent);
+        }
+    });
+});
