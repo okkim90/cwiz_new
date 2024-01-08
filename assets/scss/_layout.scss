@@ -554,7 +554,7 @@
                         bottom: 0;
                     }
                     .ico_dep1 {
-                        @for $i from 1 through 6 {
+                        @for $i from 1 through 7 {
                             &.ty_menu#{$i}{
                                 background-image: url(../images/common/ico_menu#{$i}_on.svg);
                             }
@@ -604,7 +604,7 @@
                     overflow: hidden;
                     z-index: -1;
                 }
-                @for $i from 1 through 6 {
+                @for $i from 1 through 7 {
                     &.ty_menu#{$i}{
                         background-image: url(../images/common/ico_menu#{$i}.svg);
                         &::before {

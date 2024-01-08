@@ -4851,6 +4851,9 @@ input::-webkit-search-results-decoration {
 .sidenav .nav_item.on .btn_dep1 .ico_dep1.ty_menu6 {
   background-image: url(../images/common/ico_menu6_on.svg);
 }
+.sidenav .nav_item.on .btn_dep1 .ico_dep1.ty_menu7 {
+  background-image: url(../images/common/ico_menu7_on.svg);
+}
 .sidenav .nav_item.on .btn_dep1::after {
   color: #FF7A00;
   transform: rotate(180deg);
@@ -4927,6 +4930,12 @@ input::-webkit-search-results-decoration {
 }
 .sidenav .nav .btn_dep1 .ico_dep1.ty_menu6::before {
   content: url(../images/common/ico_menu6_on.svg);
+}
+.sidenav .nav .btn_dep1 .ico_dep1.ty_menu7 {
+  background-image: url(../images/common/ico_menu7.svg);
+}
+.sidenav .nav .btn_dep1 .ico_dep1.ty_menu7::before {
+  content: url(../images/common/ico_menu7_on.svg);
 }
 .sidenav .nav .btn_dep1::after {
   transition: all 0.25s ease;
