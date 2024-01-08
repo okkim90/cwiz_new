@@ -577,8 +577,7 @@ function tabs(target, idx){
 }
 
 
-const ellipsisTooltip = document.querySelectorAll('.t_ellipsis1');
-
+const ellipsisTooltip = document.querySelectorAll('.ellipsisTooltip');
 ellipsisTooltip.forEach((e)=>{
     e.addEventListener('mouseenter',function(){
         if(e.offsetWidth < e.scrollWidth){

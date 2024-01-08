@@ -982,7 +982,7 @@
     //@include scrollY;
 }
 
-.t_ellipsis1 {
+.t_ellipsis1, .ellipsisTooltip {
     @include text-hidden-single;
     
 }

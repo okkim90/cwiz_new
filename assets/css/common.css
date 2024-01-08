@@ -5267,7 +5267,7 @@ input::-webkit-search-results-decoration {
   border: 1px solid #DDDDDD;
 }
 
-.t_ellipsis1 {
+.t_ellipsis1, .ellipsisTooltip {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
