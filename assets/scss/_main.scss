@@ -137,6 +137,9 @@
             img {
                 height: 46%;
             }
+            &.ty_greyscale {
+                filter: grayscale(1);
+            }
         }
         .tit {
             font-size: 15px;

@@ -7624,6 +7624,9 @@ tr:last-child .status_box_date {
 .main_count_item .ico_box img {
   height: 46%;
 }
+.main_count_item .ico_box.ty_greyscale {
+  filter: grayscale(1);
+}
 .main_count_item .tit {
   font-size: 15px;
   font-weight: bold;
