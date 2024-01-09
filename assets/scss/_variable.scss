@@ -25,13 +25,13 @@ $colors: (
     _bg_grey: #EFEFEF,
     _blue: #0085FF,
     _navy: #005AAD,
-    _sky: #acbdee,
+    _sky: #a1b9ff,
     _red: #FF5C5C,
     _lblue: #63c1fc,
     _orange: #FF7A00,
-    _green: #227447,
+    _green: #3b855d,
     _yellow: #ffc107,
-    _purple: #7636FF,
+    _purple: #8856f3,
     _lightGrey: #aaa,
     _solidGrey: #393939
 );
@@ -345,6 +345,9 @@ $inner: 1280px;
 }
 .mr_auto {
     margin-right: auto;
+}
+.taL {
+    text-align: left;
 }
 .taC {
     text-align: center;

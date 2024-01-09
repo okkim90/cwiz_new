@@ -834,6 +834,9 @@
     }
     & + .sec {
         margin-top: 0;
+        @at-root .container & {
+            margin-top: 0;
+        }
     }
     &2 {
         display: flex;
@@ -1803,6 +1806,135 @@
             position: absolute;
             left: 0;
             top: 0;
+        }
+    }
+}
+
+
+.reservation_step {
+    display: flex;
+    margin: 0 auto;
+    gap: 0 50px;
+    background-color: rgba(#000, .029);
+    //border: 1px solid $c_line;
+    
+    justify-content: center;
+    //border: 1px solid $c_line;
+    border-radius: 10px;
+    padding: 30px;
+    .step_item {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        //background-color: rgba(#000, .1);
+        padding-top: 49px;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 6px 10px rgba(#000, .04);
+        &.ty_end {
+            background-color: lighten(map-get($colors, _yellow),34%);
+        }
+        &.has_dep2 {
+            padding: 0;
+            background-color: transparent;
+            box-shadow: none;
+        }
+        &::after {
+            content: '';
+            width: 28px;
+            height: 28px;
+            background-image: url(../images/common/paging_next.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 80px;
+            position: absolute;
+            right: -39px;
+            top: 50%;
+            margin-top: -14px;
+            opacity: 0.2;
+        }
+        &:last-child::after {
+            display: none;
+        }
+
+        .ico_box {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: $c_blue;
+            display: flex;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 30px;
+            //box-shadow: 0 0 6px rgba(#000, .5);
+            &.bg_key {
+                background-color: $c_key;
+            }
+            &.bg_green {
+                background-color: lighten(map-get($colors, _green), 8%) ;
+            }
+            &.bg_gold {
+                background-color: map-get($colors, _yellow);
+            }
+        }
+        .desc {
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 10px;
+            line-height: 1.4;
+        }
+        .dep2 {
+            
+            box-shadow: 0 6px 10px rgba(#000, .04);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            & + .dep2 {
+                margin-top: 20px;
+            }
+            &_list {
+                display: flex;
+                gap: 50px;
+                
+            }
+            &_item {
+                width: 80px;
+                white-space: nowrap;
+                position: relative;
+                
+                .ico_box {
+                    background-color: map-get($colors, _sky);
+                    width: 60px;
+                    height: 60px;
+                    font-size: 26px;
+                }
+                .desc {
+                    font-size: 13px;
+                }
+                &::after {
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    background-image: url(../images/common/paging_next.svg);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: 50px;
+                    position: absolute;
+                    right: -34px;
+                    top: 50%;
+                    margin-top: -24px;
+                    opacity: 0.2;
+                }
+                &:last-child::after {
+                    display: none;
+                }
+            }
+            
         }
     }
 }
