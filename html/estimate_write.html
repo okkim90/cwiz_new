@@ -320,337 +320,333 @@
                     <h1 class="tit1">견적 요청</h1>
                 </div>
                 <form action="">
-                    <!--[D] 프리뷰 영역 -->
-                    <div class="preview_origin">
-                        <section class="sec mt0">
-                            <div class="sub_tit2 mb10 d_flex al_b">
-                                <h2 class="tit4">1. 기본 정보</h2> 
-                            </div>
-                            <div class="v_tbl_wrap">
-                                <table class="v_tbl">
-                                    <tbody>
-                                        <colgroup>
-                                            <col style="width: 120px;">
-                                            <col>
-                                            <col style="width: 120px;">
-                                            <col>
-                                        </colgroup>
-                                        <tr>
-                                            <th>교정기관</th>
-                                            <!-- <td>    
-                                                <button type="button" class="f_btn ty_small _key"  onclick="open_popup('popup_company2')">교정기관 선택 <i class="fa-solid fa-magnifying-glass ml2"></i></button>
-                                                <ul class="selected_list mt6">
-                                                    <li class="selected_item">
-                                                        코리아인스트루먼트 서울본사
-                                                        <button type="button" class="del_item"></button>
-                                                    </li>
-                                                    <li class="selected_item">
-                                                        코리아인스트루먼트 서울본사
-                                                        <button type="button" class="del_item"></button>
-                                                    </li>
-                                                    <li class="selected_item">
-                                                        코리아인스트루먼트 서울본사
-                                                        <button type="button" class="del_item"></button>
-                                                    </li>
-                                                    <li class="selected_item">
-                                                        코리아인스트루먼트 서울본사
-                                                        <button type="button" class="del_item"></button>
-                                                    </li>
-                                                    <li class="selected_item">
-                                                        코리아인스트루먼트 서울본사
-                                                        <button type="button" class="del_item"></button>
-                                                    </li>
-                                                    <li class="selected_item">
-                                                        (주)엄청긴회사이름엄청긴회사이름엄청긴회사이름엄청긴회사이름엄청긴회사이름엄청긴회사이름엄청긴회사이름엄청긴회사이름엄청긴회사이름엄청긴회사이름
-                                                        <button type="button" class="del_item"></button>
-                                                    </li>
-                                                    <li class="selected_item">
-                                                        코리아인스트루먼트 서울본사
-                                                        <button type="button" class="del_item"></button>
-                                                    </li>
-                                                    <li class="selected_item">
-                                                        코리아인스트루먼트 서울본사
-                                                        <button type="button" class="del_item"></button>
-                                                    </li>
-                                                    <li class="selected_item">
-                                                        (주)무슨무슨회사이름
-                                                        <button type="button" class="del_item"></button>
-                                                    </li>
-                                                    
-                                                </ul>
-                                            </td> -->
-                                            <td>
-                                                <select name="" id="" class="f_select ty_small ">
-                                                    <option value="" selected disabled>교정기관을 선택 해주세요.</option>
-                                                    <option value="">코리아인스트루먼트(주) 서울본사</option>
-                                                    <option value="">코리아인스트루먼트(주) 부산지사</option>
-                                                    <option value="">코리아인스트루먼트(주) 대전지사</option>
-                                                </select>
-                                            </td>
-                                            <th>접수 구분</th>
-                                            <td>
-                                                <div class="chk_list">
-                                                    <label class="chk_item">
-                                                        <input type="radio" name="접수구분" checked> 반출 
-                                                    </label>
-                                                    <label class="chk_item">
-                                                        <input type="radio" name="접수구분" > 출장
-                                                    </label>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>요구사항</th>
-                                            <td colspan="3">
-                                                <textarea name="" id="" class="f_ta ty_small resize_y" placeholder="요구사항을 입력해주세요." style="height:60px; min-height: 50px;"></textarea>  
-                                            </td>   
-                                        </tr>
-                                    </tbody>
-                                </table> 
-                            </div>
-                        
-                        </section>
-                        <section class="sec">
-                            <div class="sub_tit2">
-                                <h2 class="tit4">2. 계측기 정보</h2>
-                                <div class="tit4 count_info d_flex _gap6 ai_c ml15">
-                                    <span>( <b>등록 :</b> 3건</span> 
-                                    <span class="bar ty_small"></span> 
-                                    <span><b>수량 :</b> 6개 )</span>
-                                </div>
-                                <div class="btn_set ml_auto">
-                                    <button type="button" class="f_btn ty_small _solidGrey_ol">수기 입력 +</button>
-                                    <button type="button" class="f_btn ty_small _key" onclick="open_popup('popup_cal')">계측기 등록 +</button>
-                                    <button type="button"  onclick="open_popup('pop_excel')" class="f_btn ty_small _green">엑셀 등록 <i class="fa-solid fa-file-excel"></i></button>
-                                    <button type="button" class="f_btn ty_small _red">선택 삭제 <i class="fa-solid fa-trash-can"></i></button>
-                                </div>
-                            </div>
-                            <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
-                                <table class="h_tbl">
+                    <section class="sec mt0">
+                        <div class="sub_tit2 mb10 d_flex al_b">
+                            <h2 class="tit4">1. 기본 정보</h2> 
+                        </div>
+                        <div class="v_tbl_wrap">
+                            <table class="v_tbl">
+                                <tbody>
                                     <colgroup>
-                                        <col style="width: 40px;">
+                                        <col style="width: 120px;">
                                         <col>
+                                        <col style="width: 120px;">
                                         <col>
-                                        <col>
-                                        <col style="width: 90px;">
-                                        <col style="width: 100px;">
-                                        <col style="width: 100px;">
-                                        <col style="width: 50px;">
                                     </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th class="th_fixed"><input type="checkbox"></th>
-                                            <th class="th_fixed">계측기명</th>
-                                            <th class="th_fixed">제조사</th>
-                                            <th class="th_fixed">형식</th>
-                                            <th class="th_fixed">견적 구분</th>
-                                            <th class="th_fixed">성적서 언어</th>
-                                            <th class="th_fixed">수랑</th>
-                                            <th class="th_fixed">삭제</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody> 
-                                        <!--[D] 수기 입력 클릭시 추가된 row -->
-                                        <tr>
-                                            <td><input type="checkbox"></td>
-                                            <td>
-                                                <input type="text" class="f_input ty_xsmall w100" placeholder="계측기명을 입력해주세요." >
-                                            </td>
-                                            <td>
-                                                <input type="text" class="f_input ty_xsmall w100" placeholder="제조사를 입력해주세요." >
-                                            </td>
-                                            <td>
-                                                <input type="text" class="f_input ty_xsmall w100" placeholder="형식을 입력해주세요." >
-                                            </td>
-                                            <td>
-                                                <select name="" id="" class="f_select ty_xsmall  w_80">
-                                                    <option value="" selected>교정</option>
-                                                    <option value="">구입</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <label class="chk_btn">
-                                                    <input type="checkbox" checked>
-                                                    <span class="f_btn ty_xsmall" >국문</span>
-                                                </label>
-                                                <label class="chk_btn">
-                                                    <input type="checkbox">
-                                                    <span class="f_btn ty_xsmall">영문</span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <div class="num_set">
-                                                    <button type="button" class="num_set_btn ty_down" onclick="num_down(this)"><span class="blind">up</span></button>
-                                                    <input type="number" class="f_input taC ty_xsmall w_40 " value="1">
-                                                    <button type="button" class="num_set_btn ty_up" onclick="num_up(this)"><span class="blind">down</span></button>
-                                                </div>
+                                    <tr>
+                                        <th>교정기관</th>
+                                        <!-- <td>    
+                                            <button type="button" class="f_btn ty_small _key"  onclick="open_popup('popup_company2')">교정기관 선택 <i class="fa-solid fa-magnifying-glass ml2"></i></button>
+                                            <ul class="selected_list mt6">
+                                                <li class="selected_item">
+                                                    코리아인스트루먼트 서울본사
+                                                    <button type="button" class="del_item"></button>
+                                                </li>
+                                                <li class="selected_item">
+                                                    코리아인스트루먼트 서울본사
+                                                    <button type="button" class="del_item"></button>
+                                                </li>
+                                                <li class="selected_item">
+                                                    코리아인스트루먼트 서울본사
+                                                    <button type="button" class="del_item"></button>
+                                                </li>
+                                                <li class="selected_item">
+                                                    코리아인스트루먼트 서울본사
+                                                    <button type="button" class="del_item"></button>
+                                                </li>
+                                                <li class="selected_item">
+                                                    코리아인스트루먼트 서울본사
+                                                    <button type="button" class="del_item"></button>
+                                                </li>
+                                                <li class="selected_item">
+                                                    (주)엄청긴회사이름엄청긴회사이름엄청긴회사이름엄청긴회사이름엄청긴회사이름엄청긴회사이름엄청긴회사이름엄청긴회사이름엄청긴회사이름엄청긴회사이름
+                                                    <button type="button" class="del_item"></button>
+                                                </li>
+                                                <li class="selected_item">
+                                                    코리아인스트루먼트 서울본사
+                                                    <button type="button" class="del_item"></button>
+                                                </li>
+                                                <li class="selected_item">
+                                                    코리아인스트루먼트 서울본사
+                                                    <button type="button" class="del_item"></button>
+                                                </li>
+                                                <li class="selected_item">
+                                                    (주)무슨무슨회사이름
+                                                    <button type="button" class="del_item"></button>
+                                                </li>
                                                 
-                                            </td>
-                                            <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
-                                        </tr>
-                                        <!--// [D] 수기 입력 클릭시 추가된 row -->
-                                        <tr>
-                                            <td><input type="checkbox"></td>
-                                            <td>
-                                                <input type="text" class="f_input ty_xsmall w100" value="내·외측 캘리퍼내·외측 캘리퍼내·외측 캘리퍼내·외측 캘리퍼" readonly>
-                                            </td>
-                                            <td>
-                                                <input type="text" class="f_input ty_xsmall w100" value="MITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYO" readonly>
-                                            </td>
-                                            <td>
-                                                <input type="text" class="f_input ty_xsmall w100" value="200 (0.01) mm" readonly>
-                                            </td>
-                                            <td>
-                                                <select name="" id="" class="f_select ty_xsmall  w_80">
-                                                    <option value="" selected>교정</option>
-                                                    <option value="">구입</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <label class="chk_btn">
-                                                    <input type="checkbox" checked>
-                                                    <span class="f_btn ty_xsmall" >국문</span>
+                                            </ul>
+                                        </td> -->
+                                        <td>
+                                            <select name="" id="" class="f_select ty_small ">
+                                                <option value="" selected disabled>교정기관을 선택 해주세요.</option>
+                                                <option value="">코리아인스트루먼트(주) 서울본사</option>
+                                                <option value="">코리아인스트루먼트(주) 부산지사</option>
+                                                <option value="">코리아인스트루먼트(주) 대전지사</option>
+                                            </select>
+                                        </td>
+                                        <th>접수 구분</th>
+                                        <td>
+                                            <div class="chk_list">
+                                                <label class="chk_item">
+                                                    <input type="radio" name="접수구분" checked> 반출 
                                                 </label>
-                                                <label class="chk_btn">
-                                                    <input type="checkbox">
-                                                    <span class="f_btn ty_xsmall">영문</span>
+                                                <label class="chk_item">
+                                                    <input type="radio" name="접수구분" > 출장
                                                 </label>
-                                            </td>
-                                            <td>
-                                                <div class="num_set">
-                                                    <button type="button" class="num_set_btn ty_down" onclick="num_down(this)"><span class="blind">up</span></button>
-                                                    <input type="number" class="f_input taC ty_xsmall w_40 " value="1">
-                                                    <button type="button" class="num_set_btn ty_up" onclick="num_up(this)"><span class="blind">down</span></button>
-                                                </div>
-                                                
-                                            </td>
-                                            <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox"></td>
-                                            <td>
-                                                <input type="text" class="f_input ty_xsmall w100" value="내·외측 캘리퍼내·외측 캘리퍼내·외측 캘리퍼내·외측 캘리퍼" readonly>
-                                            </td>
-                                            <td>
-                                                <input type="text" class="f_input ty_xsmall w100" value="MITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYO" readonly>
-                                            </td>
-                                            <td>
-                                                <input type="text" class="f_input ty_xsmall w100" value="200 (0.01) mm" readonly>
-                                            </td>
-                                            <td>
-                                                <select name="" id="" class="f_select ty_xsmall  w_80">
-                                                    <option value="" selected>교정</option>
-                                                    <option value="">구입</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <label class="chk_btn">
-                                                    <input type="checkbox" checked>
-                                                    <span class="f_btn ty_xsmall" >국문</span>
-                                                </label>
-                                                <label class="chk_btn">
-                                                    <input type="checkbox">
-                                                    <span class="f_btn ty_xsmall">영문</span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <div class="num_set">
-                                                    <button type="button" class="num_set_btn ty_down" onclick="num_down(this)"><span class="blind">up</span></button>
-                                                    <input type="number" class="f_input taC ty_xsmall w_40 " value="1">
-                                                    <button type="button" class="num_set_btn ty_up" onclick="num_up(this)"><span class="blind">down</span></button>
-                                                </div>
-                                                
-                                            </td>
-                                            <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox"></td>
-                                            <td>
-                                                <input type="text" class="f_input ty_xsmall w100" value="내·외측 캘리퍼내·외측 캘리퍼내·외측 캘리퍼내·외측 캘리퍼" readonly>
-                                            </td>
-                                            <td>
-                                                <input type="text" class="f_input ty_xsmall w100" value="MITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYO" readonly>
-                                            </td>
-                                            <td>
-                                                <input type="text" class="f_input ty_xsmall w100" value="200 (0.01) mm" readonly>
-                                            </td>
-                                            <td>
-                                                <select name="" id="" class="f_select ty_xsmall  w_80">
-                                                    <option value="" selected>교정</option>
-                                                    <option value="">구입</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <label class="chk_btn">
-                                                    <input type="checkbox" checked>
-                                                    <span class="f_btn ty_xsmall" >국문</span>
-                                                </label>
-                                                <label class="chk_btn">
-                                                    <input type="checkbox">
-                                                    <span class="f_btn ty_xsmall">영문</span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <div class="num_set">
-                                                    <button type="button" class="num_set_btn ty_down" onclick="num_down(this)"><span class="blind">up</span></button>
-                                                    <input type="number" class="f_input taC ty_xsmall w_40 " value="1">
-                                                    <button type="button" class="num_set_btn ty_up" onclick="num_up(this)"><span class="blind">down</span></button>
-                                                </div>
-                                                
-                                            </td>
-                                            <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox"></td>
-                                            <td>
-                                                <input type="text" class="f_input ty_xsmall w100" value="내·외측 캘리퍼내·외측 캘리퍼내·외측 캘리퍼내·외측 캘리퍼" readonly>
-                                            </td>
-                                            <td>
-                                                <input type="text" class="f_input ty_xsmall w100" value="MITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYO" readonly>
-                                            </td>
-                                            <td>
-                                                <input type="text" class="f_input ty_xsmall w100" value="200 (0.01) mm" readonly>
-                                            </td>
-                                            <td>
-                                                <select name="" id="" class="f_select ty_xsmall  w_80">
-                                                    <option value="" selected>교정</option>
-                                                    <option value="">구입</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <label class="chk_btn">
-                                                    <input type="checkbox" checked>
-                                                    <span class="f_btn ty_xsmall" >국문</span>
-                                                </label>
-                                                <label class="chk_btn">
-                                                    <input type="checkbox">
-                                                    <span class="f_btn ty_xsmall">영문</span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <div class="num_set">
-                                                    <button type="button" class="num_set_btn ty_down" onclick="num_down(this)"><span class="blind">up</span></button>
-                                                    <input type="number" class="f_input taC ty_xsmall w_40 " value="1">
-                                                    <button type="button" class="num_set_btn ty_up" onclick="num_up(this)"><span class="blind">down</span></button>
-                                                </div>
-                                                
-                                            </td>
-                                            <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="9">
-                                                <div class="no_result_box">
-                                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                                    <p class="mt10">등록된 계측기가 없습니다.</p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>요구사항</th>
+                                        <td colspan="3">
+                                            <textarea name="" id="" class="f_ta ty_small resize_y" placeholder="요구사항을 입력해주세요." style="height:60px; min-height: 50px;"></textarea>  
+                                        </td>   
+                                    </tr>
+                                </tbody>
+                            </table> 
+                        </div>
+                    
+                    </section>
+                    <section class="sec">
+                        <div class="sub_tit2">
+                            <h2 class="tit4">2. 계측기 정보</h2>
+                            <div class="tit4 count_info d_flex _gap6 ai_c ml15">
+                                <span>( <b>등록 :</b> 3건</span> 
+                                <span class="bar ty_small"></span> 
+                                <span><b>수량 :</b> 6개 )</span>
                             </div>
-                        </section>
-                    </div>
-                    <!--// [D] 프리뷰 영역 -->
+                            <div class="btn_set ml_auto">
+                                <button type="button" class="f_btn ty_small _solidGrey_ol">수기 입력 +</button>
+                                <button type="button" class="f_btn ty_small _key" onclick="open_popup('popup_cal')">계측기 등록 +</button>
+                                <button type="button"  onclick="open_popup('pop_excel')" class="f_btn ty_small _green">엑셀 등록 <i class="fa-solid fa-file-excel"></i></button>
+                                <button type="button" class="f_btn ty_small _red">선택 삭제 <i class="fa-solid fa-trash-can"></i></button>
+                            </div>
+                        </div>
+                        <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
+                            <table class="h_tbl">
+                                <colgroup>
+                                    <col style="width: 40px;">
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col style="width: 90px;">
+                                    <col style="width: 100px;">
+                                    <col style="width: 100px;">
+                                    <col style="width: 50px;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th class="th_fixed"><input type="checkbox"></th>
+                                        <th class="th_fixed">계측기명</th>
+                                        <th class="th_fixed">제조사</th>
+                                        <th class="th_fixed">형식</th>
+                                        <th class="th_fixed">견적 구분</th>
+                                        <th class="th_fixed">성적서 언어</th>
+                                        <th class="th_fixed">수랑</th>
+                                        <th class="th_fixed">삭제</th>
+                                    </tr>
+                                </thead>
+                                <tbody> 
+                                    <!--[D] 수기 입력 클릭시 추가된 row -->
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>
+                                            <input type="text" class="f_input ty_xsmall w100" placeholder="계측기명을 입력해주세요." >
+                                        </td>
+                                        <td>
+                                            <input type="text" class="f_input ty_xsmall w100" placeholder="제조사를 입력해주세요." >
+                                        </td>
+                                        <td>
+                                            <input type="text" class="f_input ty_xsmall w100" placeholder="형식을 입력해주세요." >
+                                        </td>
+                                        <td>
+                                            <select name="" id="" class="f_select ty_xsmall  w_80">
+                                                <option value="" selected>교정</option>
+                                                <option value="">구입</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <label class="chk_btn">
+                                                <input type="checkbox" checked>
+                                                <span class="f_btn ty_xsmall" >국문</span>
+                                            </label>
+                                            <label class="chk_btn">
+                                                <input type="checkbox">
+                                                <span class="f_btn ty_xsmall">영문</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <div class="num_set">
+                                                <button type="button" class="num_set_btn ty_down" onclick="num_down(this)"><span class="blind">up</span></button>
+                                                <input type="number" class="f_input taC ty_xsmall w_40 " value="1">
+                                                <button type="button" class="num_set_btn ty_up" onclick="num_up(this)"><span class="blind">down</span></button>
+                                            </div>
+                                            
+                                        </td>
+                                        <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
+                                    </tr>
+                                    <!--// [D] 수기 입력 클릭시 추가된 row -->
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>
+                                            <input type="text" class="f_input ty_xsmall w100" value="내·외측 캘리퍼내·외측 캘리퍼내·외측 캘리퍼내·외측 캘리퍼" readonly>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="f_input ty_xsmall w100" value="MITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYO" readonly>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="f_input ty_xsmall w100" value="200 (0.01) mm" readonly>
+                                        </td>
+                                        <td>
+                                            <select name="" id="" class="f_select ty_xsmall  w_80">
+                                                <option value="" selected>교정</option>
+                                                <option value="">구입</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <label class="chk_btn">
+                                                <input type="checkbox" checked>
+                                                <span class="f_btn ty_xsmall" >국문</span>
+                                            </label>
+                                            <label class="chk_btn">
+                                                <input type="checkbox">
+                                                <span class="f_btn ty_xsmall">영문</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <div class="num_set">
+                                                <button type="button" class="num_set_btn ty_down" onclick="num_down(this)"><span class="blind">up</span></button>
+                                                <input type="number" class="f_input taC ty_xsmall w_40 " value="1">
+                                                <button type="button" class="num_set_btn ty_up" onclick="num_up(this)"><span class="blind">down</span></button>
+                                            </div>
+                                            
+                                        </td>
+                                        <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>
+                                            <input type="text" class="f_input ty_xsmall w100" value="내·외측 캘리퍼내·외측 캘리퍼내·외측 캘리퍼내·외측 캘리퍼" readonly>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="f_input ty_xsmall w100" value="MITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYO" readonly>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="f_input ty_xsmall w100" value="200 (0.01) mm" readonly>
+                                        </td>
+                                        <td>
+                                            <select name="" id="" class="f_select ty_xsmall  w_80">
+                                                <option value="" selected>교정</option>
+                                                <option value="">구입</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <label class="chk_btn">
+                                                <input type="checkbox" checked>
+                                                <span class="f_btn ty_xsmall" >국문</span>
+                                            </label>
+                                            <label class="chk_btn">
+                                                <input type="checkbox">
+                                                <span class="f_btn ty_xsmall">영문</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <div class="num_set">
+                                                <button type="button" class="num_set_btn ty_down" onclick="num_down(this)"><span class="blind">up</span></button>
+                                                <input type="number" class="f_input taC ty_xsmall w_40 " value="1">
+                                                <button type="button" class="num_set_btn ty_up" onclick="num_up(this)"><span class="blind">down</span></button>
+                                            </div>
+                                            
+                                        </td>
+                                        <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>
+                                            <input type="text" class="f_input ty_xsmall w100" value="내·외측 캘리퍼내·외측 캘리퍼내·외측 캘리퍼내·외측 캘리퍼" readonly>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="f_input ty_xsmall w100" value="MITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYO" readonly>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="f_input ty_xsmall w100" value="200 (0.01) mm" readonly>
+                                        </td>
+                                        <td>
+                                            <select name="" id="" class="f_select ty_xsmall  w_80">
+                                                <option value="" selected>교정</option>
+                                                <option value="">구입</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <label class="chk_btn">
+                                                <input type="checkbox" checked>
+                                                <span class="f_btn ty_xsmall" >국문</span>
+                                            </label>
+                                            <label class="chk_btn">
+                                                <input type="checkbox">
+                                                <span class="f_btn ty_xsmall">영문</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <div class="num_set">
+                                                <button type="button" class="num_set_btn ty_down" onclick="num_down(this)"><span class="blind">up</span></button>
+                                                <input type="number" class="f_input taC ty_xsmall w_40 " value="1">
+                                                <button type="button" class="num_set_btn ty_up" onclick="num_up(this)"><span class="blind">down</span></button>
+                                            </div>
+                                            
+                                        </td>
+                                        <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>
+                                            <input type="text" class="f_input ty_xsmall w100" value="내·외측 캘리퍼내·외측 캘리퍼내·외측 캘리퍼내·외측 캘리퍼" readonly>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="f_input ty_xsmall w100" value="MITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYOMITUTOYO" readonly>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="f_input ty_xsmall w100" value="200 (0.01) mm" readonly>
+                                        </td>
+                                        <td>
+                                            <select name="" id="" class="f_select ty_xsmall  w_80">
+                                                <option value="" selected>교정</option>
+                                                <option value="">구입</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <label class="chk_btn">
+                                                <input type="checkbox" checked>
+                                                <span class="f_btn ty_xsmall" >국문</span>
+                                            </label>
+                                            <label class="chk_btn">
+                                                <input type="checkbox">
+                                                <span class="f_btn ty_xsmall">영문</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <div class="num_set">
+                                                <button type="button" class="num_set_btn ty_down" onclick="num_down(this)"><span class="blind">up</span></button>
+                                                <input type="number" class="f_input taC ty_xsmall w_40 " value="1">
+                                                <button type="button" class="num_set_btn ty_up" onclick="num_up(this)"><span class="blind">down</span></button>
+                                            </div>
+                                            
+                                        </td>
+                                        <td><button type="button" class="btn_del_item"><span class="blind">삭제</span></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">
+                                            <div class="no_result_box">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                                <p class="mt10">등록된 계측기가 없습니다.</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
                     <div class="btn_set taC mt30">
                         <input type="submit" value="견적요청" class="f_btn ty_mid _key w_100">
                         <button type="button" onclick="open_popup('popup_preview')" class="f_btn ty_mid _purple w_100">미리보기</button>
@@ -671,16 +667,43 @@
                             <h1 class="tit1">견적요청 미리보기</h1>
                         </div>
                         <div class="preview_area">
-                            <!--[D] 프리뷰 영역 -->
                             <div class="sec">
-                                <ul class="list_dot">
-                                    <li class="list_item">교정 기관 : <b>코리아인스트루먼트(주) 서울본사</b></li>
-                                    <li class="list_item">접수 방식 : <b>반출</b></li>
-                                    <li class="list_item">등록 건수 : <b>9,900</b>건</li>
-                                </ul>
+                                <div class="sub_tit2 mb10 d_flex al_b">
+                                    <h2 class="tit4 fwB">1. 기본 정보</h2>
+                                </div>
+                                <div class="v_tbl_wrap">
+                                    <table class="v_tbl">
+                                        <tbody>
+                                            <colgroup>
+                                                <col style="width: 120px;">
+                                                <col>
+                                                <col style="width: 120px;">
+                                                <col>
+                                            </colgroup>
+                                            <tr>
+                                                <th>교정 기관</th>
+                                                <td>코리아인스트루먼트(주) 서울본사</td>
+                                                <th>접수 구분</th>
+                                                <td>반출</td>
+                                            </tr>
+                                            <tr>
+                                                <th>요구사항</th>
+                                                <td colspan="3">요구사항 내용 요구사항 내용 요구사항 내용 요구사항 내용 요구사항 내용 요구사항 내용 요구사항 내용 </td>
+                                            </tr>
+                                        </tbody>
+                                    </table> 
+                                </div>
                             </div>
-                            <div class="sec mt20">
-                                <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
+                            <div class="sec">
+                                <div class="sub_tit2 mb10 d_flex al_b">
+                                    <h2 class="tit4 fwB">2. 계측기 목록</h2>
+                                    <div class="tit4 count_info d_flex _gap6 ai_c ml10">
+                                        <span>( <b>등록 :</b> 3건</span> 
+                                        <span class="bar ty_small"></span> 
+                                        <span><b>수량 :</b> 6개 )</span>
+                                    </div>
+                                </div>
+                                <div class="h_tbl_wrap y_scroll_area" style="max-height: 300px;">
                                     <table class="h_tbl">
                                         <colgroup>
                                             <col>
@@ -745,7 +768,6 @@
                                     </table>
                                 </div>
                             </div>
-                            <!--// [D] 프리뷰 영역 -->
                         </div>
                         <div class="btn_set taC mt30">
                             <input type="submit" value="제출" class="f_btn ty_mid _key w_100">
@@ -860,7 +882,7 @@
                                                 </tr>
                                                 <tr class="chk_tr">
                                                     <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                                    <td><a href="" class="btn_t_link">123456</a></td>
+                                                    <td>123456</td>
                                                     <td class="ellipsisTooltip">계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
                                                     <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
                                                     <td>형식노출</td>
@@ -869,7 +891,7 @@
                                                 </tr>
                                                 <tr class="chk_tr">
                                                     <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                                    <td><a href="" class="btn_t_link">123456</a></td>
+                                                    <td>123456</td>
                                                     <td class="ellipsisTooltip">계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
                                                     <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
                                                     <td>형식노출</td>
@@ -878,7 +900,7 @@
                                                 </tr>
                                                 <tr class="chk_tr">
                                                     <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                                    <td><a href="" class="btn_t_link">123456</a></td>
+                                                    <td>123456</td>
                                                     <td class="ellipsisTooltip">계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
                                                     <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
                                                     <td>형식노출</td>
@@ -887,7 +909,7 @@
                                                 </tr>
                                                 <tr class="chk_tr">
                                                     <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                                    <td><a href="" class="btn_t_link">123456</a></td>
+                                                    <td>123456</td>
                                                     <td class="ellipsisTooltip">계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
                                                     <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
                                                     <td>형식노출</td>
@@ -896,7 +918,7 @@
                                                 </tr>
                                                 <tr class="chk_tr">
                                                     <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                                    <td><a href="" class="btn_t_link">123456</a></td>
+                                                    <td>123456</td>
                                                     <td class="ellipsisTooltip">계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
                                                     <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
                                                     <td>형식노출</td>

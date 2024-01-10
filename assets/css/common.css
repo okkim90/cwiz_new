@@ -3854,6 +3854,10 @@
   box-shadow: none;
 }
 
+.w100 {
+  width: 100%;
+}
+
 /*반응형 화면 크기*/
 .t_hidden_2 {
   width: 100%;
@@ -5141,6 +5145,9 @@ input::-webkit-search-results-decoration {
   align-items: flex-end;
   margin-bottom: 15px;
 }
+.sub_tit2.mb10 {
+  margin-bottom: 10px;
+}
 
 .container .contents {
   padding: 30px;
@@ -6084,7 +6091,6 @@ tr:last-child .status_box_date {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: #0085FF;
   display: flex;
   margin: 0 auto;
   align-items: center;
@@ -6092,14 +6098,8 @@ tr:last-child .status_box_date {
   color: #fff;
   font-size: 30px;
 }
-.reservation_step .step_item .ico_box.bg_key {
-  background-color: #FF7A00;
-}
 .reservation_step .step_item .ico_box.bg_green {
   background-color: #48a171;
-}
-.reservation_step .step_item .ico_box.bg_gold {
-  background-color: #ffc107;
 }
 .reservation_step .step_item .desc {
   font-size: 14px;
@@ -6126,7 +6126,6 @@ tr:last-child .status_box_date {
   position: relative;
 }
 .reservation_step .step_item .dep2_item .ico_box {
-  background-color: #a1b9ff;
   width: 60px;
   height: 60px;
   font-size: 26px;
@@ -6607,7 +6606,7 @@ tr:last-child .status_box_date {
   border-radius: 4px;
 }
 .f_ta.ty_small {
-  font-size: 12px;
+  font-size: 13px;
   padding: 5px;
 }
 .f_ta.ty_mid {
@@ -6704,15 +6703,15 @@ tr:last-child .status_box_date {
      -moz-user-select: none;
           user-select: none;
 }
-.chk_btn input[type=checkbox] {
+.chk_btn input[type=checkbox], .chk_btn input[type=radio] {
   visibility: hidden;
   opacity: 0;
   position: absolute;
 }
-.chk_btn input[type=checkbox]:checked ~ .f_btn {
+.chk_btn input[type=checkbox]:checked ~ .f_btn, .chk_btn input[type=radio]:checked ~ .f_btn {
   background-color: #FF7A00;
 }
-.chk_btn input[type=checkbox]:checked ~ .f_btn:hover {
+.chk_btn input[type=checkbox]:checked ~ .f_btn:hover, .chk_btn input[type=radio]:checked ~ .f_btn:hover {
   background-color: #e06b00;
 }
 .chk_btn .f_btn {
@@ -6720,7 +6719,7 @@ tr:last-child .status_box_date {
   color: #fff;
 }
 .chk_btn .f_btn:hover {
-  background-color: #969696;
+  background-color: #9b9b9b;
 }
 
 .file_set {
@@ -6840,6 +6839,19 @@ tr:last-child .status_box_date {
   width: 10px;
   height: 2px;
   background-color: #222;
+}
+
+.search_set {
+  display: flex;
+}
+.search_set .f_input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.search_set .f_btn {
+  border-left: none;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
 }
 
 .btn_add {
@@ -7123,7 +7135,6 @@ tr:last-child .status_box_date {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #333;
 }
 
 .btn_delete {
@@ -8669,4 +8680,275 @@ tr:last-child .status_box_date {
 .comment_write .f_btn {
   margin-left: 20px;
   flex-shrink: 0;
+}
+
+/* 에니매 */
+/* anibox  */
+.aniBox {
+  position: relative;
+  /* type */
+  /* delay */
+}
+.aniBox.ani_fade {
+  opacity: 0;
+}
+.aniBox.ani_fade.gogo {
+  opacity: 1;
+  transition: opacity 0.8s cubic-bezier(0.42, 0, 0.38, 1), transform 0.8s cubic-bezier(0.42, 0, 0.38, 1);
+}
+.aniBox.ani_right {
+  opacity: 0;
+  transform: translateX(40px);
+}
+@media (max-width: 767px) {
+  .aniBox.ani_right {
+    transform: translateX(40px);
+  }
+}
+.aniBox.ani_right.gogo {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.8s cubic-bezier(0.42, 0, 0.38, 1), transform 0.8s cubic-bezier(0.42, 0, 0.38, 1);
+}
+.aniBox.ani_left {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+@media (max-width: 767px) {
+  .aniBox.ani_left {
+    transform: translateX(-40px);
+  }
+}
+.aniBox.ani_left.gogo {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.8s cubic-bezier(0.42, 0, 0.38, 1), transform 0.8s cubic-bezier(0.42, 0, 0.38, 1);
+}
+.aniBox.ani_top {
+  opacity: 0;
+  transform: translateY(-40px);
+}
+@media (max-width: 767px) {
+  .aniBox.ani_top {
+    transform: translateY(-40px);
+  }
+}
+.aniBox.ani_top.gogo {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s cubic-bezier(0.42, 0, 0.38, 1), transform 0.8s cubic-bezier(0.42, 0, 0.38, 1);
+}
+.aniBox.ani_bot {
+  opacity: 0;
+  transform: translateY(40px);
+}
+@media (max-width: 767px) {
+  .aniBox.ani_bot {
+    transform: translateY(40px);
+  }
+}
+.aniBox.ani_bot.gogo {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s cubic-bezier(0.42, 0, 0.38, 1), transform 0.8s cubic-bezier(0.42, 0, 0.38, 1);
+}
+.aniBox.ani_img_scale {
+  overflow: hidden;
+}
+.aniBox.ani_img_scale.reverse img {
+  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+}
+.aniBox.ani_img_scale img {
+  opacity: 0;
+  transform: scale(1.2);
+  transition: all 1s cubic-bezier(0.42, 0, 0.38, 1);
+}
+.aniBox.ani_img_scale.gogo img {
+  opacity: 1;
+  transform: scale(1);
+}
+.aniBox.ani_cv.bottop::after {
+  bottom: auto;
+  top: 0;
+}
+.aniBox.ani_cv.leftright::after {
+  right: auto;
+  left: 0;
+}
+.aniBox.ani_cv.leftright.gogo::after {
+  width: 0;
+  height: 101%;
+}
+.aniBox.ani_cv.rightleft::after {
+  right: 0;
+  left: auto;
+}
+.aniBox.ani_cv.rightleft.gogo::after {
+  width: 0;
+  height: 101%;
+}
+.aniBox.ani_cv::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 101%;
+  background-color: #fff;
+  transition: all 1s cubic-bezier(0.42, 0, 0.38, 1);
+  z-index: 99;
+}
+.aniBox.ani_cv.gogo::after {
+  height: 0;
+}
+.aniBox.ani_cv.delay_1::after {
+  transition-delay: 0.1s;
+}
+.aniBox.ani_cv.delay_2::after {
+  transition-delay: 0.2s;
+}
+.aniBox.ani_cv.delay_3::after {
+  transition-delay: 0.3s;
+}
+.aniBox.ani_cv.delay_4::after {
+  transition-delay: 0.4s;
+}
+.aniBox.ani_cv.delay_5::after {
+  transition-delay: 0.5s;
+}
+.aniBox.ani_cv.delay_6::after {
+  transition-delay: 0.6s;
+}
+.aniBox.ani_cv.delay_7::after {
+  transition-delay: 0.7s;
+}
+.aniBox.ani_cv.delay_8::after {
+  transition-delay: 0.8s;
+}
+.aniBox.ani_cv.delay_9::after {
+  transition-delay: 0.9s;
+}
+.aniBox.ani_cv.delay_10::after {
+  transition-delay: 1s;
+}
+.aniBox.delay_1 {
+  transition-delay: 0.1s;
+}
+.aniBox.gogo.delay_1 {
+  transition-delay: 0.1s;
+}
+.aniBox.delay_2 {
+  transition-delay: 0.2s;
+}
+.aniBox.gogo.delay_2 {
+  transition-delay: 0.2s;
+}
+.aniBox.delay_3 {
+  transition-delay: 0.3s;
+}
+.aniBox.gogo.delay_3 {
+  transition-delay: 0.3s;
+}
+.aniBox.delay_4 {
+  transition-delay: 0.4s;
+}
+.aniBox.gogo.delay_4 {
+  transition-delay: 0.4s;
+}
+.aniBox.delay_5 {
+  transition-delay: 0.5s;
+}
+.aniBox.gogo.delay_5 {
+  transition-delay: 0.5s;
+}
+.aniBox.delay_6 {
+  transition-delay: 0.6s;
+}
+.aniBox.gogo.delay_6 {
+  transition-delay: 0.6s;
+}
+.aniBox.delay_7 {
+  transition-delay: 0.7s;
+}
+.aniBox.gogo.delay_7 {
+  transition-delay: 0.7s;
+}
+.aniBox.delay_8 {
+  transition-delay: 0.8s;
+}
+.aniBox.gogo.delay_8 {
+  transition-delay: 0.8s;
+}
+.aniBox.delay_9 {
+  transition-delay: 0.9s;
+}
+.aniBox.gogo.delay_9 {
+  transition-delay: 0.9s;
+}
+.aniBox.delay_10 {
+  transition-delay: 1s;
+}
+.aniBox.gogo.delay_10 {
+  transition-delay: 1s;
+}
+.aniBox.delay_11 {
+  transition-delay: 1.1s;
+}
+.aniBox.gogo.delay_11 {
+  transition-delay: 1.1s;
+}
+.aniBox.delay_12 {
+  transition-delay: 1.2s;
+}
+.aniBox.gogo.delay_12 {
+  transition-delay: 1.2s;
+}
+.aniBox.delay_13 {
+  transition-delay: 1.3s;
+}
+.aniBox.gogo.delay_13 {
+  transition-delay: 1.3s;
+}
+.aniBox.delay_14 {
+  transition-delay: 1.4s;
+}
+.aniBox.gogo.delay_14 {
+  transition-delay: 1.4s;
+}
+.aniBox.delay_15 {
+  transition-delay: 1.5s;
+}
+.aniBox.gogo.delay_15 {
+  transition-delay: 1.5s;
+}
+.aniBox.delay_16 {
+  transition-delay: 1.6s;
+}
+.aniBox.gogo.delay_16 {
+  transition-delay: 1.6s;
+}
+.aniBox.delay_17 {
+  transition-delay: 1.7s;
+}
+.aniBox.gogo.delay_17 {
+  transition-delay: 1.7s;
+}
+.aniBox.delay_18 {
+  transition-delay: 1.8s;
+}
+.aniBox.gogo.delay_18 {
+  transition-delay: 1.8s;
+}
+.aniBox.delay_19 {
+  transition-delay: 1.9s;
+}
+.aniBox.gogo.delay_19 {
+  transition-delay: 1.9s;
+}
+.aniBox.delay_20 {
+  transition-delay: 2s;
+}
+.aniBox.gogo.delay_20 {
+  transition-delay: 2s;
 }
