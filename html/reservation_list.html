@@ -217,22 +217,22 @@
             </div>
             
             <ul class="nav">
-                <li class="nav_item on">
+                <li class="nav_item">
                     <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu1"></i>견적 관리</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
                             <li><a href="" class="btn_dep2">견적 요청</a></li>
-                            <li><a href="" class="btn_dep2 on">견적 확인</a></li>
+                            <li><a href="" class="btn_dep2">견적 확인</a></li>
                             <li><a href="" class="btn_dep2">교정 수수료 조회</a></li>
                         </ul>
                     </div>
                 </li>
-                <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu2"></i>접수 관리</button>
+                <li class="nav_item on">
+                    <button type="button" class="btn_dep1 "><i class="ico_dep1 ty_menu2"></i>접수 관리</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
                             <li><a href="" class="btn_dep2">예약 접수</a></li>
-                            <li><a href="" class="btn_dep2">예약 접수 목록</a></li>
+                            <li><a href="" class="btn_dep2 on">예약 접수 목록</a></li>
                             <li><a href="" class="btn_dep2">접수 확인</a></li>
                         </ul>
                     </div>                   
@@ -309,69 +309,53 @@
                             </a>
                         </li>
                         <li class="breadcrumb_item" >
-                            <a href="#">견적 관리</a>
+                            <a href="#">접수 관리</a>
                         </li>
                         <li class="breadcrumb_item">
-                            견적 확인
+                            에약 접수 목록
                         </li>
                     </ol>
                 </nav>
                 <!--// [D] breadcrumb -->
                 <div class="sub_tit">
-                    <h1 class="tit1">견적 확인</h1>
+                    <h1 class="tit1">예약 접수 목록</h1>
                 </div>
                 <form action="">
                     <div class="v_tbl_wrap">
                         <table class="v_tbl">
                             <tbody>
                                 <colgroup>
-                                    <col style="width: 160px;">
+                                    <col style="width: 120px;">
+                                    <col style="width: 20%">
+                                    <col style="width: 120px;">
                                     <col>
-                                    <col style="width: 160px;">
-                                    <col>
-                                    <col style="width: 160px;">
+                                    <col style="width: 120px;">
                                     <col>
                                 </colgroup>
                                 <tr>
-                                    <th>기간조회</th>
-                                    <td colspan="5">
+                                    <th>신청일</th>
+                                    <td>
                                         <div class="date_set">
-                                            <select name="" id="" class="f_select ty_small w_100">
-                                                <option value="">전체</option>
-                                                <option value="">견적요청</option>
-                                                <option value="">견적승인</option>
-                                            </select>
                                             <input type="text" class="f_input ty_small inp_date date_start" readonly> ~
                                             <input type="text" class="f_input ty_small inp_date date_end" readonly>
-                                            <button type="button" onclick="set_3m(this)" class="f_btn ty_xsmall _round _blue_op w_50">3개월</button>
-                                            <button type="button" onclick="set_6m(this)" class="f_btn ty_xsmall _round _navy_op w_50">6개월</button>
-                                            <button type="button" onclick="set_1y(this)" class="f_btn ty_xsmall _round _purple_op w_50">1년</button>
                                         </div>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <th>교정기관</th>
+                                    <th>예비번호</th>
                                     <td>
-                                        <select name="" id="" class="f_select ty_small w_200">
-                                            <option value="">전체</option>
-                                            <option value="">교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명</option>
-                                            <option value="">교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명</option>
-                                            <option value="">교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명</option>
-                                            <option value="">교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명</option>
-                                        </select>
-                                    </td>
-                                    <th>교정기관</th>
-                                    <td>
-                                        <select name="" id="" class="f_select ty_small w_200">
-                                            <option value="">전체</option>
-                                            <option value="">작성중</option>
-                                            <option value="">견적 진행중</option>
-                                            <option value="">견적 완료</option>
-                                        </select>
+                                        <input type="text" class="f_input ty_small w_200">
                                     </td>
                                     <th>성적서 업체</th>
                                     <td>
                                         <input type="text" class="f_input ty_small w_200">
+                                    </td>
+                                    <th>접수 상태</th>
+                                    <td>
+                                        <select name="" id="" class="f_select ty_small w_200">
+                                            <option value="" selected disabled>전체</option>
+                                            <option value="">작성중</option>
+                                            <option value="">접수 대기</option>
+                                            <option value="">접수 완료</option>
+                                        </select>
                                     </td>
                                 </tr>
                                 <tr>
@@ -380,7 +364,9 @@
                                     <th>제조사</th>
                                     <td><input type="text" class="f_input ty_small w_200"></td>  
                                     <th>형식</th>
-                                    <td><input type="text" class="f_input ty_small w_200"></td>       
+                                    <td><input type="text" class="f_input ty_small w_200"></td>   
+                                    <th>기기번호</th>
+                                    <td><input type="text" class="f_input ty_small w_200"></td>   
                                 </tr>
                             </tbody>
                         </table> 
@@ -411,99 +397,83 @@
                                 <col style="width: 100px;">
                                 <col style="width: 80px;">
                                 <col>
+                                <col style="width: 80px;">
                                 <col>
-                                <col style="width: 60px;">
-                                <col>
                                 <col style="width: 80px;">
                                 <col style="width: 80px;">
-                                <col style="width: 80px;">
-                                <col style="width: 60px;">
-                                <col style="width: 80px;">
-                                <col style="width: 90px;">
+                                <col style="width: 100px;">
+                                <col style="width: 120px;">
                             </colgroup>
                             <thead>
                                 <tr>
                                     <th class="th_fixed">No</th>
-                                    <th class="th_fixed">견적 번호</th>
-                                    <th class="th_fixed">접수일</th>
+                                    <th class="th_fixed">예비 번호</th>
+                                    <th class="th_fixed">신청일</th>
                                     <th class="th_fixed">성적서 업체</th>
-                                    <th class="th_fixed">젼적 내역</th>
-                                    <th class="th_fixed">수량</th>
+                                    <th class="th_fixed">접수자</th>
                                     <th class="th_fixed">교정 기관</th>
-                                    <th class="th_fixed">견적 상태</th>
-                                    <th class="th_fixed">견적 완료일</th>
-                                    <th class="th_fixed">견적 금액</th>
-                                    <th class="th_fixed">견적서</th>
-                                    <th class="th_fixed">교정 요청</th>
+                                    <th class="th_fixed">총 수량</th>
+                                    <th class="th_fixed">접수 상태</th>
+                                    <th class="th_fixed">접수 번호</th>
                                     <th class="th_fixed">상세 내역</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                
                                 <tr>
                                     <td>9999</td>
-                                    <td>EST-123123-09</td>
+                                    <td>cw240202-9999</td>
                                     <td>2023-12-13</td>
                                     <td class="ellipsisTooltip">성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명</td>
-                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명</td>
-                                    <td>9999</td>
+                                    <td>김장훈</td>
                                     <td class="ellipsisTooltip">교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명</td>
-                                    <td>견적 완료</td>
-                                    <td>2023-12-12</td>
-                                    <td>199,000,000</td>
-                                    <td><a href="" class="btn_down"><span class="blind">견적서 다운로드</span></a></td>
-                                    <td>미요청</td>
+                                    <td>9,999</td>
+                                    <td>접수 완료</td>
+                                    <td>24000123</td>
                                     <td>
-                                        <div class="d_flex ty_col _gap4 ai_c">
-                                            <a href="estimate_detail.html" class="f_btn ty_xsmall _round _key w_60"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
-                                            <a href="estimate_detail.html" class="f_btn ty_xsmall _round _solidGrey w_60"><i class="fa-regular fa-copy"></i> 복사</a>
+                                        <div class="d_flex fw_w _gap4 jc_c">
+                                            <a href="estimate_detail.html" class="f_btn ty_xsmall _round _key"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
+                                            <a href="estimate_detail.html" class="f_btn ty_xsmall _round _solidGrey"><i class="fa-regular fa-copy"></i> 복사</a>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>9999</td>
-                                    <td>EST-123123-09</td>
+                                    <td>cw240202-9999</td>
                                     <td>2023-12-13</td>
                                     <td class="ellipsisTooltip">성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명</td>
-                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명</td>
-                                    <td>9999</td>
+                                    <td>김장훈</td>
                                     <td class="ellipsisTooltip">교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명</td>
-                                    <td>견적 진행중</td>
-                                    <td>2023-12-12</td>
-                                    <td>199,000,000</td>
-                                    <td><a href="" class="btn_down"><span class="blind">견적서 다운로드</span></a></td>
-                                    <td>요청 완료</td>
+                                    <td>9,999</td>
+                                    <td>접수 대기</td>
+                                    <td>-</td>
                                     <td>
-                                        <div class="d_flex ty_col _gap4 ai_c">
-                                            <a href="estimate_detail.html" class="f_btn ty_xsmall _round _key w_60"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
-                                            <a href="estimate_detail.html" class="f_btn ty_xsmall _round _solidGrey w_60"><i class="fa-regular fa-copy"></i> 복사</a>
+                                        <div class="d_flex fw_w _gap4 jc_c">
+                                            <a href="estimate_detail.html" class="f_btn ty_xsmall _round _key"><i class="fa-solid fa-pen"></i> 수정</a>
+                                            <a href="estimate_detail.html" class="f_btn ty_xsmall _round _solidGrey"><i class="fa-regular fa-copy"></i> 복사</a>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>9999</td>
-                                    <td>EST-123123-09</td>
+                                    <td>cw240202-9999</td>
                                     <td>2023-12-13</td>
                                     <td class="ellipsisTooltip">성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명</td>
-                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명</td>
-                                    <td>9999</td>
+                                    <td>김장훈</td>
                                     <td class="ellipsisTooltip">교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명</td>
-                                    <td>견적 진행중</td>
-                                    <td>2023-12-12</td>
-                                    <td>199,000,000</td>
-                                    <td><a href="" class="btn_down"><span class="blind">견적서 다운로드</span></a></td>
-                                    <td><b class="fc_red">요청 불가</b></td>
+                                    <td>9,999</td>
+                                    <td>접수 완료</td>
+                                    <td>24000123</td>
                                     <td>
-                                        <div class="d_flex ty_col _gap4 ai_c">
-                                            <a href="estimate_detail.html" class="f_btn ty_xsmall _round _key w_60"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
-                                            <a href="estimate_detail.html" class="f_btn ty_xsmall _round _solidGrey w_60"><i class="fa-regular fa-copy"></i> 복사</a>
+                                        <div class="d_flex fw_w _gap4 jc_c">
+                                            <a href="estimate_detail.html" class="f_btn ty_xsmall _round _key"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
+                                            <a href="estimate_detail.html" class="f_btn ty_xsmall _round _solidGrey"><i class="fa-regular fa-copy"></i> 복사</a>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>          
-                                    <td colspan="13">
+                                    <td colspan="10">
                                         <div class="no_result_box">
-                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                            <i class="fa-solid fa-file-circle-xmark"></i>
                                             <p class="mt10">검색 결과가 없습니다.</p>
                                         </div>
                                     </td>

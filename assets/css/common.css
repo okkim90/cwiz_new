@@ -5266,6 +5266,11 @@ input::-webkit-search-results-decoration {
 .date_set .date_end + .f_btn {
   margin-left: 4px;
 }
+.date_set .inp_date {
+  max-width: 110px;
+  flex: 1;
+  min-width: 0;
+}
 
 .scroll_area {
   overflow: auto;

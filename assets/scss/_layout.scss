@@ -972,6 +972,12 @@
             margin-left: 4px;
         }
     }
+    .inp_date {
+        max-width: 110px;
+        //width: 100%;
+        flex: 1;
+        min-width: 0;
+    }
 }
 
 .scroll_area {
