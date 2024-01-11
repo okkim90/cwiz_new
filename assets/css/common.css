@@ -3854,6 +3854,12 @@
   box-shadow: none;
 }
 
+.disabled2 {
+  pointer-events: none;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
 .w100 {
   width: 100%;
 }
