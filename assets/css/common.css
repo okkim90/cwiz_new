@@ -8034,14 +8034,14 @@ tr:last-child .status_box_date {
   z-index: 99;
 }
 .join_info_tit {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 .join_info_tit .tit {
-  font-size: 40px;
+  font-size: 34px;
   font-weight: bold;
 }
 .join_info_tit .tit img {
-  height: 60px;
+  height: 50px;
   vertical-align: middle;
 }
 .join_info_tit .desc {
@@ -8062,7 +8062,7 @@ tr:last-child .status_box_date {
   position: relative;
 }
 .join_info_step_item i {
-  font-size: 90px;
+  font-size: 70px;
 }
 .join_info_step_item i.i-arrow {
   font-size: 50px;
@@ -8085,7 +8085,7 @@ tr:last-child .status_box_date {
   margin-left: auto;
   margin-right: auto;
   text-align: left;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.7;
 }
 .join_info_bot {
@@ -8095,9 +8095,14 @@ tr:last-child .status_box_date {
   background-color: #393939;
 }
 .join_info_btn {
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
   margin-top: 50px;
+  display: flex;
+  gap: 20px;
+}
+.join_info_btn .f_btn {
+  flex: 1;
 }
 .join_info_cs {
   max-width: 500px;

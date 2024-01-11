@@ -36,12 +36,12 @@
             z-index: 99;
         }
         &_tit {
-            margin-bottom: 60px;
+            margin-bottom: 40px;
             .tit {
-                font-size: 40px;
+                font-size: 34px;
                 font-weight: bold;
                 img {
-                    height: 60px;
+                    height: 50px;
                     vertical-align: middle;
                 }
             }
@@ -62,7 +62,7 @@
                     position: relative;
                 }
                 i {
-                    font-size: 90px;
+                    font-size: 70px;
                     &.i-arrow {
                         font-size: 50px;
                         position: absolute;
@@ -89,7 +89,7 @@
             margin-left: auto;
             margin-right: auto;
             text-align: left;
-            font-size: 20px;
+            font-size: 18px;
             line-height: 1.7;
             
         }
@@ -101,9 +101,14 @@
             background-color: $c_solidGrey;
         }
         &_btn {
-            max-width: 400px;
+            max-width: 500px;
             margin: 0 auto;
             margin-top: 50px;
+            display: flex;
+            gap: 20px;
+            .f_btn {
+                flex: 1;
+            }
         }
         &_cs {
             max-width: 500px;
