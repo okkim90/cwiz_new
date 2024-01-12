@@ -217,38 +217,44 @@
             </div>
             
             <ul class="nav">
-                <li class="nav_item ">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu1"></i>교정이력</button>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu1"></i>견적 관리</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2 ">교정 접수 내역</a></li>
-                            <li><a href="" class="btn_dep2">교정 결과 조회</a></li>
+                            <li><a href="" class="btn_dep2">견적 요청</a></li>
+                            <li><a href="" class="btn_dep2">견적 확인</a></li>
+                            <li><a href="" class="btn_dep2">교정 수수료 조회</a></li>
                         </ul>
                     </div>
                 </li>
                 <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu2"></i>교정 단가 조회</button>
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu2"></i>접수 관리</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2">교정 단가 조회</a></li>
-                        </ul>
-                    </div>       
-                </li>
-                <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu3"></i>견적 요청</button>
-                    <div class="nav_dep2_box">
-                        <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2">견적 요청 조회</a></li>
-                            <li><a href="" class="btn_dep2">견적 요청</a></li>
+                            <li><a href="" class="btn_dep2">예약 접수</a></li>
+                            <li><a href="" class="btn_dep2">예약 접수 목록</a></li>
+                            <li><a href="" class="btn_dep2">접수 확인</a></li>
                         </ul>
                     </div>                   
                 </li>
                 <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu4"></i>마이 페이지</button>
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu3"></i>교정 관리</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2">내 정보</a></li>
-                            <li><a href="" class="btn_dep2">우리 장비</a></li>
+                            <li><a href="" class="btn_dep2">교정 진행 현황</a></li>
+                            <li><a href="" class="btn_dep2">교정 이력 조회</a></li>
+                            <li><a href="" class="btn_dep2">불량 이력 조회</a></li>
+                            <li><a href="" class="btn_dep2">수리 이력 조회</a></li>
+                            <li><a href="" class="btn_dep2">우리 장비 목록</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu4"></i>정산/출고 관리</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">정산 관리</a></li>
+                            <li><a href="" class="btn_dep2">출고 관리</a></li>
                         </ul>
                     </div>                   
                 </li>
@@ -258,16 +264,30 @@
                         <ul class="nav_dep2">
                             <li><a href="" class="btn_dep2 on">공지사항</a></li>
                             <li><a href="" class="btn_dep2">자료실</a></li>
+                            <li><a href="" class="btn_dep2">자주하는 질문</a></li>
                         </ul>
                     </div>                   
                 </li>
                 <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu6"></i>관리자</button>
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu6"></i>마이페이지</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">내 정보</a></li>
+                            <li><a href="" class="btn_dep2">내 문의 관리</a></li>
+                            <li><a href="" class="btn_dep2">성적서 업체 관리</a></li>
+                            <li><a href="" class="btn_dep2">포인트 관리</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu7"></i>관리자</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
                             <li><a href="" class="btn_dep2">회원 관리</a></li>
+                            <li><a href="" class="btn_dep2">문의 관리</a></li>
                             <li><a href="" class="btn_dep2">공지사항 관리</a></li>
                             <li><a href="" class="btn_dep2">자료실 관리</a></li>
+                            <li><a href="" class="btn_dep2">FAQ 관리</a></li>
                         </ul>
                     </div>                 
                 </li>
@@ -300,22 +320,30 @@
                 <div class="sub_tit">
                     <h1 class="tit1">공지사항</h1>
                 </div>
-                <form action="">
-                    <div class="board_search_wrap">
-                        <div class="d_flex jc_c _gap10">
-                            <select name="" id="" class="f_select ty_mid w_100">
-                                <option value="">전체</option>
-                                <option value="">제목</option>
-                                <option value="">내용</option>
-                            </select>
-                            <input type="text" class="f_input ty_mid w_400">
-                            <input type="submit" value="검색" class="f_btn ty_mid _key w_100" >
-                        </div>
-                    </div>
-                </form>
+                
                 <section class="sec">
+                    <ul class="tabs">
+                        <li class="tabs_item on">
+                            <button class="tabs_btn">전체</button>
+                        </li>
+                        <li class="tabs_item">
+                            <button class="tabs_btn">공지</button>
+                        </li>
+                        <li class="tabs_item">
+                            <button class="tabs_btn">교정 지연</button>
+                        </li>
+                        <li class="tabs_item">
+                            <button class="tabs_btn">IT</button>
+                        </li>
+                    </ul>
                     <div class="sub_tit2">
-                        <h2 class="tit4"><b>전체 :</b> 1,000건</h2>
+                        <h2 class="tit4">검색결과 : <b>1,000건</b></h2>
+                        <form action="" class="d_flex _gap4 ml_auto">
+                            <input type="text" class="f_input ty_small w_160">
+                            <button type="submit" class="f_btn ty_small _key w_60">
+                                검색 <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
                     </div>
                     <ul class="card_list col_5 mt20">
                         <li class="card_item col_item">
@@ -339,6 +367,10 @@
                         <li class="card_item col_item">
                             <a href="notice_view.html" class="card_inner">
                                 <div class="img_box">
+                                    <div class="tag_box">
+                                        <span class="f_tag _key">IT</span>
+                                        <span class="f_tag _key_op">NEW</span>
+                                    </div>
                                     <img src="https://picsum.photos/400" alt="">
                                 </div>
                                 <div class="txt_box">
@@ -353,6 +385,10 @@
                         <li class="card_item col_item">
                             <a href="notice_view.html" class="card_inner">
                                 <div class="img_box">
+                                    <div class="tag_box">
+                                        <span class="f_tag _key">교정지연</span>
+                                        <span class="f_tag _key_op">NEW</span>
+                                    </div>
                                     <img src="https://picsum.photos/400" alt="">
                                 </div>
                                 <div class="txt_box">
@@ -481,7 +517,7 @@
 
                     <!--[D] 공지사항 X-->
                     <div class="no_result_box ty_bg">
-                        <i class="fa-solid fa-face-sad-tear"></i>
+                        <i class="fa-solid fa-file-circle-xmark"></i>
                         <p class="mt10">등록된 공지사항이 없습니다.</p>
                     </div>
 
@@ -489,7 +525,7 @@
 
                     <!--[D] 검색결과 X-->
                     <div class="no_result_box ty_bg">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-file-circle-xmark"></i>
                         <p class="mt10">검색 결과가 없습니다.</p>
                     </div>
                 </section>

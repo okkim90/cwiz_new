@@ -1948,3 +1948,102 @@
         }
     }
 }
+
+.cal_status {
+    display: flex;
+    background-color: rgba(#000, .029);
+    justify-content: center;
+    &_card {
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #fff;
+    }
+}
+
+.faq {
+    font-size: 15px;
+    
+    &_item {
+        background-color: rgba(#000, .045);
+        border-radius: 10px;
+        border: 1px solid $c_line;
+        overflow: hidden;
+        & + & {
+            margin-top: 12px;
+        }
+    }
+    &_cont {
+        padding: 15px 0;
+        //padding-left: 80px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        &::before {
+            width: 60px;
+            text-align: center;
+            flex-shrink: 0;
+            font-size: 20px;
+            line-height: 1;
+            font-weight: bold;
+            color: $c_key;
+           
+        }
+    }
+    &_q {
+        cursor: pointer;
+        
+        &::before {
+            content:'Q'
+        }
+        &_txt {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            .f_tag {
+                margin-right: 15px;
+                flex-shrink: 0;
+            }
+        }
+        .faq_arrow { 
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            &::after {
+                content: '';
+                width: 10px;
+                height: 10px;
+                border-left: 1px solid #000;
+                border-bottom: 1px solid #000;
+                box-sizing: border-box;
+                transform: rotate(-45deg);
+                margin-top: -4px;
+            }
+        }
+        &.on {
+            //background-color: rgba(#000, .04);
+            .faq_arrow {
+                &::after {
+                    transform: rotate(135deg);
+                    margin-top: 4px;
+                }
+            }
+            & + .faq_a {
+                display: flex;
+            }
+        }
+    }
+    &_a {
+        display: none;
+        padding-right: 60px;
+        border-top: 1px dashed $c_line;
+        border-radius: 0 0 10px 10px;
+        &::before {
+            content:'A';
+            color: $c_solidGrey;
+        }
+        background-color: #fff;
+        
+    }
+}

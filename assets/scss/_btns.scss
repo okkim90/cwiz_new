@@ -273,7 +273,7 @@
         height: 50px;
         padding: 0 10px;
         font-size: 16px;
-        font-weight: bold;
+        font-weight: 500;
         line-height: 48px;
         border-radius: 6px;
         width: 200px;
@@ -335,6 +335,9 @@
     line-height: 20px;
     border: 1px solid transparent;
     font-weight: 500;
+    &.pd10 {
+        padding: 0 10px;
+    }
     &.ty_small {
         min-width: 30px;
         padding: 0 4px;
