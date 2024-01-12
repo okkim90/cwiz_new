@@ -149,6 +149,7 @@
         <!--// header -->
         <!-- nav -->
         <aside class="sidenav">
+
             <button type="button" class="btn_nav_toggle"><i class="fa-solid fa-chevron-left"></i></button>
             <!--[D] 회사로고 없을경우-->
             <div class="sidenav_top">
@@ -214,38 +215,44 @@
             </div>
             
             <ul class="nav">
-                <li class="nav_item on">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu1"></i>교정이력</button>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu1"></i>견적 관리</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2 on">교정 접수 내역</a></li>
-                            <li><a href="" class="btn_dep2">교정 결과 조회</a></li>
+                            <li><a href="" class="btn_dep2">견적 요청</a></li>
+                            <li><a href="" class="btn_dep2">견적 확인</a></li>
+                            <li><a href="" class="btn_dep2">교정 수수료 조회</a></li>
                         </ul>
                     </div>
                 </li>
                 <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu2"></i>교정 단가 조회</button>
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu2"></i>접수 관리</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2">교정 단가 조회</a></li>
-                        </ul>
-                    </div>       
-                </li>
-                <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu3"></i>견적 요청</button>
-                    <div class="nav_dep2_box">
-                        <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2">견적 요청 조회</a></li>
-                            <li><a href="" class="btn_dep2">견적 요청</a></li>
+                            <li><a href="" class="btn_dep2">예약 접수</a></li>
+                            <li><a href="" class="btn_dep2">예약 접수 목록</a></li>
+                            <li><a href="" class="btn_dep2">접수 확인</a></li>
                         </ul>
                     </div>                   
                 </li>
                 <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu4"></i>마이 페이지</button>
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu3"></i>교정 관리</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2">내 정보</a></li>
-                            <li><a href="" class="btn_dep2">우리 장비</a></li>
+                            <li><a href="" class="btn_dep2">교정 진행 현황</a></li>
+                            <li><a href="" class="btn_dep2">교정 이력 조회</a></li>
+                            <li><a href="" class="btn_dep2">불량 이력 조회</a></li>
+                            <li><a href="" class="btn_dep2">수리 이력 조회</a></li>
+                            <li><a href="" class="btn_dep2">우리 장비 목록</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu4"></i>정산/출고 관리</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">정산 관리</a></li>
+                            <li><a href="" class="btn_dep2">출고 관리</a></li>
                         </ul>
                     </div>                   
                 </li>
@@ -255,16 +262,30 @@
                         <ul class="nav_dep2">
                             <li><a href="" class="btn_dep2">공지사항</a></li>
                             <li><a href="" class="btn_dep2">자료실</a></li>
+                            <li><a href="" class="btn_dep2">자주하는 질문</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item on">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu6"></i>마이페이지</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2 on">내 정보</a></li>
+                            <li><a href="" class="btn_dep2">내 문의 관리</a></li>
+                            <li><a href="" class="btn_dep2">성적서 업체 관리</a></li>
+                            <li><a href="" class="btn_dep2">포인트 관리</a></li>
                         </ul>
                     </div>                   
                 </li>
                 <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu6"></i>관리자</button>
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu7"></i>관리자</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
                             <li><a href="" class="btn_dep2">회원 관리</a></li>
+                            <li><a href="" class="btn_dep2">문의 관리</a></li>
                             <li><a href="" class="btn_dep2">공지사항 관리</a></li>
                             <li><a href="" class="btn_dep2">자료실 관리</a></li>
+                            <li><a href="" class="btn_dep2">FAQ 관리</a></li>
                         </ul>
                     </div>                 
                 </li>
@@ -296,116 +317,158 @@
                 <div class="sub_tit">
                     <h1 class="tit1">내 정보</h1>
                 </div>
-                <form action="">
-                    <div class="sec mt0">
-                        <div class="sub_tit2">
-                            <h2 class="tit4"><b>사업자 정보</b></h2>
-                            <p class="tip ml_auto"><i class="ico_required"></i> 표시는 필수 기재 항목입니다.</p>
-                        </div>
-                        <div class="v_tbl_wrap">
-                            <table class="v_tbl">
-                                <tbody>
-                                    <colgroup>
-                                        <col style="width: 160px;">
-                                        <col>
-                                        <col style="width: 160px;">
-                                        <col>
-                                    </colgroup>
-                                    <tr>
-                                        <th><i class="ico_required"></i> 사업자번호</th>
-                                        <td>101 - 81 - 12345</td>
-                                        <th><i class="ico_required"></i> 회사명</th>
-                                        <td>주식회사 동양엘리베이터</td>
-                                    </tr>
-                                    <tr>
-                                        <th><i class="ico_required"></i> 대표자명</th>
-                                        <td>홍길동</td>
-                                        <th><i class="ico_required"></i> 회사 전화번호</th>
-                                        <td><input type="text" class="f_input ty_small w_200" placeholder='"-" 제외하고 숫자만 입력해주세요' value="02-865-2124"></td>
-                                    </tr>
-                                    <tr>
-                                        <th><i class="ico_required"></i> 회사 주소</th>
-                                        <td colspan="3">    
-                                            <div class="address_set d_flex _gap5">
-                                                <input type="text" name="" placeholder="우편번호" class="f_input ty_small w_100" value="123012" readonly="" required>
-                                                <button type="button" onclick="" class="f_btn ty_small _key">우편번호 찾기</button>
-                                            </div>
-                                            <div class="address_set d_flex _gap5 mt5">
-                                                <input type="text" name="" class="f_input ty_small w_350" value="서울 구로구 남부순환로 1303 KIC빌딩" readonly=""  required>
-                                                <input type="text" name="" placeholder="나머지 주소를 입력해주세요." class="f_input ty_small w_350" value="7층 서비스개발실" required>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table> 
-                        </div>
+            
+                <div class="sec">
+                    <div class="sub_tit2">
+                        <h2 class="tit3">1. 우리회사 정보</h2>
                     </div>
-                    <div class="sec">
-                        <div class="sub_tit2 mb10 d_flex al_b">
-                            <h2 class="tit4"><b>담당자 정보</b></h2>
-                            <p class="tip ml_auto"><i class="ico_required"></i> 표시는 필수 기재 항목입니다.</p>
-                        </div>
-                        <div class="v_tbl_wrap">
-                            <table class="v_tbl">
-                                <tbody>
-                                    <colgroup>
-                                        <col style="width: 160px;">
-                                        <col>
-                                        <col style="width: 160px;">
-                                        <col>
-                                    </colgroup>
-                                    <tr>
-                                        <th><i class="ico_required"></i> 아이디</th>
-                                        <td colspan="3">abcid1871</td>  
-                                    </tr>
-                                    <tr>
-                                        <th><i class="ico_required"></i> 비밀번호</th>
-                                        <td>
-                                            <input type="password" class="f_input ty_small w_300" placeholder="비밀번호 변경을 원하시면 입력해 주세요.">
-                                            <p class="msg_feedback fz_small fc_blue mt4">이용 가능한 비밀번호입니다.</p>
-                                            <p class="msg_feedback fz_small fc_red mt4">영문 또는 영문, 숫자를 조합하여 입력해 주세요. (4~12자)</p>
-                                        </td>
-                                        <th><i class="ico_required"></i> 비밀번호 확인</th>
-                                        <td>
-                                            <input type="password" class="f_input ty_small w_300" placeholder="비밀번호를 한 번 더 입력해 주세요.">
-                                            <p class="msg_feedback fz_small fc_blue mt4">비밀번호가 일치합니다.</p>
-                                            <p class="msg_feedback fz_small fc_red mt4">비밀번호가 일치하지 않습니다.</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th><i class="ico_required"></i> 담당자명</th>
-                                        <td>설현</td>
-                                        <th><i class="ico_required"></i> 핸드폰</th>
-                                        <td>
-                                            <div class="d_flex _gap5 ai_c">
-                                                <input type="tel" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="m_mobile" class="f_input ty_small w_200" placeholder="&quot;-&quot; 제외하고 숫자만 입력해주세요." maxlength="11" value="010-2344-1234" required>
-                                                <button type="button" class="f_btn ty_small _key">본인인증</button>
-                                            </div>
-                                            <p class="msg_feedback fz_small fc_blue mt4">본인 인증에 성공하였습니다.</p>
-                                            <p class="msg_feedback fz_small fc_red mt4">핸드폰 번호 변경 시 본인 인증은 필수입니다.</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th><i class="ico_required"></i> 이메일</th>
-                                        <td colspan="3">
-                                            <div class="d_flex _gap5 ai_c">
-                                                <input type="email" class="f_input ty_small w_300" placeholder="이메일을 입력해주세요." value="aadqwer123@gmail.com">
-                                                <button type="button" class="f_btn ty_small _key">중복확인</button>
-                                                <p class="msg_feedback fz_small fc_blue ml10">이용 가능한 이메일입니다.</p>
-                                                <p class="msg_feedback fz_small fc_red ml10">사용 중인 이메일이 있습니다. 다시 입력해 주세요.</p>
-                                            </div>  
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table> 
-                        </div>
+                    <div class="v_tbl_wrap">
+                        <table class="v_tbl">
+                            <tbody>
+                                <colgroup>
+                                    <col style="width: 160px;">
+                                    <col>
+                                    <col style="width: 160px;">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th><i class="ico_required"></i> 사업자번호</th>
+                                    <td>101 - 81 - 12345</td>
+                                    <th><i class="ico_required"></i> 회사명</th>
+                                    <td>주식회사 동양엘리베이터</td>
+                                </tr>
+                                <tr>
+                                    <th><i class="ico_required"></i> 대표자명</th>
+                                    <td>홍길동</td>
+                                    <th><i class="ico_required"></i> 회사 전화번호</th>
+                                    <td><input type="text" class="f_input ty_small w_200" placeholder='"-" 제외하고 숫자만 입력해주세요' value="02-865-2124"></td>
+                                </tr>
+                                <tr>
+                                    <th><i class="ico_required"></i> 회사 주소</th>
+                                    <td colspan="3">    
+                                        <div class="address_set d_flex _gap5">
+                                            <input type="text" name="" placeholder="우편번호" class="f_input ty_small w_100" value="123012" readonly="" required>
+                                            <button type="button" onclick="" class="f_btn ty_small _key">우편번호 찾기</button>
+                                        </div>
+                                        <div class="address_set d_flex _gap5 mt5">
+                                            <input type="text" name="" class="f_input ty_small w_350" value="서울 구로구 남부순환로 1303 KIC빌딩" readonly=""  required>
+                                            <input type="text" name="" placeholder="나머지 주소를 입력해주세요." class="f_input ty_small w_350" value="7층 서비스개발실" required>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> 
                     </div>
-                    <div class="btn_set taC mt30">
-                        <input type="submit" value="수정" class="f_btn ty_mid _key w_100">
-                        <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="reset(this)">취소</button>
-                        <a href="" class="f_btn ty_mid _lightGrey w_100">회원탈퇴</a>
+                </div>
+                <div class="sec">
+                    <div class="sub_tit2">
+                        <h2 class="tit3">1. 우리회사 정보</h2>
+                        <p class="tip ml_auto"><i class="ico_required"></i> 표시는 필수 기재 항목입니다.</p>
                     </div>
-                </form>
+                    <div class="v_tbl_wrap">
+                        <table class="v_tbl">
+                            <tbody>
+                                <colgroup>
+                                    <col style="width: 160px;">
+                                    <col>
+                                    <col style="width: 160px;">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th><i class="ico_required"></i> 사업자번호</th>
+                                    <td>101 - 81 - 12345</td>
+                                    <th><i class="ico_required"></i> 회사명</th>
+                                    <td>주식회사 동양엘리베이터</td>
+                                </tr>
+                                <tr>
+                                    <th><i class="ico_required"></i> 대표자명</th>
+                                    <td>홍길동</td>
+                                    <th><i class="ico_required"></i> 회사 전화번호</th>
+                                    <td><input type="text" class="f_input ty_small w_200" placeholder='"-" 제외하고 숫자만 입력해주세요' value="02-865-2124"></td>
+                                </tr>
+                                <tr>
+                                    <th><i class="ico_required"></i> 회사 주소</th>
+                                    <td colspan="3">    
+                                        <div class="address_set d_flex _gap5">
+                                            <input type="text" name="" placeholder="우편번호" class="f_input ty_small w_100" value="123012" readonly="" required>
+                                            <button type="button" onclick="" class="f_btn ty_small _key">우편번호 찾기</button>
+                                        </div>
+                                        <div class="address_set d_flex _gap5 mt5">
+                                            <input type="text" name="" class="f_input ty_small w_350" value="서울 구로구 남부순환로 1303 KIC빌딩" readonly=""  required>
+                                            <input type="text" name="" placeholder="나머지 주소를 입력해주세요." class="f_input ty_small w_350" value="7층 서비스개발실" required>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                    </div>
+                </div>
+                <div class="sec">
+                    <div class="sub_tit2">
+                        <h2 class="tit3">2. 담당자 정보</b></h2>
+                        <p class="tip ml_auto"><i class="ico_required"></i> 표시는 필수 기재 항목입니다.</p>
+                    </div>
+                    <div class="v_tbl_wrap">
+                        <table class="v_tbl">
+                            <tbody>
+                                <colgroup>
+                                    <col style="width: 160px;">
+                                    <col>
+                                    <col style="width: 160px;">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th><i class="ico_required"></i> 아이디</th>
+                                    <td colspan="3">abcid1871</td>  
+                                </tr>
+                                <tr>
+                                    <th><i class="ico_required"></i> 비밀번호</th>
+                                    <td>
+                                        <input type="password" class="f_input ty_small w_300" placeholder="비밀번호 변경을 원하시면 입력해 주세요.">
+                                        <p class="msg_feedback fz_small fc_blue mt4">이용 가능한 비밀번호입니다.</p>
+                                        <p class="msg_feedback fz_small fc_red mt4">영문 또는 영문, 숫자를 조합하여 입력해 주세요. (4~12자)</p>
+                                    </td>
+                                    <th><i class="ico_required"></i> 비밀번호 확인</th>
+                                    <td>
+                                        <input type="password" class="f_input ty_small w_300" placeholder="비밀번호를 한 번 더 입력해 주세요.">
+                                        <p class="msg_feedback fz_small fc_blue mt4">비밀번호가 일치합니다.</p>
+                                        <p class="msg_feedback fz_small fc_red mt4">비밀번호가 일치하지 않습니다.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><i class="ico_required"></i> 담당자명</th>
+                                    <td>설현</td>
+                                    <th><i class="ico_required"></i> 핸드폰</th>
+                                    <td>
+                                        <div class="d_flex _gap5 ai_c">
+                                            <input type="tel" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="m_mobile" class="f_input ty_small w_200" placeholder="&quot;-&quot; 제외하고 숫자만 입력해주세요." maxlength="11" value="010-2344-1234" required>
+                                            <button type="button" class="f_btn ty_small _key">본인인증</button>
+                                        </div>
+                                        <p class="msg_feedback fz_small fc_blue mt4">본인 인증에 성공하였습니다.</p>
+                                        <p class="msg_feedback fz_small fc_red mt4">핸드폰 번호 변경 시 본인 인증은 필수입니다.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><i class="ico_required"></i> 이메일</th>
+                                    <td colspan="3">
+                                        <div class="d_flex _gap5 ai_c">
+                                            <input type="email" class="f_input ty_small w_300" placeholder="이메일을 입력해주세요." value="aadqwer123@gmail.com">
+                                            <button type="button" class="f_btn ty_small _key">중복확인</button>
+                                            <p class="msg_feedback fz_small fc_blue ml10">이용 가능한 이메일입니다.</p>
+                                            <p class="msg_feedback fz_small fc_red ml10">사용 중인 이메일이 있습니다. 다시 입력해 주세요.</p>
+                                        </div>  
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                    </div>
+                </div>
+                <div class="btn_set taC mt30">
+                    <input type="submit" value="수정" class="f_btn ty_mid _key w_100">
+                    <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="reset(this)">취소</button>
+                    <a href="" class="f_btn ty_mid _lightGrey w_100">회원탈퇴</a>
+                </div>
+                
             </div>
         </main>
 

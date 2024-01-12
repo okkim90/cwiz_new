@@ -4837,7 +4837,7 @@ input::-webkit-search-results-decoration {
 }
 .sidenav .nav_item.on .nav_dep2_box {
   overflow: hidden;
-  max-height: 150px;
+  max-height: 230px;
 }
 .sidenav .nav_item.on .btn_dep1 {
   color: #FF7A00;
