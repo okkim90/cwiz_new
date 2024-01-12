@@ -1408,6 +1408,12 @@
         font-size: 50px;
         color: #bebebe;
     }
+    &.ty_bd {
+        border: 1px solid $c_line;
+        border-radius: 10px;
+        padding: 40px;
+        height: auto;
+    }
 }
 
 

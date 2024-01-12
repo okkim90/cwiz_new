@@ -36,6 +36,31 @@
         &.ty_small {
             width: 350px;
         }
+        &.ty_company {
+            width: 500px;
+            overflow-y: hidden;
+            background-color: $c_bg;
+            padding-bottom: 30px;
+            padding-top: 24px;
+            .join_box_top {
+                margin-bottom: 20px;
+                .img_box img {
+                    height: 50px;
+                }
+            } 
+            .join_form_sec {
+                margin-top: 10px;
+                max-height: calc(100vh - 344px);
+                overflow-y: auto;
+                border: 1px solid $c_line;
+                padding: 20px;
+                background-color: #fff;
+                //border-radius: 10px;
+            }
+            .join_form_btns {
+                margin-top: 20px;
+            }
+        }
     }
 
     .sec {
