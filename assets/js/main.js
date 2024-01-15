@@ -274,7 +274,10 @@ function del_form(target){
 
 function close_popup(target){
     let layer_popup = target.closest('.layer_popup');
-    let layer_popup_cont = target.closest('.layer_popup');
+    let layer_popup_cont = layer_popup.querySelector('.layer_popup_cont');
+    layer_popup_cont.scrollTo({
+        top:0
+    }); 
     layer_popup.classList.remove('on');
 }
 

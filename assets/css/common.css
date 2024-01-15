@@ -5237,7 +5237,7 @@ input::-webkit-search-results-decoration {
 .withdrawal_box {
   border: 1px solid #DDDDDD;
   background-color: #F9F9F9;
-  height: 230px;
+  padding: 40px 0;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -5245,7 +5245,7 @@ input::-webkit-search-results-decoration {
   justify-content: center;
 }
 .withdrawal_box i {
-  font-size: 48px;
+  font-size: 50px;
 }
 
 .ico_required {
@@ -7084,6 +7084,30 @@ tr:last-child .status_box_date {
   margin-left: 4px;
 }
 
+.btn_down4 {
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+}
+.btn_down4 .file_name {
+  min-width: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: 4px;
+}
+.btn_down4::before {
+  font-size: 16px;
+  content: "\f56d";
+  font-family: "Font Awesome 6 Free";
+  font-weight: bold;
+  line-height: 1;
+}
+.btn_down4:hover .file_name {
+  text-decoration: underline;
+}
+
 .btn_del_item {
   width: 20px;
 }
@@ -7398,7 +7422,7 @@ tr:last-child .status_box_date {
 }
 .v_tbl.ty_big th, .v_tbl.ty_big td {
   padding: 12px 14px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.6;
   height: 60px;
 }
@@ -7688,11 +7712,27 @@ tr:last-child .status_box_date {
 
 .reply_wrap {
   padding: 20px;
-  padding-top: 0;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(0, 0, 0, 0.014);
   border: 1px solid #DDDDDD;
-  border-radius: 4px;
 }
-
+.reply_wrap_tit {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.reply_list {
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid #DDDDDD;
+  border-radius: 10px;
+  background-color: #fff;
+}
 .reply_thumb {
   width: 40px;
   height: 40px;
@@ -7729,8 +7769,11 @@ tr:last-child .status_box_date {
   border: 2px solid #DDDDDD;
   background-color: #fff;
   padding: 20px;
-  border-radius: 6px;
+  border-radius: 10px;
   display: flex;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   gap: 10px;
 }
 .reply_write .f_ta {
@@ -7742,8 +7785,11 @@ tr:last-child .status_box_date {
   padding: 20px;
   border-bottom: 1px solid #DDDDDD;
 }
+.reply_item:last-of-type {
+  border-bottom: none;
+}
 .reply_item:hover {
-  background-color: #F9F9F9;
+  background-color: rgba(255, 255, 0, 0.045);
 }
 .reply_view {
   display: flex;
@@ -8588,13 +8634,19 @@ tr:last-child .status_box_date {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
+  align-items: center;
+}
+.board_view_tit .f_tag {
+  padding: 0 8px;
+}
+.board_view_tit .f_tag:last-of-type {
+  margin-right: 5px;
 }
 .board_view_tit .tag_box {
   margin-bottom: 10px;
 }
 .board_view_tit .tit {
   font-size: 18px;
-  width: 100%;
 }
 .board_view_info {
   display: flex;

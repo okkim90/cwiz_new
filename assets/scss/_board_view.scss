@@ -9,12 +9,20 @@
         display: flex;
         flex-wrap: wrap;
         gap: 5px;
+        align-items: center;
+
+        .f_tag {
+            padding: 0 8px;
+            &:last-of-type {
+                margin-right: 5px;
+            }
+        }
         .tag_box {
             margin-bottom: 10px;
         }
         .tit {
             font-size: 18px;
-            width: 100%;
+            //width: 100%;
         }
     }
     &_info {

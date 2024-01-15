@@ -99,12 +99,46 @@
     
 }
 .btn_down2 {
+    
     &::after {
         //font-size: 16px;
         content: '\f56d';
         font-family: "Font Awesome 6 Free";
         font-weight: bold;
         margin-left: 4px;
+    }
+}
+.btn_down4 {
+    line-height: 1.2;
+    display: inline-flex;
+    //color: #222;
+    align-items: center;
+    max-width: 100%;
+    //font-size: 12px;
+    
+    .file_name {
+        min-width: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-left: 4px;
+    }
+    &::before {
+        font-size: 16px;
+        content: '\f56d';
+        font-family: "Font Awesome 6 Free";
+        font-weight: bold;
+        //color: #393939;
+        line-height: 1;
+    }
+    &:hover {
+        .file_name {
+            text-decoration: underline;
+        }
+        // &::after {
+        //     //transform: scale(1.1);
+        //     color: $c_key;
+        // }
     }
 }
 .btn_del_item {

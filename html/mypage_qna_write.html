@@ -270,8 +270,8 @@
                     <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu6"></i>마이페이지</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2 on">내 정보</a></li>
-                            <li><a href="" class="btn_dep2">내 문의 관리</a></li>
+                            <li><a href="" class="btn_dep2">내 정보</a></li>
+                            <li><a href="" class="btn_dep2 on">내 문의 관리</a></li>
                             <li><a href="" class="btn_dep2">성적서 업체 관리</a></li>
                             <li><a href="" class="btn_dep2">포인트 관리</a></li>
                         </ul>
@@ -309,29 +309,72 @@
                             <a href="#">마이페이지</a>
                         </li>
                         <li class="breadcrumb_item">
-                            내 정보
+                            내 문의 관리
                         </li>
                         <li class="breadcrumb_item">
-                            회원 탈퇴
+                            문의하기
                         </li>
                     </ol>
                 </nav>
                 <!--// [D] breadcrumb -->
                 <div class="sub_tit">
-                    <h1 class="tit1">회원 탈퇴</h1>
+                    <h1 class="tit1">문의하기</h1>
+                    <p class="tip ml_auto"><i class="ico_required"></i> 표시는 필수 기재 항목입니다.</p>
                 </div>
-                <div class="withdrawal_box">
-                    <i class="fa-solid fa-lock"></i>
-                    <strong class="fz_big mt10">비밀번호 재확인</strong>
-                    <p class="fz_normal mt5">회원 정보를 안전하게 보호하기 위해 회원 비밀번호를 다시 확인합니다.</p>
-                    <form action="">
-                        <div class="d_flex _gap10 mt30  ai_c jc_c">
-                            <label for="pw">비밀번호</label>
-                            <input type="password" id="pw" class="f_input ty_mid w_200">
-                            <input type="submit" value="확인" class="f_btn ty_mid _key w_80">
-                        </div>
-                    </form>
-                </div>
+                <form action="">
+                    <div class="v_tbl_wrap">
+                        <table class="v_tbl ty_big">
+                            <colgroup>
+                                <col style="width: 160px;">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th><i class="ico_required"></i> 교정 기관</th>
+                                    <td>
+                                        <select name="" id="" class="f_select ty_mid">
+                                            <option value="" selected disabled>선택</option>
+                                            <option value="">코리아인스트루먼트(주) 서울본사</option>
+                                            <option value="">코리아인스트루먼트(주) 부산지사</option>
+                                            <option value="">코리아인스트루먼트(주) 대전지사 </option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><i class="ico_required"></i> 제목</th>
+                                    <td>
+                                        <input type="text" class="f_input ty_mid w_600" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><i class="ico_required"></i> 내용</th>
+                                    <td>  
+                                        <!--[D] 개발시 삭제--><div class="d_flex ai_c jc_c bg_box" style="height: 300px;">에디터 영역</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>첨부파일</th>
+                                    <td>
+                                        <div class="file_wrap">
+                                            <div class="file_set">
+                                                <div class="file_box">
+                                                    <input type="file" class="f_hidden" onchange="select_file(this)" value="">
+                                                    <input type="text" class="f_input ty_mid" placeholder="파일을 선택해주세요." onclick=" open_file(this)" value="" readonly="">
+                                                    <button type="button" class="btn_del" onclick=" del_file(this)"><span class="blind">파일삭제</span></button>
+                                                </div>
+                                                <button type="button" class="btn_add" onclick="add_form(2) //add_form(최대값)"><span class="blind">행 추가</span></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                    </div>
+                    <div class="btn_set taC mt40">
+                        <input type="submit" class="f_btn ty_mid _key w_100" value="등록">
+                        <button type="button" class="f_btn ty_mid _solidGrey w_100">취소</button>
+                    </div>
+                </form>
                 
             </div>
         </main>

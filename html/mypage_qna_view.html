@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Generator" content="KIC">
+    <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Description" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <title>교정마법사 CWIZ - CALIBRATION WIZARD</title>
+    <script src="https://kit.fontawesome.com/aa5544e91b.js" crossorigin="anonymous" ></script>
+    <script src="../assets/js/jquery-3.1.1.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/datepicker.css">
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+</head>
+<body>
+    <div id="skip-nav">
+        <a href="#container"></a>
+    </div>
+    
+    <div id="wrap" class="grid-container">
+         <!-- header -->
+         <header class="header">
+            <h1 class="logo"><a href=""><img src="../assets/images/common/logo.svg" alt=""></a></h1>
+            <div class="h_util">
+                <div class="h_util_sec h_user">
+                    <i class="fa-solid fa-user"></i><a href="" class="user_name">홍길동</a> 님 
+                </div>
+                <div class="h_util_sec h_branch">
+                    <a href="" class="h_branch_current"><i class="fa-solid fa-building"></i>코리아인스트먼트(주) 서울본사</a> 
+                </div>
+                <div class="h_util_sec h_btns">
+                    <!--[D] 알림(종) 활성화  'on' class 추가-->
+                    <button type="button" class="h_btn ty_notice on" onclick="f_alert_open();">
+                        <i class="fa-solid fa-bell"></i>
+                    </button>
+                    <a href="" class="h_btn ty_logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </div>
+                <div class="f_alert_box">
+                    <div class="f_alert_top">
+                        <h2 class="tit">알림</h2>
+                        <label class="f_toggle ml10">
+                            <input type="checkbox" class="alert_chk" onchange="f_alert_chk(this)" >
+                            <span class="slider">
+                                <div class="slider_txt false">전체</div>
+                                <div class="slider_txt true">미확인</div>
+                            </span>
+                        </label>
+                        <button type="button" class="f_alert_close ml_auto" onclick="f_alert_close()">
+                            <span class="blind">팝업 닫기</span>
+                        </button>
+                    </div>
+                    <ul class="f_alert_list">
+                        <!--[D] 이미 읽은 상태일 경우 'read' class 추가-->
+                        <li class="f_alert_item ">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 공지알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_notice.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item read">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 교정결과 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_cal.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item ">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 교정예정일 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_due.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item ">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 견적요청 승인 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_estimate.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item read">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 공지알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_notice.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 견적요청 승인 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_estimate.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item read">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 견적요청 승인 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_estimate.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!--// header -->
+        <!-- nav -->
+        <aside class="sidenav">
+
+            <button type="button" class="btn_nav_toggle"><i class="fa-solid fa-chevron-left"></i></button>
+            <!--[D] 회사로고 없을경우-->
+            <div class="sidenav_top">
+                <div class="msg_box">
+                    안녕하세요. <br>
+                    <b>(주)피엔케이피부임상연구센터</b> <br> 
+                    <b>김영술</b>님
+                </div>
+                <button type="button" class="btn_add_logo"  onclick="open_popup('pop_logo')">
+                    <i class="fa-solid fa-image"></i>
+                </button>
+            </div>
+            
+
+            <!--[D] 회사로고 있는 경우-->
+            <div class="sidenav_top">
+                <div class="img_box">
+                    <img src="../assets/images/common/Tesla_logo.png" alt="">
+                </div>
+                <button type="button" class="btn_add_logo" onclick="open_popup('pop_logo')">
+                    <i class="fa-solid fa-image"></i>
+                </button>
+            </div>
+
+            <div class="layer_popup pop_logo" onclick="close_popup(this)">
+                <div class="layer_popup_inner">
+                    <div class="layer_popup_cont ty_small">
+                        <button type="button" class="close_popup" onclick="close_popup(this)">
+                            <span class="blind">팝업 닫기</span>
+                        </button>
+                        <div class="sub_tit">
+                            <h1 class="tit1">로고 이미지 등록</h1>
+                        </div>
+                        <form action="">
+                            <!--[D] 이미지 첨부 전 -->
+                            <div class="img_box ty_upload ty_logo">
+                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
+                                <label for="upload_eq_img" class="btn_img_upluad">
+                                    <i class="fa-solid fa-image"></i>
+                                    <p>이미지 첨부하기 (260 x 90)</p>
+                                </label>
+                            </div>
+                            <!--// [D] 이미지 첨부 전 -->
+                            
+                            <br><!--[D] 개발시 삭제-->
+
+                             <!--[D] 이미지 첨부 후 -->
+                            <div class="img_box ty_upload ty_logo">
+                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
+                                <div class="img_box_edit">
+                                    <label for="upload_eq_img" class="img_box_edit_btn"><i class="fa-solid fa-rotate"></i><span class="blind">수정</span></label>
+                                    <button type="button" class="img_box_edit_btn"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button>
+                                </div>
+                                <img src="../assets/images/common/Tesla_logo.png" alt="">
+                            </div>  
+                            <!--[D] 이미지 첨부 후 -->                
+                            <div class="btn_set mt20 taC">
+                                <input type="submit" class="f_btn ty_small _key w_80" value="등록">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <ul class="nav">
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu1"></i>견적 관리</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">견적 요청</a></li>
+                            <li><a href="" class="btn_dep2">견적 확인</a></li>
+                            <li><a href="" class="btn_dep2">교정 수수료 조회</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu2"></i>접수 관리</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">예약 접수</a></li>
+                            <li><a href="" class="btn_dep2">예약 접수 목록</a></li>
+                            <li><a href="" class="btn_dep2">접수 확인</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu3"></i>교정 관리</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">교정 진행 현황</a></li>
+                            <li><a href="" class="btn_dep2">교정 이력 조회</a></li>
+                            <li><a href="" class="btn_dep2">불량 이력 조회</a></li>
+                            <li><a href="" class="btn_dep2">수리 이력 조회</a></li>
+                            <li><a href="" class="btn_dep2">우리 장비 목록</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu4"></i>정산/출고 관리</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">정산 관리</a></li>
+                            <li><a href="" class="btn_dep2">출고 관리</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu5"></i>고객 지원</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">공지사항</a></li>
+                            <li><a href="" class="btn_dep2">자료실</a></li>
+                            <li><a href="" class="btn_dep2">자주하는 질문</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item on">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu6"></i>마이페이지</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">내 정보</a></li>
+                            <li><a href="" class="btn_dep2 on">내 문의 관리</a></li>
+                            <li><a href="" class="btn_dep2">성적서 업체 관리</a></li>
+                            <li><a href="" class="btn_dep2">포인트 관리</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu7"></i>관리자</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">회원 관리</a></li>
+                            <li><a href="" class="btn_dep2">문의 관리</a></li>
+                            <li><a href="" class="btn_dep2">공지사항 관리</a></li>
+                            <li><a href="" class="btn_dep2">자료실 관리</a></li>
+                            <li><a href="" class="btn_dep2">FAQ 관리</a></li>
+                        </ul>
+                    </div>                 
+                </li>
+            </ul>
+        </aside>
+        <!-- // nav -->
+        <!--container-->
+        <main id="container" class="container">
+            <div id="contents" class="contents">
+                <a href="javascript:history.back()" class="btn_back"><span class="blind">뒤로가기</span></a>
+                <!-- [D] breadcrumb -->
+                <nav class="breadcrumb_area">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb_item">
+                            <a href="/">
+                                <i class="fa-solid fa-house"></i>
+                                <span class="blind">home</span>
+                            </a>
+                        </li>
+                        <li class="breadcrumb_item" >
+                            <a href="#">마이페이지</a>
+                        </li>
+                        <li class="breadcrumb_item">
+                            내 문의 관리
+                        </li>
+                    </ol>
+                </nav>
+                <!--// [D] breadcrumb -->
+                <div class="sub_tit">
+                    <h1 class="tit1">내 문의 관리</h1>
+                </div>
+                <section class="sec ">
+                    <div class="board_view">
+                        <div class="board_view_tit">
+                            <!--[D] 태그 있을경우 -->
+                            <span class="f_tag _key">일반문의</span>
+                            <!--// [D] 태그 있을경우 -->
+                            <h2 class="tit">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, repudiandae.</h2>
+                        </div>
+                        <ul class="board_view_info">
+                            <li class="board_view_info_item">등록일시 : 2023-03-31 </li>
+                            <li class="board_view_info_item">조회수 : 62</li>
+                        </ul>
+                        <div class="board_view_cont">
+                            <img src="../assets/images/common/sample.jpg" alt="">
+                            <br>
+                            <br>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt deleniti delectus, nobis optio culpa ducimus reprehenderit quaerat explicabo quia dolorem eaque ad expedita porro corrupti saepe quod eum soluta doloremque quos, temporibus voluptatum vitae consectetur voluptas. Doloremque qui sequi dolorem voluptate blanditiis necessitatibus, quibusdam totam voluptas eligendi consequuntur exercitationem, facilis deleniti corrupti praesentium, iure alias ea ipsum quisquam aperiam consectetur? Ut, commodi! Aliquid nihil voluptatem rem cupiditate, nisi eius dicta, asperiores doloribus delectus neque perspiciatis impedit et odio amet necessitatibus reprehenderit provident est quia quibusdam porro? Eius ratione ex est libero cum quas nisi, atque esse tempora, iste aut. Quia, sint? Quae, in odio harum accusamus sint neque deserunt vel dignissimos error laborum iusto sed, voluptatem odit alias officia accusantium similique. Necessitatibus at aut nostrum deleniti, vel dolore temporibus obcaecati mollitia hic dolorem asperiores officiis autem fugiat neque commodi nobis rem consequatur voluptate sed. Incidunt accusantium dicta facilis a dignissimos consequuntur, rem quidem ad ab. Impedit, quidem itaque! Dolorum, voluptatibus tempora nobis velit animi impedit. Numquam libero sed qui, blanditiis hic fuga doloribus ea cum aspernatur delectus non ullam ratione, enim eveniet nulla atque. Dolore, iste minima distinctio, mollitia numquam accusamus assumenda facilis modi est quaerat, odit dolores suscipit inventore. 
+                        </div>
+                        <div class="board_view_file">
+                            <strong class="tit">첨부파일</strong>
+                            <ul class="file_list">
+                                <li><a href="" class="btn_down3"><span class="file_name">KOLAS인정서_코리아인스트루먼트_주_대전지사_국문.pdf</span></a></li>
+                                <li><a href="" class="btn_down3"><span class="file_name">KOLAS인정서_코리아인스트루먼트_주_대전지사_영문.pdf</span></a></li>
+                            </ul>
+                        </div>   
+                    </div>
+                    <div class="reply_wrap mt30">
+                        <h3 class="reply_wrap_tit">댓글 (20)</h3>
+                        <ul class="reply_list">
+                            <li class="reply_item">
+                                <div class="reply_set">
+                                    <div class="reply_view">
+                                        <!-- 로고 이미지 없을때 (그냥 비워둠) -->
+                                        <div class="reply_thumb"></div>
+                                        <!--// 로고 이미지 없을때 -->
+                                        <div class="reply_cont">
+                                            <div class="reply_name">하니(뉴진스)</div>
+                                            <div class="reply_comment">
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora odit sequi deserunt quaerat blanditiis! Enim obcaecati commodi ea nemo voluptas facere accusamus at quam iure a praesentium molestiae, accusantium eos? Eius saepe optio distinctio eos aspernatur corrupti, repellat voluptatibus suscipit!
+                                            </div>
+                                            <div class="reply_view_bot">
+                                                <div class="reply_view_date">2023-12-23 16:35</div>
+                                                <button type="button" class="f_btn">답글쓰기</button>
+                                                <div class="edit_btns">
+                                                    <button type="button" class="f_btn ty_xsmall _line">수정</button>
+                                                    <button type="button" class="f_btn ty_xsmall _line">삭제</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reply_set ty_re">
+                                    <div class="reply_view ">
+                                        <!-- 로고 이미지 있을때 -->
+                                        <div class="reply_thumb has_thumb">
+                                            <img src="../assets/images/common/Tesla_logo.png" alt="">
+                                        </div>
+                                         <!--// 로고 이미지 있을때 -->
+                                        <div class="reply_cont">
+                                            <div class="reply_name">민지(뉴진스)</div>
+                                            <div class="reply_comment">
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora odit sequi deserunt quaerat blanditiis! Enim obcaecati commodi ea nemo voluptas facere accusamus at quam iure a praesentium molestiae, accusantium eos? Eius saepe optio distinctio eos aspernatur corrupti, repellat voluptatibus suscipit!
+                                            </div>
+                                            <div class="reply_view_bot">
+                                                <div class="reply_view_date">2023-12-23 16:35</div>
+                                                <button type="button" class="f_btn">답글쓰기</button>
+                                                <div class="edit_btns">
+                                                    <button type="button" class="f_btn ty_xsmall _line">수정</button>
+                                                    <button type="button" class="f_btn ty_xsmall _line">삭제</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reply_set ty_re">
+                                    <div class="reply_write">
+                                        <div class="reply_thumb has_thumb">
+                                            <img src="../assets/images/common/vw-logo-2x.png" alt="">
+                                        </div>
+                                        <div class="reply_cont">
+                                            <div class="reply_name">답글을 입력하는 다니엘</div>
+                                            <textarea name="" id="" class="f_ta"></textarea>
+                                            <div class="reply_btns">
+                                                <button class="f_btn ty_small _line">취소</button>
+                                                <button class="f_btn ty_small _key">등록</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li> 
+                            <li class="reply_item">
+                                <div class="reply_set">
+                                    <div class="reply_view">
+                                        <div class="reply_thumb"></div>
+                                        <div class="reply_cont">
+                                            <div class="reply_name">크리스티아누 호날두</div>
+                                            <div class="reply_comment">
+                                                진짜 세계관최강자들의 싸움이다.. 그찐따같던 나루토가 맞나? 진짜 나루토는 전설이다..진짜옛날에 맨날나루토봘는데 왕같은존재인 호카게 되서 세계최강 진짜 세계관최강자들의 싸움이다.. 그찐따같던 나루토가 맞나? 진짜 나루토는 전설이다..진짜옛날에 맨날나루토봘는데 왕같은존재인 호카게 되서 세계최강 진짜 세계관최강자들의 싸움이다.. 그찐따같던 나루토가 맞나? 진짜 나루토는 전설이다..진짜옛날에 맨날나루토봘는데 왕같은존재인 호카게 되서 세계최강
+                                            </div>
+                                            <div class="reply_view_bot">
+                                                <div class="reply_view_date">2023-12-23 16:35</div>
+                                                <button type="button" class="f_btn">답글쓰기</button>
+                                                <div class="edit_btns">
+                                                    <button type="button" class="f_btn ty_xsmall _line">수정</button>
+                                                    <button type="button" class="f_btn ty_xsmall _line">삭제</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li> 
+                            <!-- 댓글 수정시 -->
+                            <li class="reply_item">
+                                <div class="reply_set">
+                                    <div class="reply_write">
+                                        <div class="reply_thumb has_thumb">
+                                            <img src="../assets/images/common/test.jpg" alt="">
+                                        </div>
+                                        <div class="reply_cont">
+                                            <div class="reply_name">코리아인스트루먼트</div>
+                                            <textarea name="" id="" class="f_ta">댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면  </textarea>
+                                            <div class="reply_btns">
+                                                <button class="f_btn ty_small _line">취소</button>
+                                                <button class="f_btn ty_small _key">수정</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li> 
+                            <!--// 댓글 수정시 -->
+                            <li class="reply_item">
+                                <div class="reply_set">
+                                    <div class="reply_view">
+                                        <div class="reply_thumb"></div>
+                                        <div class="reply_cont">
+                                            <div class="reply_name">코리아인스트루먼트</div>
+                                            <div class="reply_comment">
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora odit sequi deserunt quaerat blanditiis! Enim obcaecati commodi ea nemo voluptas facere accusamus at quam iure a praesentium molestiae, accusantium eos? Eius saepe optio distinctio eos aspernatur corrupti, repellat voluptatibus suscipit!
+                                            </div>
+                                            <div class="reply_view_bot">
+                                                <div class="reply_view_date">2023-12-23 16:35</div>
+                                                <button type="button" class="f_btn">답글쓰기</button>
+                                                <div class="edit_btns">
+                                                    <button type="button" class="f_btn ty_xsmall _line">수정</button>
+                                                    <button type="button" class="f_btn ty_xsmall _line">삭제</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reply_set ty_re">
+                                    <div class="reply_view ">
+                                        <!-- 로고 이미지 있을때 -->
+                                        <div class="reply_thumb has_thumb">
+                                            <img src="../assets/images/common/Tesla_logo.png" alt="">
+                                        </div>
+                                         <!--// 로고 이미지 있을때 -->
+                                        <div class="reply_cont">
+                                            <div class="reply_name">민지(뉴진스)</div>
+                                            <div class="reply_comment">
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora odit sequi deserunt quaerat blanditiis! Enim obcaecati commodi ea nemo voluptas facere accusamus at quam iure a praesentium molestiae, accusantium eos? Eius saepe optio distinctio eos aspernatur corrupti, repellat voluptatibus suscipit!
+                                            </div>
+                                            <div class="reply_view_bot">
+                                                <div class="reply_view_date">2023-12-23 16:35</div>
+                                                <button type="button" class="f_btn">답글쓰기</button>
+                                                <div class="edit_btns">
+                                                    <button type="button" class="f_btn ty_xsmall _line">수정</button>
+                                                    <button type="button" class="f_btn ty_xsmall _line">삭제</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 대댓글 수정시 -->
+                                <div class="reply_set ty_re">
+                                    <div class="reply_write">
+                                        <div class="reply_thumb"></div>
+                                        <div class="reply_cont">
+                                            <div class="reply_name">코리아인스트루먼트</div>
+                                            <textarea name="" id="" class="f_ta">대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 </textarea>
+                                            <div class="reply_btns">
+                                                <button class="f_btn ty_small _line">취소</button>
+                                                <button class="f_btn ty_small _key">수정</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--// 대댓글 수정시 -->
+                            </li> 
+                            <!-- 삭제된 댓글 -->
+                            <li class="reply_item">
+                                <div class="reply_set">
+                                    <div class="reply_view">
+                                        <div class="reply_thumb"></div>
+                                        <div class="reply_cont">
+                                            <div class="reply_name">코리아인스트루먼트</div>
+                                            <div class="reply_comment">
+                                                삭제된 댓글입니다.
+                                            </div>
+                                            <div class="reply_view_bot">
+                                                <div class="reply_view_date">2023-12-23 16:35</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 삭제된 대댓글 -->
+                                <div class="reply_set ty_re">
+                                    <div class="reply_view ">
+                                        <div class="reply_thumb"></div>
+                                        <div class="reply_cont">
+                                            <div class="reply_name">코리아인스트루먼트</div>
+                                            <div class="reply_comment">
+                                                삭제된 댓글입니다.
+                                            </div>
+                                            <div class="reply_view_bot">
+                                                <div class="reply_view_date">2023-12-23 16:35</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!--// 삭제된 대댓글 -->
+                            </li> 
+                            <!--// 삭제된 댓글 -->
+                        </ul>
+                        <div class="reply_write mt20">
+                            <div class="reply_thumb"></div>
+                            <div class="reply_cont">
+                                <div class="reply_name">코리아인스트루먼트</div>
+                                <textarea name="" id="" class="f_ta"></textarea>
+                                <div class="reply_btns">
+                                    <button class="f_btn ty_small _key">등록</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="btn_set taC mt40">
+                        <a href="" class="f_btn ty_mid _key w_120">수 정</a>
+                        <a href="mypage_qna.html" class="f_btn ty_mid _blue w_120">목 록</a>
+                        <button type="button" class="f_btn ty_mid _red w_120">삭 제</button>
+                    </div>
+                </section>
+            </div>
+            <script>
+                function reply_scroll(){
+                    document.querySelectorAll('.layer_popup').forEach(e=>{
+                        if(e.querySelector('.reply_scroll')){
+                            e.querySelector('.reply_scroll').scrollIntoView({
+                                block: 'start',
+                                behavior: 'smooth',
+                            });
+                        }
+                    })
+                }
+            </script>
+        </main>
+
+       
+        <!--//container-->
+        <!--footer-->
+        <footer class="footer">
+            <!-- <div class="footer_top">
+                <div class="inner">
+                    <ul class="footer_top_nav ">
+                        <li><a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a></li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="footer_logo">
+                <img src="../assets/images/common/logo_footer.svg" alt="KIC 코리아인스트루먼트(주)">
+            </div>
+            <div class="footer_info">
+                <ul class="footer_info_list">
+                    <li>코리아인스트루먼트(주)</li>
+                    <li><span class="bar"></span>사업자등록번호 : 101-81-45861</li>
+                    <li><span class="bar"></span>대표이사 : 정재호</li>
+                </ul>
+                <p class="copy">Copyright@KIC, Korea Instrument All Rights Reserved.</p>
+                <div class="contact">
+                    <b><i class="fa-solid fa-phone"></i> CONTACT US</b> 
+                    <span class="bar"></span>
+                    <span>1600 - 4245</span>
+                </div>
+            </div>
+            <div class="footer_right">
+                <div class="footer_right_btns">
+                    <a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a>
+                    <span class="bar"></span>
+                    <a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a>
+                </div>
+                <div class="footer_right_branch">
+                    <button class="btn_trigger">코리아인스트루먼트(주) 지점안내</button>
+                    <ul class="branch_list">
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=0" target="_blank">코리아인스트루먼트(주) 서울본사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=1" target="_blank">코리아인스트루먼트(주) 부산지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=2" target="_blank">코리아인스트루먼트(주) 대전지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=3" target="_blank">코리아인스트루먼트(주) 가평지안</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!--//footer-->
+    </div>
+    
+</body>
+</html>

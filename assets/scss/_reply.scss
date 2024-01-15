@@ -1,12 +1,36 @@
 
-.reply_wrap {
-    
-    padding: 20px;
-    padding-top: 0;
-    border: 1px solid $c_line;
-    border-radius: 4px;
-}
 .reply {
+    $maxwidth : 1200px;
+
+    &_wrap {
+        padding: 20px;
+        padding-bottom: 30px;
+    
+        border-radius: 10px;
+        
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgba(#000, .014);
+        border: 1px solid $c_line;
+        //border-top: 1px solid #000;
+        &_tit {
+            max-width: $maxwidth;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+
+
+    &_list {
+        max-width: $maxwidth;
+        margin: 0 auto;
+        border: 1px solid $c_line;
+        border-radius: 10px;
+        background-color: #fff;
+        
+    }
     &_thumb {
         width: 40px;
         height: 40px;
@@ -47,9 +71,11 @@
         border: 2px solid $c_line;
         background-color: #fff;
         padding: 20px;
-        border-radius: 6px;
+        border-radius: 10px;
         display: flex;
-        
+        max-width: $maxwidth;
+        margin-left: auto;
+        margin-right: auto;
         gap: 10px;
         .f_ta {
             height: 60px;
@@ -62,8 +88,11 @@
         padding: 20px;
         //margin-bottom: 20px;
         border-bottom: 1px solid $c_line;
+        &:last-of-type {
+            border-bottom: none;
+        }
         &:hover {
-            background-color: $c_bg;
+            background-color: rgba(yellow, .045);
         }
     }
 
