@@ -5777,6 +5777,9 @@ input::-webkit-search-results-decoration {
   flex: 1;
   min-width: 0;
 }
+.date_set .inp_date.ty_mid {
+  max-width: 130px;
+}
 
 .scroll_area {
   overflow: auto;
@@ -6758,12 +6761,119 @@ tr:last-child .status_box_date {
 
 .point_top {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+}
+.point_top .f_btn {
+  height: 100%;
 }
 .point_status {
   display: flex;
+  padding: 20px 0;
+  border: 1px solid #DDDDDD;
+  border-radius: 10px;
+}
+.point_status_item {
+  display: flex;
   align-items: center;
+  padding: 0 40px;
+}
+.point_status_item + .point_status_item {
+  border-left: 1px solid #DDDDDD;
+}
+.point_status_item .ico_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background-color: rgba(255, 122, 0, 0.1);
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+.point_status_item .ico_box img {
+  height: 46%;
+}
+.point_status_item .ico_box.ty_greyscale {
+  filter: grayscale(1);
+}
+.point_status_item .txt_box .tit {
+  font-size: 14px;
+  font-weight: 500;
+  font-weight: bold;
+}
+.point_status_item .txt_box .points {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 4px;
+}
+.point_status_item .txt_box .points i {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(255, 122, 0, 0.2);
+  color: #FF7A00;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px;
+  font-style: normal;
+  margin-left: 4px;
+}
+.point_policy {
+  display: flex;
+  border-top: 1px solid #666;
+  border-left: 1px solid #666;
+  border-radius: 20px 0 0 0;
+}
+.point_policy_item {
+  flex: 1;
+  border-right: 1px solid #666;
+  border-bottom: 1px solid #666;
+  padding: 30px;
+}
+.point_policy_item:last-of-type {
+  border-radius: 0 0 20px 0;
+}
+.point_policy_item.ai_c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.point_policy_item .num {
+  font-size: 36px;
+  font-weight: 200;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.point_policy_item .desc {
+  font-size: 15px;
+  line-height: 1.6;
+}
+.point_policy_item .img_box.greyscale {
+  filter: grayscale(1);
+}
+.point_policy2 {
+  padding: 20px 30px;
+  background-color: rgba(0, 133, 255, 0.08);
+  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px 0 20px 0;
+}
+.point_policy2 li {
+  list-style-type: decimal;
+  font-size: 15px;
+  margin-left: 1em;
+}
+.point_policy2 li + li {
+  margin-top: 0.5em;
+}
+
+.search_form {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.02);
+  border: 1px solid #DDDDDD;
 }
 
 .layer_popup {
@@ -7796,6 +7906,12 @@ tr:last-child .status_box_date {
 .f_btn.btn_search {
   font-size: 16px;
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.f_btn.ty_ico {
+  min-width: auto;
+  display: flex;
   align-items: center;
   justify-content: center;
 }

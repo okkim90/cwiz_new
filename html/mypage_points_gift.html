@@ -311,11 +311,14 @@
                         <li class="breadcrumb_item">
                             포인트 관리
                         </li>
+                        <li class="breadcrumb_item">
+                            포인트 선물하기
+                        </li>
                     </ol>
                 </nav>
                 <!--// [D] breadcrumb -->
                 <div class="sub_tit">
-                    <h1 class="tit1">포인트 관리</h1>
+                    <h1 class="tit1">포인트 선물하기</h1>
                     <button type="button" class="f_btn ty_mid _key_ol w_100 ml_auto" onclick="open_popup('popup_point')">포인트 정책</button>
                 </div>
                 <section class="sec">
@@ -339,221 +342,78 @@
                     </div>
                 </section>
                 <section class="sec">
-                    <div class="sub_tit2 mb10">
-                        <h2 class="tit3">포인트 내역 검색</h2> 
-                    </div>
-                    <form action="" class="search_form mb10">
-                        <div class="d_flex jc_c">
-                            <div class="date_set">
-                                <select name="" id="" class="f_select ty_mid">
-                                    <option value="">전체 내역</option>
-                                    <option value="">적립 내역</option>
-                                    <option value="">사용 내역</option>
-                                </select>
-                                <input type="text" class="f_input ty_mid w_130 inp_date date_start" readonly> ~
-                                <input type="text" class="f_input ty_mid w_130 inp_date date_end" readonly>
-                                <button type="button" onclick="set_3m(this)" class="f_btn ty_small _round _blue_op w_50">3개월</button>
-                                <button type="button" onclick="set_6m(this)" class="f_btn ty_small _round _blue_op w_50">6개월</button>
-                                <button type="button" onclick="set_1y(this)" class="f_btn ty_small _round _purple_op w_50">1년</button>
-                            </div>
-                            <div class="btn_set ml20">
-                                <button type="submit" class="f_btn ty_mid ty_ico _key w_40">
-                                    <i class="fa-solid fa-magnifying-glass fz_mid"></i>
-                                </button>
-                                <button type="button" class="f_btn ty_mid ty_ico _solidGrey w_40" onclick="reset(this)">
-                                    <i class="fa-solid fa-arrows-rotate fz_mid"></i>
-                                </button>
-                            </div>
+                    <form action="">
+                        <div class="v_tbl_wrap">
+                            <table class="v_tbl ty_big">
+                                <colgroup>
+                                    <col style="width: 160px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>받는 사람</th>
+                                        <td>
+                                            <div class="d_flex _gap10 w_300">
+                                                <input type="text" class="f_input ty_mid flex1" placeholder="받으실 분을 선택해주세요." readonly>
+                                                <button type="button" class="f_btn ty_mid ty_ico _key w_40 shrink0">
+                                                    <i class="fa-solid fa-magnifying-glass fz_mid"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>선물할 포인트</th>
+                                        <td><input type="text" class="f_input ty_mid w_300" placeholder="1,000P 이상 입력 (숫자만)"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>메세지</th>
+                                        <td>
+                                            <div class="ta_count_wrap">
+                                                <textarea name="" id="" class="f_ta ty_mid" placeholder="메세지를 입력해주세요."></textarea>
+                                                <div class="ta_count" data-max="100">
+                                                    <span class="current"></span> / <span class="max"></span>
+                                                </div>
+                                            </div>
+                                            <script>
+                                                String.prototype.getBytes = function () {
+                                                    const contents = this;
+                                                    let str_character;
+                                                    let int_char_count = 0;
+                                                    let int_contents_length = contents.length;
+                                                  
+                                                    for (k = 0; k < int_contents_length; k++) {
+                                                      str_character = contents.charAt(k);
+                                                      if (escape(str_character).length > 4) int_char_count += 2;
+                                                      else int_char_count++;
+                                                    }
+                                                  
+                                                    return int_char_count;
+                                                };
+                                                const ta_count_wrap = document.querySelectorAll('.ta_count_wrap');
+                                                ta_count_wrap.forEach(e=>{
+                                                    let f_ta = e.querySelector('.f_ta');
+                                                    let ta_count = e.querySelector('.ta_count');
+                                                    let max = ta_count.dataset.max;
+                                                    let current_el = ta_count.querySelector('.current');
+                                                    ta_count.querySelector('.max').textContent = max + ' byte'
+                                                    f_ta.addEventListener('keyup',()=>{
+                                                        
+                                                        if(f_ta.value.getBytes() <= max){
+                                                            current_el.textContent = f_ta.value.getBytes();
+                                                        }else{
+                                                            
+                                                        }
+                                                    })
+                                                })
+                                            </script>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </form>
-                    <div class="sub_tit2 mb10 d_flex al_b">
-                        <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2> 
-                        <select name="" id="" class="f_select ty_small w_80 ml20">
-                            <option value="">30개</option>
-                            <option value="">50개</option>
-                            <option value="">100개</option>
-                            <option value="">200개</option>
-                            <option value="">전체</option>
-                        </select>
-                        <a href="mypage_points_gift.html" class="f_btn ty_mid _key w_140 ml_auto">포인트 선물하기 <i class="fa-solid fa-gift"></i></a>
-                    </div>
-                    <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
-                        <table class="h_tbl tl_fixed ty_big">
-                            <colgroup>
-                                <col style="width: 70px;">
-                                <col style="width: 120px;">
-                                <col>
-                                <col style="width: 120px;">
-                                <col style="width: 100px;">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th class="th_fixed">No</th>
-                                    <th class="th_fixed">구분</th>
-                                    <th class="th_fixed">내역</th>
-                                    <th class="th_fixed">포인트</th>
-                                    <th class="th_fixed">일자</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>9999</td>
-                                    <td><span class="f_tag _blue w_60">적립</span></td>
-                                    <td class="taL ellipsisTooltip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, rerum!</td>
-                                    <td><b class="fc_blue">+ 1,000</b></td>
-                                    <td>2024-01-16</td>
-                                </tr>
-                                <tr>
-                                    <td>9999</td>
-                                    <td><span class="f_tag _blue w_60">적립</span></td>
-                                    <td class="taL ellipsisTooltip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, rerum!</td>
-                                    <td><b class="fc_blue">+ 1,000</b></td>
-                                    <td>2024-01-16</td>
-                                </tr>
-                                <tr>
-                                    <td>9999</td>
-                                    <td><span class="f_tag _red w_60">사용</span></td>
-                                    <td class="taL ellipsisTooltip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, rerum!</td>
-                                    <td><b class="fc_red">- 1,000</b></td>
-                                    <td>2024-01-16</td>
-                                </tr>
-                                <tr>
-                                    <td>9999</td>
-                                    <td><span class="f_tag _red w_60">소멸</span></td>
-                                    <td class="taL ellipsisTooltip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, rerum!</td>
-                                    <td><b class="fc_red">- 1,000</b></td>
-                                    <td>2024-01-16</td>
-                                </tr>
-                                <tr>          
-                                    <td colspan="5">
-                                        <div class="no_result_box">
-                                            <i class="fa-solid fa-file-circle-xmark" aria-hidden="true"></i>
-                                            <p class="mt10">검색 결과가 없습니다.</p>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="paging_wrap">
-                        <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
-                        <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
-                        <ul class="paging_list">
-                            <li><span class="paging_btn current">1</span></li>
-                            <li><a href="" class="paging_btn">2</a></li>
-                            <li><a href="" class="paging_btn">3</a></li>
-                            <li><a href="" class="paging_btn">4</a></li>
-                            <li><a href="" class="paging_btn">5</a></li>
-                        </ul>
-                        <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
-                        <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
-                    </div>
                 </section>
             </div>
-
-            <!--[팝업] 포인트 정책 -->
-            <div class="layer_popup popup_point" onclick="close_popup(this)">
-                <div class="layer_popup_inner">
-                    <div class="layer_popup_cont">
-                        <button type="button" class="close_popup" onclick="close_popup(this)">
-                            <span class="blind">팝업 닫기</span>
-                        </button>
-                        <div class="sub_tit">
-                            <h1 class="tit1">포인트 정책 안내</h1>
-                        </div>
-                        <section class="sec">
-                            <h2 class="tit3 mb10 fwB">적립</h2>
-                            <ol class="point_policy">
-                                <li class="point_policy_item">
-                                    <div class="num">01</div>
-                                    <div class="desc">
-                                        <b>신규 회원 가입</b> 시 10,000 포인트가 적립됩니다. <br> (최초 회원가입 시에만 제공됩니다.)
-                                    </div>
-                                </li>
-                                <li class="point_policy_item">
-                                    <div class="num">02</div>
-                                    <div class="desc">
-                                        <b>온라인 결제 완료</b> 시 <br> 
-                                        교정금액(표준소급료, 부가세 제외)의 <b>1%</b>가 포인트로 적립됩니다. <br>
-                                        (결제 포인트는 교정 <b>접수한 담당자</b>에게 지급됩니다. <br>
-                                        단, <b>결제 취소 시 포인트는 소멸</b>됩니다.)
-                                    </div>
-                                </li>
-                                <li class="point_policy_item ai_c">
-                                    <div class="desc taC">
-                                        <div class="img_box mb20">
-                                            <img src="../assets/images/main/ico_coin.svg" alt="" style="width: 100px;">
-                                        </div>
-                                        포인트 적립해서 <b>혜택</b> 받으세요.
-                                    </div>
-                                </li>
-                            </ol>
-                        </section>
-                        <section class="sec mt30">
-                            <h2 class="tit3 mb10 fwB">사용</h2>
-                            <ol class="point_policy">
-                                <li class="point_policy_item">
-                                    <div class="num">01</div>
-                                    <div class="desc">
-                                        <b>10,000 포인트 이상</b>일 때 사용 가능합니다.
-                                    </div>
-                                </li>
-                                <li class="point_policy_item">
-                                    <div class="num">02</div>
-                                    <div class="desc">
-                                        <b>1,000 포인트 단위</b>로 사용 가능합니다.
-                                    </div>
-                                </li>
-                                <li class="point_policy_item">
-                                    <div class="num">03</div>
-                                    <div class="desc">
-                                        내용 어쩌구 저쩌구... 
-                                    </div>
-                                </li>
-                            </ol>
-                        </section>
-                        <section class="sec mt30">
-                            <h2 class="tit3 mb10 fwB">소멸</h2>
-                            <ol class="point_policy">
-                                <li class="point_policy_item">
-                                    <div class="num">01</div>
-                                    <div class="desc">
-                                        회원 탈퇴시 보유한 포인트는 모두 <b>소멸</b>됩니다.
-                                    </div>
-                                </li>
-                                <li class="point_policy_item">
-                                    <div class="num">02</div>
-                                    <div class="desc">
-                                        포인트의 유효기간은 적립일로 부터 <b>3년</b>이며, 유효기간이 지난 포인트는 자동적으로 <b>소멸</b>됩니다.
-                                    </div>
-                                </li>
-                                <li class="point_policy_item ai_c">
-                                    <div class="desc taC">
-                                        <div class="img_box mb20 greyscale">
-                                            <img src="../assets/images/main/ico_coin.svg" alt="" style="width: 100px;">
-                                        </div>
-                                        소멸된 포인트는 <b>복구 되지 않습니다.</b> 
-                                    </div>
-                                </li>
-                            </ol>
-                        </section>
-                        <section class="sec mt30">
-                            <h2 class="tit3 mb10 fwB">포인트 정책</h2>
-                            <ol class="point_policy2">
-                                <li>포인트는 현금으로 전환 및 환급이 불가합니다.</li>
-                                <li>소멸된 포인트는 복구되지 않습니다. </li>
-                                <li>포인트는 양도 및 거래가 불가하며 이를 어길시 사전 통보 없이 포인트는 소멸 될 수 있습니다.</li>
-                                <li>포인트 유효기간은 3년으로, 적립 후 3년간 사용하지 않은 경우 소멸됩니다.</li>
-                                <li>휴면회원 전환 또는 회원 탈퇴시 보유 포인트는 모두 소멸 됩니다.</li>
-                            </ol>
-                        </section>
-                        <div class="btn_set taC mt40">
-                            <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="close_popup(this)">닫기</button>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-            <!--//[팝업] 포인트 정책-->
         </main>
 
        
