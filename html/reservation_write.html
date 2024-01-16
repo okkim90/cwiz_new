@@ -415,7 +415,34 @@
                                 <tr>
                                     <th>성적서 업체</th>
                                     <td>
-                                        <input type="text" class="f_input ty_small w_300">
+                                        <!--[D] 'f_search' 에 'on' class 로 활성화 -->
+                                        <div class="f_search mw_300">
+                                            <input type="text" class="f_input ty_small w100" onfocus="f_search_focus(this)" onfocusout="f_search_focusout(this)" onfocusout placeholder="검색어를 입력해주세요">
+                                            <div class="f_search_list_wrap">
+                                                <ul class="f_search_list">
+                                                    <li class="f_search_item">직접입력</li>
+                                                    <li class="f_search_item">11112<b>Lorem</b>ipsum dolor sit amet</li>
+                                                    <li class="f_search_item">222222<b>Lorem</b> iercitationem quis</li>
+                                                    <li class="f_search_item">333333<b>Lorem</b> ipsum dolor sit am</li>
+                                                    <li class="f_search_item">11112<b>Lorem</b>ipsum dolor sit amet</li>
+                                                    <li class="f_search_item">222222<b>Lorem</b> iercitationem quis</li>
+                                                    <li class="f_search_item">333333<b>Lorem</b> ipsum dolor sit am</li>
+                                                    <li class="f_search_item">11112<b>Lorem</b>ipsum dolor sit amet</li>
+                                                    <li class="f_search_item">222222<b>Lorem</b> iercitationem quis</li>
+                                                    <li class="f_search_item">333333<b>Lorem</b> ipsum dolor sit am</li>
+                                                </ul>
+                                            </div>
+                                            <script>
+                                                function f_search_focus(target){
+                                                    const f_search = target.closest('.f_search');
+                                                    f_search.classList.add('on');
+                                                }
+                                                function f_search_focusout(target){
+                                                    const f_search = target.closest('.f_search');
+                                                    f_search.classList.remove('on');
+                                                }
+                                            </script>
+                                        </div>
                                     </td>
                                     <th>성적서 업체 주소</th>
                                     <td colspan="3">

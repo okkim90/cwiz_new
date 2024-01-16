@@ -2053,3 +2053,15 @@
         
     }
 }
+
+.point {
+    &_top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &_status {
+        display: flex;
+        align-items: center;
+    }
+}

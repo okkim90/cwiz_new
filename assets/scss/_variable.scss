@@ -197,6 +197,10 @@ $inner: 1280px;
     .w_#{$w} {
         width: #{$w}px
     }
+    .mw_#{$w} {
+        width: #{$w}px;
+        max-width: 100%;
+    }
 }
 
 @for $i from 1 through 5 {
