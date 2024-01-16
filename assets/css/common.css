@@ -6876,6 +6876,14 @@ tr:last-child .status_box_date {
   border: 1px solid #DDDDDD;
 }
 
+.ta_count_wrap .byteInfo_box {
+  font-size: 12px;
+  line-height: 1;
+  color: #999;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
 .layer_popup {
   position: fixed;
   left: 0;

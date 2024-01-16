@@ -2184,3 +2184,14 @@
     background-color: rgba(#000, .02);
     border: 1px solid $c_line;
 }
+.ta_count_wrap {
+    .byteInfo_box {
+        //text-align: right;
+        //margin-top: 4px;
+        font-size: 12px;
+        line-height: 1;
+        color: #999;
+        padding-left: 10px;
+        box-sizing: border-box;
+    }
+}

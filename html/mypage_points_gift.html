@@ -319,7 +319,6 @@
                 <!--// [D] breadcrumb -->
                 <div class="sub_tit">
                     <h1 class="tit1">포인트 선물하기</h1>
-                    <button type="button" class="f_btn ty_mid _key_ol w_100 ml_auto" onclick="open_popup('popup_point')">포인트 정책</button>
                 </div>
                 <section class="sec">
                     <div class="point_top">
@@ -355,7 +354,7 @@
                                         <td>
                                             <div class="d_flex _gap10 w_300">
                                                 <input type="text" class="f_input ty_mid flex1" placeholder="받으실 분을 선택해주세요." readonly>
-                                                <button type="button" class="f_btn ty_mid ty_ico _key w_40 shrink0">
+                                                <button type="button" class="f_btn ty_mid ty_ico _key w_40 shrink0" onclick="open_popup('popup_user')">
                                                     <i class="fa-solid fa-magnifying-glass fz_mid"></i>
                                                 </button>
                                             </div>
@@ -368,51 +367,146 @@
                                     <tr>
                                         <th>메세지</th>
                                         <td>
-                                            <div class="ta_count_wrap">
-                                                <textarea name="" id="" class="f_ta ty_mid" placeholder="메세지를 입력해주세요."></textarea>
-                                                <div class="ta_count" data-max="100">
-                                                    <span class="current"></span> / <span class="max"></span>
+                                            <div class="ta_count_wrap d_flex ai_b">
+                                                <textarea name="" id="" class="f_ta ty_mid resize_y" placeholder="메세지를 입력해주세요." onKeyUp="fnChkByte(this,'300')"></textarea>
+                                                <div class="byteInfo_box shrink0 w_100">
+                                                    <span class="byteInfo">0</span> / 300 byte
                                                 </div>
                                             </div>
                                             <script>
-                                                String.prototype.getBytes = function () {
-                                                    const contents = this;
-                                                    let str_character;
-                                                    let int_char_count = 0;
-                                                    let int_contents_length = contents.length;
-                                                  
-                                                    for (k = 0; k < int_contents_length; k++) {
-                                                      str_character = contents.charAt(k);
-                                                      if (escape(str_character).length > 4) int_char_count += 2;
-                                                      else int_char_count++;
-                                                    }
-                                                  
-                                                    return int_char_count;
-                                                };
-                                                const ta_count_wrap = document.querySelectorAll('.ta_count_wrap');
-                                                ta_count_wrap.forEach(e=>{
-                                                    let f_ta = e.querySelector('.f_ta');
-                                                    let ta_count = e.querySelector('.ta_count');
-                                                    let max = ta_count.dataset.max;
-                                                    let current_el = ta_count.querySelector('.current');
-                                                    ta_count.querySelector('.max').textContent = max + ' byte'
-                                                    f_ta.addEventListener('keyup',()=>{
-                                                        
-                                                        if(f_ta.value.getBytes() <= max){
-                                                            current_el.textContent = f_ta.value.getBytes();
+                                                function fnChkByte(obj, maxByte)
+                                                {
+                                                    let str = obj.value;
+                                                    let str_len = str.length;
+                                                    let rbyte = 0;
+                                                    let rlen = 0;
+                                                    let one_char = "";
+                                                    let str2 = "";
+                                                    let byteInfo = obj.closest('.ta_count_wrap').querySelector('.byteInfo');
+
+                                                    for(let i=0; i<str_len; i++)
+                                                    {
+                                                        one_char = str.charAt(i);
+                                                        if(escape(one_char).length > 4) {
+                                                            rbyte += 2;                                       
                                                         }else{
-                                                            
+                                                            rbyte++;
                                                         }
-                                                    })
-                                                })
+                                                        if(rbyte <= maxByte){
+                                                            rlen = i+1;
+                                                        }
+                                                    }
+                                                    if(rbyte > maxByte)
+                                                    {
+                                                        //alert("메세지는 최대 " + maxByte + "byte를 초과할 수 없습니다.")
+                                                        str2 = str.substr(0,rlen);   
+                                                        obj.value = str2;
+                                                        fnChkByte(obj, maxByte);
+                                                    }
+                                                    else
+                                                    {
+                                                        byteInfo.innerText = rbyte;
+                                                    }
+                                                }
                                             </script>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
+                        <div class="btn_set taC mt30">
+                            <input type="submit" value="선물하기" class="f_btn ty_mid _key w_100">
+                            <a href="mypage_points.html" class="f_btn ty_mid _solidGrey w_100">취소</a>
+                        </div>
                     </form>
                 </section>
+            </div>
+            <div class="layer_popup popup_user" onclick="close_popup(this)">
+                <div class="layer_popup_inner">
+                    <div class="layer_popup_cont ty_mid">
+                        <button type="button" class="close_popup" onclick="close_popup(this)">
+                            <span class="blind">팝업 닫기</span>
+                        </button>
+                        <div class="sub_tit">
+                            <h1 class="tit1">CWIZ 친구찾기</h1>
+                        </div>
+                        <section class="sec">
+                            <form action="" class="search_form">
+                                <div class="d_flex jc_c _gap6">
+                                    <select name="" id="" class="f_select ty_mid">
+                                        <option value="">이름</option>
+                                        <option value="">회사명</option>
+                                        <option value="">휴대폰 번호</option>
+                                    </select>
+                                    <input type="text" class="f_input ty_mid w_200"> 
+                                    <button type="submit" class="f_btn ty_mid ty_ico _key w_40 ml4">
+                                        <i class="fa-solid fa-magnifying-glass fz_mid"></i>
+                                    </button>
+                                    <button type="button" class="f_btn ty_mid ty_ico _solidGrey w_40" onclick="reset(this)">
+                                        <i class="fa-solid fa-arrows-rotate fz_mid"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </section>
+                        <section class="sec mt20">
+                            <div class="h_tbl_wrap y_scroll_area" style="max-height: 300px;">
+                                <table class="h_tbl tl_fixed">
+                                    <colgroup>
+                                        <col style="width: 80px;">
+                                        <col>
+                                        <col style="width: 120px;">
+                                        <col style="width: 100px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class="th_fixed">이름</th>
+                                            <th class="th_fixed">회사명</th>
+                                            <th class="th_fixed">휴대폰 번호</th>
+                                            <th class="th_fixed">선택</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>장원영</td>
+                                            <td class="ellipsisTooltip">코리아인스투르먼트(주) 서울본사</td>
+                                            <td>010-1234-1234</td>
+                                            <td>
+                                                <button class="f_btn ty_xsmall _key w_60">선택</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>장원영</td>
+                                            <td class="ellipsisTooltip">코리아인스투르먼트(주) 서울본사</td>
+                                            <td>010-1234-1234</td>
+                                            <td>
+                                                <button class="f_btn ty_xsmall _key w_60">선택</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>장원영</td>
+                                            <td class="ellipsisTooltip">코리아인스투르먼트(주) 서울본사</td>
+                                            <td>010-1234-1234</td>
+                                            <td>
+                                                <button class="f_btn ty_xsmall _key w_60">선택</button>
+                                            </td>
+                                        </tr>
+                                        <tr>          
+                                            <td colspan="4">
+                                                <div class="no_result_box ty_small" >
+                                                    <i class="fa-solid fa-file-circle-xmark" aria-hidden="true"></i>
+                                                    <p class="mt10">검색 결과가 없습니다.</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <div class="btn_set taC mt30">
+                            <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="close_popup(this)">닫기</button>
+                        </div> 
+                    </div>
+                </div>
             </div>
         </main>
 
