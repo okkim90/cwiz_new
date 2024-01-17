@@ -1654,15 +1654,15 @@
     display: inline-block;
     position: relative;
     z-index: 10;
-    vertical-align: middle;
+    vertical-align: top;
     &_ico {
         position: relative;
         z-index: 10;
         color: $c_key;
-        cursor: default;
+        cursor: pointer;
         font-size: 17px;
-        width: 18px;
-        height: 18px;
+        width: 16px;
+        height: 16px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1681,7 +1681,7 @@
         white-space: nowrap;
         opacity: 0;
         visibility: hidden;
-        background-color: lighten($c_key, 47%);
+        background-color: lighten($c_key, 46%);
         padding: 6px 10px;
         padding-left: 26px;
         border-radius: 6px;
@@ -1692,12 +1692,22 @@
         font-weight: normal;
         box-shadow: 0 2px 8px rgba(#000, .11);
         text-align: left;
+        cursor: default;
+        border: 1px solid $c_key;
+        &.ty_right {
+            left: auto;
+            right: -4px;
+            padding-left: 10px;
+            padding-right: 30px;
+        }
     }
 }
 
 .status_box {
     position: relative;
     cursor: default;
+    display: inline-block;
+    vertical-align:middle;
     &:hover {
         .status_box_date {
             opacity: 1;
@@ -1962,10 +1972,72 @@
     display: flex;
     background-color: rgba(#000, .029);
     justify-content: center;
+    padding: 40px 0;
+    gap: 0 50px;
+    border-radius: 10px;
+    &_item {
+        position: relative;
+        &::after {
+            content: '';
+            width: 28px;
+            height: 28px;
+            background-image: url(../images/common/paging_next.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 80px;
+            position: absolute;
+            right: -39px;
+            top: 50%;
+            margin-top: -14px;
+            opacity: 0.2;
+        }
+        
+        &:last-child::after {
+            display: none;
+        }
+    }
     &_card {
         padding: 20px;
         border-radius: 10px;
         background-color: #fff;
+        text-align: center;
+        box-shadow: 0 6px 10px rgba(#000, .04);
+        .ico_box {
+            
+            font-size: 30px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            //display: none;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            // &.bg1 {
+            //     background-color: rgba($c_key, .1);
+            // }
+            // &.bg2 {
+            //     background-color: rgba($c_blue, .1);
+            // }
+            // &.bg3 {
+            //     background-color: rgba($c_green, .1);
+            // }
+            // &.bg4 {
+            //     background-color: rgba($c_red, .1);
+            // }
+        }
+        .tit {
+            font-size: 16px;
+            color: #666;
+            font-weight: 500;
+        }
+        .count {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 4px;
+        }
     }
 }
 

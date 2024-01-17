@@ -1201,6 +1201,81 @@
   color: #3b855d;
 }
 
+.fc_green2 {
+  color: #48a171;
+}
+
+.bg_green2 {
+  background-color: #48a171;
+}
+
+.bd_green2 {
+  border-color: #48a171;
+}
+
+.f_btn._green2 {
+  transition: all 0.1s ease-in-out;
+  background-color: #48a171;
+  border-color: #48a171;
+  color: #fff;
+}
+.f_btn._green2:hover {
+  background-color: #43966a;
+  border-color: #43966a;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+.f_btn._green2:active {
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+}
+.f_btn._green2_ol {
+  transition: all 0.1s ease-in-out;
+  background-color: transparent;
+  border-color: #48a171;
+  color: #48a171;
+}
+.f_btn._green2_ol:hover {
+  background-color: #48a171;
+  color: #fff;
+}
+.f_btn._green2_ol.on {
+  background-color: #48a171;
+  color: #fff;
+}
+.f_btn._green2_ol:active {
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+}
+.f_btn._green2_op {
+  transition: all 0.1s ease-in-out;
+  background-color: rgba(72, 161, 113, 0.15);
+  border-color: #48a171;
+  color: #48a171;
+}
+.f_btn._green2_op:hover {
+  background-color: rgba(72, 161, 113, 0.2);
+}
+.f_btn._green2_op:active {
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+}
+
+.f_tag._green2 {
+  background-color: #48a171;
+  border-color: #48a171;
+  color: #fff;
+}
+.f_tag._green2_ol {
+  background-color: transparent;
+  border-color: #48a171;
+  color: #48a171;
+}
+.f_tag._green2_op {
+  background-color: #cde8d9;
+  border-color: #48a171;
+  color: #48a171;
+}
+
 .fc_yellow {
   color: #ffc107;
 }
@@ -6399,16 +6474,16 @@ input::-webkit-search-results-decoration {
   display: inline-block;
   position: relative;
   z-index: 10;
-  vertical-align: middle;
+  vertical-align: top;
 }
 .f_tooltip_ico {
   position: relative;
   z-index: 10;
   color: #FF7A00;
-  cursor: default;
+  cursor: pointer;
   font-size: 17px;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6426,7 +6501,7 @@ input::-webkit-search-results-decoration {
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
-  background-color: #fff7f0;
+  background-color: #fff4eb;
   padding: 6px 10px;
   padding-left: 26px;
   border-radius: 6px;
@@ -6437,11 +6512,21 @@ input::-webkit-search-results-decoration {
   font-weight: normal;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.11);
   text-align: left;
+  cursor: default;
+  border: 1px solid #FF7A00;
+}
+.f_tooltip_cont.ty_right {
+  left: auto;
+  right: -4px;
+  padding-left: 10px;
+  padding-right: 30px;
 }
 
 .status_box {
   position: relative;
   cursor: default;
+  display: inline-block;
+  vertical-align: middle;
 }
 .status_box:hover .status_box_date {
   opacity: 1;
@@ -6675,11 +6760,58 @@ tr:last-child .status_box_date {
   display: flex;
   background-color: rgba(0, 0, 0, 0.029);
   justify-content: center;
+  padding: 40px 0;
+  gap: 0 50px;
+  border-radius: 10px;
+}
+.cal_status_item {
+  position: relative;
+}
+.cal_status_item::after {
+  content: "";
+  width: 28px;
+  height: 28px;
+  background-image: url(../images/common/paging_next.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80px;
+  position: absolute;
+  right: -39px;
+  top: 50%;
+  margin-top: -14px;
+  opacity: 0.2;
+}
+.cal_status_item:last-child::after {
+  display: none;
 }
 .cal_status_card {
   padding: 20px;
   border-radius: 10px;
   background-color: #fff;
+  text-align: center;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.04);
+}
+.cal_status_card .ico_box {
+  font-size: 30px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.cal_status_card .tit {
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+}
+.cal_status_card .count {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 4px;
 }
 
 .faq {
@@ -7694,6 +7826,7 @@ tr:last-child .status_box_date {
   line-height: 1;
   display: inline-flex;
   align-items: center;
+  position: relative;
 }
 .btn_down:hover .txt {
   text-decoration: underline;
@@ -7703,6 +7836,10 @@ tr:last-child .status_box_date {
   content: "\f56d";
   font-family: "Font Awesome 6 Free";
   font-weight: bold;
+}
+.btn_down:hover .btn_tooltip {
+  opacity: 1;
+  visibility: visible;
 }
 
 .btn_down2::after {
@@ -7923,6 +8060,9 @@ tr:last-child .status_box_date {
   align-items: center;
   justify-content: center;
 }
+.f_btn.pd10 {
+  padding: 0 10px;
+}
 
 .btn_delete {
   display: inline-block;
@@ -7984,6 +8124,26 @@ tr:last-child .status_box_date {
   align-items: center;
   gap: 5px;
   cursor: pointer;
+}
+
+.btn_tooltip {
+  transition: all 0.1s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  font-size: 11px;
+  line-height: 22px;
+  white-space: nowrap;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid #DDDDDD;
+  color: #333;
+  z-index: 10;
+  left: 50%;
+  top: 100%;
+  padding: 0 6px;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .tabs {

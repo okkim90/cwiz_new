@@ -80,6 +80,7 @@
     display: inline-flex;
     //color: #222;
     align-items: center;
+    position: relative;
     &:hover {
         .txt {
             text-decoration: underline;
@@ -96,6 +97,14 @@
         font-weight: bold;
         //color: #393939;
     }
+
+    &:hover {
+        .btn_tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    
     
 }
 .btn_down2 {
@@ -337,6 +346,9 @@
         align-items: center;
         justify-content: center;
     }
+    &.pd10 {
+        padding: 0 10px;
+    }
 }
 
 .btn_delete {
@@ -399,4 +411,25 @@
     align-items: center;
     gap: 5px;
     cursor: pointer;
+}
+
+
+.btn_tooltip {
+    transition: all .1s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    font-size: 11px;
+    line-height: 22px;
+    white-space: nowrap;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid $c_line;
+    color: #333;
+    z-index: 10;
+    left: 50%;
+    top: 100%;
+    padding: 0 6px;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(#000, .3);
 }

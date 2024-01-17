@@ -30,6 +30,7 @@ $colors: (
     _lblue: #63c1fc,
     _orange: #FF7A00,
     _green: #3b855d,
+    _green2: #48a171,
     _yellow: #ffc107,
     _purple: #8856f3,
     _lightGrey: #aaa,
@@ -174,6 +175,9 @@ $c_bg_grey : map-get($colors, _bg_grey);
 $c_blue : map-get($colors, _blue);
 $c_red : map-get($colors, _red);
 $c_sky : map-get($colors, _sky);
+$c_green : map-get($colors, _green);
+$c_yellow : map-get($colors, _yellow);
+$c_purple : map-get($colors, _purple);
 $c_lightGrey : map-get($colors, _lightGrey);
 $c_solidGrey : map-get($colors, _solidGrey);
 
