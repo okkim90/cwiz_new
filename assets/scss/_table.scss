@@ -61,6 +61,7 @@
 .h_tbl {
     position: relative;
     z-index: 10;
+    
     &_wrap {
         border: 1px solid $c_line;
         border-top: 1px solid #000;
@@ -92,15 +93,29 @@
     &.tl_fixed {
         table-layout: fixed;
     }
+    &.no_hv {
+        tr:hover {
+            cursor: default;
+            background-color: #fff
+        }
+    }
     thead {
+        &.th_fixed {
+            position: sticky;
+            top: 0px;
+            z-index: 99;
+            background-color: $c_line;
+            
+        }
         th {
             background-color: $c_bg_grey;
             text-align: center;
             padding: 5px;
             height: 3em;
-            cursor: pointer;
+            //cursor: pointer;
             border: 1px solid $c_line;
             border-top: none;
+            //box-shadow:  0 0 1px #000;
             &:first-child {
                 border-left: none;
             }
@@ -145,10 +160,15 @@
             }
            
             
-            
+            &.bg_bg_grey {
+                &:hover { 
+                    background-color: $c_bg_grey;
+                }
+            }
             &:hover {
                 background-color: rgba(rgb(249, 246, 61), .08);
                 cursor: pointer;
+
             }
             
         }

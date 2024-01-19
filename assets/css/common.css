@@ -8272,12 +8272,21 @@ tr:last-child .status_box_date {
 .h_tbl.tl_fixed {
   table-layout: fixed;
 }
+.h_tbl.no_hv tr:hover {
+  cursor: default;
+  background-color: #fff;
+}
+.h_tbl thead.th_fixed {
+  position: sticky;
+  top: 0px;
+  z-index: 99;
+  background-color: #DDDDDD;
+}
 .h_tbl thead th {
   background-color: #EFEFEF;
   text-align: center;
   padding: 5px;
   height: 3em;
-  cursor: pointer;
   border: 1px solid #DDDDDD;
   border-top: none;
 }
@@ -8311,6 +8320,9 @@ tr:last-child .status_box_date {
 }
 .h_tbl tbody tr.no_hv:hover {
   cursor: default;
+}
+.h_tbl tbody tr.bg_bg_grey:hover {
+  background-color: #EFEFEF;
 }
 .h_tbl tbody tr:hover {
   background-color: rgba(249, 246, 61, 0.08);
