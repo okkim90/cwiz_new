@@ -2401,7 +2401,7 @@
                                         <div class="d_flex mb10">
                                             <p class="tip ml_auto self_bot"><i class="ico_required"></i> 표시는 필수 기재 항목입니다.</p>
                                         </div>
-                                       
+                                    
                                         <div class="v_tbl_wrap">
                                             <table class="v_tbl tl_auto">
                                                 <tbody>
@@ -2419,9 +2419,13 @@
                                                         <th>주소 <i class="ico_required"></i></th>
                                                         <td>     
                                                             <div class="d_flex fw_w _gap5">
-                                                                <input type="text" class="f_input ty_small w_120 shrink0" readonly>
-                                                                <button type="button" class="f_btn ty_small w_100 shrink0 _key">주소찾기</button>
-                                                                <input type="text" class="f_input ty_small w100" placeholder="기본주소를 입력해주세요.">
+                                                                <div class="search_set shrink0">
+                                                                    <input type="text" class="f_input w_100 ty_small" placeholder="우편번호" readonly="">
+                                                                    <button type="button" class="f_btn ty_small _key btn_search">
+                                                                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                                                                    </button>
+                                                                </div>
+                                                                <input type="text" class="f_input ty_small w100" placeholder="기본주소를 입력해주세요." readonly>
                                                                 <input type="text" class="f_input ty_small w100" placeholder="상세주로를 입력해주세요.">
                                                             </div> 
                                                         </td>
@@ -2471,7 +2475,7 @@
                                         <div class="d_flex mb10">
                                             <p class="tip ml_auto self_bot"><i class="ico_required"></i> 표시는 필수 기재 항목입니다.</p>
                                         </div>
-                                       
+                                    
                                         <div class="v_tbl_wrap">
                                             <table class="v_tbl tl_auto">
                                                 <tbody>
@@ -2489,9 +2493,13 @@
                                                         <th>주소 <i class="ico_required"></i></th>
                                                         <td>     
                                                             <div class="d_flex fw_w _gap5">
-                                                                <input type="text" class="f_input ty_small w_120 shrink0" value="12345" readonly>
-                                                                <button type="button" class="f_btn ty_small w_100 shrink0 _key">주소찾기</button>
-                                                                <input type="text" class="f_input ty_small w100" placeholder="기본주소를 입력해주세요." value="서울특별시 구로구 디지털로 111">
+                                                                <div class="search_set shrink0">
+                                                                    <input type="text" class="f_input w_100 ty_small" value="12345" placeholder="우편번호" readonly>
+                                                                    <button type="button" class="f_btn ty_small _key btn_search">
+                                                                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                                                                    </button>
+                                                                </div>
+                                                                <input type="text" class="f_input ty_small w100" placeholder="기본주소를 입력해주세요." value="서울특별시 구로구 디지털로 111" readonly>
                                                                 <input type="text" class="f_input ty_small w100" placeholder="상세주로를 입력해주세요." value="그랜드 빌딩 99층">
                                                             </div> 
                                                         </td>

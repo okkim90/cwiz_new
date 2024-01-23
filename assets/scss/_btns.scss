@@ -332,6 +332,17 @@
     &.w100 {
         width: 100%;
     }
+    &.ty_pay {
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        font-size: 18px;
+        padding: 20px;
+        font-weight: bold;
+        
+    }
 
     &.btn_search {
         font-size: 16px;
@@ -432,4 +443,22 @@
     padding: 0 6px;
     transform: translateX(-50%);
     box-shadow: 0 0 10px rgba(#000, .3);
+}
+
+.btn_ico {
+    &:hover {
+        color: $c_key;
+    }
+    &.ty_small {
+        font-size: 15px;
+        line-height: 20px;
+        height: 20px;
+        width: 20px;
+    }
+    &.ty_mid {
+        font-size: 16px;
+        line-height: 22px;
+        height: 22px;
+        width: 22px;
+    }
 }

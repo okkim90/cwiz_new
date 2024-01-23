@@ -34,7 +34,8 @@ $colors: (
     _yellow: #ffc107,
     _purple: #8856f3,
     _lightGrey: #aaa,
-    _solidGrey: #393939
+    _solidGrey: #393939,
+    //_tp : transparent
 );
 
 
@@ -42,6 +43,7 @@ $fz: (
     _normal: 13px, 
     _big: 20px, 
     _mid: 16px, 
+    _mid2: 14px,
     _small: 12px, 
 );
 
@@ -199,7 +201,8 @@ $inner: 1280px;
 @for $i from 1 through 100 {
     $w : 10*$i;
     .w_#{$w} {
-        width: #{$w}px
+        width: #{$w}px;
+        max-width: 100%;
     }
     .mw_#{$w} {
         width: #{$w}px;
@@ -348,6 +351,9 @@ $inner: 1280px;
     }
 }
 
+.d_block {
+    display: block;
+}
 .ml_auto {
     margin-left: auto;
 }
@@ -363,6 +369,9 @@ $inner: 1280px;
 
 .fwB {
     font-weight: bold;
+}
+.fwM {
+    font-weight: 500;
 }
 .no_select {
     user-select: none;

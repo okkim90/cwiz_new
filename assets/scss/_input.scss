@@ -365,22 +365,29 @@
 .chk_btn {
     position: relative;
     user-select: none;
+    white-space: nowrap;
     input[type="checkbox"], input[type="radio"] {
         visibility: hidden;
         opacity: 0;
         position: absolute;
         &:checked ~ .f_btn {    
             background-color: $c_key;
-            &:hover {
-                background-color: darken($c_key, 6%);
-            }
+            // &:hover {
+            //     background-color: darken($c_key, 6%);
+            // }
         }
+        &:checked ~ .inp_date {
+            display: block;
+        } 
+    }
+    .inp_date {
+        display: none;
     }
     .f_btn {
-        background-color: $c_lightGrey;
+        background-color: #bbb ;
         color: #fff;
         &:hover {
-            background-color: darken($c_lightGrey, 6%);
+            background-color: darken(#bbb, 4%);
         }
     }
 }
@@ -516,6 +523,7 @@
         
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
+        border-right: none;
     }
     .f_btn {
         border-left: none;

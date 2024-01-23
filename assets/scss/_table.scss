@@ -131,6 +131,13 @@
         }
     }
     tfoot {
+        &.th_fixed {
+            position: sticky;
+            bottom: 0px;
+            z-index: 99;
+            background-color: $c_line;
+            
+        }
         th, td {
             border: 1px solid $c_line;
             background-color: lighten($c_blue, 46%);
