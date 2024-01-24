@@ -841,7 +841,7 @@
     &2 {
         display: flex;
         align-items: flex-end;
-        margin-bottom: 15px;
+        margin-bottom: 16px;
         &.mb10 {
             margin-bottom: 10px;
         }
@@ -1827,7 +1827,7 @@
         padding-left: 0.8em;
         position: relative;
         & + .list_item {
-            margin-top: 4px;
+            margin-top: 0.5em;
         }
         &::before {
             content: '•';
@@ -2268,55 +2268,108 @@
     }
 }
 
-.payment_wrap {
-    position: relative;
-    display: flex;
-    margin-top: 40px;
-    
-    &_left {
-        flex: 1;
-        padding: 25px 20px 40px;
-        border-radius: 12px;
-        border: 1px solid #333;
-    }
-    &_right {
-        flex-shrink: 0;
-        width: 340px;
-        
-        margin-left: 30px;
-        //align-self: flex-end;
-        //height: 100%;
+.payment {
+    &_wrap {
         position: relative;
         display: flex;
-        align-items: flex-end;
-    }
-    .payment_box {
-        position: sticky;
-        width: 100%;
-        bottom: 10px;
-        padding: 25px 20px 30px;
-        border: 3px solid #333;
-        border-radius: 12px;
+        margin-top: 40px;
         
-        .tit {
-            font-size: 18px;
-            text-align: center;
-            margin-bottom: 20px;
-            font-weight: bold;
+        &_left {
+            flex: 1;
+            padding: 25px 20px 40px;
+            border-radius: 12px;
+            border: 1px solid #333;
         }
-        &_list {
-            li {
-                font-size: 16px;
+        &_right {
+            flex-shrink: 0;
+            width: 340px;
+            
+            margin-left: 30px;
+            //align-self: flex-end;
+            //height: 100%;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+        }
+        .payment_box {
+            position: sticky;
+            width: 100%;
+            bottom: 10px;
+            padding: 20px 20px 25px;
+            border: 3px solid #333;
+            border-radius: 12px;
+            
+            .tit {
+                font-size: 18px;
+                text-align: center;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+            &_list {
+                li {
+                    font-size: 16px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    & + li {
+                        margin-top: 10px;
+                    }
+                    &.total {
+                        .item_cont {
+                            font-size: 18px;
+                        }
+                        padding-top: 10px;
+                        border-top: 1px dashed #000;
+                    }
+                }
+            }
+        }
+    }
+    &_agreement {
+        padding: 10px;
+        background-color: #f2f2f2;
+        border-radius: 6px;
+        li {
+            & + li {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+
+.shipment_info {
+    
+    
+    &_list {
+        margin-top: 10px;
+        display: flex;
+        gap: 30px;
+        padding: 20px 30px;
+        background-color: rgba(#000, .03);
+        border-radius: 10px;
+        justify-content: center;
+        .list_item {
+            flex: 1;
+            border-radius: 10px;
+            border: 1px solid $c_line;
+            background-color: #fff;
+            //max-width: 400px;
+
+            .tit {
+                font-weight: 500;
+                
+                flex-shrink: 0;
                 display: flex;
-                justify-content: space-between;
-                & + li {
-                    margin-top: 10px;
-                }
-                &.total {
-                    font-size: 18px;
-                    padding-top: 16px;
-                    border-top: 1px dashed #000;
-                }
+                gap: 8px;
+                align-items: center;
+                
+                font-size: 16px;
+                padding: 12px 20px;
+            }
+            .desc {
+                padding: 14px 20px;
+                border-top: 1px solid $c_line;
             }
         }
     }

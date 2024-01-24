@@ -23,6 +23,7 @@ $colors: (
     _line: #DDDDDD,
     _bg: #F9F9F9,
     _bg_grey: #EFEFEF,
+    _bg_grey2: #f4f4f4,
     _blue: #0085FF,
     _navy: #005AAD,
     _sky: #a1b9ff,
@@ -34,6 +35,7 @@ $colors: (
     _yellow: #ffc107,
     _purple: #8856f3,
     _lightGrey: #aaa,
+    _midGrey: #777,
     _solidGrey: #393939,
     //_tp : transparent
 );
@@ -174,6 +176,7 @@ $c_key : map-get($colors, _key);
 $c_line : map-get($colors, _line);
 $c_bg : map-get($colors, _bg);
 $c_bg_grey : map-get($colors, _bg_grey);
+$c_bg_grey2 : map-get($colors, _bg_grey2);
 $c_blue : map-get($colors, _blue);
 $c_red : map-get($colors, _red);
 $c_sky : map-get($colors, _sky);
@@ -182,6 +185,7 @@ $c_yellow : map-get($colors, _yellow);
 $c_purple : map-get($colors, _purple);
 $c_lightGrey : map-get($colors, _lightGrey);
 $c_solidGrey : map-get($colors, _solidGrey);
+$c_midGrey : map-get($colors, _midGrey);
 
 //Font
 $font: 'Noto Sans KR', sans-serif;
@@ -253,6 +257,12 @@ $inner: 1280px;
     .pb#{$i} {
         padding-bottom: #{$i}px
     }
+    .pa#{$i} {
+        padding: #{$i}px
+    }
+    .bd_radius#{$i} {
+        border-radius: #{$i}px
+    }
     
     .mt#{$z} {
         margin-top: #{$z}px;
@@ -278,6 +288,12 @@ $inner: 1280px;
     }
     .pb#{$z} {
         padding-bottom: #{$z}px
+    }
+    .pa#{$z} {
+        padding: #{$z}px
+    }
+    .bd_radius#{$z} {
+        border-radius: #{$z}px
     }
 }
 @mixin list_col($col ,$gapX:20px, $gapY:30px){

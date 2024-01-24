@@ -323,6 +323,7 @@
                 <section class="sec">
                     <div class="sub_tit2">
                         <h2 class="tit3">1. 결제 정보</h2>
+                        <span class="fc_midGrey fz_mid fwM ml10">- 결제하실 내용을 확인해주세요.</span>
                     </div>
                     <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
                         <table class="h_tbl tl_fixed">
@@ -408,7 +409,8 @@
                     <div class="payment_wrap_left">
                         <section class="sec mt0">
                             <div class="sub_tit2">
-                                <h2 class="tit3">2. 출고 요청</h2>
+                                <h2 class="tit3">2. 출고 방식 선택</h2>
+                                <span class="fc_midGrey fz_mid fwM ml10">- 출고 하실 방식을 선택해주세요.</span>
                             </div>
                             <div class="d_flex _gap15">
                                 <label class="chk_btn">
@@ -439,7 +441,7 @@
                                     <h3 class="tit4 ">※ 배송지 선택</h3>
                                     <button class="f_btn _key_ol ty_mid pd10 ml_auto" onclick="open_popup('popup_address_add')">배송지 추가 +</button>
                                 </div>
-                                <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
+                                <div class="h_tbl_wrap y_scroll_area" style="max-height: 260px;">
                                     <table class="h_tbl tl_fixed">
                                         <colgroup>
                                             <col style="width: 50px;">
@@ -512,6 +514,14 @@
                                                     <button type="button" class="btn_ico ty_small" aria-label="delete"><i class="fa-solid fa-trash-can"></i></button>
                                                 </td>
                                             </tr>
+                                            <tr>          
+                                                <td colspan="6">
+                                                    <div class="no_result_box ty_small">
+                                                        <i class="fa-solid fa-file-circle-xmark" aria-hidden="true"></i>
+                                                        <p class="mt10">등록된 배송지가 없습니다.</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -534,7 +544,8 @@
                         </section>
                         <section class="sec">
                             <div class="sub_tit2">
-                                <h2 class="tit3">3. 결제 수단</h2>
+                                <h2 class="tit3">3. 결제 수단 선택</h2>
+                                <span class="fc_midGrey fz_mid fwM ml10">- 결제 수단을 선택해주세요.</span>
                             </div>
                             <div class="d_flex _gap15">
                                 <label class="chk_btn">
@@ -684,23 +695,38 @@
                                     <span class="item_tit">결제금액 합계</span> 
                                     <b class="item_cont"><span>999,000,000</span> 원</b>
                                 </li>
-                                <li> 
+                                <!-- <li> 
                                     <span class="item_tit">할인금액 합계</span> 
                                     <b class="item_cont"><span>-9,990,000</span> 원</b>
-                                </li>
+                                </li> -->
                                 <li class="total">
                                     <b class="item_tit">최종 결제금액</b> 
                                     <b class="item_cont"><span class="fc_key">989,010,000</span> 원</b>
                                 </li>
                             </ul>
+                            <ul class="payment_agreement mt20 pt10">
+                                <li>
+                                    <label class="btn_chk no_select">
+                                        <input type="checkbox">
+                                        어쩌구 저쩌구1 약관 동의합니다.
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="btn_chk no_select">
+                                        <input type="checkbox">
+                                        어쩌구 저쩌구2 약관 동의합니다.
+                                    </label>
+                                </li>
+                            </ul>
                             <!--[D] 출고/결제수단 미작성시 비활성화-->
                             <!-- <button class="f_btn _key ty_big w100 mt30 disabled">결제하기</button>  -->
-                             <!--[D] 활성화 상태 -->
-                            <button class="f_btn _key ty_big w100 mt30">결제하기</button>
+                            <!--[D] 활성화 상태 -->
+                            
+                            <button class="f_btn _key ty_big w100 mt20">결제하기</button>
                         </div>
                     </div>
                 </div>
-                <div class="btn_set taC mt50">
+                <div class="btn_set taC mt40">
                     <a href="cost_list.html" class="f_btn ty_mid w_100 _lightGrey">목록</a>
                 </div>
             </div>

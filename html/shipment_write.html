@@ -323,9 +323,91 @@
                 <div class="sub_tit">
                     <h1 class="tit1">출고 요청</h1>
                 </div>
+                
                 <section class="sec">
                     <div class="sub_tit2">
-                        <h2 class="tit3">1. 출고 요청</h2>
+                        <h2 class="tit3">1. 선택한 교정 내역 : 9,999건</h2>
+                        <span class="fc_midGrey fz_mid fwM ml10">- 출고 요청 할 교정 내역을 확인해주세요.</span>
+                    </div>
+                    <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
+                        <table class="h_tbl tl_fixed">
+                            <colgroup> 
+                                <col style="width: 90px;">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col style="width: 80px;">
+                                <col style="width: 80px;">
+                                <col style="width: 60px;">
+                            </colgroup>
+                            <thead class="th_fixed">
+                                <tr>
+                                    <th>교정번호</th>
+                                    <th>성적서 업체</th>
+                                    <th>계측기명</th>
+                                    <th>제조사</th>
+                                    <th>형식</th>
+                                    <th>기기번호</th>
+                                    <th>현재상태</th>
+                                    <th>교정결과</th>                          
+                                    <th>삭제</th>                          
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2300097-1</td>
+                                    <td class="ellipsisTooltip">업체명업체명업체명업체명업체명업체명업체명업</td>
+                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명계측</td>
+                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명</td>
+                                    <td class="ellipsisTooltip">형식형식형식형식형식형식형식형식형식형식형식</td>
+                                    <td class="ellipsisTooltip">기기번호기기번호기기번호기기번호기기번호기기</td>
+                                    <td>교정 완료</td>
+                                    <td>정상</td>
+                                    <td><button type="button" class="btn_ico ty_small"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button></td>
+                                </tr>
+                                <tr>
+                                    <td>2300097-1</td>
+                                    <td class="ellipsisTooltip">업체명업체명업체명업체명업체명업체명업체명업</td>
+                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명계측</td>
+                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명</td>
+                                    <td class="ellipsisTooltip">형식형식형식형식형식형식형식형식형식형식형식</td>
+                                    <td class="ellipsisTooltip">기기번호기기번호기기번호기기번호기기번호기기</td>
+                                    <td>교정 완료</td>
+                                    <td>정상</td>
+                                    <td><button type="button" class="btn_ico ty_small"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button></td>
+                                </tr>
+                                <tr>
+                                    <td>2300097-1</td>
+                                    <td class="ellipsisTooltip">업체명업체명업체명업체명업체명업체명업체명업</td>
+                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명계측</td>
+                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명</td>
+                                    <td class="ellipsisTooltip">형식형식형식형식형식형식형식형식형식형식형식</td>
+                                    <td class="ellipsisTooltip">기기번호기기번호기기번호기기번호기기번호기기</td>
+                                    <td>교정 완료</td>
+                                    <td>정상</td>
+                                    <td><button type="button" class="btn_ico ty_small"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button></td>
+                                </tr>
+                                <tr>
+                                    <td>2300097-1</td>
+                                    <td class="ellipsisTooltip">업체명업체명업체명업체명업체명업체명업체명업</td>
+                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명계측</td>
+                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명</td>
+                                    <td class="ellipsisTooltip">형식형식형식형식형식형식형식형식형식형식형식</td>
+                                    <td class="ellipsisTooltip">기기번호기기번호기기번호기기번호기기번호기기</td>
+                                    <td>교정 완료</td>
+                                    <td>정상</td>
+                                    <td><button type="button" class="btn_ico ty_small"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="sec">
+                    <div class="sub_tit2">
+                        <h2 class="tit3">2. 출고 방식 선택</h2>
+                        <span class="fc_midGrey fz_mid fwM ml10">- 출고 하실 방식을 선택해주세요.</span>
                     </div>
                     <div class="d_flex _gap15">
                         <label class="chk_btn">
@@ -351,20 +433,20 @@
                             </span>
                         </label>   
                     </div>
-                    <div class="address_wrap mt10 mw_1000" style="display: none;">
+                    <div class="address_wrap mt10" style="display: none;">
                         <div class="d_flex mb10 ai_b">
                             <h3 class="tit4 ">※ 배송지 선택</h3>
                             <button class="f_btn _key_ol ty_mid pd10 ml_auto" onclick="open_popup('popup_address_add')">배송지 추가 +</button>
                         </div>
-                        <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
-                            <table class="h_tbl tl_fixed">
+                        <div class="h_tbl_wrap y_scroll_area" style="max-height: 300px;">
+                            <table class="h_tbl tl_fixed ty_big">
                                 <colgroup>
                                     <col style="width: 50px;">
                                     <col>
                                     <col style="width: 80px;">
-                                    <col style="width: 100px;">
-                                    <col style="width: 50px;">
-                                    <col style="width: 50px;">
+                                    <col style="width: 120px;">
+                                    <col style="width: 60px;">
+                                    <col style="width: 60px;">
                                 </colgroup>
                                 <thead class="th_fixed">
                                     <tr>
@@ -429,6 +511,14 @@
                                             <button type="button" class="btn_ico ty_small" aria-label="delete"><i class="fa-solid fa-trash-can"></i></button>
                                         </td>
                                     </tr>
+                                    <tr>          
+                                        <td colspan="6">
+                                            <div class="no_result_box ty_small">
+                                                <i class="fa-solid fa-file-circle-xmark" aria-hidden="true"></i>
+                                                <p class="mt10">등록된 배송지가 없습니다.</p>
+                                            </div>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -448,81 +538,27 @@
                             })
                         })
                     </script>
-                </section>
-                <section class="sec">
-                    <div class="sub_tit2">
-                        <h2 class="tit3">2. 교정 내역 : 9,999건</h2>
-                    </div>
-                    <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
-                        <table class="h_tbl tl_fixed">
-                            <colgroup> 
-                                <col style="width: 100px;">
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                                <col style="width: 80px;">
-                                <col style="width: 80px;">
-                            </colgroup>
-                            <thead class="th_fixed">
-                                <tr>
-                                    <th>교정번호</th>
-                                    <th>성적서 업체</th>
-                                    <th>계측기명</th>
-                                    <th>제조사</th>
-                                    <th>형식</th>
-                                    <th>기기번호</th>
-                                    <th>현재상태</th>
-                                    <th>교정결과</th>                          
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>2300097-1</td>
-                                    <td class="ellipsisTooltip">업체명업체명업체명업체명업체명업체명업체명업</td>
-                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명계측</td>
-                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명</td>
-                                    <td class="ellipsisTooltip">형식형식형식형식형식형식형식형식형식형식형식</td>
-                                    <td class="ellipsisTooltip">기기번호기기번호기기번호기기번호기기번호기기</td>
-                                    <td>교정 완료</td>
-                                    <td>정상</td>
-                                </tr>
-                                <tr>
-                                    <td>2300097-1</td>
-                                    <td class="ellipsisTooltip">업체명업체명업체명업체명업체명업체명업체명업</td>
-                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명계측</td>
-                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명</td>
-                                    <td class="ellipsisTooltip">형식형식형식형식형식형식형식형식형식형식형식</td>
-                                    <td class="ellipsisTooltip">기기번호기기번호기기번호기기번호기기번호기기</td>
-                                    <td>교정 완료</td>
-                                    <td>정상</td>
-                                </tr>
-                                <tr>
-                                    <td>2300097-1</td>
-                                    <td class="ellipsisTooltip">업체명업체명업체명업체명업체명업체명업체명업</td>
-                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명계측</td>
-                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명</td>
-                                    <td class="ellipsisTooltip">형식형식형식형식형식형식형식형식형식형식형식</td>
-                                    <td class="ellipsisTooltip">기기번호기기번호기기번호기기번호기기번호기기</td>
-                                    <td>교정 완료</td>
-                                    <td>정상</td>
-                                </tr>
-                                <tr>
-                                    <td>2300097-1</td>
-                                    <td class="ellipsisTooltip">업체명업체명업체명업체명업체명업체명업체명업</td>
-                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명계측</td>
-                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명</td>
-                                    <td class="ellipsisTooltip">형식형식형식형식형식형식형식형식형식형식형식</td>
-                                    <td class="ellipsisTooltip">기기번호기기번호기기번호기기번호기기번호기기</td>
-                                    <td>교정 완료</td>
-                                    <td>정상</td>
-                                </tr>
-                            </tbody>
-                        </table>
+
+                    <div class="shipment_info mt40">
+                        <h3 class="tit4 fwB d_flex ai_c"><i class="fa-solid fa-circle-info fz_big fc_key mr8"></i>출고 안내 사항</h3>
+                        <ul class="shipment_info_list">
+                            <li class="list_item">
+                                <span class="tit"><i class="fa-solid fa-truck-fast fz_mid"></i>택배</span>  
+                                <p class="desc">택배 관련 안내&주의 사항 내용 어쩌구 저쩌구구구구구구구 저쩌구구구구구구구 어쩌구 저쩌구구구구구구구 저쩌구구구구구구구</p> 
+                            </li>
+                            <li class="list_item">
+                                <span class="tit"><i class="fa-solid fa-building-user fz_mid"></i>방문수령</span> 
+                                <p class="desc">방문수령 관련 안내&주의 사항 내용 어쩌구 저쩌구구구구구구구 </p> 
+                            </li>
+                            <li class="list_item">
+                                <span class="tit"><i class="fa-solid fa-motorcycle fz_mid"></i>퀵 (착불)</span> 
+                                <p class="desc">퀵 관련 안내&주의 사항 내용 어쩌구 저쩌구구구구구구구 저쩌구구구구구구구 어쩌구 저쩌구구구구구구구 저쩌구구구구구구구 저쩌구구구구구구구 저쩌구구구구구구구구</p>
+                            </li>
+                        </ul>
                     </div>
                 </section>
                 <div class="btn_set taC mt40">
+                    <a href="shipment_list.html" class="f_btn ty_big _lightGrey">취소하기</a>
                     <button type="submit" class="f_btn ty_big _key">출고 요청</button>
                 </div>
             </div>
