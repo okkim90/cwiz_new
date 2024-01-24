@@ -9036,7 +9036,7 @@ tr:last-child .status_box_date {
 .h_tbl tbody tr.no_hv:hover {
   cursor: default;
 }
-.h_tbl tbody tr.bg_bg_grey:hover {
+.h_tbl tbody tr.bg_bg_grey2:hover {
   background-color: #f4f4f4;
 }
 .h_tbl tbody tr:hover {
