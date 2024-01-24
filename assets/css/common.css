@@ -7652,6 +7652,16 @@ tr:last-child .status_box_date {
   background-color: #f2f2f2;
   border-radius: 6px;
 }
+.payment_agreement li {
+  display: flex;
+  justify-content: space-between;
+}
+.payment_agreement li a {
+  font-size: 12px;
+}
+.payment_agreement li a:hover {
+  text-decoration: underline;
+}
 .payment_agreement li + li {
   margin-top: 10px;
 }
