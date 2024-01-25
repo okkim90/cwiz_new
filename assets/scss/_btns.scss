@@ -360,6 +360,14 @@
     &.pd10 {
         padding: 0 10px;
     }
+    &.ty_arrow {
+        &::after {
+            content: "\f054";
+            font-family: "Font Awesome 6 Free";
+            margin-left: 5px;
+            font-weight: bold;
+        }
+    }
 }
 
 .btn_delete {
@@ -419,9 +427,17 @@
 .btn_chk {
     display: inline-flex;
     vertical-align: top;
-    align-items: center;
-    gap: 5px;
+    //align-items: center;
+    gap: 0.5em;
     cursor: pointer;
+    input[type='checkbox'] {
+        flex-shrink: 0;
+        margin-top: 0.1em;
+        width: 1.3em;
+        height: 1.3em;
+        font-size: 1em;
+        line-height: 1;
+    }
 }
 
 
