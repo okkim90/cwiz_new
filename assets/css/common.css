@@ -9351,10 +9351,10 @@ tr:last-child .status_box_date {
   cursor: pointer;
 }
 .card2_item:hover {
-  background-color: rgb(255, 255, 237);
+  background-color: rgb(255, 255, 246);
 }
 .card2_item.on {
-  background-color: rgb(253, 253, 230);
+  background-color: rgb(254, 254, 233);
 }
 .card2_inner {
   display: flex;
