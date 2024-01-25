@@ -124,12 +124,20 @@
     &_row {
         &.ty_flex {
             display: flex;
-            gap: 10px;
+            flex-wrap: wrap;
+            gap: 2px 8px;
             align-items: center;
         }
         .list_sepBar {
             .list_item {
+                padding-right: 9px;
+                margin-right: 8px;
+                &:last-child {
+                    padding-right: 0;
+                    margin-right: 0;
+                }
                 &::after {
+                    background-color: $c_lightGrey;
                     height: 12px;
                     margin-top: -5px;
                 }
