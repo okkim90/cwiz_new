@@ -2386,3 +2386,88 @@
         }
     }
 }
+
+
+.cal {
+    &_list {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    &_item {
+        width: calc((100% / 4) - (((4 - 1)/4)*20px));
+        &_link {
+            display: block;
+            border: 1px solid $c_line;
+            border-radius: 10px;
+            box-sizing: border-box;
+            transition: all .2s ease-in-out;
+            background-color: #fff;
+            overflow: hidden;
+            font-size: 13px;
+            &:hover {
+                border-color: $c_key;
+                transform: translateY(-4px);
+                box-shadow: 0 4px 6px rgba(#000, .07);
+            }
+        }
+        &_top {
+            display: flex;
+            justify-content: space-between;
+            
+            padding: 10px 14px;
+            background-color: $c_bg_grey2;
+            .num {
+                font-weight: 500;
+                font-size: 14px;
+            }
+            .date {
+                color: $c_midGrey;
+            }
+        }
+        &_info {
+            padding: 14px;
+            li {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                & + li {
+                    margin-top: 6px;
+                }
+                .tit {
+                    //width: 60px;
+                    flex-shrink: 0;
+                    font-weight: 500;
+                    padding-right: 4px;
+                }
+                .progress {
+                    flex: 1;
+                    height: 10px;
+                    border-radius: 5px;
+                    background-color: $c_bg_grey;
+                    position: relative;
+                    overflow: hidden;
+                    &_bar {
+                        position: absolute;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        border-radius: 5px;
+                        background-color: $c_key;
+                    }
+                }
+                .ratio {
+                    display: flex;
+                    justify-content: end;
+                    gap: 4px;
+                    width: 60px;
+                    flex-shrink: 0;
+                    text-align: right;
+                    &_status {
+                        color: $c_key;
+                    }
+                }
+            }
+        }
+    }
+}

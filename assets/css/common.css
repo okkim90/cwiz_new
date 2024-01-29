@@ -7777,6 +7777,86 @@ tr:last-child .status_box_date {
   border-top: 1px solid #DDDDDD;
 }
 
+.cal_list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.cal_item {
+  width: calc(25% - 15px);
+}
+.cal_item_link {
+  display: block;
+  border: 1px solid #DDDDDD;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  background-color: #fff;
+  overflow: hidden;
+  font-size: 13px;
+}
+.cal_item_link:hover {
+  border-color: #FF7A00;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+.cal_item_top {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background-color: #f4f4f4;
+}
+.cal_item_top .num {
+  font-weight: 500;
+  font-size: 14px;
+}
+.cal_item_top .date {
+  color: #777;
+}
+.cal_item_info {
+  padding: 14px;
+}
+.cal_item_info li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.cal_item_info li + li {
+  margin-top: 6px;
+}
+.cal_item_info li .tit {
+  flex-shrink: 0;
+  font-weight: 500;
+  padding-right: 4px;
+}
+.cal_item_info li .progress {
+  flex: 1;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #EFEFEF;
+  position: relative;
+  overflow: hidden;
+}
+.cal_item_info li .progress_bar {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 5px;
+  background-color: #FF7A00;
+}
+.cal_item_info li .ratio {
+  display: flex;
+  justify-content: end;
+  gap: 4px;
+  width: 60px;
+  flex-shrink: 0;
+  text-align: right;
+}
+.cal_item_info li .ratio_status {
+  color: #FF7A00;
+}
+
 .layer_popup {
   position: fixed;
   left: 0;

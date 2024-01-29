@@ -321,262 +321,313 @@
                     <h1 class="tit1">교정 진행 현황</h1>
                 </div>
                 <section class="sec">
-                    <ol class="cal_status">
-                        <li class="cal_status_item aniBox ani_left">
-                            <div class="cal_status_card">
-                                <div class="ico_box bg_key">
-                                    <i class="fa-solid fa-dolly"></i>
-                                </div>
-                                <h2 class="tit">입고 대기</h2>
-                                <div class="count">999,000,000</div>
-                            </div>
-                        </li>
-                        <li class="cal_status_item aniBox ani_left delay_4">
-                            <div class="d_flex _gap10">
-                                <div class="cal_status_card">
-                                    <div class="ico_box bg_blue">
-                                        <i class="fa-solid fa-boxes-packing"></i>
-                                    </div>
-                                    <h2 class="tit">교정 대기</h2>
-                                    <div class="count">999,000,000</div>
-                                </div>
-                                <div class="cal_status_card">
-                                    <div class="ico_box bg_blue">
-                                        <i class="fa-solid fa-scale-balanced"></i>
-                                    </div>
-                                    <h2 class="tit">교정 진행중</h2>
-                                    <div class="count">999,000,000</div>
-                                </div>
-                                <div class="cal_status_card">
-                                    <div class="ico_box bg_blue">
-                                        <i class="fa-solid fa-circle-check"></i>
-                                    </div>
-                                    <h2 class="tit">교정 완료</h2>
-                                    <div class="count">999,000,000</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="cal_status_item aniBox ani_left delay_8">
-                            <div class="d_flex _gap10">
-                                <div class="cal_status_card">
-                                    <div class="ico_box bg_green2">
-                                        <i class="fa-solid fa-receipt"></i>
-                                    </div>
-                                    <h2 class="tit">정산 대기</h2>
-                                    <div class="count">999,000,000</div>
-                                </div>
-                                <div class="cal_status_card">
-                                    <div class="ico_box bg_green2">
-                                        <i class="fa-solid fa-boxes-stacked"></i>
-                                    </div>
-                                    <h2 class="tit">출고 대기</h2>
-                                    <div class="count">999,000,000</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="cal_status_item aniBox ani_left delay_12">
-                            <div class="cal_status_card">
-                                <div class="ico_box bg_yellow">
-                                    <i class="fa-solid fa-award"></i>
-                                </div>
-                                <h2 class="tit">완료</h2>
-                                <div class="count">999,000,000</div>
-                            </div>
-                        </li>
-                    </ol>
-                   
+                    <form action="">
+                        <div class="v_tbl_wrap">
+                            <table class="v_tbl">
+                                <colgroup>
+                                    <col style="width: 120px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>기간 조회</th>
+                                        <td>
+                                            <div class="date_set">
+                                                <select name="" id="" class="f_select ty_small w_80">
+                                                    <option value="">접수일</option>
+                                                    <option value="">교정일</option>
+                                                </select>
+                                                <input type="text" class="f_input ty_small inp_date date_start" readonly="" id=""> ~
+                                                <input type="text" class="f_input ty_small inp_date date_end" readonly="" id="">
+                                                <button type="button" onclick="set_3m(this)" class="f_btn ty_xsmall _round _blue_op w_50">3개월</button>
+                                                <button type="button" onclick="set_6m(this)" class="f_btn ty_xsmall _round _navy_op w_50">6개월</button>
+                                                <button type="button" onclick="set_1y(this)" class="f_btn ty_xsmall _round _purple_op w_50">1년</button>
+                                                <button type="button" onclick="set_1y(this)" class="f_btn ty_xsmall _round _red_op w_50">전체</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>접수 번호</th>
+                                        <td>
+                                            <input type="text" class="f_input ty_small w_200">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table> 
+                        </div>
+                        <div class="btn_set taC mt20">
+                            <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
+                            <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="reset(this)">초기화 <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i></button>
+                        </div>
+                    </form>
                 </section>
                 <section class="sec">
                     <div class="sub_tit2">
-                        <h2 class="tit3">교정 진행 현황</h2>
-                        <div class="tit4 count_info d_flex _gap6 ai_c ml15">
-                            <span>총 9,999건</span> 
-                        </div>
-                        <select name="" id="" class="f_select ty_small w_80 ml20">
-                            <option value="">30개</option>
-                            <option value="">50개</option>
-                            <option value="">100개</option>
-                            <option value="">200개</option>
-                            <option value="">전체</option>
-                        </select>
-                        <div class="d_flex _gap12 ml_auto">
-                            <span class="d_flex ai_c _gap4 fc_navy"><i class="fa-solid fa-file-arrow-down"></i> 국문</span>
-                            <span class="d_flex ai_c _gap4 fc_key"><i class="fa-solid fa-file-arrow-down"></i> 영문</span>
-                            <span class="d_flex ai_c _gap4 fc_red"><i class="fa-solid fa-file-arrow-down"></i> 사외</span>
-                        </div>
-                        <div class="btn_set ml20">
-                            <button type="button" class="f_btn ty_small _green w_110">
-                                엑셀 다운받기 <i class="fa-solid fa-file-arrow-down"></i>
-                            </button>
-                            <button type="button" class="f_btn ty_small _key w_110">
-                                성적서 다운받기 <i class="fa-solid fa-file-arrow-down"></i>
-                            </button>
+                        <div class="tit4 count_info d_flex _gap6 ai_c">
+                            <span>검색결과 : 9,999건</span> 
                         </div>
                     </div>
-                    <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
-                        <table class="h_tbl tl_fixed">
-                            <colgroup>
-                                <col style="width: 40px;">
-                                <col style="width: 80px;">
-                                <col style="width: 70px;">
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                                <col style="width: 70px;">
-                                <col style="width: 60px;">
-                                <col style="width: 70px;">
-                                <col style="width: 70px;">
-                                <col style="width: 70px;">
-                                <col style="width: 90px;">
-                                <col style="width: 80px;">
-                                <col style="width: 40px;">
-                                <col style="width: 40px;">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th class="th_fixed"><input type="checkbox"></th>
-                                    <th class="th_fixed">교정 번호</th>
-                                    <th class="th_fixed">구분</th>
-                                    <th class="th_fixed">성적서 업체</th>
-                                    <th class="th_fixed">계측기명</th>
-                                    <th class="th_fixed">제조사</th>
-                                    <th class="th_fixed">형식</th>
-                                    <th class="th_fixed">기기번호</th>
-                                    <th class="th_fixed">접수일</th>
-                                    <th class="th_fixed">신청자</th>
-                                    <th class="th_fixed">진행 상태</th>
-                                    <th class="th_fixed">교정 결과</th>
-                                    <th class="th_fixed">교정 담당자</th>
-                                    <th class="th_fixed" style="z-index: 100;">
-                                        교정 수수료
-                                        <div class="f_tooltip">
-                                            <i class="f_tooltip_ico fa-solid fa-circle-info" aria-hidden="true"></i>
-                                            <div class="f_tooltip_cont ty_right">
-                                                교정 수수료는 표준 소급료 및 부가세 제외된 금액이며, <br> 실제 청구 금액과 상이할 수 있습니다.
-                                            </div>
-                                        </div> 
-                                    </th>
-                                    <th class="th_fixed">성적서</th>
-                                    <th class="th_fixed">출고</th>
-                                    <th class="th_fixed">수납</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td><button type="button" class="btn_t_link" onclick="open_popup('popup_detail')">2300100-1</button></td>
-                                    <td>교정</td>
-                                    <td class="ellipsisTooltip">성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업</td>
-                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명</td>
-                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
-                                    <td class="ellipsisTooltip">형식형식형식형식형식형식형식형식형식형식형식형식형식형식형식형식형식형식형식형식</td>
-                                    <td class="ellipsisTooltip">기기번호기기번호기기번호기기번호기기번호기기번호기기번호기기번호기기번호기기번호</td>
-                                    <td>2023-12-12</td>
-                                    <td>장원영</td>
-                                    <td>교정완료</td>
-                                    <td>정상</td>
-                                    <td>김장훈</td>
-                                    <td>199,000,000</td>
-                                    <td>
-                                        <div class="d_flex _gap10 jc_c">
-                                            <button type="button" class="btn_down fc_navy"><span class="btn_tooltip"><b>국문</b>  성적서</span></button>
-                                            <button type="button" class="btn_down fc_red"><span class="btn_tooltip"><b>사외</b> 성적서</span></button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="status_box">
-                                            <span class="status_box_ico ico_release on"></span>
-                                            <span class="status_box_date">출고일 : 2023-10-24</span>
+                    <ul class="cal_list">
+                        <li class="cal_item">
+                            <a href="" class="cal_item_link">
+                                <div class="cal_item_top">
+                                    <span class="num">2024002312</span>
+                                    <span class="date">2023-12-30</span>
+                                </div>
+                                <ul class="cal_item_info">
+                                    <li class="info_item" data-status="160" data-total="200">
+                                        <span class="tit">교정 현황</span>
+                                        <span class="progress">
+                                            <span class="progress_bar"></span>
                                         </span>
-                                    </td>
-                                    <td>
-                                        <span class="status_box">
-                                            <span class="status_box_ico ico_accept on"></span>
-                                            <span class="status_box_date">수납일 : 2023-10-24</span>
+                                        <span class="ratio">
+                                            <span class="ratio_status"></span>/<span class="ratio_total"></span>
                                         </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td><button type="button" class="btn_t_link" onclick="open_popup('popup_detail')">2300100-1</button></td>
-                                    <td>수리교정</td>
-                                    <td class="ellipsisTooltip">성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업</td>
-                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명</td>
-                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
-                                    <td class="ellipsisTooltip">형식형식형식형식형식형식형식형식형식형식형식형식형식형식형식형식형식형식형식형식</td>
-                                    <td class="ellipsisTooltip">기기번호기기번호기기번호기기번호기기번호기기번호기기번호기기번호기기번호기기번호</td>
-                                    <td>2023-12-12</td>
-                                    <td>장원영</td>
-                                    <td>교정대기</td>
-                                    <td>교정취소</td>
-                                    <td>김장훈</td>
-                                    <td>199,000,000</td>
-                                    <td>
-                                        <div class="d_flex _gap10 jc_c">
-                                            <button type="button" class="btn_down fc_navy"><span class="btn_tooltip"><b>국문</b>  성적서</span></button>
-                                            <button type="button" class="btn_down fc_key"><span class="btn_tooltip"><b>영문</b> 성적서</span></button>
-                                            <button type="button" class="btn_down fc_red"><span class="btn_tooltip"><b>사외</b> 성적서</span></button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="status_box">
-                                            <span class="status_box_ico ico_release on"></span>
-                                            <span class="status_box_date">출고일 : 2023-10-24</span>
+                                    </li>
+                                    <li class="info_item" data-status="123" data-total="200">
+                                        <span class="tit">결제 현황</span>
+                                        <span class="progress">
+                                            <span class="progress_bar"></span>
                                         </span>
-                                    </td>
-                                    <td>
-                                        <span class="status_box">
-                                            <span class="status_box_ico ico_accept on"></span>
-                                            <span class="status_box_date">수납일 : 2023-10-24</span>
+                                        <span class="ratio">
+                                            <span class="ratio_status"></span>/<span class="ratio_total"></span>
                                         </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td><button type="button" class="btn_t_link" onclick="open_popup('popup_detail')">2300100-1</button></td>
-                                    <td>수리교정</td>
-                                    <td class="ellipsisTooltip">성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업</td>
-                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명계측기명</td>
-                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
-                                    <td class="ellipsisTooltip">형식형식형식형식형식형식형식형식형식형식형식형식형식형식형식형식형식형식형식형식</td>
-                                    <td class="ellipsisTooltip">기기번호기기번호기기번호기기번호기기번호기기번호기기번호기기번호기기번호기기번호</td>
-                                    <td>2023-12-12</td>
-                                    <td>장원영</td>
-                                    <td>교정대기</td>
-                                    <td><b class="fc_red">불량</b></td>
-                                    <td>김장훈</td>
-                                    <td>199,000,000</td>
-                                    <td>
-                                        <div class="d_flex _gap10 jc_c">
-                                            <button type="button" class="btn_down fc_navy"><span class="btn_tooltip"><b>국문</b>  성적서</span></button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="status_box">
-                                            <span class="status_box_ico ico_release on"></span>
-                                            <span class="status_box_date">출고일 : 2023-10-24</span>
+                                    </li>
+                                    <li class="info_item" data-status="97" data-total="200">
+                                        <span class="tit">출고 현황</span>
+                                        <span class="progress">
+                                            <span class="progress_bar"></span>
                                         </span>
-                                    </td>
-                                    <td>
-                                        <span class="status_box">
-                                            <span class="status_box_ico ico_accept on"></span>
-                                            <span class="status_box_date">수납일 : 2023-10-24</span>
+                                        <span class="ratio">
+                                            <span class="ratio_status"></span>/<span class="ratio_total"></span>
                                         </span>
-                                    </td>
-                                </tr>
-                                <tr>          
-                                    <td colspan="17">
-                                        <div class="no_result_box">
-                                            <i class="fa-solid fa-file-circle-xmark" aria-hidden="true"></i>
-                                            <p class="mt10">진행중인 교정건이 없습니다.</p>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="cal_item">
+                            <a href="" class="cal_item_link">
+                                <div class="cal_item_top">
+                                    <span class="num">2024002312</span>
+                                    <span class="date">2023-12-30</span>
+                                </div>
+                                <ul class="cal_item_info">
+                                    <li class="info_item" data-status="8" data-total="10">
+                                        <span class="tit">교정 현황</span>
+                                        <span class="progress">
+                                            <span class="progress_bar"></span>
+                                        </span>
+                                        <span class="ratio">
+                                            <span class="ratio_status"></span>/<span class="ratio_total"></span>
+                                        </span>
+                                    </li>
+                                    <li class="info_item" data-status="7" data-total="10">
+                                        <span class="tit">결제 현황</span>
+                                        <span class="progress">
+                                            <span class="progress_bar"></span>
+                                        </span>
+                                        <span class="ratio">
+                                            <span class="ratio_status"></span>/<span class="ratio_total"></span>
+                                        </span>
+                                    </li>
+                                    <li class="info_item" data-status="7" data-total="10">
+                                        <span class="tit">출고 현황</span>
+                                        <span class="progress">
+                                            <span class="progress_bar"></span>
+                                        </span>
+                                        <span class="ratio">
+                                            <span class="ratio_status"></span>/<span class="ratio_total"></span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="cal_item">
+                            <a href="" class="cal_item_link">
+                                <div class="cal_item_top">
+                                    <span class="num">2024002312</span>
+                                    <span class="date">2023-12-30</span>
+                                </div>
+                                <ul class="cal_item_info">
+                                    <li class="info_item" data-status="757" data-total="999">
+                                        <span class="tit">교정 현황</span>
+                                        <span class="progress">
+                                            <span class="progress_bar"></span>
+                                        </span>
+                                        <span class="ratio">
+                                            <span class="ratio_status"></span>/<span class="ratio_total"></span>
+                                        </span>
+                                    </li>
+                                    <li class="info_item" data-status="322" data-total="999">
+                                        <span class="tit">결제 현황</span>
+                                        <span class="progress">
+                                            <span class="progress_bar"></span>
+                                        </span>
+                                        <span class="ratio">
+                                            <span class="ratio_status"></span>/<span class="ratio_total"></span>
+                                        </span>
+                                    </li>
+                                    <li class="info_item" data-status="200" data-total="999">
+                                        <span class="tit">출고 현황</span>
+                                        <span class="progress">
+                                            <span class="progress_bar"></span>
+                                        </span>
+                                        <span class="ratio">
+                                            <span class="ratio_status"></span>/<span class="ratio_total"></span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="cal_item">
+                            <a href="" class="cal_item_link">
+                                <div class="cal_item_top">
+                                    <span class="num">2024002312</span>
+                                    <span class="date">2023-12-30</span>
+                                </div>
+                                <ul class="cal_item_info">
+                                    <li class="info_item" data-status="3" data-total="6">
+                                        <span class="tit">교정 현황</span>
+                                        <span class="progress">
+                                            <span class="progress_bar"></span>
+                                        </span>
+                                        <span class="ratio">
+                                            <span class="ratio_status"></span>/<span class="ratio_total"></span>
+                                        </span>
+                                    </li>
+                                    <li class="info_item" data-status="0" data-total="6">
+                                        <span class="tit">결제 현황</span>
+                                        <span class="progress">
+                                            <span class="progress_bar"></span>
+                                        </span>
+                                        <span class="ratio">
+                                            <span class="ratio_status"></span>/<span class="ratio_total"></span>
+                                        </span>
+                                    </li>
+                                    <li class="info_item" data-status="0" data-total="6">
+                                        <span class="tit">출고 현황</span>
+                                        <span class="progress">
+                                            <span class="progress_bar"></span>
+                                        </span>
+                                        <span class="ratio">
+                                            <span class="ratio_status"></span>/<span class="ratio_total"></span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="cal_item">
+                            <a href="" class="cal_item_link">
+                                <div class="cal_item_top">
+                                    <span class="num">2024002312</span>
+                                    <span class="date">2023-12-30</span>
+                                </div>
+                                <ul class="cal_item_info">
+                                    <li class="info_item" data-status="160" data-total="200">
+                                        <span class="tit">교정 현황</span>
+                                        <span class="progress">
+                                            <span class="progress_bar"></span>
+                                        </span>
+                                        <span class="ratio">
+                                            <span class="ratio_status"></span>/<span class="ratio_total"></span>
+                                        </span>
+                                    </li>
+                                    <li class="info_item" data-status="123" data-total="200">
+                                        <span class="tit">결제 현황</span>
+                                        <span class="progress">
+                                            <span class="progress_bar"></span>
+                                        </span>
+                                        <span class="ratio">
+                                            <span class="ratio_status"></span>/<span class="ratio_total"></span>
+                                        </span>
+                                    </li>
+                                    <li class="info_item" data-status="97" data-total="200">
+                                        <span class="tit">출고 현황</span>
+                                        <span class="progress">
+                                            <span class="progress_bar"></span>
+                                        </span>
+                                        <span class="ratio">
+                                            <span class="ratio_status"></span>/<span class="ratio_total"></span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="cal_item">
+                            <a href="" class="cal_item_link">
+                                <div class="cal_item_top">
+                                    <span class="num">2024002312</span>
+                                    <span class="date">2023-12-30</span>
+                                </div>
+                                <ul class="cal_item_info">
+                                    <li class="info_item" data-status="8" data-total="10">
+                                        <span class="tit">교정 현황</span>
+                                        <span class="progress">
+                                            <span class="progress_bar"></span>
+                                        </span>
+                                        <span class="ratio">
+                                            <span class="ratio_status"></span>/<span class="ratio_total"></span>
+                                        </span>
+                                    </li>
+                                    <li class="info_item" data-status="7" data-total="10">
+                                        <span class="tit">결제 현황</span>
+                                        <span class="progress">
+                                            <span class="progress_bar"></span>
+                                        </span>
+                                        <span class="ratio">
+                                            <span class="ratio_status"></span>/<span class="ratio_total"></span>
+                                        </span>
+                                    </li>
+                                    <li class="info_item" data-status="7" data-total="10">
+                                        <span class="tit">출고 현황</span>
+                                        <span class="progress">
+                                            <span class="progress_bar"></span>
+                                        </span>
+                                        <span class="ratio">
+                                            <span class="ratio_status"></span>/<span class="ratio_total"></span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="cal_item">
+                            <a href="" class="cal_item_link">
+                                <div class="cal_item_top">
+                                    <span class="num">2024002312</span>
+                                    <span class="date">2023-12-30</span>
+                                </div>
+                                <ul class="cal_item_info">
+                                    <li class="info_item" data-status="757" data-total="999">
+                                        <span class="tit">교정 현황</span>
+                                        <span class="progress">
+                                            <span class="progress_bar"></span>
+                                        </span>
+                                        <span class="ratio">
+                                            <span class="ratio_status"></span>/<span class="ratio_total"></span>
+                                        </span>
+                                    </li>
+                                    <li class="info_item" data-status="322" data-total="999">
+                                        <span class="tit">결제 현황</span>
+                                        <span class="progress">
+                                            <span class="progress_bar"></span>
+                                        </span>
+                                        <span class="ratio">
+                                            <span class="ratio_status"></span>/<span class="ratio_total"></span>
+                                        </span>
+                                    </li>
+                                    <li class="info_item" data-status="200" data-total="999">
+                                        <span class="tit">출고 현황</span>
+                                        <span class="progress">
+                                            <span class="progress_bar"></span>
+                                        </span>
+                                        <span class="ratio">
+                                            <span class="ratio_status"></span>/<span class="ratio_total"></span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul>
                     <div class="paging_wrap">
                         <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
                         <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
@@ -589,6 +640,39 @@
                         </ul>
                         <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
                         <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
+                    </div>
+                    <script>
+                        const cal_ratio = document.querySelectorAll('.cal_item_info .info_item');
+                        cal_ratio.forEach((e)=>{
+                            let status_val = e.dataset.status;
+                            let total_val = e.dataset.total;
+
+                            let status = e.querySelector('.ratio_status');
+                            let total = e.querySelector('.ratio_total');
+                            let progress_bar = e.querySelector('.progress_bar');
+
+                            status.textContent = commaSeparateNumber(status_val);
+                            total.textContent = commaSeparateNumber(total_val);
+                            progress_bar.style.width = (status_val / total_val) * 100 + '%'
+                        });
+                        function commaSeparateNumber(val){
+                            while (/(\d+)(\d{3})/.test(val.toString())){
+                                val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+                            }
+                            return val;
+                        }
+                    </script>
+                </section>
+                <section class="sec">
+                    <div class="no_result_box ty_bg">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <p class="mt10">교정건을 검색해주세요.</p>
+                    </div>
+                </section>
+                <section class="sec">
+                    <div class="no_result_box ty_bg">
+                        <i class="fa-solid fa-file-circle-xmark" aria-hidden="true"></i>
+                        <p class="mt10">검색 결과가 없습니다.</p>
                     </div>
                 </section>
             </div>
