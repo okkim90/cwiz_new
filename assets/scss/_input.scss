@@ -296,27 +296,40 @@
     &.ty_xsmall {
         height: 22px;
         padding: 0 5px;
+        padding-right: 15px;
         border-radius: 4px;
         font-size: 12px;
         line-height: 1;
         line-height: 22px;
+        background-position: calc(100% - 5px) center;
+        background-size: 10px 10px;
     }
     &.ty_small {
         height: 28px;
         padding: 0 5px;
+        padding-right: 15px;
         border-radius: 4px;
         font-size: 13px;
+        background-position: calc(100% - 5px) center;
+        background-size: 10px 10px;
     }
     &.ty_mid {
         height: 36px;
         padding: 0 10px;
+        padding-right: 20px;
         border-radius: 4px;
         font-size: 14px;
+        background-position: calc(100% - 10px) center;
+        background-size: 10px 10px;
     }
     &.ty_big {
         height: 50px;
         padding: 0 15px;
+        padding-right: 30px;
         border-radius: 6px;
+        font-size: 16px;
+        background-position: calc(100% - 10px) center;
+        background-size: 12px 12px;
     }
 }
 

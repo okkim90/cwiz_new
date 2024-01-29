@@ -174,17 +174,19 @@ input[type="submit"] {
 // }
 
 /* Select box 스타일 초기화 */ 
-// select {
-//     -webkit-appearance: none;
-//        -moz-appearance: none;
-//             appearance: none;
-//     background-image: url(../images/common/arrow_select_box.svg);
-//     background-position: calc(100% - 15px) center;
-//     background-repeat: no-repeat;
-// }
+select {
+    position: relative;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-image: url(../images/common/arrow_select_box.svg);
+    background-position: calc(100% - 0.5em) center;
+    background-repeat: no-repeat;
+    background-size: 0.8em;
+}
 
 /* IE 에서 Select box 화살표 제거 */ 
-// select::-ms-expand { display: none; }
+select::-ms-expand { display: none; }
 
 input[type="password"] {
     -webkit-text-security: disc;

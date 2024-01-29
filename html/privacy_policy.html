@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Generator" content="KIC">
+    <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Description" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <title>교정마법사 CWIZ - CALIBRATION WIZARD</title>
+    <script src="https://kit.fontawesome.com/aa5544e91b.js" crossorigin="anonymous" ></script>
+    <script src="../assets/js/jquery-3.1.1.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/datepicker.css">
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+</head>
+<body>
+    <div id="skip-nav">
+        <a href="#container"></a>
+    </div>
+    <main id="container" class="container ty_terms">
+        <div class="inner">
+            <div class="terms_outer">
+                <div class="terms_logo"><img src="../assets/images/common/logo.svg" alt=""></div>
+                <div class="terms_tab">
+                    <ul class="terms_tab_list">
+                        <li class="terms_tab_item "><a href="./tos.html" class="terms_tab_link ">이용약관</a></li>
+                        <li class="terms_tab_item on"><a href="./privacy_policy.html" class="terms_tab_link ">개인정보 보호정책</a></li>
+                    </ul>
+                </div>
+                <div class="terms_tit">
+                    <h1 class="tit">개인보호 보호정책</h1>
+                </div>
+                <div class="term_select_area">
+                    <select name="" id="" class="f_select ty_big">
+                        <option value="v1">2010년 1월 1일 시행</option>
+                    </select>
+                </div>
+                <div id="terms_wrap" class="terms_wrap"></div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function term_load(version){
+            let url = `./privacy/${version}.html`
+            //console.log(url);
+            $('#terms_wrap').load(url);
+        }
+        function term_change(target){
+            let thisVersion = target.value;
+            //console.log(thisVersion);
+            term_load(thisVersion);
+        }
+        $(document).ready(function(){
+            term_load('v1');
+        });
+    </script>
+</body>
+</html>
