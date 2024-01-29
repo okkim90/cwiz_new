@@ -2416,8 +2416,9 @@
             justify-content: space-between;
             
             padding: 10px 14px;
-            background-color: $c_bg_grey2;
+            background-color: rgba(#000, .03);
             border-radius: 10px 10px 0 0;
+            border-bottom: 1px solid $c_line;
             .num {
                 font-weight: 500;
                 font-size: 14px;
