@@ -7805,6 +7805,7 @@ tr:last-child .status_box_date {
   justify-content: space-between;
   padding: 10px 14px;
   background-color: #f4f4f4;
+  border-radius: 10px 10px 0 0;
 }
 .cal_item_top .num {
   font-weight: 500;
