@@ -299,6 +299,48 @@
                 <h2 class="tit2 mb15">TITKE2 중타이틀 중타이틀 중타이틀 (18px)</h2>
                 <h3 class="tit3 mb10">TITKE3 소타이틀 소타이틀 소타이틀 (16px)</h3>
 
+
+
+                <div class="sec">
+                    <h3 class="tit2 mb15">로딩 레이어 띄우기 </h3>
+                    <p class="fz_mid mb20">전체 화면 공통, 항상 전체화면으로 띄움</p>
+                    <button type="button" class="f_btn ty_mid _key" onclick="open_loading()" >로딩 레이어 띄우기</button>
+                    
+                    <div class="loading">
+                        <div class="loading_inner">
+                            <!-- <img src="../assets/images/common/logo_mini.svg" class="logo" alt="">
+                            <div class="loading_dots">
+                                <span class="loading_dot"></span>
+                                <span class="loading_dot"></span>
+                                <span class="loading_dot"></span>
+                                <span class="loading_dot"></span>
+                            </div> -->
+
+                            <svg class="loading_svg" data-name="loading" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.7 67.04">
+                                <g id="Layer_1-2" data-name="Layer 1">
+                                    <g>
+                                        <g class="loading_plus ">
+                                            <rect class="cls-4 " x="130.82" y=".44" width="6.43" height="21.04" rx="3.22" ry="3.22"/>
+                                            <rect class="cls-4 " x="130.82" y=".44" width="6.43" height="21.04" rx="3.22" ry="3.22" transform="translate(145 -123.08) rotate(90)"/>
+                                        </g>
+                                        <path class="loading_bar bar1" d="m70.78,55.87l-5.78,5.78c-3.64,3.64-9.55,3.64-13.19,0L0,9.84l5.78-5.78c3.64-3.64,9.55-3.64,13.19,0l51.8,51.8Z"/>
+                                        <path class="loading_bar bar2" d="m56.18-6.71h12.91c2.7,0,4.89,2.19,4.89,4.89v75.38h-12.91c-2.7,0-4.89-2.19-4.89-4.89V-6.71h0Z" transform="translate(-4.58 55.81) rotate(-45)"/>
+                                        <path class="loading_bar bar3" d="m78.65-2.7h12.61c2.7,0,4.89,2.19,4.89,4.89v53.56h-12.61c-2.7,0-4.89-2.19-4.89-4.89V-2.7h0Z" transform="translate(6.84 69.57) rotate(-45)"/>
+                                        <path class="loading_bar bar4" d="m128.76,26.5l-8.59,8.59c-2.09,2.09-5.69,1.88-8.04-.48l-24.29-24.29,8.59-8.59c2.09-2.09,5.69-1.88,8.04.48l24.29,24.29Z"/>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <script>
+                        function open_loading(){
+                            let loading = document.querySelector('.loading');
+                            loading.classList.add('on');
+                        }
+                    </script>
+
+                </div>
                 <section class="sec">
                     <h3 class="tit2 mb15">팝업 모음</h3>
                     <div class="d_flex _gap10 fw_w">

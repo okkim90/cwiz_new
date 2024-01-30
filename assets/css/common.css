@@ -9656,6 +9656,75 @@ tr:last-child .status_box_date {
   font-weight: bold;
 }
 
+.loading {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  z-index: -9999;
+  background-color: rgba(255, 255, 255, 0.6);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.2s ease-in-out;
+}
+.loading.on {
+  visibility: visible;
+  opacity: 1;
+  z-index: 10001;
+}
+.loading_svg {
+  width: 20vw;
+}
+.loading_inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.loading .cls-2, .loading .cls-3, .loading .cls-4, .loading .cls-5 {
+  fill: #ff7c24;
+}
+.loading .cls-4 {
+  opacity: 0.8;
+}
+.loading_bar {
+  fill: #ff7c24;
+  animation: 0.5s loading_opacity infinite alternate;
+}
+.loading_bar.bar12 {
+  animation-delay: 0.1s;
+}
+.loading_bar.bar2 {
+  animation-delay: 0.2s;
+}
+.loading_bar.bar3 {
+  animation-delay: 0.3s;
+}
+.loading_bar.bar4 {
+  animation-delay: 0.4s;
+}
+.loading_plus {
+  opacity: 0.8;
+  transform-origin: 92.5% 16%;
+  animation: 2s loading_rotate infinite linear;
+}
+
+@keyframes loading_rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading_opacity {
+  to {
+    opacity: 0.2;
+  }
+}
 /* pages */
 .main_wrap {
   display: flex;
