@@ -418,7 +418,7 @@
 
                 <div class="sec_wrap d_flex _gap30">
                     <section class="sec" style="width: 44%;">
-                        <div class="sub_tit2">
+                        <div class="sub_tit2" style="height: 36px;">
                             <div class="tit3"><b> 1. 접수 내역 :</b> 9,999건</div>
                             <select name="" id="" class="f_select ty_small w_80 ml20">
                                 <option value="">30개</option>
@@ -557,10 +557,14 @@
                                 <p>
                                     <i class="fa-solid fa-circle-info fz_mid fc_key mr5"></i>출고 요청은 결제 완료건만 가능합니다.
                                 </p>
+                                <button type="button" class="f_btn ty_mid _key ty_arrow w_100">출고하기</button>
                             </div>
                         </div>
                         <div class="card2_wrap chk_wrap">
-                            <ul class="card2_list" style="height: 576px;">
+                            <div class="card2_wrap_top">
+                                <label class="chk_all_btn"><input type="checkbox" class="chk_all" onchange="chk_row_all(this)"> 전체선택</label>
+                            </div>    
+                            <ul class="card2_list" style="height: 550px;">
                                 <li class="card2_item chk_row">
                                     <div class="card2_inner">
                                         <div class="card2_row ty_flex">
@@ -594,6 +598,7 @@
                                 <li class="card2_item chk_row">
                                     <div class="card2_inner">
                                         <div class="card2_row ty_flex">
+                                            <input type="checkbox" class="row_chk">
                                             <button type="button" class="btn_t_link"  
                                             onclick="open_popup('popup_detail'); event.stopPropagation()">
                                                 23001001-123
@@ -627,6 +632,7 @@
                                 <li class="card2_item chk_row">
                                     <div class="card2_inner">
                                         <div class="card2_row ty_flex">
+                                            <input type="checkbox" class="row_chk">
                                             <button type="button" class="btn_t_link"  
                                             onclick="open_popup('popup_detail'); event.stopPropagation()">
                                                 23001001-123
@@ -749,7 +755,7 @@
                 </div>
                 <div class="sec_wrap d_flex _gap30">
                     <section class="sec" style="width: 44%;">
-                        <div class="sub_tit2">
+                        <div class="sub_tit2" style="height: 36px;">
                             <div class="tit3"><b> 1. 접수 내역 :</b> 9,999건</div>
                             <select name="" id="" class="f_select ty_small w_80 ml20">
                                 <option value="">30개</option>
@@ -782,6 +788,7 @@
                                 <p>
                                     <i class="fa-solid fa-circle-info fz_mid fc_key mr5"></i>출고 요청은 결제 완료건만 가능합니다.
                                 </p>
+                                <button type="button" class="f_btn ty_mid _key ty_arrow w_100">출고하기</button>
                             </div>
                         </div>
                         <div class="no_result_box ty_bg">
