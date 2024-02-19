@@ -326,85 +326,304 @@
                 
                 <section class="sec">
                     <div class="sub_tit2">
-                        <h2 class="tit3">1. 선택한 교정 내역 : 9,999건</h2>
-                        <span class="fc_midGrey fz_mid fwM ml10">- 출고 요청 할 교정 내역을 확인해주세요.</span>
+                        <h2 class="tit3">접수 3건 <span class="fc_midGrey fwM">(계측기 : 9,999개)</span> </h2>
                     </div>
-                    <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
+                    <div class="h_tbl_wrap">
                         <table class="h_tbl tl_fixed">
-                            <colgroup> 
+                            <colgroup>
+                                <col style="width: 140px;">
+                                <col>
+                                <col style="width: 36%">
                                 <col style="width: 90px;">
                                 <col>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                                <col style="width: 80px;">
-                                <col style="width: 80px;">
-                                <col style="width: 60px;">
                             </colgroup>
                             <thead class="th_fixed">
                                 <tr>
-                                    <th>교정번호</th>
-                                    <th>성적서 업체</th>
-                                    <th>계측기명</th>
-                                    <th>제조사</th>
-                                    <th>형식</th>
-                                    <th>기기번호</th>
-                                    <th>현재상태</th>
-                                    <th>교정결과</th>                          
-                                    <th>삭제</th>                          
+                                    <th>접수 정보</th>
+                                    <th>성적서 업체 정보</th>
+                                    <th>교정 정보</th>
+                                    <th>접수 방식</th>
+                                    <th>출고 요청사항</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>2300097-1</td>
-                                    <td class="ellipsisTooltip">업체명업체명업체명업체명업체명업체명업체명업</td>
-                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명계측</td>
-                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명</td>
-                                    <td class="ellipsisTooltip">형식형식형식형식형식형식형식형식형식형식형식</td>
-                                    <td class="ellipsisTooltip">기기번호기기번호기기번호기기번호기기번호기기</td>
-                                    <td>교정 완료</td>
-                                    <td>정상</td>
-                                    <td><button type="button" class="btn_ico ty_small"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button></td>
+                                    <td>
+                                        <div>20240000123</div>
+                                        <div class="d_flex jc_c fc_midGrey _gap2">
+                                            <ul class="list_sepBar ty_small">    
+                                                <li class="list_item">2024-12-12</li>
+                                                <li class="list_item">1대</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td class="taL">
+                                        <p class="fwB">그랜드정션(주)</p>
+                                        <p class="fc_midGrey">서울시 구로구 디지털로123길 12345 그랜드정션 빌딩 1045610호</p>
+                                    </td>
+                                    <td>
+                                        <div class="card2_wrap">
+                                            <ul class="card2_list" style="max-height: 300px;">
+                                                <li class="card2_item">
+                                                    <div class="card2_inner">
+                                                        <div class="card2_row ty_flex">
+                                                            <button type="button" class="btn_t_link"  
+                                                            onclick="open_popup('popup_detail'); event.stopPropagation()">
+                                                                23001001-123
+                                                            </button> 
+                                                            <ul class="list_sepBar ml_auto">
+                                                                <li class="list_item"><b>정상</b></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card2_row ty_flex">
+                                                            <p class="fwM">[재단법인 한국의료기기검사원] DIGITAL LOW RESISTANCE OHMMETER</p> 
+                                                            <ul class="list_sepBar fc_grey">    
+                                                                <li class="list_item">형식 : S5350XL284 1005</li>
+                                                                <li class="list_item">기기번호 : qwfsad1234123</li>
+                                                            </ul> 
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>택배</td>
+                                    <td>
+                                        <textarea name="" id="" class="f_ta ty_small h100" placeholder="출고 요청사항을 입력해주세요."></textarea>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>2300097-1</td>
-                                    <td class="ellipsisTooltip">업체명업체명업체명업체명업체명업체명업체명업</td>
-                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명계측</td>
-                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명</td>
-                                    <td class="ellipsisTooltip">형식형식형식형식형식형식형식형식형식형식형식</td>
-                                    <td class="ellipsisTooltip">기기번호기기번호기기번호기기번호기기번호기기</td>
-                                    <td>교정 완료</td>
-                                    <td>정상</td>
-                                    <td><button type="button" class="btn_ico ty_small"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button></td>
+                                    <td>
+                                        <div>20240000123</div>
+                                        <div class="d_flex jc_c fc_midGrey _gap2">
+                                            <ul class="list_sepBar ty_small">    
+                                                <li class="list_item">2024-12-12</li>
+                                                <li class="list_item">9,999대</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td class="taL">
+                                        <p class="fwB">그랜드정션(주)</p>
+                                        <p class="fc_midGrey">서울시 구로구 디지털로123길 12345 그랜드정션 빌딩 1045610호</p>
+                                    </td>
+                                    <td>
+                                        <div class="card2_wrap card2_toggle">
+                                            <ul class="card2_list" style="max-height: 300px;">
+                                                <li class="card2_item">
+                                                    <div class="card2_inner">
+                                                        <div class="card2_row ty_flex">
+                                                            <button type="button" class="btn_t_link"  
+                                                            onclick="open_popup('popup_detail'); event.stopPropagation()">
+                                                                23001001-123
+                                                            </button> 
+                                                            <ul class="list_sepBar ml_auto">
+                                                                <li class="list_item"><b>정상</b></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card2_row ty_flex">
+                                                            <p class="fwM">[재단법인 한국의료기기검사원] DIGITAL LOW RESISTANCE OHMMETER</p> 
+                                                            <ul class="list_sepBar fc_grey">    
+                                                                <li class="list_item">형식 : S5350XL284 1005</li>
+                                                                <li class="list_item">기기번호 : qwfsad1234123</li>
+                                                            </ul> 
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="card2_item">
+                                                    <div class="card2_inner">
+                                                        <div class="card2_row ty_flex">
+                                                            <button type="button" class="btn_t_link"  
+                                                            onclick="open_popup('popup_detail'); event.stopPropagation()">
+                                                                23001001-123
+                                                            </button> 
+                                                            <ul class="list_sepBar ml_auto">
+                                                                <li class="list_item"><b>정상</b></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card2_row ty_flex">
+                                                            <p class="fwM">[재단법인 한국의료기기검사원] DIGITAL LOW RESISTANCE OHMMETER</p> 
+                                                            <ul class="list_sepBar fc_grey">    
+                                                                <li class="list_item">형식 : S5350XL284 1005</li>
+                                                                <li class="list_item">기기번호 : qwfsad1234123</li>
+                                                            </ul> 
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="card2_item">
+                                                    <div class="card2_inner">
+                                                        <div class="card2_row ty_flex">
+                                                            <button type="button" class="btn_t_link"  
+                                                            onclick="open_popup('popup_detail'); event.stopPropagation()">
+                                                                23001001-123
+                                                            </button> 
+                                                            <ul class="list_sepBar ml_auto">
+                                                                <li class="list_item"><b>정상</b></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card2_row ty_flex">
+                                                            <p class="fwM">[재단법인 한국의료기기검사원] DIGITAL LOW RESISTANCE OHMMETER</p> 
+                                                            <ul class="list_sepBar fc_grey">    
+                                                                <li class="list_item">형식 : S5350XL284 1005</li>
+                                                                <li class="list_item">기기번호 : qwfsad1234123</li>
+                                                            </ul> 
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="card2_item">
+                                                    <div class="card2_inner">
+                                                        <div class="card2_row ty_flex">
+                                                            <button type="button" class="btn_t_link"  
+                                                            onclick="open_popup('popup_detail'); event.stopPropagation()">
+                                                                23001001-123
+                                                            </button> 
+                                                            <ul class="list_sepBar ml_auto">
+                                                                <li class="list_item"><b>정상</b></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card2_row ty_flex">
+                                                            <p class="fwM">[재단법인 한국의료기기검사원] DIGITAL LOW RESISTANCE OHMMETER</p> 
+                                                            <ul class="list_sepBar fc_grey">    
+                                                                <li class="list_item">형식 : S5350XL284 1005</li>
+                                                                <li class="list_item">기기번호 : qwfsad1234123</li>
+                                                            </ul> 
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="card2_toggle_bot mt6">
+                                                <button class="f_btn ty_xsmall ty_arrow_b w100 _lightGrey"  onclick="btn_toggle_card(this)"><span>외 999건</span></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>택배</td>
+                                    <td>
+                                        <textarea name="" id="" class="f_ta ty_small h100" placeholder="출고 요청사항을 입력해주세요."></textarea>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>2300097-1</td>
-                                    <td class="ellipsisTooltip">업체명업체명업체명업체명업체명업체명업체명업</td>
-                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명계측</td>
-                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명</td>
-                                    <td class="ellipsisTooltip">형식형식형식형식형식형식형식형식형식형식형식</td>
-                                    <td class="ellipsisTooltip">기기번호기기번호기기번호기기번호기기번호기기</td>
-                                    <td>교정 완료</td>
-                                    <td>정상</td>
-                                    <td><button type="button" class="btn_ico ty_small"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button></td>
-                                </tr>
-                                <tr>
-                                    <td>2300097-1</td>
-                                    <td class="ellipsisTooltip">업체명업체명업체명업체명업체명업체명업체명업</td>
-                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명계측</td>
-                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명</td>
-                                    <td class="ellipsisTooltip">형식형식형식형식형식형식형식형식형식형식형식</td>
-                                    <td class="ellipsisTooltip">기기번호기기번호기기번호기기번호기기번호기기</td>
-                                    <td>교정 완료</td>
-                                    <td>정상</td>
-                                    <td><button type="button" class="btn_ico ty_small"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button></td>
+                                    <td>
+                                        <div>20240000123</div>
+                                        <div class="d_flex jc_c fc_midGrey _gap2">
+                                            <ul class="list_sepBar ty_small">    
+                                                <li class="list_item">2024-12-12</li>
+                                                <li class="list_item">9,999대</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td class="taL">
+                                        <p class="fwB">그랜드정션(주)</p>
+                                        <p class="fc_midGrey">서울시 구로구 디지털로123길 12345 그랜드정션 빌딩 1045610호</p>
+                                    </td>
+                                    <td>
+                                        <div class="card2_wrap card2_toggle">
+                                            <ul class="card2_list" style="max-height: 300px;">
+                                                <li class="card2_item">
+                                                    <div class="card2_inner">
+                                                        <div class="card2_row ty_flex">
+                                                            <button type="button" class="btn_t_link"  
+                                                            onclick="open_popup('popup_detail'); event.stopPropagation()">
+                                                                23001001-123
+                                                            </button> 
+                                                            <ul class="list_sepBar ml_auto">
+                                                                <li class="list_item"><b>정상</b></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card2_row ty_flex">
+                                                            <p class="fwM">[재단법인 한국의료기기검사원] DIGITAL LOW RESISTANCE OHMMETER</p> 
+                                                            <ul class="list_sepBar fc_grey">    
+                                                                <li class="list_item">형식 : S5350XL284 1005</li>
+                                                                <li class="list_item">기기번호 : qwfsad1234123</li>
+                                                            </ul> 
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="card2_item">
+                                                    <div class="card2_inner">
+                                                        <div class="card2_row ty_flex">
+                                                            <button type="button" class="btn_t_link"  
+                                                            onclick="open_popup('popup_detail'); event.stopPropagation()">
+                                                                23001001-123
+                                                            </button> 
+                                                            <ul class="list_sepBar ml_auto">
+                                                                <li class="list_item"><b>정상</b></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card2_row ty_flex">
+                                                            <p class="fwM">[재단법인 한국의료기기검사원] DIGITAL LOW RESISTANCE OHMMETER</p> 
+                                                            <ul class="list_sepBar fc_grey">    
+                                                                <li class="list_item">형식 : S5350XL284 1005</li>
+                                                                <li class="list_item">기기번호 : qwfsad1234123</li>
+                                                            </ul> 
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="card2_item">
+                                                    <div class="card2_inner">
+                                                        <div class="card2_row ty_flex">
+                                                            <button type="button" class="btn_t_link"  
+                                                            onclick="open_popup('popup_detail'); event.stopPropagation()">
+                                                                23001001-123
+                                                            </button> 
+                                                            <ul class="list_sepBar ml_auto">
+                                                                <li class="list_item"><b>정상</b></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card2_row ty_flex">
+                                                            <p class="fwM">[재단법인 한국의료기기검사원] DIGITAL LOW RESISTANCE OHMMETER</p> 
+                                                            <ul class="list_sepBar fc_grey">    
+                                                                <li class="list_item">형식 : S5350XL284 1005</li>
+                                                                <li class="list_item">기기번호 : qwfsad1234123</li>
+                                                            </ul> 
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="card2_item">
+                                                    <div class="card2_inner">
+                                                        <div class="card2_row ty_flex">
+                                                            <button type="button" class="btn_t_link"  
+                                                            onclick="open_popup('popup_detail'); event.stopPropagation()">
+                                                                23001001-123
+                                                            </button> 
+                                                            <ul class="list_sepBar ml_auto">
+                                                                <li class="list_item"><b>정상</b></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card2_row ty_flex">
+                                                            <p class="fwM">[재단법인 한국의료기기검사원] DIGITAL LOW RESISTANCE OHMMETER</p> 
+                                                            <ul class="list_sepBar fc_grey">    
+                                                                <li class="list_item">형식 : S5350XL284 1005</li>
+                                                                <li class="list_item">기기번호 : qwfsad1234123</li>
+                                                            </ul> 
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="card2_toggle_bot mt6">
+                                                <button class="f_btn ty_xsmall ty_arrow_b w100 _lightGrey"  onclick="btn_toggle_card(this)"><span>외 999건</span></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>방문</td>
+                                    <td>
+                                        <textarea name="" id="" class="f_ta ty_small h100" placeholder="출고 요청사항을 입력해주세요."></textarea>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
+                    <script>
+                        function btn_toggle_card(target){
+                            let card2_toggle = target.closest('.card2_toggle');
+                            if(card2_toggle.classList.contains('on')){
+                                card2_toggle.classList.remove('on')
+                            }else{
+                                card2_toggle.classList.add('on')
+                            }
+                            
+                        }
+                    </script>
                 </section>
-                <section class="sec">
+                <!-- <section class="sec">
                     <div class="sub_tit2">
                         <h2 class="tit3">2. 출고 방식 선택</h2>
                         <span class="fc_midGrey fz_mid fwM ml10">- 출고 하실 방식을 선택해주세요.</span>
@@ -523,7 +742,7 @@
                             </table>
                         </div>
                     </div>
-                    <!--[D] 출고주소리스트 토글 : 안쓸거면 스크립트 지워도됩니다 -->
+                    
                     <script>
                         const address_wrap = document.querySelector('.address_wrap');
                         const inp_shipment = document.querySelectorAll('input[name="shipment"]');
@@ -556,12 +775,467 @@
                             </li>
                         </ul>
                     </div>
+                </section> -->
+                <section class="sec">
+                    <div class="shipment_tips">
+                        <div class="sub_tit2">
+                            <h2 class="tit3">출고요청 유의사항</h2>
+                        </div>
+                        <ol class="ol">
+                            <li>접수번호 단위로 출고 요청이 가능합니다. (개별 계측기 출고 요청은 불가 합니다.)</li>
+                            <li>출고 방식은 접수 방식과 동일하게 발송됩니다. 예) 택배 접수건은  접수 시 신청 하신 주소로 발송됩니다.</li>
+                            <li>요청 사항이 있으면 출고 요청 사항에 반드시 기입해주세요.</li>
+                            <li>택배 발송은 ~0시 까지 접수분에 한해서 당일 발송됩니다. 00 시 이후 접수건은 익일 발송 됩니다.</li>
+                            <li>방문 수령은 방문일 및 시간을 기재해주세요.</li>
+                        </ol>
+                    </div>
+                    
                 </section>
                 <div class="btn_set taC mt40">
-                    <a href="shipment_list.html" class="f_btn ty_big _lightGrey">취소하기</a>
+                    <a href="shipment_list.html" class="f_btn ty_big _solidGrey">목록</a>
                     <button type="submit" class="f_btn ty_big _key">출고 요청</button>
                 </div>
+                <div class="btn_set taC mt40">
+                    <a href="shipment_list.html" class="f_btn ty_big _solidGrey">목록</a>
+                    <button type="button" href="shipment_list.html" class="f_btn ty_big _red">출고 요청 취소</button>
+                    <button type="submit" class="f_btn ty_big _key">출고 요청 수정</button>
+                </div>
             </div>
+
+            <!-- [팝업] 교정 이력 상세 -->
+            <div class="layer_popup popup_detail" onclick="close_popup(this)">
+                <div class="layer_popup_inner">
+                    <div class="layer_popup_cont">
+                        <button type="button" class="close_popup" onclick="close_popup(this)">
+                            <span class="blind">팝업 닫기</span>
+                        </button>
+                        <div class="sub_tit">
+                            <h1 class="tit1">교정 이력 상세보기</h1>
+                        </div>
+                        <section class="sec">
+                            <h2 class="tit4 mb10 fwB">1. 접수 정보</h2>
+                            <div class="v_tbl_wrap">
+                                <table class="v_tbl">
+                                    <colgroup>
+                                        <col style="width: 12%">
+                                        <col>
+                                        <col style="width: 12%">
+                                        <col>
+                                        <col style="width: 12%">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>접수번호</th>
+                                            <td>23021231</td>
+                                            <th>접수일</th>
+                                            <td>2023-12-10</td>
+                                            <th>입고일</th>
+                                            <td>2023-12-10</td>
+                                        </tr>
+                                        <tr> 
+                                            <th>성적서 업체명</th>
+                                            <td>그랜드 정션(주)</td>
+                                            <th>성적서 업체 주소</th>
+                                            <td colspan="3">서울특별시 구로구 디지털로 111 그랜드 정션</td>
+                                        </tr>
+                                        <tr>
+                                            <th>요구사항</th>
+                                            <td colspan="5">이렇게 저렇게 해주이렇게 저렇게 해주세요~~~이렇게 저렇게 해주세요~~~세요~~~이렇게 저렇게 해주세요~~~이렇게 저렇게 해주세요~~~이렇게 저렇게 해주세요~~~</td>
+                                        </tr>
+                                    </tbody>
+                                </table> 
+                            </div>
+                        </section>
+                        <section class="sec mt20">
+                            <h2 class="tit4 mb10 fwB">2. 계측기 정보</h2>
+                            <div class="v_tbl_wrap">
+                                <table class="v_tbl">
+                                    <colgroup>
+                                        <col style="width: 12%">
+                                        <col>
+                                        <col style="width: 12%">
+                                        <col>
+                                        <col style="width: 12%">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>계측기명</th>
+                                            <td>엄청긴계측기명 엄청긴계측기명 엄청긴계측기명 엄청긴계측기명 엄청긴계측기명</td>
+                                            <th>제조사</th>
+                                            <td>(주)엄청긴이름을가진제조사엄청긴이름을가진제조사엄청긴이름을가진제조사</td>
+                                            <th>형식</th>
+                                            <td>형식 어쩌구저쩌구</td>
+                                        </tr>
+                                        <tr>
+                                            <th>기기번호</th>
+                                            <td>123456123123677</td>
+                                            <th>관리번호</th>
+                                            <td>12345234234234</td>
+                                            <th>CMI ID</th>
+                                            <td>1231231241242</td>
+                                        </tr>
+                                    </tbody>
+                                </table> 
+                            </div>
+                        </section>
+                        <section class="sec mt20">
+                            <!--사내교정시-->
+                            <h2 class="tit4 mb10 fwB">3. 교정 정보</h2> <!--사내교정시-->
+                            <div class="v_tbl_wrap">
+                                <table class="v_tbl">
+                                    <colgroup>
+                                        <col style="width: 12%">
+                                        <col>
+                                        <col style="width: 12%">
+                                        <col>
+                                        <col style="width: 12%">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>현재상태</th>
+                                            <td>교정 대기</td>
+                                            <th>교정 구분</th>
+                                            <td>교정 | 사내</td>
+                                            <th>교정 분야</th>
+                                            <td>길이 관련량</td>
+                                        </tr>
+                                        <tr>
+                                            <th>교정일</th>
+                                            <td>2023-11-17</td>
+                                            <th>교정 주기</th>
+                                            <td>12개월</td>
+                                            <th>차기 교정일</th>
+                                            <td>2024-11-17</td>
+                                        </tr>
+                                        <tr>
+                                            <th>교정 담당자</th>
+                                            <td>박보영</td>
+                                            <th>기술 책임자</th>
+                                            <td>한혜진</td>
+                                            <th>교정 결과</th>
+                                            <td>정상</td>
+                                        </tr>
+                                        <tr>
+                                            <th>교정 성적서</th>
+                                            <td>
+                                                <div class="btn_set ai_c">
+                                                    <a href="" class="btn_down fc_navy"><span class="txt mr4">국문</span></a>
+                                                    <span class="bar ty_small"></span> 
+                                                    <a href="" class="btn_down fc_key"><span class="txt mr4">영문</span></a>
+                                                </div>
+                                            </td>
+                                            <th>교정 금액</th>
+                                            <td>999,000,000원</td>
+                                            <th>교정 기관</th>
+                                            <td>(주)이름이엄청긴교정기관관관관관관관관관관관관관관관관</td>
+                                        </tr>
+                                        <tr>
+                                            <th>처리사유</th>
+                                            <td colspan="5">불량사유 노출</td>
+                                        </tr>
+                                    </tbody>
+                                </table> 
+                            </div>
+                        </section>
+                        <section class="sec mt20">
+                            <!--사외교정시-->
+                            <h2 class="tit4 mb10 fwB">3. 교정 정보</h2> <!--사외교정시-->
+                            <div class="v_tbl_wrap">
+                                <table class="v_tbl">
+                                    <colgroup>
+                                        <col style="width: 12%">
+                                        <col>
+                                        <col style="width: 12%">
+                                        <col>
+                                        <col style="width: 12%">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>현재상태</th>
+                                            <td>교정 대행</td>
+                                            <th>교정 구분</th>
+                                            <td>교정 | 사외</td>
+                                            <th>교정 기관</th>
+                                            <td>(주)사외교정기관이름이엄청길어요</td>
+                                        </tr>
+                                        <tr>
+                                            <th>회수일</th>
+                                            <td>2023-11-17</td>
+                                            <th>교정 결과</th>
+                                            <td>정상</td>
+                                            <th>교정 성적서</th>
+                                            <td><a href="" class="btn_down fc_red"><span class="txt mr4">사외</span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>처리사유</th>
+                                            <td colspan="5">불량사유 노출</td>
+                                        </tr>
+                                    </tbody>
+                                </table> 
+                            </div>
+                        </section>
+                        <section class="sec mt20">
+                            <h2 class="tit4 mb10 fwB">4. 출고 정산</h2>
+                            <div class="v_tbl_wrap">
+                                <table class="v_tbl">
+                                    <colgroup>
+                                        <col style="width: 12%">
+                                        <col>
+                                        <col style="width: 12%">
+                                        <col>
+                                        <col style="width: 12%">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>발행번호</th>
+                                            <td>T2023-1121-1</td>
+                                            <th>거래명세서 발행일</th>
+                                            <td>2023-12-12</td>
+                                            <th>거래명세서 발행자</th>
+                                            <td>김갑주</td>
+                                        </tr>
+                                        <tr>
+                                            <th>계산서 작성일</th>
+                                            <td>2023-11-17</td>
+                                            <th>계산서 발행일</th>
+                                            <td>2023-11-17</td>
+                                            <th>결제일</th>
+                                            <td>2023-11-17</td>
+                                        </tr>
+                                        <tr>
+                                            <th>출고일</th>
+                                            <td>2023-12-12</td>
+                                            <th>출고구분</th>
+                                            <td colspan="3">택배</td>
+                                        </tr>
+                                    </tbody>
+                                </table> 
+                            </div>
+                        </section>
+                        <section class="sec mt20">
+                            <h2 class="tit4 mb10 fwB">5. 교정 문의</h2>
+                            <div class="reply_wrap">
+                                <ul class="reply_list">
+                                    <li class="reply_item">
+                                        <div class="reply_set">
+                                            <div class="reply_view">
+                                                <!-- 로고 이미지 없을때 (그냥 비워둠) -->
+                                                <div class="reply_thumb"></div>
+                                                <!--// 로고 이미지 없을때 -->
+                                                <div class="reply_cont">
+                                                    <div class="reply_name">하니(뉴진스)</div>
+                                                    <div class="reply_comment">
+                                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora odit sequi deserunt quaerat blanditiis! Enim obcaecati commodi ea nemo voluptas facere accusamus at quam iure a praesentium molestiae, accusantium eos? Eius saepe optio distinctio eos aspernatur corrupti, repellat voluptatibus suscipit!
+                                                    </div>
+                                                    <div class="reply_view_bot">
+                                                        <div class="reply_view_date">2023-12-23 16:35</div>
+                                                        <button type="button" class="f_btn">답글쓰기</button>
+                                                        <div class="edit_btns">
+                                                            <button type="button" class="f_btn ty_xsmall _line">수정</button>
+                                                            <button type="button" class="f_btn ty_xsmall _line">삭제</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="reply_set ty_re">
+                                            <div class="reply_view ">
+                                                <!-- 로고 이미지 있을때 -->
+                                                <div class="reply_thumb has_thumb">
+                                                    <img src="../assets/images/common/Tesla_logo.png" alt="">
+                                                </div>
+                                                 <!--// 로고 이미지 있을때 -->
+                                                <div class="reply_cont">
+                                                    <div class="reply_name">민지(뉴진스)</div>
+                                                    <div class="reply_comment">
+                                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora odit sequi deserunt quaerat blanditiis! Enim obcaecati commodi ea nemo voluptas facere accusamus at quam iure a praesentium molestiae, accusantium eos? Eius saepe optio distinctio eos aspernatur corrupti, repellat voluptatibus suscipit!
+                                                    </div>
+                                                    <div class="reply_view_bot">
+                                                        <div class="reply_view_date">2023-12-23 16:35</div>
+                                                        <button type="button" class="f_btn">답글쓰기</button>
+                                                        <div class="edit_btns">
+                                                            <button type="button" class="f_btn ty_xsmall _line">수정</button>
+                                                            <button type="button" class="f_btn ty_xsmall _line">삭제</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="reply_set ty_re">
+                                            <div class="reply_write">
+                                                <div class="reply_thumb has_thumb">
+                                                    <img src="../assets/images/common/vw-logo-2x.png" alt="">
+                                                </div>
+                                                <div class="reply_cont">
+                                                    <div class="reply_name">답글을 입력하는 다니엘</div>
+                                                    <textarea name="" id="" class="f_ta"></textarea>
+                                                    <div class="reply_btns">
+                                                        <button class="f_btn ty_small _line">취소</button>
+                                                        <button class="f_btn ty_small _key">등록</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li> 
+                                    <li class="reply_item">
+                                        <div class="reply_set">
+                                            <div class="reply_view">
+                                                <div class="reply_thumb"></div>
+                                                <div class="reply_cont">
+                                                    <div class="reply_name">크리스티아누 호날두</div>
+                                                    <div class="reply_comment">
+                                                        진짜 세계관최강자들의 싸움이다.. 그찐따같던 나루토가 맞나? 진짜 나루토는 전설이다..진짜옛날에 맨날나루토봘는데 왕같은존재인 호카게 되서 세계최강 진짜 세계관최강자들의 싸움이다.. 그찐따같던 나루토가 맞나? 진짜 나루토는 전설이다..진짜옛날에 맨날나루토봘는데 왕같은존재인 호카게 되서 세계최강 진짜 세계관최강자들의 싸움이다.. 그찐따같던 나루토가 맞나? 진짜 나루토는 전설이다..진짜옛날에 맨날나루토봘는데 왕같은존재인 호카게 되서 세계최강
+                                                    </div>
+                                                    <div class="reply_view_bot">
+                                                        <div class="reply_view_date">2023-12-23 16:35</div>
+                                                        <button type="button" class="f_btn">답글쓰기</button>
+                                                        <div class="edit_btns">
+                                                            <button type="button" class="f_btn ty_xsmall _line">수정</button>
+                                                            <button type="button" class="f_btn ty_xsmall _line">삭제</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li> 
+                                    <!-- 댓글 수정시 -->
+                                    <li class="reply_item">
+                                        <div class="reply_set">
+                                            <div class="reply_write">
+                                                <div class="reply_thumb has_thumb">
+                                                    <img src="../assets/images/common/test.jpg" alt="">
+                                                </div>
+                                                <div class="reply_cont">
+                                                    <div class="reply_name">코리아인스트루먼트</div>
+                                                    <textarea name="" id="" class="f_ta">댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면  </textarea>
+                                                    <div class="reply_btns">
+                                                        <button class="f_btn ty_small _line">취소</button>
+                                                        <button class="f_btn ty_small _key">수정</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li> 
+                                    <!--// 댓글 수정시 -->
+                                    <li class="reply_item">
+                                        <div class="reply_set">
+                                            <div class="reply_view">
+                                                <div class="reply_thumb"></div>
+                                                <div class="reply_cont">
+                                                    <div class="reply_name">코리아인스트루먼트</div>
+                                                    <div class="reply_comment">
+                                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora odit sequi deserunt quaerat blanditiis! Enim obcaecati commodi ea nemo voluptas facere accusamus at quam iure a praesentium molestiae, accusantium eos? Eius saepe optio distinctio eos aspernatur corrupti, repellat voluptatibus suscipit!
+                                                    </div>
+                                                    <div class="reply_view_bot">
+                                                        <div class="reply_view_date">2023-12-23 16:35</div>
+                                                        <button type="button" class="f_btn">답글쓰기</button>
+                                                        <div class="edit_btns">
+                                                            <button type="button" class="f_btn ty_xsmall _line">수정</button>
+                                                            <button type="button" class="f_btn ty_xsmall _line">삭제</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="reply_set ty_re">
+                                            <div class="reply_view ">
+                                                <!-- 로고 이미지 있을때 -->
+                                                <div class="reply_thumb has_thumb">
+                                                    <img src="../assets/images/common/Tesla_logo.png" alt="">
+                                                </div>
+                                                 <!--// 로고 이미지 있을때 -->
+                                                <div class="reply_cont">
+                                                    <div class="reply_name">민지(뉴진스)</div>
+                                                    <div class="reply_comment">
+                                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora odit sequi deserunt quaerat blanditiis! Enim obcaecati commodi ea nemo voluptas facere accusamus at quam iure a praesentium molestiae, accusantium eos? Eius saepe optio distinctio eos aspernatur corrupti, repellat voluptatibus suscipit!
+                                                    </div>
+                                                    <div class="reply_view_bot">
+                                                        <div class="reply_view_date">2023-12-23 16:35</div>
+                                                        <button type="button" class="f_btn">답글쓰기</button>
+                                                        <div class="edit_btns">
+                                                            <button type="button" class="f_btn ty_xsmall _line">수정</button>
+                                                            <button type="button" class="f_btn ty_xsmall _line">삭제</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- 대댓글 수정시 -->
+                                        <div class="reply_set ty_re">
+                                            <div class="reply_write">
+                                                <div class="reply_thumb"></div>
+                                                <div class="reply_cont">
+                                                    <div class="reply_name">코리아인스트루먼트</div>
+                                                    <textarea name="" id="" class="f_ta">대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 </textarea>
+                                                    <div class="reply_btns">
+                                                        <button class="f_btn ty_small _line">취소</button>
+                                                        <button class="f_btn ty_small _key">수정</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--// 대댓글 수정시 -->
+                                    </li> 
+                                    <!-- 삭제된 댓글 -->
+                                    <li class="reply_item">
+                                        <div class="reply_set">
+                                            <div class="reply_view">
+                                                <div class="reply_thumb"></div>
+                                                <div class="reply_cont">
+                                                    <div class="reply_name">코리아인스트루먼트</div>
+                                                    <div class="reply_comment">
+                                                        삭제된 댓글입니다.
+                                                    </div>
+                                                    <div class="reply_view_bot">
+                                                        <div class="reply_view_date">2023-12-23 16:35</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 삭제된 대댓글 -->
+                                        <div class="reply_set ty_re">
+                                            <div class="reply_view ">
+                                                <div class="reply_thumb"></div>
+                                                <div class="reply_cont">
+                                                    <div class="reply_name">코리아인스트루먼트</div>
+                                                    <div class="reply_comment">
+                                                        삭제된 댓글입니다.
+                                                    </div>
+                                                    <div class="reply_view_bot">
+                                                        <div class="reply_view_date">2023-12-23 16:35</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <!--// 삭제된 대댓글 -->
+                                    </li> 
+                                    <!--// 삭제된 댓글 -->
+                                </ul>
+                                <div class="reply_write mt20">
+                                    <div class="reply_thumb"></div>
+                                    <div class="reply_cont">
+                                        <div class="reply_name">코리아인스트루먼트</div>
+                                        <textarea name="" id="" class="f_ta"></textarea>
+                                        <div class="reply_btns">
+                                            <button class="f_btn ty_small _key">등록</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </section>
+                        <div class="btn_set taC mt30">
+                            <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="close_popup(this)">닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--// [팝업] 교정 이력 상세 -->
             <!--[팝업] 배송지 등록하기 -->
             <div class="layer_popup popup_address_add" onclick="close_popup(this)">
                 <div class="layer_popup_inner">

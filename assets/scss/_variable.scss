@@ -348,6 +348,12 @@ $inner: 1280px;
     &.jc_r {
         justify-content: flex-end;
     }
+    &.jc_sb {
+        justify-content: space-between;
+    }
+    &.jc_sa {
+        justify-content: space-around;
+    }
     .flex1 {
         flex: 1;
     }
@@ -412,4 +418,7 @@ $inner: 1280px;
 }
 .w100 {
     width: 100%;
+}
+.h100 {
+    height: 100% !important;
 }

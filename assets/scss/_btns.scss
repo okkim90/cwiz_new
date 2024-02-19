@@ -368,6 +368,17 @@
             font-weight: bold;
         }
     }
+    &.ty_arrow_b {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::after {
+            content: '\f078';
+            font-family: "Font Awesome 6 Free";
+            margin-left: 5px;
+            font-weight: bold;
+        }
+    }
 }
 
 .btn_delete {

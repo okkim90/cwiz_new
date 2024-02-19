@@ -89,14 +89,53 @@
             margin-bottom: 6px;
         }
     }
+    &_toggle {
+        .card2_item {
+            &:first-child {
+                display: block;
+            }
+            display: none;
+        }
+        &.on {
+            .card2_item {
+                display: block;
+            }
+            .card2_toggle_bot {
+                .f_btn {
+                    &::after {
+                        transform: rotate(180deg);
+                    }
+                    &::before {
+                        content: '닫기';
+                    }
+                    span {
+                        display: none;
+                    }
+                }
+            }
+            
+        }
+        &_bot {
+            padding: 0 10px;
+            
+        }
+    }
    
     &_list {
         padding: 0 10px;
-    
+        text-align: left;
         border-radius: 10px;
         font-size: 12px;
         line-height: 1.5;
         overflow-y: auto;
+        &.ty_2 {
+            .card2_item {
+                border: 1px solid $c_line;
+                &:hover {
+                    background-color: #fff;
+                }
+            }
+        }
     }
     &_item {
         background-color: #fff;

@@ -312,260 +312,54 @@
                             정산/출고 관리
                         </li>
                         <li class="breadcrumb_item">
-                            정산 관리
+                            결제하기
                         </li>
                     </ol>
                 </nav>
                 <!--// [D] breadcrumb -->
                 <div class="sub_tit">
-                    <h1 class="tit1">정산 관리</h1>
+                    <h1 class="tit1">결제 확인</h1>
                 </div>
-                <section class="sec">
-                    <form action="">
-                        <div class="v_tbl_wrap">
-                            <table class="v_tbl">
-                                <colgroup>
-                                    <col style="width: 110px;">
-                                    <col>
-                                    <col style="width: 110px;">
-                                    <col>
-                                    <col style="width: 110px;">
-                                    <col>
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <th>기간 조회</th>
-                                        <td colspan="5">
-                                            <div class="date_set">
-                                                <select name="" id="" class="f_select ty_small w_80">
-                                                    <option value="">접수일</option>
-                                                    <option value="">교정일</option>
-                                                </select>
-                                                <input type="text" class="f_input ty_small inp_date date_start" readonly="" id=""> ~
-                                                <input type="text" class="f_input ty_small inp_date date_end" readonly="" id="">
-                                                <button type="button" onclick="set_3m(this)" class="f_btn ty_xsmall _round _blue_op w_50">3개월</button>
-                                                <button type="button" onclick="set_6m(this)" class="f_btn ty_xsmall _round _navy_op w_50">6개월</button>
-                                                <button type="button" onclick="set_1y(this)" class="f_btn ty_xsmall _round _purple_op w_50">1년</button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>교정 기관</th>
-                                        <td>
-                                            <select name="" id="" class="f_select ty_small w_300">
-                                                <option value="">전체</option>
-                                                <option value="">코리아인스트루먼트(주) 서울본사</option>
-                                                <option value="">코리아인스트루먼트(주) 부산지사</option>
-                                                <option value="">코리아인스트루먼트(주) 대전지사</option>
-                                            </select>
-                                        </td>
-                                        <th>성적서 업체</th>
-                                        <td>
-                                            <div class="f_search mw_300">
-                                                <input type="text" class="f_input ty_small w100" onfocus="f_search_focus(this)" onfocusout="f_search_focusout(this)" placeholder="검색어를 입력해주세요">
-                                                <div class="f_search_list_wrap">
-                                                    <ul class="f_search_list">
-                                                        <li class="f_search_item">직접입력</li>
-                                                        <li class="f_search_item">11112<b>Lorem</b>ipsum dolor sit amet</li>
-                                                        <li class="f_search_item">222222<b>Lorem</b> iercitationem quis</li>
-                                                        <li class="f_search_item">333333<b>Lorem</b> ipsum dolor sit am</li>
-                                                        <li class="f_search_item">11112<b>Lorem</b>ipsum dolor sit amet</li>
-                                                        <li class="f_search_item">222222<b>Lorem</b> iercitationem quis</li>
-                                                        <li class="f_search_item">333333<b>Lorem</b> ipsum dolor sit am</li>
-                                                        <li class="f_search_item">11112<b>Lorem</b>ipsum dolor sit amet</li>
-                                                        <li class="f_search_item">222222<b>Lorem</b> iercitationem quis</li>
-                                                        <li class="f_search_item">333333<b>Lorem</b> ipsum dolor sit am</li>
-                                                    </ul>
-                                                </div>
-                                                <script>
-                                                    function f_search_focus(target){
-                                                        const f_search = target.closest('.f_search');
-                                                        f_search.classList.add('on');
-                                                    }
-                                                    function f_search_focusout(target){
-                                                        const f_search = target.closest('.f_search');
-                                                        f_search.classList.remove('on');
-                                                    }
-                                                </script>
-                                            </div>
-                                        </td>
-                                        <th>번호 조회</th>
-                                        <td>
-                                            <div class="d_flex _gap5">
-                                                <select name="" id="" class="f_select ty_small w_90 shrink0">
-                                                    <option value="">접수 번호</option>
-                                                    <option value="">발행 번호</option>
-                                                </select>
-                                                <input type="text" class="f_input ty_small flex1">
-                                            </div>
-                                        </td> 
-                                    </tr>
-                                    <tr>
-                                        <th>결제 여부</th>
-                                        <td>
-                                            <div class="chk_list">
-                                                <label class="chk_item"><input type="checkbox" > 결제 완료</label>
-                                                <label class="chk_item"><input type="checkbox" > 결제 대기</label>
-                                            </div>
-                                        </td>
-                                        <th>정산 구분</th>
-                                        <td colspan="3">
-                                            <div class="chk_list">
-                                                <label class="chk_item"><input type="checkbox" > 청구</label>
-                                                <label class="chk_item"><input type="checkbox" > 영수</label>
-                                                <label class="chk_item"><input type="checkbox" > 카드</label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                
-                                </tbody>
-                            </table> 
+                <div class="sec">
+                    <div class="result_box bd_box taC pa40 bd_radius20">
+                        <i class="fa-solid fa-circle-check fc_key" style="font-size: 100px;"></i>
+                        <div class="result_box_tit fz_big fwB mt15">결제 완료</div>
+                        <div class="result_box_desc fz_mid2 mt40">
+                            <div class="h_tbl_wrap mw_600" style="margin: 0 auto;">
+                                <table class="h_tbl tl_fixed ty_big">
+                                    <thead>
+                                        <tr>
+                                            <th>거래명세서 건수</th>
+                                            <th>계측기 갯수</th>
+                                            <th>최종 결제 금액</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>6건</td>
+                                            <td>3건</td>
+                                            <td class="fwB">999,000,000원</td>
+                                        </tr>
+                                    </tbody>
+                                </table> 
+                            </div>
                         </div>
-                        <div class="btn_set taC mt30">
-                            <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
-                            <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="reset(this)">초기화 <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i></button>
-                        </div>
-                    </form>
-                </section>
-                <section class="sec">
-                    <div class="sub_tit2">
-                        <div class="tit4 count_info d_flex _gap6 ai_c">
-                            <span>검색결과 : 9,999건</span> 
-                        </div>
-                        <select name="" id="" class="f_select ty_small w_80 ml20">
-                            <option value="">30개</option>
-                            <option value="">50개</option>
-                            <option value="">100개</option>
-                            <option value="">200개</option>
-                            <option value="">전체</option>
-                        </select>
-                        <div class="btn_set ml_auto ai_b">
-                            <p class="fz_big mr10 ">결제대기 : <b class="fc_red">999,000,000 원</b></p>
-                            <button type="button" class="f_btn ty_mid _key w_140">
-                                세금계산서 발행 <i class="fa-solid fa-receipt"></i>
-                            </button>
-                            <button type="button" class="f_btn ty_mid _key w_110">
-                                결제하기 <i class="fa-solid fa-credit-card"></i>
-                            </button>
-                        </div>
+                        <a href="" class="f_btn ty_big _key w_200 mt40">확인</a>
                     </div>
-                    <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
-                        <table class="h_tbl tl_fixed">
-                            <colgroup>
-                                <col style="width: 40px;">
-                                <col style="width: 90px;">
-                                <col>
-                                <col style="width: 60px;">
-                                <col style="width: 110px;">
-                                <col>
-                                <col style="width: 90px;">
-                                <col style="width: 80px;">
-                                <col style="width: 90px;">
-                                <col style="width: 75px;">
-                                <col style="width: 80px;">
-                                <col style="width: 50px;">
-                                <col style="width: 75px;">
-                            </colgroup>
-                            <thead class="th_fixed">
-                                <tr>
-                                    <th rowspan="2"><input type="checkbox"></th>
-                                    <th rowspan="2">접수번호</th>
-                                    <th rowspan="2">성적서 업체</th>
-                                    <th rowspan="2">담당자</th>
-                                    <th rowspan="2">수수료<br>(소급비/VAT 포함)</th>
-                                    <th rowspan="2">교정 기관</th>
-                                    <th colspan="4">거래명세서</th>
-                                    <th colspan="3">세금계산서</th>                                   
-                                </tr>
-                                <tr>
-                                    <th>발행번호</th>
-                                    <th>결제일</th>
-                                    <th>미수금</th>
-                                    <th>거래명세서</th>
-                                    <th>작성일자</th>
-                                    <th>구분</th>
-                                    <th>세금계산서</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><input type="checkbox" disabled></td> <!--[D] 결제완료건 비활성화-->
-                                    <td >2300100 외3</td>
-                                    <td class="ellipsisTooltip">업체명업체명업체명업체명업체명업체명업체명업체</td>
-                                    <td>장원영</td>
-                                    <td>999,999,000</td>
-                                    <td class="ellipsisTooltip">교정기관명교정기관명교정기관명교정기관명교정기관명</td>
-                                    <td>MC2023-1216</td>
-                                    <td>2024-11-23</td>
-                                    <td>999,999,000</td>
-                                    <td><a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a></td>
-                                    <td>2024-11-23</td>
-                                    <td>영수</td>
-                                    <td><a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td>2300100 외3</td>
-                                    <td class="ellipsisTooltip">업체명업체명업체명업체명업체명업체명업체명업체</td>
-                                    <td>장원영</td>
-                                    <td>999,999,000</td>
-                                    <td class="ellipsisTooltip">교정기관명교정기관명교정기관명교정기관명교정기관명</td>
-                                    <td>MC2023-1216</td>
-                                    <td>-</td>
-                                    <td>999,999,000</td>
-                                    <td><a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a></td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td><a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td>2300100 외3</td>
-                                    <td class="ellipsisTooltip">업체명업체명업체명업체명업체명업체명업체명업체</td>
-                                    <td>장원영</td>
-                                    <td>999,999,000</td>
-                                    <td class="ellipsisTooltip">교정기관명교정기관명교정기관명교정기관명교정기관명</td>
-                                    <td>MC2023-1216</td>
-                                    <td>-</td>
-                                    <td>999,999,000</td>
-                                    <td><a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a></td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                </tr>
-                                <tr>          
-                                    <td colspan="13">
-                                        <div class="no_result_box">
-                                            <i class="fa-solid fa-magnifying-glass"></i>
-                                            <p class="mt10">정산 내역을 검색해주세요.</p>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>          
-                                    <td colspan="13">
-                                        <div class="no_result_box">
-                                            <i class="fa-solid fa-file-circle-xmark" aria-hidden="true"></i>
-                                            <p class="mt10">검색 결과가 없습니다.</p>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                </div>
+                <div class="sec">
+                    <div class="result_box bd_box taC pa40 bd_radius20">
+                        <i class="fa-solid fa-triangle-exclamation fc_solidGrey" style="font-size: 100px;"></i>
+                        <div class="result_box_tit fz_big fwB mt15">결제 실패</div>
+                        <div class="result_box_desc fz_mid2 mt40">
+                            <div class="fwB mb10">결제 실패 사유</div> 
+                            <p>결제가 실패되어 결제를 완료하지 못했습니다.</p>
+                            <p>Error Code: ****</p>
+                            <p class="mt20">다시 시도하시거나 고객센터에 문의하여 주시기 바랍니다.</p>
+                        </div>
+                        <a href="" class="f_btn ty_big _key w_200 mt40">확인</a>
                     </div>
-                    <div class="paging_wrap">
-                        <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
-                        <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
-                        <ul class="paging_list">
-                            <li><span class="paging_btn current">1</span></li>
-                            <li><a href="" class="paging_btn">2</a></li>
-                            <li><a href="" class="paging_btn">3</a></li>
-                            <li><a href="" class="paging_btn">4</a></li>
-                            <li><a href="" class="paging_btn">5</a></li>
-                        </ul>
-                        <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
-                        <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
-                    </div>
-                </section>
+                </div>
             </div>
         </main>
         <!--//container-->

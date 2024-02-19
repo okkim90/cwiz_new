@@ -1801,6 +1801,22 @@
 .list_sepBar {
     display: flex;
     flex-wrap: wrap;
+    &.ai_c {
+        align-items: center;
+    }
+    &.jc_c {
+        justify-content: center;
+    }
+    &.ty_small {
+        .list_item {
+            padding-right: 7px;
+            margin-right: 6px;
+            &:last-child {
+                padding-right: 0;
+                margin-right: 0;
+            }
+        }
+    }
     .list_item {
         padding-right: 11px;
         margin-right: 10px;
@@ -2470,6 +2486,42 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.list_receipt {
+    display: flex;
+    flex-wrap: wrap;
+    //white-space: nowrap;
+    padding: 0 5px;
+    dt, dd {
+        flex: 1 0 50%;
+    }
+    dt {
+        text-align: left;
+    }
+    dd {
+        text-align: right;
+    }
+}
+
+.ol {
+    li {
+        list-style:decimal;
+        list-style-position: inside;
+        & + li {
+            margin-top: 0.2em;
+        }
+    }
+}
+.shipment_tips {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: lighten($c_blue, 46%);
+    .ol {
+        li + li {
+            margin-top: 0.4em;
         }
     }
 }

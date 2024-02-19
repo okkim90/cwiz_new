@@ -5025,6 +5025,12 @@
 .d_flex.jc_r {
   justify-content: flex-end;
 }
+.d_flex.jc_sb {
+  justify-content: space-between;
+}
+.d_flex.jc_sa {
+  justify-content: space-around;
+}
 .d_flex .flex1 {
   flex: 1;
 }
@@ -5094,6 +5100,10 @@
 
 .w100 {
   width: 100%;
+}
+
+.h100 {
+  height: 100% !important;
 }
 
 /*반응형 화면 크기*/
@@ -7283,6 +7293,20 @@ tr:last-child .status_box_date {
   display: flex;
   flex-wrap: wrap;
 }
+.list_sepBar.ai_c {
+  align-items: center;
+}
+.list_sepBar.jc_c {
+  justify-content: center;
+}
+.list_sepBar.ty_small .list_item {
+  padding-right: 7px;
+  margin-right: 6px;
+}
+.list_sepBar.ty_small .list_item:last-child {
+  padding-right: 0;
+  margin-right: 0;
+}
 .list_sepBar .list_item {
   padding-right: 11px;
   margin-right: 10px;
@@ -7857,6 +7881,38 @@ tr:last-child .status_box_date {
 }
 .cal_item_info li .ratio_status {
   color: #FF7A00;
+}
+
+.list_receipt {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5px;
+}
+.list_receipt dt, .list_receipt dd {
+  flex: 1 0 50%;
+}
+.list_receipt dt {
+  text-align: left;
+}
+.list_receipt dd {
+  text-align: right;
+}
+
+.ol li {
+  list-style: decimal;
+  list-style-position: inside;
+}
+.ol li + li {
+  margin-top: 0.2em;
+}
+
+.shipment_tips {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ebf5ff;
+}
+.shipment_tips .ol li + li {
+  margin-top: 0.4em;
 }
 
 .layer_popup {
@@ -8945,6 +9001,17 @@ tr:last-child .status_box_date {
   margin-left: 5px;
   font-weight: bold;
 }
+.f_btn.ty_arrow_b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.f_btn.ty_arrow_b::after {
+  content: "\f078";
+  font-family: "Font Awesome 6 Free";
+  margin-left: 5px;
+  font-weight: bold;
+}
 
 .btn_delete {
   display: inline-block;
@@ -9241,6 +9308,9 @@ tr:last-child .status_box_date {
 .h_tbl tbody tr.chk_tr:hover {
   cursor: pointer;
 }
+.h_tbl tbody tr.cursor_pointer {
+  cursor: pointer;
+}
 .h_tbl tbody tr.on {
   background-color: rgba(249, 246, 61, 0.16);
 }
@@ -9441,12 +9511,40 @@ tr:last-child .status_box_date {
   align-items: flex-end;
   margin-bottom: 6px;
 }
+.card2_toggle .card2_item {
+  display: none;
+}
+.card2_toggle .card2_item:first-child {
+  display: block;
+}
+.card2_toggle.on .card2_item {
+  display: block;
+}
+.card2_toggle.on .card2_toggle_bot .f_btn::after {
+  transform: rotate(180deg);
+}
+.card2_toggle.on .card2_toggle_bot .f_btn::before {
+  content: "닫기";
+}
+.card2_toggle.on .card2_toggle_bot .f_btn span {
+  display: none;
+}
+.card2_toggle_bot {
+  padding: 0 10px;
+}
 .card2_list {
   padding: 0 10px;
+  text-align: left;
   border-radius: 10px;
   font-size: 12px;
   line-height: 1.5;
   overflow-y: auto;
+}
+.card2_list.ty_2 .card2_item {
+  border: 1px solid #DDDDDD;
+}
+.card2_list.ty_2 .card2_item:hover {
+  background-color: #fff;
 }
 .card2_item {
   background-color: #fff;

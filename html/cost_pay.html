@@ -337,7 +337,6 @@
                                 <col style="width: 110px;">
                                 <col style="width: 110px;">
                                 <col style="width: 130px;">
-                                <col style="width: 60px;">
                             </colgroup>
                             <thead class="th_fixed">
                                 <tr>
@@ -350,7 +349,6 @@
                                     <th>공급가액</th>
                                     <th>부가세</th>
                                     <th>합계</th>
-                                    <th>삭제</th>
                                 </tr>
                             </thead>
                             <tfoot class="th_fixed">
@@ -360,7 +358,6 @@
                                     <td>999,999,000원</td>
                                     <td>999,999,000원</td>
                                     <td class="fc_navy">999,999,000원</td>
-                                    <td></td>
                                 </tr>
                             </tfoot>
                             <tbody>
@@ -374,7 +371,6 @@
                                     <td>999,000,000</td>
                                     <td>999,000,000</td>
                                     <td>999,000,000</td>
-                                    <td><button type="button" class="btn_ico ty_small"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button></td>
                                 </tr>
                                 <tr>
                                     <td>9999</td>
@@ -386,7 +382,6 @@
                                     <td>999,000,000</td>
                                     <td>999,000,000</td>
                                     <td>999,000,000</td>
-                                    <td><button type="button" class="btn_ico ty_small"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button></td>
                                 </tr>
                                 <tr>
                                     <td>9999</td>
@@ -398,7 +393,6 @@
                                     <td>999,000,000</td>
                                     <td>999,000,000</td>
                                     <td>999,000,000</td>
-                                    <td><button type="button" class="btn_ico ty_small"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -407,144 +401,10 @@
 
                 <div class="payment_wrap">
                     <div class="payment_wrap_left">
+                      
                         <section class="sec mt0">
                             <div class="sub_tit2">
-                                <h2 class="tit3">2. 출고 방식 선택</h2>
-                                <span class="fc_midGrey fz_mid fwM ml10">- 출고 하실 방식을 선택해주세요.</span>
-                            </div>
-                            <div class="d_flex _gap15">
-                                <label class="chk_btn">
-                                    <input type="radio" name="shipment" data-address='true'>
-                                    <span class="f_btn ty_mid w_140 ty_ico">
-                                        <i class="fa-solid fa-truck-fast fz_big mr6"></i>
-                                        택배
-                                    </span>
-                                </label>    
-                                <label class="chk_btn d_flex">
-                                    <input type="radio" name="shipment" data-address='false'>
-                                    <span class="f_btn ty_mid w_140 ty_ico">
-                                        <i class="fa-solid fa-building-user fz_big mr6"></i>
-                                        방문수령
-                                    </span>
-                                    <input type="text" placeholder="방문 날짜 선택" class="f_input ty_mid w_140 inp_date ml5" readonly> 
-                                </label>
-                                <label class="chk_btn">
-                                    <input type="radio" name="shipment" data-address='true'>
-                                    <span class="f_btn ty_mid  w_140 ty_ico">
-                                        <i class="fa-solid fa-motorcycle fz_big mr6"></i>
-                                        퀵(착불)
-                                    </span>
-                                </label>   
-                            </div>
-                            <div class="address_wrap mt10" style="display: none;">
-                                <div class="d_flex mb10 ai_b">
-                                    <h3 class="tit4 ">※ 배송지 선택</h3>
-                                    <button class="f_btn _key_ol ty_mid pd10 ml_auto" onclick="open_popup('popup_address_add')">배송지 추가 +</button>
-                                </div>
-                                <div class="h_tbl_wrap y_scroll_area" style="max-height: 260px;">
-                                    <table class="h_tbl tl_fixed">
-                                        <colgroup>
-                                            <col style="width: 50px;">
-                                            <col>
-                                            <col style="width: 80px;">
-                                            <col style="width: 100px;">
-                                            <col style="width: 50px;">
-                                            <col style="width: 50px;">
-                                        </colgroup>
-                                        <thead class="th_fixed">
-                                            <tr>
-                                                <th>선택</th>
-                                                <th>배송지 정보</th>
-                                                <th>담당자명</th>
-                                                <th>연락처</th>
-                                                <th>수정</th>
-                                                <th>삭제</th>
-                                            </tr>
-                                        </thead>
-                                        
-                                        <tbody>
-                                            <tr>
-                                                <td><input type="radio" name="address"></td>
-                                                <td class="taL">
-                                                    <p class="ellipsisTooltip fwM">업체명업체명업체명업체명업체명업체명업체명업체</p> 
-                                                    <p class="ellipsisTooltip mt4"><b class="fc_key">[기본]</b> 서울특별시 강남구 테해란로 9999길 101010 코리아인스트루먼트타워 1950동 1050호</p>
-                                                </td>
-                                                <td>장원영</td>
-                                                <td>010-1234-1234</td>
-                                                <td>
-                                                    <button type="button" class="btn_ico ty_small" aria-label="edit" onclick="open_popup('popup_address_edit')">
-                                                        <i class="fa-solid fa-pen-to-square"></i>
-                                                    </button>
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn_ico ty_small" aria-label="delete"><i class="fa-solid fa-trash-can"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="radio" name="address"></td>
-                                                <td class="taL">
-                                                    <p class="ellipsisTooltip fwM">업체명업체명업체명업체명업체명업체명업체명업체</p> 
-                                                    <p class="ellipsisTooltip mt4">서울특별시 강남구 테해란로 9999길 101010 코리아인스트루먼트타워 1950동 1050호</p>
-                                                </td>
-                                                <td>장원영</td>
-                                                <td>010-1234-1234</td>
-                                                <td>
-                                                    <button type="button" class="btn_ico ty_small" aria-label="edit" onclick="open_popup('popup_address_edit')">
-                                                        <i class="fa-solid fa-pen-to-square"></i>
-                                                    </button>
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn_ico ty_small" aria-label="delete"><i class="fa-solid fa-trash-can"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="radio" name="address"></td>
-                                                <td class="taL">
-                                                    <p class="ellipsisTooltip fwM">업체명업체명업체명업체명업체명업체명업체명업체</p> 
-                                                    <p class="ellipsisTooltip mt4">서울특별시 강남구 테해란로 9999길 101010 코리아인스트루먼트타워 1950동 1050호</p>
-                                                </td>
-                                                <td>장원영</td>
-                                                <td>010-1234-1234</td>
-                                                <td>
-                                                    <button type="button" class="btn_ico ty_small" aria-label="edit" onclick="open_popup('popup_address_edit')">
-                                                        <i class="fa-solid fa-pen-to-square"></i>
-                                                    </button>
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn_ico ty_small" aria-label="delete"><i class="fa-solid fa-trash-can"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>          
-                                                <td colspan="6">
-                                                    <div class="no_result_box ty_small">
-                                                        <i class="fa-solid fa-file-circle-xmark" aria-hidden="true"></i>
-                                                        <p class="mt10">등록된 배송지가 없습니다.</p>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <!--[D] 출고주소리스트 토글 : 안쓸거면 스크립트 지워도됩니다 -->
-                            <script>
-                                const address_wrap = document.querySelector('.address_wrap');
-                                const inp_shipment = document.querySelectorAll('input[name="shipment"]');
-                                //console.log(inp_shipment);
-                                inp_shipment.forEach((e)=>{
-                                    e.addEventListener('change',()=>{
-                                        if(e.dataset.address == 'true'){
-                                            address_wrap.style.display = 'block';
-                                        }else{
-                                            address_wrap.style.display = 'none';
-                                        }
-                                    })
-                                })
-                            </script>
-                        </section>
-                        <section class="sec">
-                            <div class="sub_tit2">
-                                <h2 class="tit3">3. 결제 수단 선택</h2>
+                                <h2 class="tit3">2. 결제 수단 선택</h2>
                                 <span class="fc_midGrey fz_mid fwM ml10">- 결제 수단을 선택해주세요.</span>
                             </div>
                             <div class="d_flex _gap15">
@@ -571,7 +431,10 @@
                                 </label>   
                             </div>
                             <div class="payment_info mt20" style="display: none;">
-                                <h3 class="tit4 mb10">※ 세금계산서 요청 정보</h3>
+                                <div class="d_flex">
+                                    <h3 class="tit4 mb10">※ 세금계산서 요청 정보</h3>
+                                    <span class="f_tip ml_auto"><i class="ico_required"></i> 표시는 필수 기재 항목입니다.</span>
+                                </div>
                                 <div class="v_tbl_wrap">
                                     <table class="v_tbl">
                                         <colgroup>
@@ -582,7 +445,7 @@
                                         </colgroup>
                                         <tbody>
                                             <tr>
-                                                <th>업체명</th>
+                                                <th>업체명 <i class="ico_required"></i> </th>
                                                 <td>
                                                     <div class="f_search mw_300">
                                                         <input type="text" class="f_input ty_small w100" onfocus="f_search_focus(this)" onfocusout="f_search_focusout(this)" placeholder="검색어를 입력해주세요">
@@ -612,7 +475,7 @@
                                                         </script>
                                                     </div>
                                                 </td>
-                                                <th>사업자 번호</th>
+                                                <th>사업자 번호 <i class="ico_required"></i> </th>
                                                 <td>
                                                     <div class="d_flex _gap4 ai_c">
                                                         <input type="text" class="f_input ty_small w_50 taC" maxlength="3">
@@ -625,27 +488,27 @@
                                                 
                                             </tr>
                                             <tr>
-                                                <th>대표자명</th>
+                                                <th>대표자명 <i class="ico_required"></i> </th>
                                                 <td>
                                                     <input type="text" class="f_input ty_small w_200" placeholder="대표자명을 입력해주세요.">
                                                 </td>
-                                                <th>담당자명</th>
+                                                <th>담당자명 <i class="ico_required"></i> </th>
                                                 <td>
                                                     <input type="text" class="f_input ty_small w_200" placeholder="담당자명을 입력해주세요.">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>연락처</th>
+                                                <th>연락처 <i class="ico_required"></i> </th>
                                                 <td>
                                                     <input type="tel" class="f_input ty_small w_200" placeholder="'-' 없이 번호만 입력해주세요.">
                                                 </td>
-                                                <th>이메일</th>
+                                                <th>이메일 <i class="ico_required"></i> </th>
                                                 <td>
                                                     <input type="email" class="f_input ty_small w_300" placeholder="예) 'okkim@kic21.co.kr'">
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>주소</th>
+                                                <th>주소 <i class="ico_required"></i> </th>
                                                 <td colspan="3">
                                                     <div class="d_flex fw_w _gap5 mw_500">
                                                         <div class="search_set shrink0">
@@ -657,6 +520,12 @@
                                                         <input type="text" class="f_input ty_small w100" readonly="">
                                                         <input type="text" class="f_input ty_small w100" placeholder="상세 주소를 입력해주세요.">
                                                     </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>비고</th>
+                                                <td colspan="3">
+                                                    <textarea name="" id="" class="f_ta ty_small"></textarea>
                                                 </td>
                                             </tr>
                                         </tbody>
