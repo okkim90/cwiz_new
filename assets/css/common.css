@@ -9591,7 +9591,12 @@ tr:last-child .status_box_date {
 .card2_row.bdT {
   border-top: 1px dashed #DDDDDD;
   padding-top: 4px;
-  margin-top: 2px;
+  margin-top: 3px;
+}
+.card2_row.bdT2 {
+  border-top: 1px dashed #DDDDDD;
+  padding-top: 6px;
+  margin-top: 6px;
 }
 .card2_row .btn_t_link {
   text-decoration: none;
