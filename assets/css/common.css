@@ -5106,6 +5106,12 @@
   height: 100% !important;
 }
 
+.srchKey {
+  background-color: rgba(255, 122, 0, 0.08);
+  color: #FF7A00;
+  font-weight: 500;
+}
+
 /*반응형 화면 크기*/
 .t_hidden_2 {
   width: 100%;
@@ -8275,6 +8281,10 @@ tr:last-child .status_box_date {
 }
 .f_search_item:hover {
   background-color: rgba(249, 246, 61, 0.1);
+  color: #222;
+}
+.f_search_item.on {
+  background-color: rgba(0, 133, 255, 0.1);
   color: #222;
 }
 

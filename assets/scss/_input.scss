@@ -133,6 +133,10 @@
             background-color: rgba(rgb(249, 246, 61), .1);
             color: #222;
         }
+        &.on {
+            background-color: rgba($c_blue, .1);
+            color: #222;
+        }
     }
 }
 

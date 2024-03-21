@@ -422,3 +422,9 @@ $inner: 1280px;
 .h100 {
     height: 100% !important;
 }
+
+.srchKey {
+    background-color: rgba($c_key, .08);
+    color: $c_key;
+    font-weight: 500;
+}
