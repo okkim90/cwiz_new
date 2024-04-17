@@ -105,6 +105,22 @@
         }
     }
     
+    &.notAllowed {
+        color: $c_lightGrey;
+        cursor: default;
+        //opacity: 0.6;
+        // &::before {
+        //     content: '?';
+        //     position: absolute;
+        //     font-size: 18px;
+        //     z-index: 10;
+        //     color: #000;
+        //     font-weight: bold;
+        //     line-height: 1;
+        //     text-align: center;
+        //     width: 100%;
+        // }
+    }
     
 }
 .btn_down2 {
@@ -458,7 +474,8 @@
     visibility: hidden;
     position: absolute;
     font-size: 11px;
-    line-height: 22px;
+    line-height: 1.5;
+    padding: 0.3em 6px;
     white-space: nowrap;
     background-color: #fff;
     border-radius: 3px;
@@ -467,7 +484,7 @@
     z-index: 10;
     left: 50%;
     top: 100%;
-    padding: 0 6px;
+    
     transform: translateX(-50%);
     box-shadow: 0 0 10px rgba(#000, .3);
 }

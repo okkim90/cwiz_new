@@ -8774,6 +8774,10 @@ tr:last-child .status_box_date {
   opacity: 1;
   visibility: visible;
 }
+.btn_down.notAllowed {
+  color: #aaa;
+  cursor: default;
+}
 
 .btn_down2::after {
   content: "\f56d";
@@ -9098,7 +9102,8 @@ tr:last-child .status_box_date {
   visibility: hidden;
   position: absolute;
   font-size: 11px;
-  line-height: 22px;
+  line-height: 1.5;
+  padding: 0.3em 6px;
   white-space: nowrap;
   background-color: #fff;
   border-radius: 3px;
@@ -9107,7 +9112,6 @@ tr:last-child .status_box_date {
   z-index: 10;
   left: 50%;
   top: 100%;
-  padding: 0 6px;
   transform: translateX(-50%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
@@ -10183,6 +10187,10 @@ tr:last-child .status_box_date {
   color: #222;
   background-color: #666;
   padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 .join_info .vid_bg {
   position: fixed;
@@ -10198,7 +10206,7 @@ tr:last-child .status_box_date {
   filter: blur(3px);
 }
 .join_info_inner {
-  max-width: 700px;
+  width: 700px;
   margin: 0 auto;
   padding: 50px 0 0;
   box-sizing: border-box;
