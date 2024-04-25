@@ -8932,6 +8932,7 @@ tr:last-child .status_box_date {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  padding: 0 30px;
 }
 .btn_set.ty_nowrap {
   flex-wrap: nowrap;
