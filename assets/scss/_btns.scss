@@ -263,6 +263,11 @@
     &.ty_top {
         height: 0;
     }
+    &.ty_small {
+        border-top: 1px solid $c_line;
+        margin-top: 30px;
+        padding-top: 15px;
+    }
 }
 
 .f_btn {

@@ -7924,7 +7924,7 @@ tr:last-child .status_box_date {
 .inform {
   padding: 26px 20px;
   border-radius: 10px;
-  background-color: #ebf5ff;
+  border: 4px solid #DDDDDD;
 }
 .inform_sec + .inform_sec {
   margin-top: 20px;
@@ -7938,6 +7938,10 @@ tr:last-child .status_box_date {
 .agreement {
   display: flex;
   gap: 20px;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff4eb;
 }
 .agreement_btn {
   display: flex;
@@ -7949,6 +7953,7 @@ tr:last-child .status_box_date {
   border: 4px solid #ddd;
   font-weight: 500;
   font-size: 14px;
+  background-color: #fff;
 }
 .agreement_btn .ico_chk {
   font-size: 20px;
@@ -8962,6 +8967,11 @@ tr:last-child .status_box_date {
 }
 .btn_set.ty_top {
   height: 0;
+}
+.btn_set.ty_small {
+  border-top: 1px solid #DDDDDD;
+  margin-top: 30px;
+  padding-top: 15px;
 }
 
 .f_btn {

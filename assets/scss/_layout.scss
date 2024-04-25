@@ -2530,8 +2530,8 @@
 .inform {
     padding: 26px 20px;
     border-radius: 10px;
-    background-color: lighten($c_blue, 46%);
-
+    //background-color: lighten($c_blue, 46%);
+    border: 4px solid $c_line;
     &_sec {
         & + & {
             margin-top: 20px;
@@ -2547,7 +2547,11 @@
 .agreement {
     display: flex;
     gap: 20px;
-    
+    justify-content: center;
+    // background-color: $c_bg_grey2;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: lighten($c_key, 46%);
     &_btn {
         display: flex;
         align-items: center;
@@ -2559,6 +2563,7 @@
         border: 4px solid #ddd;
         font-weight: 500;
         font-size: 14px;
+        background-color: #fff;
         .ico_chk {
             font-size: 20px;
             line-height: 1;
@@ -2576,6 +2581,7 @@
         }
         @at-root .f_chk:checked ~ & {
             border-color: $c_key;
+            //background-color: lighten($c_key, 46%);
             .ico_chk {
                 color: $c_key;
             }
