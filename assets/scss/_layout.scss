@@ -2515,6 +2515,75 @@
         }
     }
 }
+
+.ol_ty2 {
+    li {
+        margin-left: 1.7em;
+        list-style:decimal;
+        list-style-position: outside;
+        & + li {
+            margin-top: 0.3em;
+        }
+    }
+}
+
+.inform {
+    padding: 26px 20px;
+    border-radius: 10px;
+    background-color: lighten($c_blue, 46%);
+
+    &_sec {
+        & + & {
+            margin-top: 20px;
+        }
+        .tit {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.agreement {
+    display: flex;
+    gap: 20px;
+    
+    &_btn {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        //gap: 4px;
+        padding: 1em 1.4em;
+        border-radius: 10px;
+        position: relative;
+        border: 4px solid #ddd;
+        font-weight: 500;
+        font-size: 14px;
+        .ico_chk {
+            font-size: 20px;
+            line-height: 1;
+            margin-right: 10px;
+            color: #ddd;
+            &::after {
+                content: '\f00c';
+                font-family: "Font Awesome 6 Free";
+                font-weight: bold;
+                font-size: 1.1em;
+            }
+        }
+        .f_btn {
+            margin-left: 20px;
+        }
+        @at-root .f_chk:checked ~ & {
+            border-color: $c_key;
+            .ico_chk {
+                color: $c_key;
+            }
+        }
+        
+    }
+    
+}
 .shipment_tips {
     padding: 20px;
     border-radius: 10px;

@@ -7912,6 +7912,66 @@ tr:last-child .status_box_date {
   margin-top: 0.2em;
 }
 
+.ol_ty2 li {
+  margin-left: 1.7em;
+  list-style: decimal;
+  list-style-position: outside;
+}
+.ol_ty2 li + li {
+  margin-top: 0.3em;
+}
+
+.inform {
+  padding: 26px 20px;
+  border-radius: 10px;
+  background-color: #ebf5ff;
+}
+.inform_sec + .inform_sec {
+  margin-top: 20px;
+}
+.inform_sec .tit {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.agreement {
+  display: flex;
+  gap: 20px;
+}
+.agreement_btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 1em 1.4em;
+  border-radius: 10px;
+  position: relative;
+  border: 4px solid #ddd;
+  font-weight: 500;
+  font-size: 14px;
+}
+.agreement_btn .ico_chk {
+  font-size: 20px;
+  line-height: 1;
+  margin-right: 10px;
+  color: #ddd;
+}
+.agreement_btn .ico_chk::after {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.agreement_btn .f_btn {
+  margin-left: 20px;
+}
+.f_chk:checked ~ .agreement_btn {
+  border-color: #FF7A00;
+}
+.f_chk:checked ~ .agreement_btn .ico_chk {
+  color: #FF7A00;
+}
+
 .shipment_tips {
   padding: 20px;
   border-radius: 10px;
@@ -10939,10 +10999,16 @@ tr:last-child .status_box_date {
 .terms_wrap .tbl_rnd {
   border: 1px solid #222;
 }
+.terms_wrap .tbl_rnd th {
+  background-color: #f4f4f4;
+}
 .terms_wrap .tbl_rnd th, .terms_wrap .tbl_rnd td {
   border: 1px solid #222;
   text-align: center;
-  padding: 0.5em;
+  padding: 0.4em 0.6em;
+}
+.terms_wrap .tbl_rnd .taL {
+  text-align: left;
 }
 
 .terms_tab {
