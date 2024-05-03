@@ -744,13 +744,86 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="btn_set taC mt30">
-                        <input type="submit" value="등록" class="f_btn ty_mid _key w_100">
-                        <button type="button" onclick="open_popup('popup_preview')" class="f_btn ty_mid _purple w_100">미리보기</button>
-                        <input type="submit" value="임시저장" class="f_btn ty_mid _solidGrey w_100">
-                        <a href="" class="f_btn ty_mid _blue w_100">목록</a>
+                </section>
+                <section class="sec">
+                    <div class="inform">
+                         <!--[D] inform_sec 이 한 세트-->
+                        <div class="inform_sec">
+                            <strong class="tit"><i class="fa-solid fa-circle-info"></i> 예약접수 유의사항</strong>
+                            <ol class="ol2">
+                                <li class="ol2_item">견적서가 있는 고객은 견적서를 동봉하여 주시기 바랍니다.</li>
+                                <li class="ol2_item">측정 방법 및 측정 범위 등 요구사항이 있는 경우 예약 접수 시 요구사항 또는 비고란에 기재 바랍니다.</li>
+                                <li class="ol2_item">신청업체와 성적서 업체가 다른 경우, 반드시 성적서 발행업체의 업체와 주소를 정확하게 기재 바랍니다. </li>
+                                <li class="ol2_item">접수 확인은 [접수관리 > 접수확인] 메뉴에서 확인 가능 하십니다.</li>
+                                <li class="ol2_item">
+                                    <p>교정기관 주소 안내</p> 
+                                    <ul class="list_bar mt4">
+                                        <li class="list_bar_item">서울본사: 서울 구로구 남부순환로 1303 2층 고객지원팀</li>
+                                        <li class="list_bar_item">부산지사: 부산 사상구 광장로 56번길 45</li>
+                                        <li class="list_bar_item">대전지사: 대전 유성구 테크노 11로 32</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        <!--//-->
+                        <!--[D] inform_sec 이 한 세트-->
+                        <div class="inform_sec">
+                            <strong class="tit"><i class="fa-solid fa-circle-info"></i> 방문접수 유의사항</strong>
+                            <ol class="ol2">
+                                <li class="ol2_item"> 방문 접수는 08:30 ~ 17:30 가능하며 토요일 및 공휴일은 휴무입니다.</li>
+                            </ol>
+                        </div>
+                        <!--//-->
+                        <!--[D] inform_sec 이 한 세트-->
+                        <div class="inform_sec">
+                            <strong class="tit"><i class="fa-solid fa-circle-info"></i> 택배접수 유의사항</strong>
+                            <ol class="ol2">
+                                <li class="ol2_item">택배불가 품목: 고가장비 및 파손 위험이 있는 장비 (15kg 이상되는 중량물)</li>
+                                <li class="ol2_item">운송 도중 택배회사의 과실 또는 사고에 의한 분실, 파손 등이 발생할 경우 교정기관은 일체의 배상 책임이 없을을 알려드립니다.</li>
+                                <li class="ol2_item">택배비는 고객부담입니다.</li>
+                            </ol>
+                        </div>
+                        <!--//-->
+                        <!--[D] inform_sec 이 한 세트-->
+                        <div class="inform_sec">
+                            <strong class="tit"><i class="fa-solid fa-circle-info"></i> 출장접수 유의사항</strong>
+                            <ol class="ol2">
+                                <li class="ol2_item">출장 신청은 이동이 불가한 장비 등에 대해서만 신청 바랍니다.</li>
+                                <li class="ol2_item">출장 신청 시 교정 수수료 외에 출장비가 추가 될수 있습니다.</li>
+                                <li class="ol2_item">출장 신청일은 확정된 날짜가 아니며, 검토 후 확정일자를 회신 드리도록 하겠습니다.</li>
+                            </ol>
+                        </div>
+                        <!--//-->
                     </div>
                 </section>
+                <ul class="agreement mt30">
+                    <li class="agreement_item">
+                        <label class="agreement_label">
+                            <input type="checkbox" class="f_chk blind" checked required>
+                            <div class="agreement_btn">
+                                <span class="ico_chk"></span>
+                                <p>개인정보 수집 및 이용에 동의합니다. <span class="fc_red">(필수)</span> </p> 
+                                <a href="./privacy_policy.html" target="_blank" class="f_btn ty_small _solidGrey">전문보기</a>
+                            </div>
+                        </label>                       
+                    </li>
+                    <li class="agreement_item">
+                        <label class="agreement_label">
+                            <input type="checkbox" class="f_chk blind" required>
+                            <div class="agreement_btn">
+                                <span class="ico_chk"></span>
+                                <p>개인정보 처리 위탁에 동의합니다. <span class="fc_red">(필수)</span></p>
+                                <a href="./privacy_entrust.html" target="_blank" class="f_btn ty_small _solidGrey">전문보기</a>
+                            </div>
+                        </label>     
+                    </li>
+                </ul>
+                <div class="btn_set taC mt30  ai_b">
+                    <a href="" class="f_btn ty_mid _solidGrey w_100">목록</a>
+                    <button type="button" onclick="open_popup('popup_preview')" class="f_btn ty_mid _key_ol w_100">미리보기</button>
+                    <input type="submit" value="임시저장" class="f_btn ty_mid _key_ol w_100">
+                    <input type="submit" value="등록" class="f_btn ty_mid _key w_100">
+                </div>
             </div>
 
              <!-- [팝업] 미리보기 -->
