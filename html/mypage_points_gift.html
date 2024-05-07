@@ -340,8 +340,8 @@
                         </ul>
                     </div>
                 </section>
-                <section class="sec">
-                    <form action="">
+                <form action="">
+                    <section class="sec">
                         <div class="v_tbl_wrap">
                             <table class="v_tbl ty_big">
                                 <colgroup>
@@ -414,12 +414,48 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="btn_set taC mt30">
-                            <input type="submit" value="선물하기" class="f_btn ty_mid _key w_100">
-                            <a href="mypage_points.html" class="f_btn ty_mid _solidGrey w_100">취소</a>
-                        </div>
-                    </form>
-                </section>
+                    </section>
+                    <section class="sec">
+                        <div class="inform">
+                            <!--[D] inform_sec 이 한 세트-->
+                            <div class="inform_sec">
+                                <strong class="tit"><i class="fa-solid fa-circle-info"></i> 포인트 선물하기 유의사항</strong>
+                                <ol class="ol2">
+                                    <li class="ol2_item">CWIZ 회원에게만 포인트를 선물하실 수 있습니다. <br> (이름, 회사명, 휴대폰 번호로 조회 할 수 있습니다.)</li>
+                                    <li class="ol2_item">포인트 선물은 최소 000 포인트 이상, 000 포인트 단위로 선물 가능합니다.</li>
+                                    <li class="ol2_item">포인트 선물 시 보유 포인트에서 차감되며, 선물 받은 포인트는 즉시 사용 가능합니다.</li>
+                                </ol>
+                            </div>
+                            <!--//-->
+                        </div>   
+                    </section>
+                    <ul class="agreement mt30">
+                        <li class="agreement_item">
+                            <label class="agreement_label">
+                                <input type="checkbox" class="f_chk blind" checked required>
+                                <div class="agreement_btn">
+                                    <span class="ico_chk"></span>
+                                    <p>개인정보 수집 및 이용에 동의합니다. <span class="fc_red">(필수)</span> </p> 
+                                    <a href="./privacy_policy.html" target="_blank" class="f_btn ty_small _solidGrey">전문보기</a>
+                                </div>
+                            </label>                       
+                        </li>
+                        <li class="agreement_item">
+                            <label class="agreement_label">
+                                <input type="checkbox" class="f_chk blind" required>
+                                <div class="agreement_btn">
+                                    <span class="ico_chk"></span>
+                                    <p>개인정보 처리 위탁에 동의합니다. <span class="fc_red">(필수)</span></p>
+                                    <a href="./privacy_entrust.html" target="_blank" class="f_btn ty_small _solidGrey">전문보기</a>
+                                </div>
+                            </label>     
+                        </li>
+                    </ul>
+                    <div class="btn_set taC mt30">  
+                        <a href="mypage_points.html" class="f_btn ty_mid _solidGrey w_100">취소</a>
+                        <input type="submit" value="선물하기" class="f_btn ty_mid _key w_100">
+                    </div>
+                </form>
             </div>
             <div class="layer_popup popup_user" onclick="close_popup(this)">
                 <div class="layer_popup_inner">
