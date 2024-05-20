@@ -10788,12 +10788,13 @@ tr:last-child .status_box_date {
   padding: 15px 20px;
   border-bottom: 1px solid #DDDDDD;
   display: flex;
-  flex-wrap: wrap;
   gap: 5px;
-  align-items: center;
+  align-items: flex-start;
 }
 .board_view_tit .f_tag {
   padding: 0 8px;
+  flex-shrink: 0;
+  margin-top: 4px;
 }
 .board_view_tit .f_tag:last-of-type {
   margin-right: 5px;
@@ -10803,6 +10804,9 @@ tr:last-child .status_box_date {
 }
 .board_view_tit .tit {
   font-size: 18px;
+}
+.board_view_tit .f_btn {
+  flex-shrink: 0;
 }
 .board_view_info {
   display: flex;

@@ -7,12 +7,14 @@
         padding: 15px 20px;
         border-bottom: 1px solid $c_line;
         display: flex;
-        flex-wrap: wrap;
+        //flex-wrap: wrap;
         gap: 5px;
-        align-items: center;
+        align-items: flex-start;
 
         .f_tag {
             padding: 0 8px;
+            flex-shrink: 0;
+            margin-top: 4px;
             &:last-of-type {
                 margin-right: 5px;
             }
@@ -23,6 +25,9 @@
         .tit {
             font-size: 18px;
             //width: 100%;
+        }
+        .f_btn {
+            flex-shrink: 0;
         }
     }
     &_info {
