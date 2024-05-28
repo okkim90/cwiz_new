@@ -392,7 +392,8 @@
     padding: 15px 10px 30px;
     box-sizing: border-box;
     transition: transform .3s ease-in-out;
-
+    display: flex;
+    flex-direction: column;
 
     .btn_nav_toggle {
         position: absolute;
@@ -482,6 +483,7 @@
         justify-content: center;
         position: relative;
         padding: 10px;
+        flex-shrink: 0;
         .img_box {
             width: 130px;
             min-height: 45px;
@@ -522,12 +524,14 @@
 
     .nav {
         margin-top: 15px;
+        overflow-y: auto;
+        @include  scrollY;
         &_dep2 {
             //visibility: hidden;
             &_box {
                 overflow: hidden;
                 max-height: 0;
-                transition: all .25s ease;
+                //transition: all 0.1s ease;
             }
             
             background-color: rgba($c_key, .05);
@@ -544,6 +548,7 @@
                     &_box {
                         overflow: hidden;
                         max-height: 230px;
+                        transition: all 0.25s ease;
                     }
                 }
                 .btn_dep1 {

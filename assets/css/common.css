@@ -6052,6 +6052,8 @@ input::-webkit-search-results-decoration {
   padding: 15px 10px 30px;
   box-sizing: border-box;
   transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
 }
 .sidenav .btn_nav_toggle {
   position: absolute;
@@ -6127,6 +6129,7 @@ input::-webkit-search-results-decoration {
   justify-content: center;
   position: relative;
   padding: 10px;
+  flex-shrink: 0;
 }
 .sidenav_top .img_box {
   width: 130px;
@@ -6162,6 +6165,21 @@ input::-webkit-search-results-decoration {
 }
 .sidenav .nav {
   margin-top: 15px;
+  overflow-y: auto;
+}
+.sidenav .nav::-webkit-scrollbar {
+  width: 7px;
+}
+.sidenav .nav::-webkit-scrollbar-thumb {
+  background-color: #FF7A00;
+  border-radius: 5px;
+  background-clip: padding-box;
+  width: 100%;
+  box-sizing: border-box;
+}
+.sidenav .nav::-webkit-scrollbar-track {
+  background-color: #EFEFEF;
+  border: 2px solid transparent;
 }
 .sidenav .nav_dep2 {
   background-color: rgba(255, 122, 0, 0.05);
@@ -6171,11 +6189,11 @@ input::-webkit-search-results-decoration {
 .sidenav .nav_dep2_box {
   overflow: hidden;
   max-height: 0;
-  transition: all 0.25s ease;
 }
 .sidenav .nav_item.on .nav_dep2_box {
   overflow: hidden;
   max-height: 230px;
+  transition: all 0.25s ease;
 }
 .sidenav .nav_item.on .btn_dep1 {
   color: #FF7A00;
@@ -8236,7 +8254,7 @@ tr:last-child .status_box_date {
 /* templetes */
 .paging_wrap {
   display: flex;
-  margin-top: 30px;
+  margin-top: 20px;
   align-items: center;
   justify-content: center;
   text-align: center;
