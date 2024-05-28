@@ -8254,7 +8254,7 @@ tr:last-child .status_box_date {
 /* templetes */
 .paging_wrap {
   display: flex;
-  margin-top: 20px;
+  margin-top: 30px;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -8268,6 +8268,10 @@ tr:last-child .status_box_date {
 .paging_wrap.mt20 {
   margin-top: 20px;
 }
+.layer_popup .paging_wrap {
+  margin-top: 20px;
+}
+
 .paging_btn {
   display: block;
   min-width: 30px;
