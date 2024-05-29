@@ -9466,7 +9466,7 @@ input::-webkit-search-results-decoration {
   border: 1px solid #DDDDDD;
   border-top: none;
 }
-.h_tbl thead th:first-child {
+.h_tbl thead th:first-of-type {
   border-left: none;
 }
 .h_tbl thead th:last-child {

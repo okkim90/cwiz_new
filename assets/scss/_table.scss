@@ -116,7 +116,7 @@
             border: 1px solid $c_line;
             border-top: none;
             //box-shadow:  0 0 1px #000;
-            &:first-child {
+            &:first-of-type {
                 border-left: none;
             }
             &:last-child {
