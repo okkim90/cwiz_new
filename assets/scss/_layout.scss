@@ -1757,11 +1757,18 @@
         top: 100%;
         padding: 0 6px;
         box-shadow: 0 0 10px rgba(#000, .3);
-        @at-root tr:last-child & {
+        // @at-root tr:last-child & {
+        //     top: auto;
+        //     bottom: 50%;
+        //     right: 50%;
+        // }
+        @at-root .h_tbl & {
+            z-index: 100;
+            right: 90%;
             top: auto;
             bottom: 50%;
-            right: 50%;
-        }
+            transform: none;
+        } 
     }
 }
 

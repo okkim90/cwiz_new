@@ -487,12 +487,20 @@
     border-radius: 3px;
     border: 1px solid $c_line;
     color: #333;
-    z-index: 10;
+    z-index: 100;
     left: 50%;
     top: 100%;
     
     transform: translateX(-50%);
     box-shadow: 0 0 10px rgba(#000, .3);
+    @at-root .h_tbl & {
+        z-index: 100;
+        left: auto;
+        right: 80%;
+        top: auto;
+        bottom: 50%;
+        transform: none;
+    } 
 }
 
 .btn_ico {

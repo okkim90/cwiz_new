@@ -7349,10 +7349,12 @@ input::-webkit-search-results-decoration {
   padding: 0 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-tr:last-child .status_box_date {
+.h_tbl .status_box_date {
+  z-index: 100;
+  right: 90%;
   top: auto;
   bottom: 50%;
-  right: 50%;
+  transform: none;
 }
 
 .selected_list {
@@ -9289,11 +9291,19 @@ tr:last-child .status_box_date {
   border-radius: 3px;
   border: 1px solid #DDDDDD;
   color: #333;
-  z-index: 10;
+  z-index: 100;
   left: 50%;
   top: 100%;
   transform: translateX(-50%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.h_tbl .btn_tooltip {
+  z-index: 100;
+  left: auto;
+  right: 80%;
+  top: auto;
+  bottom: 50%;
+  transform: none;
 }
 
 .btn_ico:hover {
