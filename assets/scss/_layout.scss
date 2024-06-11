@@ -802,7 +802,7 @@
         & + & {
             &::before {
                 content:"\f054";
-                font-family: "Font Awesome 6 Free";
+                font-family: "Font Awesome 6 Pro";
                 font-weight: bold;
                 margin: 0 4px;
                 transform: translateY(1px);
@@ -960,7 +960,7 @@
     display: inline-block;
     &::after {
         content: '\f621';
-        font-family: 'Font Awesome 6 Free';
+        font-family: 'Font Awesome 6 Pro';
         font-weight: bold;
     }
     transform: translateY(-2px) scale(0.9);
@@ -1244,7 +1244,7 @@
                 background-color: rgba($c_key, .14);
                 &::before {
                     content: '\f054';
-                    font-family: "Font Awesome 6 Free";
+                    font-family: "Font Awesome 6 Pro";
                     font-weight: bold;
                     margin-right: 5px;
                     font-size: 11px;
@@ -2599,7 +2599,7 @@
             color: #ddd;
             &::after {
                 content: '\f00c';
-                font-family: "Font Awesome 6 Free";
+                font-family: "Font Awesome 6 Pro";
                 font-weight: bold;
                 font-size: 1.1em;
             }
@@ -2633,6 +2633,10 @@
     position: relative;
     text-align: center;
     padding-bottom: 20px;
+    label {
+        cursor: pointer;
+    }
+   
     .qr_scan_ico {
         font-size: 120px;
         //color: $c_key;
@@ -2640,6 +2644,9 @@
     .f_tip {
         font-size: 16px;
         font-weight: 500;
+        &2 {
+            font-size: 14px;
+        }
     }
     .f_input {
         position: absolute;

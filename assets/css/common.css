@@ -6310,7 +6310,7 @@ input::-webkit-search-results-decoration {
 .sidenav .nav .btn_dep1::after {
   transition: all 0.25s ease;
   content: "\f078";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   margin-left: auto;
   width: 20px;
@@ -6465,7 +6465,7 @@ input::-webkit-search-results-decoration {
 }
 .breadcrumb_item + .breadcrumb_item::before {
   content: "\f054";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   margin: 0 4px;
   transform: translateY(1px);
@@ -6614,7 +6614,7 @@ input::-webkit-search-results-decoration {
 }
 .ico_required::after {
   content: "\f621";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
 }
 
@@ -6876,7 +6876,7 @@ input::-webkit-search-results-decoration {
 }
 .search_details .list_wrap .item_option.on::before {
   content: "\f054";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   margin-right: 5px;
   font-size: 11px;
@@ -8071,7 +8071,7 @@ input::-webkit-search-results-decoration {
 }
 .agreement_btn .ico_chk::after {
   content: "\f00c";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   font-size: 1.1em;
 }
@@ -8099,12 +8099,18 @@ input::-webkit-search-results-decoration {
   text-align: center;
   padding-bottom: 20px;
 }
+.qr_scan_box label {
+  cursor: pointer;
+}
 .qr_scan_box .qr_scan_ico {
   font-size: 120px;
 }
 .qr_scan_box .f_tip {
   font-size: 16px;
   font-weight: 500;
+}
+.qr_scan_box .f_tip2 {
+  font-size: 14px;
 }
 .qr_scan_box .f_input {
   position: absolute;
@@ -8936,7 +8942,7 @@ input::-webkit-search-results-decoration {
 }
 .btn_back::before {
   content: "\f060";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   color: #fff;
 }
@@ -8984,7 +8990,7 @@ input::-webkit-search-results-decoration {
 .btn_down::after {
   font-size: 16px;
   content: "\f56d";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
 }
 .btn_down:hover .btn_tooltip {
@@ -8998,7 +9004,7 @@ input::-webkit-search-results-decoration {
 
 .btn_down2::after {
   content: "\f56d";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   margin-left: 4px;
 }
@@ -9019,7 +9025,7 @@ input::-webkit-search-results-decoration {
 .btn_down4::before {
   font-size: 16px;
   content: "\f56d";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   line-height: 1;
 }
@@ -9032,7 +9038,7 @@ input::-webkit-search-results-decoration {
 }
 .btn_del_item::before {
   content: "\f2ed";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   font-size: 15px;
   color: #393939;
@@ -9040,7 +9046,7 @@ input::-webkit-search-results-decoration {
 
 .btn_detail::after {
   content: "\f078";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   margin-left: 4px;
 }
@@ -9233,7 +9239,7 @@ input::-webkit-search-results-decoration {
 }
 .f_btn.ty_arrow::after {
   content: "\f054";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   margin-left: 5px;
   font-weight: bold;
 }
@@ -9244,7 +9250,7 @@ input::-webkit-search-results-decoration {
 }
 .f_btn.ty_arrow_b::after {
   content: "\f078";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   margin-left: 5px;
   font-weight: bold;
 }
@@ -10991,7 +10997,7 @@ input::-webkit-search-results-decoration {
 }
 .board_view_file .file_list .btn_down3::before {
   content: "\f56d";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   width: 22px;
   height: 22px;
