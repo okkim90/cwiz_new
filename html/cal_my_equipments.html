@@ -362,7 +362,10 @@
                                             </div> 
                                         </th>
                                         <td>
-                                            <input type="text" class="f_input ty_small w_120 taC"> 
+                                            <div class="d_flex mw_200">
+                                                <input type="text" class="f_input ty_small w100"> 
+                                                <button type="button" class="f_btn ty_small _key shrink0 pd10 ml4"  onclick="open_popup('popup_qrScan')">QR 스캔</button>
+                                            </div> 
                                         </td>
                                         <th>교정 결과</th>
                                         <td>
@@ -388,7 +391,7 @@
                                         <th>성적서 업체</th>
                                         <td>
                                             <div class="f_search mw_300">
-                                                <input type="text" class="f_input ty_small w100" onfocus="f_search_focus(this)" onfocusout="f_search_focusout(this)" placeholder="검색어를 입력해주세요">
+                                                <input type="text" class="f_input ty_small w100" autocomplete='off' onfocus="f_search_focus(this)" onfocusout="f_search_focusout(this)" placeholder="검색어를 입력해주세요">
                                                 <div class="f_search_list_wrap">
                                                     <ul class="f_search_list">
                                                         <li class="f_search_item">직접입력</li>
@@ -579,6 +582,62 @@
                         <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
                     </div>
                 </section>
+            </div>
+            <!--[팝업] QR 스캔 -->
+            <div class="layer_popup popup_qrScan" onclick="close_popup(this)">
+                <div class="layer_popup_inner close_button">
+                    <div class="layer_popup_cont" style="width: 500px;">
+                        <button type="button" class="close_popup close_button" onclick="close_popup(this)">
+                            <span class="blind">팝업 닫기</span>
+                        </button> 
+                        <div class="sub_tit">
+                            <h1 class="tit1">QR 스캔</h1>
+                        </div> 
+                        <section class="sec">
+                            <div class="qr_scan_box">
+                                <input type="text" name="qr" id="qr" class="f_input" placeholder="스캔한 CMI ID를 입력해주세요."> 
+                                <i class="fa-regular fa-scanner-gun qr_scan_ico"></i>
+                                <p class="f_tip mt10">QR 코드를 스캔 해주세요.</p>
+                            </div>                             
+                            <div class="qr_cmi mt10">
+                                <ul class="qr_cmi_list">
+                                    <li class="qr_cmi_item">
+                                        <span>123451</span>
+                                        <button class="btn_ico btn_del_item2 ty_small" aria-label="삭제"><i class="fa-solid fa-xmark"></i></button>
+                                    </li>
+                                    <li class="qr_cmi_item">
+                                        <span>456789</span>
+                                        <button class="btn_ico btn_del_item2 ty_small" aria-label="삭제"><i class="fa-solid fa-xmark"></i></button>
+                                    </li>
+                                    <li class="qr_cmi_item">
+                                        <span>123451</span>
+                                        <button class="btn_ico btn_del_item2 ty_small" aria-label="삭제"><i class="fa-solid fa-xmark"></i></button>
+                                    </li>
+                                    <li class="qr_cmi_item">
+                                        <span>123451</span>
+                                        <button class="btn_ico btn_del_item2 ty_small" aria-label="삭제"><i class="fa-solid fa-xmark"></i></button>
+                                    </li>
+                                    <li class="qr_cmi_item">
+                                        <span>123451</span>
+                                        <button class="btn_ico btn_del_item2 ty_small" aria-label="삭제"><i class="fa-solid fa-xmark"></i></button>
+                                    </li>
+                                    <li class="qr_cmi_item">
+                                        <span>123451</span>
+                                        <button class="btn_ico btn_del_item2 ty_small" aria-label="삭제"><i class="fa-solid fa-xmark"></i></button>
+                                    </li>
+                                    <li class="qr_cmi_item">
+                                        <span>123451</span>
+                                        <button class="btn_ico btn_del_item2 ty_small" aria-label="삭제"><i class="fa-solid fa-xmark"></i></button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="btn_set taC mt30">
+                                <input type="button" value="검색" class="f_btn ty_mid _key w_100"> 
+                                <button type="button" class="f_btn ty_mid _solidGrey w_100 close_button" onclick="close_popup(this)">닫기</button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
             </div>
             <!--[팝업] 우리 장비 등록하기-->
             <div class="layer_popup popup_eqmt_add" onclick="close_popup(this)">

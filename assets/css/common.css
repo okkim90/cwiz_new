@@ -8094,6 +8094,46 @@ input::-webkit-search-results-decoration {
   margin-top: 0.4em;
 }
 
+.qr_scan_box {
+  position: relative;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.qr_scan_box .qr_scan_ico {
+  font-size: 120px;
+}
+.qr_scan_box .f_tip {
+  font-size: 16px;
+  font-weight: 500;
+}
+.qr_scan_box .f_input {
+  position: absolute;
+  opacity: 0;
+}
+.qr_scan_box .f_input:focus ~ .qr_scan_ico {
+  color: #FF7A00;
+}
+
+.qr_cmi {
+  border: 1px solid #DDDDDD;
+  padding: 10px 8px;
+  border-radius: 6px;
+}
+.qr_cmi_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 6px;
+}
+.qr_cmi_item {
+  display: flex;
+  font-size: 13px;
+  align-items: center;
+  padding: 0 6px 0 10px;
+  line-height: 26px;
+  border-radius: 23px;
+  background-color: #EFEFEF;
+}
+
 .layer_popup {
   position: fixed;
   left: 0;
