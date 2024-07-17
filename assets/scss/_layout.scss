@@ -2675,3 +2675,85 @@
         background-color: $c_bg_grey;
     }
 }
+
+.dpTooltip {
+    font-size: 12px;
+    width: 100%;
+    padding: 4px 6px;
+    border-radius: 4px;
+    background-color: $c_key;
+    color: #fff;
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+
+.file_upload_box {
+    background-color: $c_bg_grey;
+    border: 1px solid $c_line;
+    position: relative;
+    height: 200px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: all .1s ease-in-out;
+    &:hover {
+        background-color: rgba($c_key, .1);
+        border: 1px dashed $c_key;
+    }
+    .input_file {
+        position: absolute;
+        opacity: 0;
+        z-index: -9999;
+    }
+
+    &.file_on {
+        background-color: rgba($c_key, .1);
+        border: 1px dashed $c_key;
+        .file_upload_default {
+            display: none;
+        }
+        .file_upload_on {
+            display: block;
+        }
+    }
+    .file_upload_default {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        text-align: center;
+        color: #aaa;
+        user-select: none;
+        i {
+            font-size: 50px;
+        }
+    }
+    .file_upload_on {
+        display: none;
+    }
+    .file_name {
+        
+        text-align: center;
+        @include text-hidden(2, 32px, auto);
+        padding: 0 20px;
+        font-size: 16px;
+        word-break: break-all;
+
+    }
+    .btn_del2 {
+        
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: 14px;
+        top: 14px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-image: url(../images/common/ico_del3.svg);
+    }
+}

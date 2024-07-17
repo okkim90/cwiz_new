@@ -38,7 +38,8 @@ $colors: (
     _lightGrey: #aaa,
     _midGrey: #777,
     _solidGrey: #393939,
-    _grey:#999
+    _grey:#999,
+    _white: #fff
     //_tp : transparent
 );
 
@@ -180,6 +181,7 @@ $c_bg : map-get($colors, _bg);
 $c_bg_grey : map-get($colors, _bg_grey);
 $c_bg_grey2 : map-get($colors, _bg_grey2);
 $c_blue : map-get($colors, _blue);
+$c_navy : map-get($colors, _navy);
 $c_red : map-get($colors, _red);
 $c_sky : map-get($colors, _sky);
 $c_green : map-get($colors, _green);
@@ -323,11 +325,7 @@ $inner: 1280px;
 
 .d_flex {
     display: flex;
-    @for $i from 1 through 30 {
-        &._gap#{$i} {
-            gap : #{$i}px
-        } 
-    } 
+    
     &.fw_w {
         flex-wrap: wrap;
     }
@@ -374,6 +372,18 @@ $inner: 1280px;
         flex-direction: column;
     }
 }
+
+@for $i from 1 through 30 {
+    ._gap#{$i} {
+        gap : #{$i}px
+    } 
+    ._gapX#{$i} {
+        column-gap: #{$i}px
+    } 
+    ._gapY#{$i} {
+        row-gap: #{$i}px
+    } 
+} 
 
 .d_block {
     display: block;

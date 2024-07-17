@@ -37,6 +37,69 @@ nav_btn.forEach(e=>{
 });
 
 
+var setCalsClearButton = function(year,month,elem){
+    var afterShow = function(){
+        var d = new $.Deferred();
+        var cnt = 0;
+        setTimeout(function(){
+            if(elem.dpDiv[0].style.display === "block"){
+                d.resolve();
+            }
+            if(cnt >= 500){
+                d.reject("datepicker show timeout");
+            }
+            cnt++;
+        },10);
+        return d.promise();
+    }();
+
+
+    
+
+    afterShow.done(function(){
+        $('.ui-datepicker').css('z-index', 2000);
+
+        var buttonPane = $( elem ).datepicker( "widget" ).find( ".ui-datepicker-buttonpane" );
+
+        var btn = $('<button class="ui-datepicker-clear ui-state-default ui-priority-primary ui-corner-all" type="button">초기화</button>');
+        btn.off("click").on("click", function () {
+                $.datepicker._clearDate( elem.input[0] );
+            });
+        btn.appendTo( buttonPane );
+
+        var btn_today = $( elem ).datepicker( "widget" ).find( "button.ui-datepicker-current" );
+        btn_today.on('click', function() {
+            $.datepicker._curInst.input.datepicker('setDate', 'today').datepicker('hide').blur();
+        });
+    });
+}
+
+
+const dpTooltip = function(inst,elem){
+    var afterShow = function(){
+        var d = new $.Deferred();
+        var cnt = 0;
+        setTimeout(function(){
+            if(elem.dpDiv[0].style.display === "block"){
+                d.resolve();
+            }
+            if(cnt >= 500){
+                d.reject("datepicker show timeout");
+            }
+            cnt++;
+        },10);
+        return d.promise();
+    }();
+    afterShow.done(function(){
+        if(inst.dataset.tooltip){
+            let buttonPane = $( elem ).datepicker( "widget" ).find( ".ui-datepicker-buttonpane" );
+            buttonPane.append(`
+                <div class="dpTooltip">`+inst.dataset.tooltip+`</div>
+            `)
+        }
+    });
+}
+
 
 
 // datepicker
@@ -56,7 +119,7 @@ $.datepicker.regional['ko'] = {
     isRTL: false,
     showMonthAfterYear: true,
     changeMonth: true,
-    changeYear: true
+    changeYear: true,
 };
 $.datepicker.setDefaults($.datepicker.regional['ko']);
 
@@ -64,9 +127,23 @@ $(".inp_date").datepicker({
     //showOn: "button",
     //buttonImage: "../img/ico_calendar1.svg",
     //buttonImageOnly: true,
-    //showButtonPanel: true
+    showButtonPanel: true,
+    beforeShow : function(inst,elem){
+        setCalsClearButton(null,null,elem);
+        dpTooltip(inst,elem)
+    },
+    onChangeMonthYear:setCalsClearButton
 });
-    
+
+$(".inp_date").each(function(){
+    let min = $(this).data('min');
+    let max = $(this).data('max');
+    $(this).datepicker('option','minDate',min);
+    $(this).datepicker('option','maxDate',max);
+});
+
+
+
 function set_today(target){
     let date_set = $(target).parents('.date_set');
     let date_start = date_set.find('.date_start');

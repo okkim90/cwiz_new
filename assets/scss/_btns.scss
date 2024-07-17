@@ -272,14 +272,16 @@
 }
 
 .f_btn {
-    display: inline-block;
+    display: inline-flex;
     max-width: 100%;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     border: 1px solid transparent;
     box-sizing: border-box;
     cursor: pointer;
     font-weight: 500;
-    
+    column-gap: 4px;
     
     &.ty_xsmall {
         min-width: 40px;
@@ -518,5 +520,26 @@
         line-height: 22px;
         height: 22px;
         width: 22px;
+    }
+}
+
+.btn_file {
+    display: inline-block;
+    max-width: 100%;
+    align-items: center;
+    font-size: 13px;
+    color: $c_navy;
+    min-width: 0;
+    @include text-hidden-single;
+    &:hover {
+        text-decoration: underline;
+    }
+    &::before {
+        content: "\f15b";
+        font-family: "Font Awesome 6 Pro";
+        margin-right: 0.2em;
+        font-weight: bold;
+        font-size: 1.1em;
+
     }
 }

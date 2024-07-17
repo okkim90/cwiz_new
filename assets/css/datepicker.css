@@ -46,3 +46,31 @@
 a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover { border-radius: 50%; box-sizing: border-box; background: rgba(27, 91, 174, 0.1); font-weight: 700; color: #1b5bae; }
+
+
+.ui-datepicker .ui-datepicker-buttonpane {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+    padding-top: 10px;
+    flex-wrap: wrap;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+    padding: 0 10px;
+    margin: 0;
+    width: auto;
+    height: 30px;
+    border-radius: 4px;
+    background-color: #eee;
+    opacity: 1;
+}
+.ui-datepicker .ui-datepicker-buttonpane .ui-datepicker-current {
+    order: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane .ui-datepicker-clear {
+    order: 1;
+}
+.ui-datepicker .ui-datepicker-buttonpane .ui-datepicker-close {
+    order: 2;
+}
+
