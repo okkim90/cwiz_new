@@ -37,10 +37,10 @@ nav_btn.forEach(e=>{
 });
 
 
-var setCalsClearButton = function(year,month,elem){
-    var afterShow = function(){
-        var d = new $.Deferred();
-        var cnt = 0;
+const setCalsClearButton = function(year,month,elem){
+    const afterShow = function(){
+        let d = new $.Deferred();
+        let cnt = 0;
         setTimeout(function(){
             if(elem.dpDiv[0].style.display === "block"){
                 d.resolve();
@@ -59,15 +59,15 @@ var setCalsClearButton = function(year,month,elem){
     afterShow.done(function(){
         $('.ui-datepicker').css('z-index', 2000);
 
-        var buttonPane = $( elem ).datepicker( "widget" ).find( ".ui-datepicker-buttonpane" );
+        let buttonPane = $( elem ).datepicker( "widget" ).find( ".ui-datepicker-buttonpane" );
 
-        var btn = $('<button class="ui-datepicker-clear ui-state-default ui-priority-primary ui-corner-all" type="button">초기화</button>');
+        let btn = $('<button class="ui-datepicker-clear ui-state-default ui-priority-primary ui-corner-all" type="button">초기화</button>');
         btn.off("click").on("click", function () {
                 $.datepicker._clearDate( elem.input[0] );
             });
         btn.appendTo( buttonPane );
 
-        var btn_today = $( elem ).datepicker( "widget" ).find( "button.ui-datepicker-current" );
+        let btn_today = $( elem ).datepicker( "widget" ).find( "button.ui-datepicker-current" );
         btn_today.on('click', function() {
             $.datepicker._curInst.input.datepicker('setDate', 'today').datepicker('hide').blur();
         });
@@ -76,9 +76,9 @@ var setCalsClearButton = function(year,month,elem){
 
 
 const dpTooltip = function(inst,elem){
-    var afterShow = function(){
-        var d = new $.Deferred();
-        var cnt = 0;
+    const afterShow = function(){
+        let d = new $.Deferred();
+        let cnt = 0;
         setTimeout(function(){
             if(elem.dpDiv[0].style.display === "block"){
                 d.resolve();

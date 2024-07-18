@@ -329,9 +329,9 @@
                                 <tbody>
                                     <colgroup>
                                         <col style="width: 120px;">
-                                        <col>
+                                        <col style="width: 40%;">
                                         <col style="width: 120px;">
-                                        <col>
+                                        <col style="width: 60%">
                                     </colgroup>
                                     <tr>
                                         <th>교정기관</th>      
@@ -401,17 +401,17 @@
                             </table> 
                         </div>
                     </section>
-                    <section class="sec">
-                        <div class="tabs_wrap">
-                            <ul class="tabs">
-                                <li class="tabs_item on">
-                                    <button type="button" class="tabs_btn" onclick="tabs(this,0)">파일 등록</button>
-                                </li>
-                                <li class="tabs_item">
-                                    <button type="button" class="tabs_btn" onclick="tabs(this,1)">계측기 목록</button>
-                                </li>
-                            </ul>
-                            <div class="tabs_cont on">
+                    <div class="sec tabs_wrap">
+                        <ul class="tabs">
+                            <li class="tabs_item on">
+                                <button type="button" class="tabs_btn" onclick="tabs(this,0)">파일 등록</button>
+                            </li>
+                            <li class="tabs_item">
+                                <button type="button" class="tabs_btn" onclick="tabs(this,1)">계측기 등록</button>
+                            </li>
+                        </ul>
+                        <div class="tabs_cont on">
+                            <section class="sec mt0">
                                 <div class="sub_tit2">
                                     <h2 class="tit4">2. 계측기 정보</h2>
                                     <div class="btn_set ml_auto">
@@ -458,8 +458,55 @@
                                         }                            
                                     }
                                 </script>
+                            </section>
+                            <section class="sec">
+                                <div class="inform">
+                                    <!--[D] inform_sec 이 한 세트-->
+                                    <div class="inform_sec">
+                                        <strong class="tit"><i class="fa-solid fa-circle-info"></i> 견적요청 유의사항</strong>
+                                        <ol class="ol2">
+                                            <li class="ol2_item">교정검사 수수료는 교정결과 후, 다소 가감될 수 있습니다.</li>
+                                            <li class="ol2_item">서비스 지원: 위탁관리, 예약교정, 출정교정, 픽업, 온라인 정보제공 등 <br> (※ 당사 교정불가 품목에 대해서는 교정을 대행하여 드립니다.)</li>
+                                            <li class="ol2_item">출장교정은 출장일자를 확정해야만 유효합니다.</li>
+                                            <li class="ol2_item">교정수수료 산출근거: 한국계량측정협회 2023.07. 교정학목별 수수료 기준</li>
+                                            <li class="ol2_item">소급료: 국가표준기본법 시행령 제 18조에 근거하여 교정발전기금으로 사용되는 비용 (교정단가의 10%)</li>
+                                            <li class="ol2_item">견적과 접소는 별도 진행되오니 접수 시 특이사항에 대해서는 반드시 신청서 요구사항 또는 비고란에 기재 바랍니다. </li>
+                                            <li class="ol2_item">지불조건: 구입비는 선불이며, 교정비는 후불입니다.</li>
+                                            <li class="ol2_item">견적유효기간은 견적일로부터 30일입니다.</li>
+                                        </ol>
+                                    </div>
+                                    <!--//-->
+                                </div>   
+                            </section>
+                            <ul class="agreement mt30">
+                                <li class="agreement_item">
+                                    <label class="agreement_label">
+                                        <input type="checkbox" class="f_chk blind" checked required>
+                                        <div class="agreement_btn">
+                                            <span class="ico_chk"></span>
+                                            <p>개인정보 수집 및 이용에 동의합니다. <span class="fc_red">(필수)</span> </p> 
+                                            <a href="./privacy_policy.html" target="_blank" class="f_btn ty_small _solidGrey">전문보기</a>
+                                        </div>
+                                    </label>                       
+                                </li>
+                                <li class="agreement_item">
+                                    <label class="agreement_label">
+                                        <input type="checkbox" class="f_chk blind" required>
+                                        <div class="agreement_btn">
+                                            <span class="ico_chk"></span>
+                                            <p>개인정보 처리 위탁에 동의합니다. <span class="fc_red">(필수)</span></p>
+                                            <a href="./privacy_entrust.html" target="_blank" class="f_btn ty_small _solidGrey">전문보기</a>
+                                        </div>
+                                    </label>     
+                                </li>
+                            </ul>
+                            <div class="btn_set taC mt30  ai_b">
+                                <a href="" class="f_btn ty_mid _solidGrey w_100">목록</a>
+                                <input type="submit" value="등록" class="f_btn ty_mid _key w_100">
                             </div>
-                            <div class="tabs_cont">
+                        </div>
+                        <div class="tabs_cont ">
+                            <section class="sec mt0">
                                 <div class="sub_tit2">
                                     <h2 class="tit4">2. 계측기 정보</h2>
                                     <div class="tit4 count_info d_flex _gap6 ai_c ml15">
@@ -740,57 +787,56 @@
                                         </tbody>
                                     </table> 
                                 </div>
-                            </div>  
-                        </div>
-                    </section>
-                    <section class="sec">
-                        <div class="inform">
-                            <!--[D] inform_sec 이 한 세트-->
-                            <div class="inform_sec">
-                                <strong class="tit"><i class="fa-solid fa-circle-info"></i> 견적요청 유의사항</strong>
-                                <ol class="ol2">
-                                    <li class="ol2_item">교정검사 수수료는 교정결과 후, 다소 가감될 수 있습니다.</li>
-                                    <li class="ol2_item">서비스 지원: 위탁관리, 예약교정, 출정교정, 픽업, 온라인 정보제공 등 <br> (※ 당사 교정불가 품목에 대해서는 교정을 대행하여 드립니다.)</li>
-                                    <li class="ol2_item">출장교정은 출장일자를 확정해야만 유효합니다.</li>
-                                    <li class="ol2_item">교정수수료 산출근거: 한국계량측정협회 2023.07. 교정학목별 수수료 기준</li>
-                                    <li class="ol2_item">소급료: 국가표준기본법 시행령 제 18조에 근거하여 교정발전기금으로 사용되는 비용 (교정단가의 10%)</li>
-                                    <li class="ol2_item">견적과 접소는 별도 진행되오니 접수 시 특이사항에 대해서는 반드시 신청서 요구사항 또는 비고란에 기재 바랍니다. </li>
-                                    <li class="ol2_item">지불조건: 구입비는 선불이며, 교정비는 후불입니다.</li>
-                                    <li class="ol2_item">견적유효기간은 견적일로부터 30일입니다.</li>
-                                </ol>
+                            </section>
+                            <section class="sec">
+                                <div class="inform">
+                                    <!--[D] inform_sec 이 한 세트-->
+                                    <div class="inform_sec">
+                                        <strong class="tit"><i class="fa-solid fa-circle-info"></i> 견적요청 유의사항</strong>
+                                        <ol class="ol2">
+                                            <li class="ol2_item">교정검사 수수료는 교정결과 후, 다소 가감될 수 있습니다.</li>
+                                            <li class="ol2_item">서비스 지원: 위탁관리, 예약교정, 출정교정, 픽업, 온라인 정보제공 등 <br> (※ 당사 교정불가 품목에 대해서는 교정을 대행하여 드립니다.)</li>
+                                            <li class="ol2_item">출장교정은 출장일자를 확정해야만 유효합니다.</li>
+                                            <li class="ol2_item">교정수수료 산출근거: 한국계량측정협회 2023.07. 교정학목별 수수료 기준</li>
+                                            <li class="ol2_item">소급료: 국가표준기본법 시행령 제 18조에 근거하여 교정발전기금으로 사용되는 비용 (교정단가의 10%)</li>
+                                            <li class="ol2_item">견적과 접소는 별도 진행되오니 접수 시 특이사항에 대해서는 반드시 신청서 요구사항 또는 비고란에 기재 바랍니다. </li>
+                                            <li class="ol2_item">지불조건: 구입비는 선불이며, 교정비는 후불입니다.</li>
+                                            <li class="ol2_item">견적유효기간은 견적일로부터 30일입니다.</li>
+                                        </ol>
+                                    </div>
+                                    <!--//-->
+                                </div>   
+                            </section>
+                            <ul class="agreement mt30">
+                                <li class="agreement_item">
+                                    <label class="agreement_label">
+                                        <input type="checkbox" class="f_chk blind" checked required>
+                                        <div class="agreement_btn">
+                                            <span class="ico_chk"></span>
+                                            <p>개인정보 수집 및 이용에 동의합니다. <span class="fc_red">(필수)</span> </p> 
+                                            <a href="./privacy_policy.html" target="_blank" class="f_btn ty_small _solidGrey">전문보기</a>
+                                        </div>
+                                    </label>                       
+                                </li>
+                                <li class="agreement_item">
+                                    <label class="agreement_label">
+                                        <input type="checkbox" class="f_chk blind" required>
+                                        <div class="agreement_btn">
+                                            <span class="ico_chk"></span>
+                                            <p>개인정보 처리 위탁에 동의합니다. <span class="fc_red">(필수)</span></p>
+                                            <a href="./privacy_entrust.html" target="_blank" class="f_btn ty_small _solidGrey">전문보기</a>
+                                        </div>
+                                    </label>     
+                                </li>
+                            </ul>
+                            <div class="btn_set taC mt30  ai_b">
+                                <a href="" class="f_btn ty_mid _solidGrey w_100">목록</a>
+                                <button type="button" onclick="open_popup('popup_preview')" class="f_btn ty_mid _key_ol w_100">미리보기</button>
+                                <input type="submit" value="임시저장" class="f_btn ty_mid _key_ol w_100">
+                                <input type="submit" value="등록" class="f_btn ty_mid _key w_100">
                             </div>
-                            <!--//-->
-                        </div>   
-                    </section>
-                    <ul class="agreement mt30">
-                        <li class="agreement_item">
-                            <label class="agreement_label">
-                                <input type="checkbox" class="f_chk blind" checked required>
-                                <div class="agreement_btn">
-                                    <span class="ico_chk"></span>
-                                    <p>개인정보 수집 및 이용에 동의합니다. <span class="fc_red">(필수)</span> </p> 
-                                    <a href="./privacy_policy.html" target="_blank" class="f_btn ty_small _solidGrey">전문보기</a>
-                                </div>
-                            </label>                       
-                        </li>
-                        <li class="agreement_item">
-                            <label class="agreement_label">
-                                <input type="checkbox" class="f_chk blind" required>
-                                <div class="agreement_btn">
-                                    <span class="ico_chk"></span>
-                                    <p>개인정보 처리 위탁에 동의합니다. <span class="fc_red">(필수)</span></p>
-                                    <a href="./privacy_entrust.html" target="_blank" class="f_btn ty_small _solidGrey">전문보기</a>
-                                </div>
-                            </label>     
-                        </li>
-                    </ul>
-                    <div class="btn_set taC mt30  ai_b">
-                        <a href="" class="f_btn ty_mid _solidGrey w_100">목록</a>
-                        <button type="button" onclick="open_popup('popup_preview')" class="f_btn ty_mid _key_ol w_100">미리보기</button>
-                        <input type="submit" value="임시저장" class="f_btn ty_mid _key_ol w_100">
-                        <input type="submit" value="등록" class="f_btn ty_mid _key w_100">
+                        </div>  
                     </div>
-                   
                 </form>
             </div>
 
@@ -825,7 +871,7 @@
                                                 <td><b>출장</b><span class="fc_grey ml4">(희망일자 : 2024-10-10 ~ 2024-10-20)</span></td>
                                             </tr>
                                             <tr>
-                                                <th>접수 구분</th>
+                                                <th>출장지 주소</th>
                                                 <td colspan="3">(123456) 경기 성남시 분당구 분당로 분당빌딩 10층</td>
                                             </tr>
                                             <tr>
@@ -909,7 +955,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="v_tbl_wrap mt10">
+                                <div class="v_tbl_wrap mt20">
                                     <table class="v_tbl">
                                         <tbody>
                                             <colgroup>
