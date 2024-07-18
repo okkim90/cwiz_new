@@ -216,6 +216,9 @@ $inner: 1280px;
         width: #{$w}px;
         max-width: 100%;
     }
+    .fz_#{$w} {
+        font-size: #{$w}px;
+    }
 }
 
 @for $i from 1 through 5 {

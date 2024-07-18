@@ -955,7 +955,7 @@
 
 .ico_required {
     color:rgb(249, 59, 59);   
-    font-size: 10px;
+    font-size: 8px;
     font-style: normal;
     display: inline-block;
     &::after {
@@ -2755,5 +2755,14 @@
         background-position: center center;
         background-size: cover;
         background-image: url(../images/common/ico_del3.svg);
+    }
+}
+
+.ui-sortable-helper {
+    display: table;
+    table-layout: fixed;
+    background-color: #fff;
+    td {
+        background-color: #fff;
     }
 }

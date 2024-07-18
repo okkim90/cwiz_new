@@ -992,9 +992,27 @@
                     <input type="submit" value="등록" class="f_btn ty_mid _key w_100">
                 </div>
             </div>
-
-             <!-- [팝업] 미리보기 -->
-             <div class="layer_popup popup_preview" onclick="close_popup(this)">
+            <!-- [팝업] 사업자등록증 미등록시 -->
+            <div class="layer_popup on">
+                <div class="layer_popup_inner">
+                    <div class="layer_popup_cont ty_mid2">
+                        <div class="taC pa20">
+                            <i class="fa-regular fa-sensor-triangle-exclamation fz_100 fc_red2"></i>
+                            <p class="fz_20 mt40">
+                                등록된 사업자등록증이 없습니다. <br>
+                                예약접수 시 사업자등록증은 필수입니다. <br><br>
+                                <b>마이 페이지 > 내 정보</b> 로 이동하셔서 사업자등록증을 첨부해주세요.
+                            </p>
+                            <div class="mt40">
+                                <a href="" class="f_btn ty_big w_300 _key _round">사업자등록증 등록하기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--// [팝업] 사업자등록증 미등록시 -->
+            <!-- [팝업] 미리보기 -->
+            <div class="layer_popup popup_preview" onclick="close_popup(this)">
                 <div class="layer_popup_inner">
                     <div class="layer_popup_cont">
                         <button type="button" class="close_popup" onclick="close_popup(this)">

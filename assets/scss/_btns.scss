@@ -177,6 +177,17 @@
     }
 }
 
+.btn_copy_item {
+    width: 20px;
+    &::before {
+        content: '\f0c5';
+        font-family: "Font Awesome 6 sharp";
+        font-weight: bold;
+        font-size: 15px;
+        color: #393939;
+    }
+}
+
 .btn_detail {
     &::after {
         //font-size: 16px;
@@ -338,12 +349,12 @@
     }
     &.ty_big {
         height: 50px;
-        padding: 0 10px;
+        padding: 0 30px;
         font-size: 16px;
         font-weight: 500;
         line-height: 48px;
         border-radius: 6px;
-        width: 200px;
+        //width: 200px;
         &._round {
             border-radius: 50px;
         }

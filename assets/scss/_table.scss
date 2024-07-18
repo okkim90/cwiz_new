@@ -81,7 +81,9 @@
     border-left: none;
     border-collapse: collapse;
     background-color: #fff;
-    
+    &.changing {
+        overflow: hidden;
+    }
     &.ty_big {
         font-size: 13px;
         thead th, tbody td {

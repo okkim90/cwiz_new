@@ -401,10 +401,10 @@
         display: none;
     }
     .f_btn {
-        background-color: #bbb ;
+        background-color: #ccc ;
         color: #fff;
         &:hover {
-            background-color: darken(#bbb, 4%);
+            background-color: darken(#ccc, 4%);
         }
     }
 }
