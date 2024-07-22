@@ -9011,6 +9011,22 @@ input::-webkit-search-results-decoration {
   background-color: #fff;
 }
 
+.br_set {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+  min-width: 0;
+}
+.br_set_btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+.br_set_btn:hover {
+  background-color: #EFEFEF;
+}
+
 .layer_popup {
   position: fixed;
   left: 0;
