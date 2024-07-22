@@ -544,7 +544,7 @@
                                 <tr>
                                     <th>접수 방식</th>
                                     <td colspan="5">
-                                        <div class="d_flex _gap4">
+                                        <div class="d_flex _gap4 ai_c">
                                             <label class="chk_btn">
                                                 <input type="radio" name="reception" >
                                                 <span class="f_btn _round ty_small w_50" >방문</span>
@@ -556,8 +556,9 @@
                                             <label class="chk_btn">
                                                 <input type="radio" name="reception" value="type_onsite" checked>
                                                 <span class="f_btn _round ty_small w_50">출장</span>
+                                                <div class="input_toggle ml10"><div class="tip fc_grey">(※ 출장지 주소는 성적서 업체 주소와 동일합니다. 다를 경우에만 입력해주세요.) </div></div>
                                             </label>
-                                        </div>
+                                        </div>                                    
                                     </td>
                                 </tr>
                                 <!-- [D] 접수방식 - '출장' 선택시 노출 -->
@@ -676,14 +677,12 @@
                                     </td>
                                     <th>성적서 양식</th>
                                     <td>
-                                        <div class="d_flex _gap4">
-                                            <label class="chk_btn">
-                                                <input type="checkbox" checked="">
-                                                <span class="f_btn ty_small w_80">전자 문서</span>
+                                        <div class="chk_list">
+                                            <label class="chk_item">
+                                                <input type="checkbox" name="접수구분" > 전자문서 
                                             </label>
-                                            <label class="chk_btn">
-                                                <input type="checkbox">
-                                                <span class="f_btn ty_small w_80">종이 성적서</span>
+                                            <label class="chk_item">
+                                                <input type="checkbox" name="접수구분" > 종이성적서
                                             </label>
                                         </div>
                                     </td>
@@ -706,9 +705,9 @@
                             <span>등록 : 9,999건</span> 
                         </div>
                         <div class="btn_set ml_auto">
-                            <button type="button" class="f_btn ty_small _key" onclick="open_popup('popup_cal')">계측기 등록 +</button>
-                            <button type="button" class="f_btn ty_small _key" onclick="open_popup('popup_history')">과거 이력</button>
-                            <button type="button" class="f_btn ty_small _red">선택 삭제 <i class="fa-solid fa-trash-can" aria-hidden="true"></i></button>
+                            <button type="button" class="f_btn ty_small w_100 _key" onclick="open_popup('popup_cal')">계측기 등록 +</button>
+                            <button type="button" class="f_btn ty_small w_100 _key" onclick="open_popup('popup_history')">과거 이력</button>
+                            <button type="button" class="f_btn ty_small w_100 _red">선택 삭제 <i class="fa-solid fa-trash-can" aria-hidden="true"></i></button>
                         </div>
                     </div>
                     <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
@@ -722,7 +721,7 @@
                                 <col style="width: 80px;">
                                 <col style="width: 100px;">
                                 <col>
-                                <col>
+                                <col style="width: 18%;">
                                 <col style="width: 50px;">
                                 <col style="width: 50px;">
                             </colgroup>
