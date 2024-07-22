@@ -554,3 +554,24 @@
 
     }
 }
+
+.btn_spread {
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    &::before {
+        content: "\f424";
+        font-family: "Font Awesome 6 Pro";
+        font-weight: bold;
+        font-size: 1em;
+
+    }
+    &.on {
+        color: $c_key;
+        &::before {
+            content: "\f422";
+        }
+    }
+}

@@ -325,7 +325,7 @@
                 </div>
                 <section class="sec">
                     <div class="sub_tit2">
-                        <h2 class="tit3">1. 기본 정보 </h2> 
+                        <h2 class="tit3">1. 업체 정보 </h2> 
                         <p class="tit3 ml10">[접수번호: <span class="fc_key">24000123</span>]</p>
                     </div>
                     <!--[D] 'disabled2' class : 커서&클릭이벤트 방지-->
@@ -341,129 +341,170 @@
                                     <col>
                                 </colgroup>
                                 <tr>
+                                    <th>교정 기관</th>
+                                    <td colspan="5">
+                                        코리아인스트루먼트 ㈜ 본사
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>신청 업체</th>
+                                    <td>
+                                        네이버 주식회사
+                                    </td>
+                                    <th>신청 업체 주소</th>
+                                    <td colspan="3">
+                                        (13561) 경기 성남시 분당구 불정로 6 (정자동, 네이버 그린팩토리) 네이버
+                                    </td>
+                                </tr> 
+                                <tr>
                                     <th>성적서 업체</th>
                                     <td>
-                                        <input type="text" class="f_input ty_small w_300" value="그랜드 정션(주)">
+                                        <div class="mb6">
+                                            <label class="chk_item">
+                                                <input type="checkbox" name="" checked> 
+                                                신청 업체와 동일
+                                            </label>
+                                        </div>
+                                        네이버 주식회사
                                     </td>
                                     <th>성적서 업체 주소</th>
                                     <td colspan="3">
-                                        <div class="d_flex _gap5">
-                                            <div class="search_set shrink0">
-                                                <input type="text" class="f_input w_100 ty_small" placeholder="우편번호" readonly  value="21451">
-                                                <button type="button" class="f_btn ty_small _key btn_search">
-                                                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                                                </button>
-                                            </div>
-                                            <input type="text" class="f_input ty_small flex1" readonly value="서울특별시 구로구 디지털로 784">
-                                            <input type="text" class="f_input ty_small flex1" placeholder="상세 주소를 입력해주세요." value="그랜드 정션 빌딩">
-                                        </div>
+                                        (13561) 경기 성남시 분당구 불정로 6 (정자동, 네이버 그린팩토리) 네이버
                                     </td>
-                                </tr>
-                                <tr>
-                                    <th>교정 기관</th>
-                                    <td colspan="3">
-                                        <select name="" id="" class="f_select ty_small w_300">
-                                            <option value="" disabled>선택</option>
-                                            <option value="" selected>코리아인스트루먼트(주) 서울본사</option>
-                                            <option value="">코리아인스트루먼트(주) 부산지사</option>
-                                            <option value="">코리아인스트루먼트(주) 대전지사</option>
-                                        </select>
-                                    </td>
-                                    <th>접수 방식</th>
-                                    <td>
-                                        <div class="d_flex _gap4">
-                                            <label class="chk_btn">
-                                                <input type="radio" name="reception" >
-                                                <span class="f_btn _round ty_small w_50" >방문</span>
-                                            </label>
-                                            <label class="chk_btn">
-                                                <input type="radio" name="reception">
-                                                <span class="f_btn _round ty_small w_50">택배</span>
-                                            </label>
-                                            <label class="chk_btn">
-                                                <input type="radio" name="reception" value="type_onsite" checked>
-                                                <span class="f_btn _round ty_small w_50">출장</span>
-                                            </label>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <!-- [D] 접수방식 - '출장' 선택시 노출 -->
-                                <tr class="onsite_row">
-                                    <th>출장지 (국문)</th>
-                                    <td colspan="3">
-                                        <div class="d_flex _gap5">
-                                            <div class="search_set shrink0">
-                                                <input type="text" class="f_input w_100 ty_small" placeholder="우편번호" readonly value="21451">
-                                                <button type="button" class="f_btn ty_small _key btn_search">
-                                                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                                                </button>
-                                            </div>
-                                            <input type="text" class="f_input ty_small flex1" readonly value="서울특별시 구로구 디지털로 784">
-                                            <input type="text" class="f_input ty_small flex1" placeholder="상세 주소를 입력해주세요." value="그랜드 정션 빌딩">
-                                        </div>
-                                    </td>
-                                    <th rowspan="2">출장 희망일</th>
-                                    <td rowspan="2">
-                                        <input type="text" class="f_input ty_small inp_date" readonly value="2024-02-01">
-                                    </td>
-                                </tr>
-                                <tr class="onsite_row">
-                                    <th>출장지 (영문)</th>
-                                    <td colspan="3">
-                                        <div class="d_flex _gap5">
-                                            <div class="search_set shrink0">
-                                                <input type="text" class="f_input w_100 ty_small" placeholder="우편번호" readonly value="21451">
-                                                <button type="button" class="f_btn ty_small _key btn_search">
-                                                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                                                </button>
-                                            </div>
-                                            <input type="text" class="f_input ty_small flex1" readonly value="784,Digital-ro, Guro-gu, Seoul">
-                                            <input type="text" class="f_input ty_small flex1" placeholder="상세 주소를 입력해주세요." value="Grand BD">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <script>
-                                    const inp_reception = document.querySelectorAll('input[name="reception"]');
-                                    const onsite_row = document.querySelectorAll('.onsite_row');
-                                    inp_reception.forEach(e=>{
-                                        e.addEventListener('change',(event)=>{
-                                            if(e.value == 'type_onsite'){
-                                                onsite_row.forEach(e=>{
-                                                    e.style.display = 'table-row'
-                                                });
-                                            }else{
-                                                onsite_row.forEach(e=>{
-                                                    e.style.display = 'none'
-                                                });
-                                            }
-                                        });
-                                    });
-                                </script>
-                                <!--// [D] 접수방식 - 출장 선택시 노출 -->
-                                <tr>
-                                    <th>요구사항</th>
-                                    <td colspan="3">
-                                        <textarea name="" id="" class="f_ta ty_small resize_y" placeholder="요구사항을 입력해주세요." style="height:60px; min-height: 50px;">이렇게저렇게 해주세요.</textarea>  
-                                    </td>   
-                                    <th>성적서 양식</th>
-                                    <td>
-                                        <div class="chk_list">
-                                            <label class="chk_item">
-                                                <input type="checkbox" name="접수구분" checked> 전자문서 
-                                            </label>
-                                            <label class="chk_item">
-                                                <input type="checkbox" name="접수구분" > 종이성적서
-                                            </label>
-                                        </div>
-                                    </td>
-                                </tr>
+                                </tr> 
                             </tbody>
                         </table> 
                     </div>
                 </section> 
                 <section class="sec">
                     <div class="sub_tit2">
-                        <h2 class="tit3">2. 계측기 정보</h2> 
+                        <h2 class="tit3">2. 접수 방식</h2> 
+                    </div>
+                    <div class="v_tbl_wrap disabled2">
+                        <table class="v_tbl">
+                            <colgroup>
+                                <col style="width: 120px;">
+                                <col>
+                                <col style="width: 120px;">
+                                <col>
+                                <col style="width: 120px;">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>접수 방식</th>
+                                    <td colspan="5">
+                                        출장                         
+                                    </td>
+                                </tr>
+                                <!-- [D] 접수방식 - '출장' 선택시 노출 -->
+                                <tr class="onsite_row">
+                                    <th>출장지 (국문)</th>
+                                    <td colspan="3">
+                                        (13561) 경기 성남시 분당구 불정로 6 (정자동, 네이버 그린팩토리) 네이버
+                                    </td>
+                                    <th>출장 희망일</th>
+                                    <td>
+                                        <div class="date_set">
+                                            <input 
+                                            type="text" 
+                                            class="f_input ty_small inp_date date_start" 
+                                            readonly="" 
+                                            id="" value="2024-12-20"> ~
+                                            <input 
+                                            type="text" 
+                                            class="f_input ty_small inp_date date_end" 
+                                            readonly="" 
+                                            id="" value="2024-12-30">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="onsite_row">
+                                    <th>출장지 (영문)</th>
+                                    <td colspan="3">
+                                        (13561) 경기 성남시 분당구 불정로 6 (정자동, 네이버 그린팩토리) 네이버
+                                    </td>
+                                    <th>출장 확정일</th>
+                                    <td>
+                                        <div class="date_set">
+                                            <input 
+                                            type="text" 
+                                            class="f_input ty_small inp_date" 
+                                            readonly="" 
+                                            id="" value="2024-12-24">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                   
+                </section>
+
+                <section class="sec">
+                    <div class="sub_tit2">
+                        <h2 class="tit3">3. 성적서 요청사항</h2> 
+                    </div>
+                    <div class="v_tbl_wrap disabled2">
+                        <table class="v_tbl">
+                            <colgroup>
+                                <col style="width: 140px;">
+                                <col>
+                                <col style="width: 140px;">
+                                <col>
+                                <col style="width: 140px;">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>성적서 언어</th>
+                                    <td>
+                                        <div class="d_flex _gap4">
+                                            <label class="chk_btn">
+                                                <input type="checkbox" checked=>
+                                                <span class="f_btn ty_small w_60">국문</span>
+                                            </label>
+                                            <label class="chk_btn">
+                                                <input type="checkbox">
+                                                <span class="f_btn ty_small w_60">영문</span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <th>차기교정일 표기 방식</th>
+                                    <td>
+                                        <label class="f_toggle ml_auto ty_big">
+                                            <input type="checkbox" class="push_chk" checked>
+                                            <span class="slider">
+                                                <div class="slider_txt false">미표기</div>
+                                                <div class="slider_txt true">표기</div>
+                                            </span>
+                                        </label>
+                                    </td>
+                                    <th>성적서 양식</th>
+                                    <td>
+                                        <div class="chk_list">
+                                            <label class="chk_item">
+                                                <input type="checkbox" name="접수구분" > 전자문서 
+                                            </label>
+                                            <label class="chk_item">
+                                                <input type="checkbox" name="접수구분" checked> 종이성적서
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>요구사항</th>
+                                    <td colspan="5">
+                                        <textarea name="" id="" class="f_ta ty_small resize_y" placeholder="요구사항을 입력해주세요." style="height:60px; min-height: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis dolorem blanditiis vel non debitis similique, eum labore quam. Saepe, temporibus doloremque. Aut qui vitae quos ea quam? Molestias fuga eum non in deleniti, repellendus accusantium quos libero incidunt voluptatem laudantium vel ut molestiae esse animi sapiente eaque explicabo nisi! Quisquam?</textarea>  
+                                    </td>   
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="sec">
+                    <div class="sub_tit2">
+                        <h2 class="tit3">4. 계측기 정보</h2> 
                         <div class="tit4 count_info d_flex _gap6 ai_c ml15">
                             <span>등록 : 9,999건</span> 
                         </div>
@@ -471,35 +512,40 @@
                             <button type="button" class="f_btn ty_small _solidGrey w_80">
                                 접수증<i class="fa-solid fa-file-arrow-down ml6"></i>
                             </button>
-                            <a href="" class="f_btn ty_small _key w_80">신청서 작성 <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="" class="f_btn ty_small _key w_100">신청서 작성 <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="h_tbl_wrap y_scroll_area " style="max-height: 400px;">
                         <table class="h_tbl tl_fixed">
                             <colgroup>
-                                <col style="width: 100px;">
+                                <col style="width: 90px;">
                                 <col>
                                 <col>
                                 <col>
                                 <col>
                                 <col style="width: 80px;">
                                 <col style="width: 100px;">
-                                <col style="width: 80px;">
                                 <col>
-                                <col style="width: 50px;">
+                                <col style="width: 20%;">
                             </colgroup>
                             <thead>
-                                <tr class="disabled2">
+                                <tr class="">
                                     <th class="th_fixed">교정번호</th>
-                                    <th class="th_fixed">계측기명</th>
-                                    <th class="th_fixed">제조사</th>
-                                    <th class="th_fixed">형식</th>
-                                    <th class="th_fixed">기기번호</th>
-                                    <th class="th_fixed">구분</th>
-                                    <th class="th_fixed">성적서 언어</th>
-                                    <th class="th_fixed">차기교정일</th>
-                                    <th class="th_fixed">비고</th>
-                                    <th class="th_fixed">상태</th>
+                                    <th class="th_fixed"><i class="ico_required"></i> 계측기명</th>
+                                    <th class="th_fixed"><i class="ico_required"></i> 제조사 </th>
+                                    <th class="th_fixed"><i class="ico_required"></i> 형식</th>
+                                    <th class="th_fixed" style="z-index: 100;"><i class="ico_required"></i> 기기번호</i> 
+                                        <div class="f_tooltip">
+                                            <i class="f_tooltip_ico fa-solid fa-circle-info"></i>
+                                            <div class="f_tooltip_cont">
+                                                계측기 기기번호는 필수입니다. 기기번호를 정확하게 입력해주세요. <br> 기기번호를 모르는 경우 “None” 버튼을 선택해주세요.
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th class="th_fixed"><i class="ico_required"></i> 구분</th>
+                                    <th class="th_fixed"><i class="ico_required"></i> 성적서 언어</th>
+                                    <th class="th_fixed">자체 관리번호</th>
+                                    <th class="th_fixed">요청사항 <button type="button" class="btn_spread ml4" onclick="spread_input(this)"></button></th>
                                 </tr>
                             </thead>
                             <tbody> 
@@ -535,18 +581,11 @@
                                         </label>
                                     </td>
                                     <td>
-                                        <label class="f_toggle">
-                                            <input type="checkbox" checked>
-                                            <span class="slider">
-                                                <div class="slider_txt false">미표기</div>
-                                                <div class="slider_txt true">표기</div>
-                                            </span>
-                                        </label>
+                                        <input type="text" class="f_input ty_xsmall w100" placeholder="자체 관리번호" value="12341234">
                                     </td>
                                     <td>
-                                        <input type="text" class="f_input ty_xsmall w100" placeholder="비고를 입력해주세요.">
+                                        <div class="foled_input f_input ty_xsmall">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum sequi dolor explicabo itaque tempora repellendus odit dolore animi minus corrupti?</div>
                                     </td>
-                                    <td>미입고</td>
                                 </tr>
                                 <tr class="disabled2">
                                     <td>24000123-1</td>
@@ -579,18 +618,11 @@
                                         </label>
                                     </td>
                                     <td>
-                                        <label class="f_toggle">
-                                            <input type="checkbox" checked>
-                                            <span class="slider">
-                                                <div class="slider_txt false">미표기</div>
-                                                <div class="slider_txt true">표기</div>
-                                            </span>
-                                        </label>
+                                        <input type="text" class="f_input ty_xsmall w100" placeholder="자체 관리번호" value="12341234">
                                     </td>
                                     <td>
-                                        <input type="text" class="f_input ty_xsmall w100" placeholder="비고를 입력해주세요.">
+                                        <div class="foled_input f_input ty_xsmall">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum sequi dolor explicabo itaque tempora repellendus odit dolore animi minus corrupti?</div>
                                     </td>
-                                    <td>-</td>
                                 </tr>
                                 <tr class="disabled2">
                                     <td>24000123-1</td>
@@ -623,18 +655,11 @@
                                         </label>
                                     </td>
                                     <td>
-                                        <label class="f_toggle">
-                                            <input type="checkbox" checked>
-                                            <span class="slider">
-                                                <div class="slider_txt false">미표기</div>
-                                                <div class="slider_txt true">표기</div>
-                                            </span>
-                                        </label>
+                                        <input type="text" class="f_input ty_xsmall w100" placeholder="자체 관리번호" value="12341234">
                                     </td>
                                     <td>
-                                        <input type="text" class="f_input ty_xsmall w100" placeholder="비고를 입력해주세요." value="어쩌구저쩌구">
+                                        <div class="foled_input f_input ty_xsmall">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum sequi dolor explicabo itaque tempora repellendus odit dolore animi minus corrupti?</div>
                                     </td>
-                                    <td>-</td>
                                 </tr>
                                 <tr class="disabled2">
                                     <td>24000123-1</td>
@@ -667,18 +692,11 @@
                                         </label>
                                     </td>
                                     <td>
-                                        <label class="f_toggle">
-                                            <input type="checkbox" checked>
-                                            <span class="slider">
-                                                <div class="slider_txt false">미표기</div>
-                                                <div class="slider_txt true">표기</div>
-                                            </span>
-                                        </label>
+                                        <input type="text" class="f_input ty_xsmall w100" placeholder="자체 관리번호" value="12341234">
                                     </td>
                                     <td>
-                                        <input type="text" class="f_input ty_xsmall w100" placeholder="비고를 입력해주세요." value="어쩌구저쩌구">
+                                        <div class="foled_input f_input ty_xsmall">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum sequi dolor explicabo itaque tempora repellendus odit dolore animi minus corrupti?</div>
                                     </td>
-                                    <td>-</td>
                                 </tr>
                                 <tr class="disabled2">
                                     <td>24000123-1</td>
@@ -711,18 +729,11 @@
                                         </label>
                                     </td>
                                     <td>
-                                        <label class="f_toggle">
-                                            <input type="checkbox" checked>
-                                            <span class="slider">
-                                                <div class="slider_txt false">미표기</div>
-                                                <div class="slider_txt true">표기</div>
-                                            </span>
-                                        </label>
+                                        <input type="text" class="f_input ty_xsmall w100" placeholder="자체 관리번호" value="12341234">
                                     </td>
                                     <td>
-                                        <input type="text" class="f_input ty_xsmall w100" placeholder="비고를 입력해주세요." value="어쩌구저쩌구">
+                                        <div class="foled_input f_input ty_xsmall">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum sequi dolor explicabo itaque tempora repellendus odit dolore animi minus corrupti?</div>
                                     </td>
-                                    <td>-</td>
                                 </tr>
                                 <tr class="disabled2">
                                     <td>24000123-1</td>
@@ -755,20 +766,23 @@
                                         </label>
                                     </td>
                                     <td>
-                                        <label class="f_toggle">
-                                            <input type="checkbox" checked>
-                                            <span class="slider">
-                                                <div class="slider_txt false">미표기</div>
-                                                <div class="slider_txt true">표기</div>
-                                            </span>
-                                        </label>
+                                        <input type="text" class="f_input ty_xsmall w100" placeholder="자체 관리번호" value="12341234">
                                     </td>
                                     <td>
-                                        <input type="text" class="f_input ty_xsmall w100" placeholder="비고를 입력해주세요." value="어쩌구저쩌구">
+                                        <div class="foled_input f_input ty_xsmall">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum sequi dolor explicabo itaque tempora repellendus odit dolore animi minus corrupti?</div>
                                     </td>
-                                    <td>-</td>
                                 </tr>
                             </tbody>
+                            <script>
+                                function spread_input(target){
+                                    const tbl = target.closest('.h_tbl');
+                                    const foled_input = tbl.querySelectorAll('.foled_input');
+                                    target.classList.toggle('on')
+                                    foled_input.forEach(e=>{
+                                        e.classList.toggle('on');
+                                    })
+                                }
+                            </script>
                         </table>
                     </div>
                 </section>

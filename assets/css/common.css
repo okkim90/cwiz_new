@@ -9272,7 +9272,7 @@ input::-webkit-search-results-decoration {
   padding: 0 5px;
   border-radius: 4px;
   font-size: 12px;
-  line-height: 22px;
+  line-height: 20px;
 }
 .f_input.ty_small {
   height: 28px;
@@ -9311,6 +9311,16 @@ input::-webkit-search-results-decoration {
 }
 .f_input.inp_date:read-only {
   background-color: #fff;
+}
+.f_input.foled_input {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.f_input.foled_input.on {
+  height: auto;
+  white-space: normal;
+  text-overflow: inherit;
 }
 
 .f_search {
@@ -9506,6 +9516,10 @@ input::-webkit-search-results-decoration {
   line-height: 1.5;
   border-radius: 4px;
 }
+.f_ta.ty_xsmall {
+  font-size: 12px;
+  padding: 2px 5px;
+}
 .f_ta.ty_small {
   font-size: 13px;
   padding: 5px;
@@ -9612,11 +9626,13 @@ input::-webkit-search-results-decoration {
 }
 
 .chk_btn {
+  display: inline-flex;
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   white-space: nowrap;
+  align-items: center;
 }
 .chk_btn input[type=checkbox], .chk_btn input[type=radio] {
   visibility: hidden;
@@ -9629,7 +9645,13 @@ input::-webkit-search-results-decoration {
 .chk_btn input[type=checkbox]:checked ~ .inp_date, .chk_btn input[type=radio]:checked ~ .inp_date {
   display: block;
 }
+.chk_btn input[type=checkbox]:checked ~ .input_toggle, .chk_btn input[type=radio]:checked ~ .input_toggle {
+  display: block;
+}
 .chk_btn .inp_date {
+  display: none;
+}
+.chk_btn .input_toggle {
   display: none;
 }
 .chk_btn .f_btn {
@@ -10276,6 +10298,26 @@ input::-webkit-search-results-decoration {
   margin-right: 0.2em;
   font-weight: bold;
   font-size: 1.1em;
+}
+
+.btn_spread {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn_spread::before {
+  content: "\f424";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: bold;
+  font-size: 1em;
+}
+.btn_spread.on {
+  color: #FF7A00;
+}
+.btn_spread.on::before {
+  content: "\f422";
 }
 
 .tabs {
