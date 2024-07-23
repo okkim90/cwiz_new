@@ -9556,6 +9556,7 @@ input::-webkit-search-results-decoration {
   max-width: 100%;
   border: 1px solid #DDDDDD;
   box-sizing: border-box;
+  text-overflow: ellipsis;
 }
 .f_select.w100 {
   width: 100%;

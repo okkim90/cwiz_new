@@ -305,7 +305,7 @@
     max-width: 100%;
     border: 1px solid $c_line;
     box-sizing: border-box;
-   
+    text-overflow: ellipsis;
     &.w100 {
         width: 100%;
     }

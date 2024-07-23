@@ -325,29 +325,36 @@
                         <div class="v_tbl_wrap">
                             <table class="v_tbl">
                                 <colgroup>
-                                    <col style="width: 110px;">
+                                    <col style="width: 120px;">
                                     <col>
-                                    <col style="width: 110px;">
+                                    <col style="width: 120px;">
                                     <col>
-                                    <col style="width: 110px;">
+                                    <col style="width: 120px;">
                                     <col>
-                                    <col style="width: 110px;">
+                                    <col style="width: 120px;">
                                     <col>
                                 </colgroup>
                                 <tbody>
                                     <tr>
                                         <th>기간 조회</th>
-                                        <td colspan="7">
+                                        <td colspan="5">
                                             <div class="date_set">
-                                                <select name="" id="" class="f_select ty_small w_80">
-                                                    <option value="">접수일</option>
-                                                    <option value="">교정일</option>
+                                                <select name="" id="" class="f_select ty_small w_100">
+                                                    <option value="">최근 교정일</option>
+                                                    <option value="">차기 교정일</option>
                                                 </select>
                                                 <input type="text" class="f_input ty_small inp_date date_start" readonly="" id=""> ~
                                                 <input type="text" class="f_input ty_small inp_date date_end" readonly="" id="">
                                                 <button type="button" onclick="set_3m(this)" class="f_btn ty_xsmall _round _blue_op w_50">3개월</button>
                                                 <button type="button" onclick="set_6m(this)" class="f_btn ty_xsmall _round _navy_op w_50">6개월</button>
                                                 <button type="button" onclick="set_1y(this)" class="f_btn ty_xsmall _round _purple_op w_50">1년</button>
+                                            </div>
+                                        </td>
+                                        <th>우리장비 사용 여부</th>
+                                        <td>
+                                            <div class="chk_list">
+                                                <label class="chk_item"><input type="radio" name="use" checked> 사용</label>
+                                                <label class="chk_item"><input type="radio" name="use"> 미사용</label>
                                             </div>
                                         </td>
                                     </tr>
@@ -470,9 +477,9 @@
                                 <col>
                                 <col>
                                 <col>
-                                <col style="width: 80px;">
+                                <col style="width: 90px;">
                                 <col style="width: 70px;">
-                                <col style="width: 80px;">
+                                <col style="width: 90px;">
                                 <col style="width: 84px;">
                                 <col>
                             </colgroup>
@@ -485,9 +492,20 @@
                                     <th class="th_fixed">제조사</th>
                                     <th class="th_fixed">형식</th>
                                     <th class="th_fixed">기기번호</th>
-                                    <th class="th_fixed">차기 교정일</th>
+                                    <th class="th_fixed">차기 교정일 
+                                        <div class="col_sort">
+                                            <button class="btn_sort ty_up on"></button>
+                                            <button class="btn_sort ty_down"></button>
+                                        </div>
+                                    </th>
                                     <th class="th_fixed">교정 주기</th>
-                                    <th class="th_fixed">최근 교정일</th>                                   
+                                    <th class="th_fixed">
+                                        최근 교정일
+                                        <div class="col_sort">
+                                            <button class="btn_sort ty_up on"></button>
+                                            <button class="btn_sort ty_down"></button>
+                                        </div>
+                                    </th>                                   
                                     <th class="th_fixed">최근 교정결과</th>                                   
                                     <th class="th_fixed">최근 교정기관</th>                                   
                                 </tr>
@@ -875,7 +893,7 @@
                             </div>   
                             
                         </section>
-                        <section class="sec">
+                        <section class="sec mt30">
                             <div class="d_flex mb10 ai_c">
                                 <h2 class="tit4 fwB">2. 교정 정보</h2>
                                 <div class="btn_set ai_c ml_auto">
@@ -1011,6 +1029,18 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                            </div>
+                        </section>
+                        <section class="sec mt30">
+                            <div class="d_flex mb10 ai_c">
+                                <h2 class="tit4 fwB">3. 우리장비 사용 여부 설정</h2>
+                                <label class="f_toggle ty_big ml20">
+                                    <input type="checkbox" checked>
+                                    <span class="slider">
+                                        <div class="slider_txt false">미사용</div>
+                                        <div class="slider_txt true">사용</div>
+                                    </span>
+                                </label>
                             </div>
                         </section>
                         <div class="btn_set taC mt30">

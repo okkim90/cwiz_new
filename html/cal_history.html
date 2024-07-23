@@ -353,7 +353,7 @@
                                     </tr>
                                     <tr>
                                         <th>교정 기관</th>
-                                        <td colspan="3">
+                                        <td>
                                             <select name="" id="" class="f_select ty_small w_300">
                                                 <option value="">전체</option>
                                                 <option value="">코리아인스트루먼트(주) 서울본사</option>
@@ -391,6 +391,8 @@
                                                 </script>
                                             </div>
                                         </td>
+                                        <th>신청자</th>
+                                        <td><input type="text" class="f_input ty_small w_300"></td>
                                     </tr>
                                     <tr>
                                         
@@ -399,12 +401,18 @@
                                             <input type="text" class="f_input ty_small w_90 taC"> - 
                                             <input type="text" class="f_input ty_small w_40 taC"> 
                                         </td>
-                                        <th>교정 여부</th>
+                                        <th>교정 구분</th>
                                         <td>
-                                            <div class="chk_list">
-                                                <label class="chk_item"><input type="checkbox" checked> 완료</label>
-                                                <label class="chk_item"><input type="checkbox" checked> 진행중</label>
-                                            </div>
+                                            <select name="" id="" class="f_select ty_small w_300">
+                                                <option value="">전체</option> 
+                                                <option value="UT01">교정</option> 
+                                                <option value="UT02">구입교정</option> 
+                                                <option value="UT03">수리교정</option> 
+                                                <option value="UT04">구입만</option> 
+                                                <option value="UT05">수리만</option> 
+                                                <option value="UT06">보류</option> 
+                                                <option value="UT07">시험</option>
+                                            </select>
                                         </td>
                                         <th>교정 결과</th>
                                         <td>
@@ -489,7 +497,6 @@
                                 <col style="width: 70px;">
                                 <col style="width: 70px;">
                                 <col style="width: 70px;">
-                                <col style="width: 90px;">
                                 <col style="width: 80px;">
                                 <col style="width: 40px;">
                                 <col style="width: 40px;">
@@ -507,17 +514,8 @@
                                     <th class="th_fixed">접수일</th>
                                     <th class="th_fixed">신청자</th>
                                     <th class="th_fixed">진행 상태</th>
-                                    <th class="th_fixed">교정 결과</th>
-                                    <th class="th_fixed">교정 담당자</th>
-                                    <th class="th_fixed" style="z-index: 100;">
-                                        교정 수수료
-                                        <div class="f_tooltip">
-                                            <i class="f_tooltip_ico fa-solid fa-circle-info" aria-hidden="true"></i>
-                                            <div class="f_tooltip_cont ty_right">
-                                                교정 수수료는 표준 소급료 및 부가세 제외된 금액이며, <br> 실제 청구 금액과 상이할 수 있습니다.
-                                            </div>
-                                        </div> 
-                                    </th>
+                                    <th class="th_fixed">교정 결과</th>    
+                                    <th class="th_fixed">교정일</th>            
                                     <th class="th_fixed">성적서</th>
                                     <th class="th_fixed">출고</th>
                                     <th class="th_fixed">수납</th>
@@ -537,8 +535,7 @@
                                     <td>장원영</td>
                                     <td>교정완료</td>
                                     <td>정상</td>
-                                    <td>김장훈</td>
-                                    <td>199,000,000</td>
+                                    <td>2024-10-20</td>
                                     <td>
                                         <div class="d_flex _gap10 jc_c">
                                             <button type="button" class="btn_down fc_navy"><span class="btn_tooltip"><b>국문</b>  성적서</span></button>
@@ -574,8 +571,7 @@
                                     <td>장원영</td>
                                     <td>교정완료</td>
                                     <td>정상</td>
-                                    <td>김장훈</td>
-                                    <td>199,000,000</td>
+                                    <td>2024-10-20</td>
                                     <td>
                                         <div class="d_flex _gap10 jc_c">
                                             <span class="btn_down notAllowed">
@@ -609,8 +605,7 @@
                                     <td>장원영</td>
                                     <td>교정대기</td>
                                     <td>교정취소</td>
-                                    <td>김장훈</td>
-                                    <td>199,000,000</td>
+                                    <td>2024-10-20</td>
                                     <td>
                                         <div class="d_flex _gap10 jc_c">
                                             <button type="button" class="btn_down fc_navy"><span class="btn_tooltip"><b>국문</b>  성적서</span></button>
@@ -644,8 +639,7 @@
                                     <td>장원영</td>
                                     <td>교정대기</td>
                                     <td><b class="fc_red">불량</b></td>
-                                    <td>김장훈</td>
-                                    <td>199,000,000</td>
+                                    <td>2024-10-20</td>
                                     <td>
                                         <div class="d_flex _gap10 jc_c">
                                             <button type="button" class="btn_down fc_navy"><span class="btn_tooltip"><b>국문</b>  성적서</span></button>
@@ -665,7 +659,7 @@
                                     </td>
                                 </tr>
                                 <tr>          
-                                    <td colspan="17">
+                                    <td colspan="16">
                                         <div class="no_result_box">
                                             <i class="fa-solid fa-magnifying-glass"></i>
                                             <p class="mt10">교정 이력을 검색해주세요.</p>
@@ -673,7 +667,7 @@
                                     </td>
                                 </tr>
                                 <tr>          
-                                    <td colspan="17">
+                                    <td colspan="16">
                                         <div class="no_result_box">
                                             <i class="fa-solid fa-file-circle-xmark" aria-hidden="true"></i>
                                             <p class="mt10">검색결과가 없습니다.</p>
@@ -808,7 +802,7 @@
                                         </tr>
                                         <tr>
                                             <th>교정 담당자</th>
-                                            <td>박보영</td>
+                                            <td>박보영 (070-1234-1234)</td>
                                             <th>기술 책임자</th>
                                             <td>한혜진</td>
                                             <th>교정 결과</th>
