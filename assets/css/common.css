@@ -5491,23 +5491,28 @@
 .d_flex.jc_sa {
   justify-content: space-around;
 }
-.d_flex .flex1 {
-  flex: 1;
-}
-.d_flex .shrink0 {
-  flex-shrink: 0;
-}
-.d_flex .self_top {
-  align-self: flex-start;
-}
-.d_flex .self_c {
-  align-self: center;
-}
-.d_flex .self_bot {
-  align-self: flex-end;
-}
 .d_flex.ty_col {
   flex-direction: column;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.shrink0 {
+  flex-shrink: 0;
+}
+
+.self_top {
+  align-self: flex-start;
+}
+
+.self_c {
+  align-self: center;
+}
+
+.self_bot {
+  align-self: flex-end;
 }
 
 ._gap1 {
@@ -5960,6 +5965,10 @@
   background-color: rgba(255, 122, 0, 0.08);
   color: #FF7A00;
   font-weight: 500;
+}
+
+.vaT {
+  vertical-align: top;
 }
 
 /*반응형 화면 크기*/

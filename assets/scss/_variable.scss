@@ -356,24 +356,25 @@ $inner: 1280px;
     &.jc_sa {
         justify-content: space-around;
     }
-    .flex1 {
-        flex: 1;
-    }
-    .shrink0 {
-        flex-shrink: 0;
-    }
-    .self_top {
-        align-self: flex-start;
-    }
-    .self_c {
-        align-self: center;
-    }
-    .self_bot {
-        align-self: flex-end;
-    }
+
     &.ty_col {
         flex-direction: column;
     }
+}
+.flex1 {
+    flex: 1;
+}
+.shrink0 {
+    flex-shrink: 0;
+}
+.self_top {
+    align-self: flex-start;
+}
+.self_c {
+    align-self: center;
+}
+.self_bot {
+    align-self: flex-end;
 }
 
 @for $i from 1 through 30 {
@@ -441,4 +442,7 @@ $inner: 1280px;
     background-color: rgba($c_key, .08);
     color: $c_key;
     font-weight: 500;
+}
+.vaT {
+    vertical-align: top;
 }

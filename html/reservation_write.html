@@ -546,7 +546,7 @@
                                     <td colspan="5">
                                         <div class="d_flex _gap4 ai_c">
                                             <label class="chk_btn">
-                                                <input type="radio" name="reception" >
+                                                <input type="radio" name="reception"checked >
                                                 <span class="f_btn _round ty_small w_50" >방문</span>
                                             </label>
                                             <label class="chk_btn">
@@ -554,7 +554,7 @@
                                                 <span class="f_btn _round ty_small w_50">택배</span>
                                             </label>
                                             <label class="chk_btn">
-                                                <input type="radio" name="reception" value="type_onsite" checked>
+                                                <input type="radio" name="reception" value="type_onsite" >
                                                 <span class="f_btn _round ty_small w_50">출장</span>
                                                 <div class="input_toggle ml10"><div class="tip fc_grey">(※ 출장지 주소는 성적서 업체 주소와 동일합니다. 다를 경우에만 입력해주세요.) </div></div>
                                             </label>
@@ -562,7 +562,7 @@
                                     </td>
                                 </tr>
                                 <!-- [D] 접수방식 - '출장' 선택시 노출 -->
-                                <tr class="onsite_row">
+                                <tr class="onsite_row" style="display: none;">
                                     <th>출장지 (국문)</th>
                                     <td colspan="3">
                                         <div class="d_flex _gap5">
@@ -585,6 +585,7 @@
                                             class="f_input ty_small inp_date date_start" 
                                             readonly="" 
                                             id="" 
+                                            
                                             data-min="2w" 
                                             data-tooltip="출장 희망일이 2024-07-25 이전이시면 요구사항에 기재하시거나 고객센터로 문의 부탁드리겠습니다."> ~
                                             <input 
@@ -592,12 +593,13 @@
                                             class="f_input ty_small inp_date date_end" 
                                             readonly="" 
                                             id="" 
+                                           
                                             data-min="2w" 
                                             data-tooltip="출장 희망일이 2024-07-25 이전이시면 요구사항에 기재하시거나 고객센터로 문의 부탁드리겠습니다.">
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="onsite_row">
+                                <tr class="onsite_row" style="display: none;">
                                     <th>출장지 (영문)</th>
                                     <td colspan="3">
                                         <div class="d_flex _gap5">

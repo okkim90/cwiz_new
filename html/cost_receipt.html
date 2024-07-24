@@ -402,8 +402,11 @@
                         <h2 class="tit3">2. 세금계산서 정보</h2>
                     </div>
                     <div class="payment_info">
-                        <div class="d_flex">
-                            <h3 class="tit4 mb10">※ 세금계산서 요청 정보</h3>
+                        <div class="d_flex mb10">
+                            <h3 class="tit4 ">※ 세금계산서 요청 정보</h3>
+                            <label class="chk_item ml20">
+                                <input type="checkbox" name=""> 신청업체와 동일
+                            </label>
                             <span class="f_tip ml_auto"><i class="ico_required"></i> 표시는 필수 기재 항목입니다.</span>
                         </div>
                        
@@ -419,33 +422,46 @@
                                     <tr>
                                         <th>업체명 <i class="ico_required"></i></th>
                                         <td>
-                                            <div class="f_search mw_300">
-                                                <input type="text" class="f_input ty_small w100" onfocus="f_search_focus(this)" onfocusout="f_search_focusout(this)" placeholder="검색어를 입력해주세요">
-                                                <div class="f_search_list_wrap">
-                                                    <ul class="f_search_list">
-                                                        <li class="f_search_item">직접입력</li>
-                                                        <li class="f_search_item">11112<b>Lorem</b>ipsum dolor sit amet</li>
-                                                        <li class="f_search_item">222222<b>Lorem</b> iercitationem quis</li>
-                                                        <li class="f_search_item">333333<b>Lorem</b> ipsum dolor sit am</li>
-                                                        <li class="f_search_item">11112<b>Lorem</b>ipsum dolor sit amet</li>
-                                                        <li class="f_search_item">222222<b>Lorem</b> iercitationem quis</li>
-                                                        <li class="f_search_item">333333<b>Lorem</b> ipsum dolor sit am</li>
-                                                        <li class="f_search_item">11112<b>Lorem</b>ipsum dolor sit amet</li>
-                                                        <li class="f_search_item">222222<b>Lorem</b> iercitationem quis</li>
-                                                        <li class="f_search_item">333333<b>Lorem</b> ipsum dolor sit am</li>
-                                                    </ul>
+                                            <div class="d_flex fw_w _gapY6 _gapX10 ai_c">
+                                                <div class="f_search mw_300">
+                                                    <input type="text" class="f_input ty_small w100" onfocus="f_search_focus(this)" onfocusout="f_search_focusout(this)" placeholder="검색어를 입력해주세요">
+                                                    <div class="f_search_list_wrap">
+                                                        <ul class="f_search_list">
+                                                            <li class="f_search_item">직접입력</li>
+                                                            <li class="f_search_item">11112<b>Lorem</b>ipsum dolor sit amet</li>
+                                                            <li class="f_search_item">222222<b>Lorem</b> iercitationem quis</li>
+                                                            <li class="f_search_item">333333<b>Lorem</b> ipsum dolor sit am</li>
+                                                            <li class="f_search_item">11112<b>Lorem</b>ipsum dolor sit amet</li>
+                                                            <li class="f_search_item">222222<b>Lorem</b> iercitationem quis</li>
+                                                            <li class="f_search_item">333333<b>Lorem</b> ipsum dolor sit am</li>
+                                                            <li class="f_search_item">11112<b>Lorem</b>ipsum dolor sit amet</li>
+                                                            <li class="f_search_item">222222<b>Lorem</b> iercitationem quis</li>
+                                                            <li class="f_search_item">333333<b>Lorem</b> ipsum dolor sit am</li>
+                                                        </ul>
+                                                    </div>
+                                                    <script>
+                                                        function f_search_focus(target){
+                                                            const f_search = target.closest('.f_search');
+                                                            f_search.classList.add('on');
+                                                        }
+                                                        function f_search_focusout(target){
+                                                            const f_search = target.closest('.f_search');
+                                                            f_search.classList.remove('on');
+                                                        }
+                                                    </script>
                                                 </div>
-                                                <script>
-                                                    function f_search_focus(target){
-                                                        const f_search = target.closest('.f_search');
-                                                        f_search.classList.add('on');
-                                                    }
-                                                    function f_search_focusout(target){
-                                                        const f_search = target.closest('.f_search');
-                                                        f_search.classList.remove('on');
-                                                    }
-                                                </script>
+                                                <!--[D]사업자 등록증 미 등록 시-->
+                                                <button type="button" class="f_btn ty_small _lightGrey">파일 선택</button>
+                                                <!--//[D]사업자 등록증 미 등록 시-->
+                                                <!--[D]사업자 등록증 등록 시-->
+                                                <div class="br_set">
+                                                    <a href="" class="btn_down4 fc_key t_ellipsis1 mr6"><span class="file_name">사업자등록증.pdf</span></a>
+                                                    <button type="button" class="br_set_btn shrink0" aria-label="수정"><i class="fa-solid fa-rotate"></i></button>
+                                                    <button type="button" class="br_set_btn shrink0" aria-label="삭제"><i class="fa-solid fa-trash-can"></i></button>
+                                                </div> 
+                                                <!--//[D]사업자 등록증 등록 시-->
                                             </div>
+                                            
                                         </td>
                                         <th>사업자 번호 <i class="ico_required"></i></th>
                                         <td>
