@@ -2781,3 +2781,85 @@
         }
     }
 }
+
+.sitemap {
+    display: flex;
+    padding-top: 20px;
+    gap: 30px;
+    &1 {
+        &_item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        &_link {
+            display: inline-flex;
+            vertical-align: top;
+            font-size: 18px;
+            font-weight: 600;
+            align-items: center;
+            
+            flex-shrink: 0;
+            
+            @at-root .sitemap1_item:hover & {
+                color: $c_key;
+                
+            }
+            .ico_dep1 {
+                width: 20px;
+                height: 20px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                margin-right: 8px;
+                
+                @for $i from 1 through 6 {
+                    &.ty_menu#{$i}{
+                        background-image: url(../images/common/ico_menu#{$i}.svg);
+                    }
+                }
+                @at-root .sitemap1_item:hover & {
+                    @for $i from 1 through 6 {
+                        &.ty_menu#{$i}{
+                            background-image: url(../images/common/ico_menu#{$i}_on.svg);
+                        }
+                    }
+                }
+            }
+            
+        }
+        
+    }
+    &2 {
+        margin-top: 18px;
+        position: relative;
+        padding: 20px;
+        border-radius: 12px;
+        padding-right: 0;
+        background-color: rgba(#000, .04); 
+        flex: 1;
+        transition: background-color .1s ease-in-out;
+        @at-root .sitemap1_item:hover & {
+            background-color: rgba($c_key, .1); 
+        }
+        &_link {
+            display: block;
+            font-size: 16px;
+            line-height: 30px;
+            &::before {
+                content: '·';
+                margin-right: 6px;
+                
+            }
+            &:hover {
+                color: $c_key;
+                font-weight: 500;
+
+            }
+        }
+        &_item {
+            & + & {
+                margin-top: 6px;
+            }
+        }
+    }
+}

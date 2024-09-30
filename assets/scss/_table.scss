@@ -175,7 +175,8 @@
                 }
             }
             &:hover {
-                background-color: rgba(rgb(249, 246, 61), .08);
+                background-color: #FFFEF0;
+
                 //cursor: pointer;
 
             }
@@ -184,6 +185,19 @@
             }
             &.cursor_pointer {
                 cursor: pointer;
+            }
+
+            &.sort_able {
+                .handle {
+                    cursor: move;
+                }
+            } 
+            &.sortable-ghost {
+                opacity: 1;
+                background: lighten($c_blue, 45%) ;
+                &:hover {
+                    background: lighten($c_blue, 45%) ;
+                }
             }
         }
         
@@ -321,3 +335,4 @@
     border-radius: 10px;
     background-color: rgba($c_key,.15);
 }
+
