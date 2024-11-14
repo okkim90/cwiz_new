@@ -10,13 +10,17 @@
         border-radius: 20px;
         box-shadow: 0 4px 10px rgba(#000, .08);
         position: relative;
-        min-height: 200px;
+        //min-height: 200px;
        
         
         width: calc(50% - 10px);
         
-        &.w100 {
-            width: 100%;
+        &.ty_col1 {
+            flex: 1;
+            
+        }
+        &.ty_col2 {
+            width: calc(50% - 10px);
         }
 
         @include list_col(3 ,16px, 40px);
@@ -45,75 +49,115 @@
             height: 186px;
         }
 
+        .sub_tit {
+            &.ty_line {
+                padding-bottom: 10px;
+                border-bottom: 1px solid $c_solidGrey;
+            }
+        }
+        .tit1 {
+            font-size: 20px;
+        }
+
         &_cont {
             display: flex;
             gap: 20px;
+            //align-items: center;
             .main_count_list {
                 flex: 1;
                 //height: 200px;
             }
-            .chart_box_wrap {
-                flex: 1;
-                
-                flex-shrink: 0;
-                
-                border: 1px solid $c_line;
-                border-radius: 10px;
-                overflow: hidden;
-                padding: 20px;
-                .txt_box {
+
+            &.calChart_wrap {
+                .calChart_box {
+                    width: 34%;
+                    min-width: 200px;
+                    height: 100px;
+                    #calChart {
+                        width: 100%;
+                        //height: 100px;
+                    }
+                }
+                .data_list {
+                    flex: 1;
                     display: flex;
-                    justify-content: center;
-                    font-size: 18px;
+                    
                     gap: 10px;
-                    margin-bottom: 20px;
-                    align-items: flex-end;
-                    .tit {
-                        font-weight: bold;
-                        line-height: 40px;
+                    //padding: 0 30px;
+                    //border: 1px solid #ddd;
+                    border-radius: 10px;
+                    &_item {
+                        display: flex;
+                        flex: 1;
+                        align-items: center;
+                        flex-direction: column;
+                        justify-content: center;
+                        text-align: center;
+                        //background-color: $c_bg;
+                        border-radius: 8px;
+                        gap: 10px;
+                        padding: 0 10px;
+                        &.ty_total {
+                            border: 2px solid $c_lightGrey;
+                        }
+                        &.ty_completed {
+                            border: 2px solid $c_key;
+                        }
+                        &.ty_incomplete {
+                            border: 2px solid #ffc998;
+                        }
+                        dt {
+                            font-size: 15px;
+                            font-weight: 500;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            //margin-right: auto;
+                            
+                            .color_chip {
+                                width: 18px;
+                                height: 18px;
+                                border-radius: 3px;
+                                margin-right: 6px;
+                                &.ty_total {
+                                    background-color: #ccc;
+                                }
+                                &.ty_blue {
+                                    background-color: $c_key;
+                                }
+                                &.ty_red {
+                                    background-color: #ffc998;
+                                }
+                            }
+                        }
+                        dd {
+                            font-size: 14px;
+                            //text-align: right;
+                        }
                     }
-                    .count {
-                        color: $c_key;
-                        font-size: 30px;
-                        letter-spacing: -0.01em;
-                    }
-                }
-                .chart_box {
-                    height: 220px;
-                    position: relative;
-                    width: 100%;
-                }
-                .chart {
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    width: 100%;
-                    height: 100%;
                 }
             }
+            
         }
     }
 }
 
 .main_count {
-    &_list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        
-    }
     &_item {
         //width: calc((100%/3) - (((3/2)*20px)/2));
+        & + & {
+            margin-top: 14px;
+        }
         flex: 1;
         display: flex;
         //flex-direction: column;
         //justify-content: center;
         align-items: center;
         //text-align: center;
-        border: 1px solid $c_line;
+        
         box-sizing: border-box;
         border-radius: 10px;
-        padding: 20px 4%;
+        
         
         //gap: 15px;
         //border-right: 1px solid $c_line;
@@ -149,14 +193,22 @@
         }
         .txt_box {
             //padding-left: 15px;
-            margin-top: 6px;
-           
+            //margin-top: 6px;
+            display: flex;
+            //align-items: center;
+            color: $c_key;
+            font-size: 16px;
+            column-gap: 2px;
+            margin-left: auto;
+            &:hover {
+                text-decoration: underline;
+            }
             .count {
                 display: block;
-                font-size: 26px;
-                line-height: 1.2;
+                
+                
                 letter-spacing: -0.01em;
-                font-weight: bold;
+                font-weight: 500;
                 font-family: 'Roboto';
                 position: relative;
                 color: $c_key;
@@ -166,6 +218,16 @@
 
                 }
             }
+            .unit {
+                font-size: 15px;
+                font-weight: 500;
+                
+                //margin-top: 1px;
+            }
         }
     }
+}
+
+.calChart_wrap {
+    display: flex;
 }

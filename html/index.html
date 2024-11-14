@@ -295,9 +295,10 @@
         <!--container-->
         <main id="container" class="container">
             <div class="main_wrap">
-                <div class="main_sec main_sec_1">
-                    <div class="sub_tit">
-                        <h1 class="tit1">견적관리</h1>  
+                <div class="main_sec ty_col1">
+                    <div class="sub_tit ty_line">
+                        <h1 class="tit1">견적 관리</h1>  
+                        <span class="fz_mid fc_midGrey ml6">(최근 3개월)</span>
                         <a href="" class="btn_view_more ml_auto">
                             <span class="blind">더 보기</span>
                         </a>
@@ -305,40 +306,45 @@
                     <div class="main_sec_cont">
                         <ul class="main_count_list">
                             <li class="main_count_item">
-                                <div class="ico_box">
-                                    <img src="../assets/images/main/ico_file.svg" alt="">
-                                </div>
-                                <div>
-                                    <div class="tit">견적 요청</div>
-                                    <div class="txt_box">
-                                        <!--[D] data-value = 수량 -->
-                                        <strong class="count" data-value="931700">
-                                            0
-                                            <span class="sizing_box"></span>
-                                        </strong>
-                                    </div>
-                                </div>
+                                <div class="tit">견적 대기</div>
+                                <a href class="txt_box">
+                                    <!--[D] data-value = 수량 -->
+                                    <strong class="count" data-value="931700">
+                                        0
+                                        <span class="sizing_box"></span>
+                                    </strong>
+                                    <span class="unit">건</span>
+                                </a>
+                            </li>
+                            <li class="main_count_item">  
+                                <div class="tit">견적 진행중</div>
+                                <a href class="txt_box">
+                                    <!--[D] data-value = 수량 -->
+                                    <strong class="count" data-value="931700">
+                                        0
+                                        <span class="sizing_box"></span>
+                                    </strong>
+                                    <span class="unit">건</span>
+                                </a>
                             </li>
                             <li class="main_count_item">
-                                <div class="ico_box">
-                                    <img src="../assets/images/main/ico_file_chk.svg" alt="">
-                                </div>
-                                <div>
-                                    <div class="tit">견적 완료</div>
-                                    <div class="txt_box">
-                                        <strong class="count" data-value="31709">
-                                            0
-                                            <span class="sizing_box"></span>
-                                        </strong>
-                                    </div>
-                                </div>
+                                <div class="tit">견적 완료</div>
+                                <a href class="txt_box">
+                                    <!--[D] data-value = 수량 -->
+                                    <strong class="count" data-value="931700">
+                                        0
+                                        <span class="sizing_box"></span>
+                                    </strong>
+                                    <span class="unit">건</span>
+                                </a>
                             </li> 
                         </ul>
                     </div>
                 </div>
-                <div class="main_sec main_sec_2">
-                    <div class="sub_tit">
-                        <h1 class="tit1">포인트 관리</h1>  
+                <div class="main_sec ty_col1">
+                    <div class="sub_tit ty_line">
+                        <h1 class="tit1">접수 관리</h1>  
+                        <span class="fz_mid fc_midGrey ml6">(최근 3개월)</span>
                         <a href="" class="btn_view_more ml_auto">
                             <span class="blind">더 보기</span>
                         </a>
@@ -346,37 +352,166 @@
                     <div class="main_sec_cont">
                         <ul class="main_count_list">
                             <li class="main_count_item">
-                                <div class="ico_box">
-                                    <img src="../assets/images/main/ico_coin.svg" alt="">
-                                </div>
-                                <div>
-                                    <div class="tit">사용 가능 포인트</div>
-                                    <div class="txt_box">
-                                        <!--[D] data-value = 수량 -->
-                                        <strong class="count" data-value="931700">
-                                            0
-                                            <span class="sizing_box"></span>
-                                        </strong>
-                                    </div>
-                                </div>
+                                <div class="tit">접수 대기</div>
+                                <a href class="txt_box">
+                                    <!--[D] data-value = 수량 -->
+                                    <strong class="count" data-value="931700">
+                                        0
+                                        <span class="sizing_box"></span>
+                                    </strong>
+                                    <span class="unit">건</span>
+                                </a>
+                            </li>
+                            <li class="main_count_item">  
+                                <div class="tit">출장일정 확정</div>
+                                <a href class="txt_box">
+                                    <!--[D] data-value = 수량 -->
+                                    <strong class="count" data-value="931700">
+                                        0
+                                        <span class="sizing_box"></span>
+                                    </strong>
+                                    <span class="unit">건</span>
+                                </a>
                             </li>
                             <li class="main_count_item">
-                                <div class="ico_box ty_greyscale">
-                                    <img src="../assets/images/main/ico_coin_op.svg" alt="">
-                                </div>
-                                <div>
-                                    <div class="tit">이번달 소멸 포인트</div>
-                                    <div class="txt_box">
-                                        <strong class="count" data-value="31709">
-                                            0
-                                            <span class="sizing_box"></span>
-                                        </strong>
-                                    </div>
-                                </div>
+                                <div class="tit">접수 완료</div>
+                                <a href class="txt_box">
+                                    <!--[D] data-value = 수량 -->
+                                    <strong class="count" data-value="931700">
+                                        0
+                                        <span class="sizing_box"></span>
+                                    </strong>
+                                    <span class="unit">건</span>
+                                </a>
                             </li> 
                         </ul>
                     </div>
                 </div>
+                <div class="main_sec ty_col2" >
+                    <div class="sub_tit ty_line">
+                        <h1 class="tit1">교정 진행  현황</h1>  
+                        <span class="fz_mid fc_midGrey ml6">(최근 3개월)</span>
+                        <a href="" class="btn_view_more ml_auto">
+                            <span class="blind">더 보기</span>
+                        </a>
+                    </div>
+                    <div class="main_sec_cont calChart_wrap" data-complete="9200" data-incomplete="2456">
+                        <div class="calChart_box">
+                            <canvas id="calChart"></canvas>
+                        </div>
+                        <div class="data_list">
+                            <dl class="data_list_item ty_total">
+                                <dt><i class="color_chip ty_total"></i>전체</dt>
+                                <dd><b class="output_total">0건</b></dd>
+                            </dl>
+                            <dl class="data_list_item ty_completed">
+                                <dt><i class="color_chip ty_blue"></i>완료</dt>
+                                <dd><b class="output_complete">0건</b> <span class="fc_midGrey">(<span class="percent_complete">0</span>%)</span></dd>
+                            </dl>
+                            <dl class="data_list_item ty_incomplete">
+                                <dt><i class="color_chip ty_red"></i>미완료</dt>
+                                <dd><b class="output_incomplete">0건</b> <span class="fc_midGrey">(<span class="percent_incomplete">0</span>%)</span></dd>
+                            </dl>
+                        </div>
+                       
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js"></script>
+                        <script>
+                            const calChart_wrap = document.querySelector('.calChart_wrap');
+                            const output_total = calChart_wrap.querySelector('.output_total');
+                            const output_complete = calChart_wrap.querySelector('.output_complete');
+                            const output_incomplete = calChart_wrap.querySelector('.output_incomplete');
+                            const percent_complete = calChart_wrap.querySelector('.percent_complete');
+                            const percent_incomplete = calChart_wrap.querySelector('.percent_incomplete');
+
+                            let valComplete = parseInt(calChart_wrap.dataset.complete);
+                            let valIncomplete = parseInt(calChart_wrap.dataset.incomplete);
+                            let valTotal = valComplete + valIncomplete;
+
+                            output_total.innerHTML = commaSeparateNumber(valTotal) + '건';
+                            output_complete.innerHTML = commaSeparateNumber(valComplete) + '건';
+                            output_incomplete.innerHTML = commaSeparateNumber(valIncomplete) + '건';
+                            percent_complete.innerHTML = !isNaN(valComplete / valTotal) ? ((valComplete / valTotal) * 100).toFixed(1) : 0;
+                            percent_incomplete.innerHTML = !isNaN(valIncomplete / valTotal) ? ((valIncomplete / valTotal) * 100).toFixed(1) : 0;
+
+                            function commaSeparateNumber(val){
+                                while (/(\d+)(\d{3})/.test(val.toString())){
+                                val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+                                }
+                                return val;
+                            }
+
+                            let ctx = $("#calChart");
+                            const centerTextPlugin = {
+                                id: 'centerText',
+                                beforeDraw: function(chart) {
+                                    let width = chart.width,
+                                        height = chart.height,
+                                        ctx = chart.ctx;
+                                    ctx.restore();
+                                    ctx.textBaseline = "middle";
+                                    //let data0 = valComplete;
+                                    //let data1 = valIncomplete;
+                                    //let data_total = data0 + data1;
+                                    if (valTotal > 0){
+                                        let fontSize = (height / 50).toFixed(2);
+                                        ctx.font = fontSize + "em sans-serif";
+                                        ctx.fillStyle = '#FF7A00';
+                                        
+                                        let text =  ((valComplete / valTotal) * 100).toFixed(1) + "%",
+                                        textX = Math.round((width - ctx.measureText(text).width) / 2),
+                                        textY = (height / 2) + 30;
+                                        ctx.fillText(text, textX, textY);
+                                    }else {
+                                        let fontSize = (height / 70).toFixed(2);
+                                        ctx.font = fontSize + "em sans-serif";
+                                        ctx.fillStyle = '#aaa';
+                                        let text =  "진행중인 교정이 없습니다.",
+                                        textX = Math.round((width - ctx.measureText(text).width) / 2),
+                                        textY = (height / 2);
+                                        ctx.fillText(text, textX, textY);
+                                    }
+                                    ctx.save();
+                                }
+                            };
+                            let data = {
+                                datasets: [{
+                                    data: [valComplete, valIncomplete], // [완료, 미완료]
+                                    backgroundColor: [
+                                        '#FF7A00',
+                                        '#ffc998'
+                                    ],
+                                    borderWidth: 1
+                                }],
+                                labels: [
+                                    '완료',
+                                    '미완료'
+                                ]
+                            };
+                            let options = {
+                                responsive: true,               
+                                maintainAspectRatio: false,     
+                                cutout: '60%',                  
+                                rotation: -90,                  
+                                circumference: 180,             
+                                plugins: {
+                                    legend: {display: false}     
+                                },
+                                animation: {
+                                    duration: 1000              
+                                },
+                                
+                            };
+                            let myChart = new Chart(ctx,{
+                                type: 'doughnut',
+                                data: data,
+                                options: options,
+                                plugins: [centerTextPlugin]    
+                            });
+                        </script>
+                        
+                    </div>
+                </div>
+               
                 
                 <div class="main_sec main_sec_3">
                     <div class="sub_tit">
