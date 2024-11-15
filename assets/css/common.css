@@ -6526,76 +6526,39 @@ input::-webkit-search-results-decoration {
 .header .h_util .h_user .user_name:hover {
   text-decoration: underline;
 }
-.header .h_util .h_branch {
-  position: relative;
-  padding-left: 11px;
+.header .h_util .h_point {
   margin-left: 10px;
-  z-index: 999;
 }
-.header .h_util .h_branch .ico_arrow {
-  margin-left: 6px;
-  opacity: 0.5;
-  transition: all 0.2s ease-in-out;
-  width: 16px;
-  height: 16px;
-}
-.header .h_util .h_branch .fa-building {
-  margin-right: 6px;
-  color: #393939;
-}
-.header .h_util .h_branch_current {
-  cursor: pointer;
-  display: block;
-  line-height: 50px;
-}
-.header .h_util .h_branch:hover .h_branch_list {
-  opacity: 1;
-  visibility: visible;
-}
-.header .h_util .h_branch:hover .ico_arrow {
-  transform: rotate(180deg);
-}
-.header .h_util .h_branch_list {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  right: 0;
-  top: 46px;
-  white-space: nowrap;
+.header .h_util .h_point_btn {
+  display: flex;
+  align-items: center;
+  border: 1px solid #FF7A00;
+  padding: 4px;
+  padding-right: 10px;
+  border-radius: 16px;
+  gap: 4px;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  padding: 10px 0;
-  border-radius: 10px;
-  line-height: 30px;
-  transition: all 0.2s ease-in-out;
 }
-.header .h_util .h_branch_list::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  margin-left: -6px;
-  bottom: 100%;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 8px solid #fff;
+.header .h_util .h_point_ico {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 22px;
+  color: #FF7A00;
+  font-family: "Roboto";
+  background-color: #ffe4cc;
 }
-.header .h_util .h_branch_item a {
-  display: block;
-  padding: 0 18px;
-}
-.header .h_util .h_branch_item:hover {
-  background-color: rgba(255, 122, 0, 0.1);
-}
-.header .h_util .h_branch::before {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 14px;
-  background-color: #bbb;
-  left: 0;
-  top: 50%;
-  margin-top: -7px;
+.header .h_util .h_point_cont {
+  font-size: 16px;
+  line-height: 21px;
+  color: #FF7A00;
+  font-family: "Roboto";
+  font-weight: 500;
+  text-align: right;
+  min-width: 60px;
 }
 .header .h_util .h_btns {
   margin-left: 20px;
