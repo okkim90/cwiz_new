@@ -6526,6 +6526,77 @@ input::-webkit-search-results-decoration {
 .header .h_util .h_user .user_name:hover {
   text-decoration: underline;
 }
+.header .h_util .h_branch {
+  position: relative;
+  padding-left: 11px;
+  margin-left: 10px;
+  z-index: 999;
+}
+.header .h_util .h_branch .ico_arrow {
+  margin-left: 6px;
+  opacity: 0.5;
+  transition: all 0.2s ease-in-out;
+  width: 16px;
+  height: 16px;
+}
+.header .h_util .h_branch .fa-building {
+  margin-right: 6px;
+  color: #393939;
+}
+.header .h_util .h_branch_current {
+  cursor: pointer;
+  display: block;
+  line-height: 50px;
+}
+.header .h_util .h_branch:hover .h_branch_list {
+  opacity: 1;
+  visibility: visible;
+}
+.header .h_util .h_branch:hover .ico_arrow {
+  transform: rotate(180deg);
+}
+.header .h_util .h_branch_list {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  top: 46px;
+  white-space: nowrap;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  padding: 10px 0;
+  border-radius: 10px;
+  line-height: 30px;
+  transition: all 0.2s ease-in-out;
+}
+.header .h_util .h_branch_list::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-left: -6px;
+  bottom: 100%;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid #fff;
+}
+.header .h_util .h_branch_item a {
+  display: block;
+  padding: 0 18px;
+}
+.header .h_util .h_branch_item:hover {
+  background-color: rgba(255, 122, 0, 0.1);
+}
+.header .h_util .h_branch::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 14px;
+  background-color: #bbb;
+  left: 0;
+  top: 50%;
+  margin-top: -7px;
+}
 .header .h_util .h_point {
   margin-left: 10px;
 }
@@ -11243,16 +11314,64 @@ input::-webkit-search-results-decoration {
 .main_wrap .main_sec_cont.calChart_wrap .data_list_item dd {
   font-size: 14px;
 }
-
-.main_count_item {
+.main_wrap .main_sec .status_list {
+  width: 100%;
+}
+.main_wrap .main_sec .status_list_item {
   flex: 1;
   display: flex;
   align-items: center;
   box-sizing: border-box;
   border-radius: 10px;
 }
-.main_count_item + .main_count_item {
+.main_wrap .main_sec .status_list_item + .status_list_item {
   margin-top: 14px;
+}
+.main_wrap .main_sec .status_list_item .tit {
+  font-size: 15px;
+  font-weight: 500;
+}
+.main_wrap .main_sec .status_list_item .txt_box {
+  display: flex;
+  color: #FF7A00;
+  font-size: 16px;
+  -moz-column-gap: 2px;
+       column-gap: 2px;
+  margin-left: auto;
+}
+.main_wrap .main_sec .status_list_item .txt_box:hover {
+  text-decoration: underline;
+}
+.main_wrap .main_sec .status_list_item .txt_box .count {
+  display: block;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  font-family: "Roboto";
+  position: relative;
+  color: #FF7A00;
+}
+.main_wrap .main_sec .status_list_item .txt_box .count .sizing_box {
+  position: absolute;
+  opacity: 0;
+}
+.main_wrap .main_sec .status_list_item .txt_box .unit {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.main_count_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.main_count_item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border: 1px solid #DDDDDD;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 20px 4%;
 }
 .main_count_item .ico_box {
   display: flex;
@@ -11276,20 +11395,14 @@ input::-webkit-search-results-decoration {
   font-weight: bold;
 }
 .main_count_item .txt_box {
-  display: flex;
-  color: #FF7A00;
-  font-size: 16px;
-  -moz-column-gap: 2px;
-       column-gap: 2px;
-  margin-left: auto;
-}
-.main_count_item .txt_box:hover {
-  text-decoration: underline;
+  margin-top: 6px;
 }
 .main_count_item .txt_box .count {
   display: block;
+  font-size: 26px;
+  line-height: 1.2;
   letter-spacing: -0.01em;
-  font-weight: 500;
+  font-weight: bold;
   font-family: "Roboto";
   position: relative;
   color: #FF7A00;
@@ -11297,10 +11410,6 @@ input::-webkit-search-results-decoration {
 .main_count_item .txt_box .count .sizing_box {
   position: absolute;
   opacity: 0;
-}
-.main_count_item .txt_box .unit {
-  font-size: 15px;
-  font-weight: 500;
 }
 
 .calChart_wrap {

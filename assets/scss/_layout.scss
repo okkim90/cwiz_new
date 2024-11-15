@@ -65,6 +65,85 @@
                 }
             }
         }
+        .h_branch {
+            position: relative;
+            
+            padding-left: 11px;
+            margin-left: 10px;
+            z-index: 999;
+            .ico_arrow {
+                margin-left: 6px;
+                opacity: 0.5;
+                transition: all .2s ease-in-out;
+                width: 16px;
+                height: 16px;
+            }
+            .fa-building {
+                margin-right: 6px;
+                color: #393939;
+            }
+            &_current {
+                cursor: pointer;
+                display: block;
+                line-height: 50px;
+            }
+            &:hover {
+                .h_branch_list {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .ico_arrow {
+                    transform: rotate(180deg);
+                }
+            }
+            &_list {
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                right: 0;
+                top: 46px;
+                white-space: nowrap;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(#000, 0.2);
+                box-sizing: border-box;
+                padding: 10px 0;
+                border-radius: 10px;
+                line-height: 30px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -6px;
+                    bottom: 100%;
+                    border-left: 6px solid transparent;
+                    border-right: 6px solid transparent;
+                    border-bottom: 8px solid #fff;
+                }
+
+                transition: all .2s ease-in-out;
+            }
+            &_item {
+                
+                a {
+                    display: block;
+                    padding: 0 18px;
+                }
+                &:hover {
+                    background-color: rgba($c_key, .1);
+                }
+            }
+            
+            &::before {
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: 14px;
+                background-color: #bbb;
+                left: 0;
+                top: 50%;
+                margin-top: -7px;
+            }
+        }
         .h_point {
             margin-left: 10px;
             &_btn {
