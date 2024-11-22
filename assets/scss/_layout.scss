@@ -3139,3 +3139,101 @@
         }
     }
 }
+
+.coupon {
+    &_list {
+        display: flex;
+        @include flex_col(4, 20px, 30px)
+    }
+    &_item {
+        border: 1px solid $c_line;
+        border-radius: 8px;
+        min-width: 0;
+        overflow: hidden;
+        
+    }
+    &_deal {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        padding: 16px;
+        background-color: $c_bg;
+        .img_box {
+            width: 40%;
+            max-width: 120px;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            border: 1px solid $c_line;
+            &_inner {
+                padding-top: 100%;
+                position: relative;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    object-fit: contain;
+                }
+            }
+
+        }
+        .txt_box {
+            flex: 1;
+            font-size: 14px;
+            .tit {
+                color: $c_midGrey;
+                @include text-hidden-single;
+            }
+            .desc {
+                margin-top: 4px;
+                @include text-hidden(2, 1.5);
+            }
+            .price {
+                margin-top: 4px;
+                color: $c_key;
+                text-align: right;
+            }
+        }
+    }
+    &_info {
+        padding: 16px;
+        border-top: 1px dashed $c_line;
+        &_item {
+            display: flex;
+            
+            align-items: center;
+            gap: 0 10px;
+            line-height: 22px;
+            & + & {
+                margin-top: 6px;
+            }
+            dt {
+                color: $c_midGrey;
+            }
+            dd {
+                font-weight: 500;
+                flex: 1;
+                justify-content: flex-end;
+                display: flex;
+                align-items: center;
+                gap: 0 4px;
+                min-width: 0;
+                .coupon_number {
+                    @include text-hidden-single;   
+                }
+                .f_btn {
+                    flex-shrink: 0;
+                }
+            }
+        }
+    }
+    &_btns {
+        padding: 16px;
+        border-top: 1px dashed $c_line;
+        display: flex;
+        justify-content: center;
+        gap: 0 8px;
+    }
+}

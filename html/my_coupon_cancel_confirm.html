@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Generator" content="KIC">
+    <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Description" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <title>교정마법사 CWIZ - CALIBRATION WIZARD</title>
+    <script src="https://kit.fontawesome.com/8f18490998.js" crossorigin="anonymous" ></script>
+    <script src="../assets/js/jquery-3.1.1.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/datepicker.css">
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+</head>
+<body>
+    <div id="skip-nav">
+        <a href="#container"></a>
+    </div>
+    
+    <div id="wrap" class="grid-container">
+        <!-- header -->
+        <header class="header">
+            <h1 class="logo"><a href=""><img src="../assets/images/common/logo.svg" alt=""></a></h1>
+            <div class="h_util">
+                <div class="h_util_sec h_user">
+                    <i class="fa-solid fa-user"></i><a href="" class="user_name">홍길동</a> 님 
+                </div>
+                <div class="h_util_sec h_point">
+                    <a href="" class="h_point_btn">
+                        <span class="h_point_ico">P</span>
+                        <span class="h_point_cont">129,005</span>
+                    </a>
+                </div>
+                <div class="h_util_sec h_btns">
+                    <!--[D] 알림(종) 활성화  'on' class 추가-->
+                    <button type="button" class="h_btn ty_notice on" onclick="f_alert_open();">
+                        <i class="fa-solid fa-bell"></i>
+                    </button>
+                    <a href="" class="h_btn ty_logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </div>
+                <div class="f_alert_box">
+                    <div class="f_alert_top">
+                        <h2 class="tit">알림</h2>
+                        <label class="f_toggle ml10">
+                            <input type="checkbox" class="alert_chk" onchange="f_alert_chk(this)" >
+                            <span class="slider">
+                                <div class="slider_txt false">전체</div>
+                                <div class="slider_txt true">미확인</div>
+                            </span>
+                        </label>
+                        <button type="button" class="f_alert_close ml_auto" onclick="f_alert_close()">
+                            <span class="blind">팝업 닫기</span>
+                        </button>
+                    </div>
+                    <ul class="f_alert_list">
+                        <!--[D] 이미 읽은 상태일 경우 'read' class 추가-->
+                        <li class="f_alert_item ">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 공지알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_notice.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item read">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 교정결과 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_cal.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item ">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 교정예정일 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_due.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item ">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 견적요청 승인 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_estimate.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item read">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 공지알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_notice.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 견적요청 승인 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_estimate.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item read">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 견적요청 승인 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_estimate.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="" class="btn_mall">포인트몰</a>
+        </header>
+        <!--// header -->
+        <!-- nav -->
+        <aside class="sidenav">
+
+            <button type="button" class="btn_nav_toggle"><i class="fa-solid fa-chevron-left"></i></button>
+            <!--[D] 회사로고 없을경우-->
+            <div class="sidenav_top">
+                <div class="msg_box">
+                    안녕하세요. <br>
+                    <b>(주)피엔케이피부임상연구센터</b> <br> 
+                    <b>김영술</b>님
+                </div>
+                <button type="button" class="btn_add_logo"  onclick="open_popup('pop_logo')">
+                    <i class="fa-solid fa-image"></i>
+                </button>
+            </div>
+            
+
+            <!--[D] 회사로고 있는 경우-->
+            <div class="sidenav_top">
+                <div class="img_box">
+                    <img src="../assets/images/common/Tesla_logo.png" alt="">
+                </div>
+                <button type="button" class="btn_add_logo" onclick="open_popup('pop_logo')">
+                    <i class="fa-solid fa-image"></i>
+                </button>
+            </div>
+
+            <div class="layer_popup pop_logo" onclick="close_popup(this)">
+                <div class="layer_popup_inner">
+                    <div class="layer_popup_cont ty_small">
+                        <button type="button" class="close_popup" onclick="close_popup(this)">
+                            <span class="blind">팝업 닫기</span>
+                        </button>
+                        <div class="sub_tit">
+                            <h1 class="tit1">로고 이미지 등록</h1>
+                        </div>
+                        <form action="">
+                            <!--[D] 이미지 첨부 전 -->
+                            <div class="img_box ty_upload ty_logo">
+                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
+                                <label for="upload_eq_img" class="btn_img_upluad">
+                                    <i class="fa-solid fa-image"></i>
+                                    <p>이미지 첨부하기 (260 x 90)</p>
+                                </label>
+                            </div>
+                            <!--// [D] 이미지 첨부 전 -->
+                            
+                            <br><!--[D] 개발시 삭제-->
+
+                             <!--[D] 이미지 첨부 후 -->
+                            <div class="img_box ty_upload ty_logo">
+                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
+                                <div class="img_box_edit">
+                                    <label for="upload_eq_img" class="img_box_edit_btn"><i class="fa-solid fa-rotate"></i><span class="blind">수정</span></label>
+                                    <button type="button" class="img_box_edit_btn"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button>
+                                </div>
+                                <img src="../assets/images/common/Tesla_logo.png" alt="">
+                            </div>  
+                            <!--[D] 이미지 첨부 후 -->                
+                            <div class="btn_set mt20 taC">
+                                <input type="submit" class="f_btn ty_small _key w_80" value="등록">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <ul class="nav">
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu1"></i>견적 관리</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">견적 요청</a></li>
+                            <li><a href="" class="btn_dep2">견적 확인</a></li>
+                            <li><a href="" class="btn_dep2">교정 수수료 조회</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu2"></i>접수 관리</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">예약 접수</a></li>
+                            <li><a href="" class="btn_dep2">예약 접수 목록</a></li>
+                            <li><a href="" class="btn_dep2">접수 확인</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu3"></i>교정 관리</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">교정 진행 현황</a></li>
+                            <li><a href="" class="btn_dep2">교정 이력 조회</a></li>
+                            <li><a href="" class="btn_dep2">불량 이력 조회</a></li>
+                            <li><a href="" class="btn_dep2">수리 이력 조회</a></li>
+                            <li><a href="" class="btn_dep2">우리 장비 목록</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu4"></i>정산/출고 관리</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">정산 관리</a></li>
+                            <li><a href="" class="btn_dep2">출고 관리</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item on">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu8"></i>포인트몰</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2 on">모바일 쿠폰</a></li>
+                            <!-- <li><a href="" class="btn_dep2">네이버페이</a></li> -->
+                            <li><a href="" class="btn_dep2">내 쿠폰함</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu5"></i>고객 지원</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">공지사항</a></li>
+                            <li><a href="" class="btn_dep2">자료실</a></li>
+                            <li><a href="" class="btn_dep2">자주하는 질문</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu6"></i>마이페이지</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">내 정보</a></li>
+                            <li><a href="" class="btn_dep2">내 문의 관리</a></li>
+                            <li><a href="" class="btn_dep2">성적서 업체 관리</a></li>
+                            <li><a href="" class="btn_dep2">포인트 관리</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu7"></i>관리자</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">회원 관리</a></li>
+                            <li><a href="" class="btn_dep2">문의 관리</a></li>
+                            <li><a href="" class="btn_dep2">공지사항 관리</a></li>
+                            <li><a href="" class="btn_dep2">자료실 관리</a></li>
+                            <li><a href="" class="btn_dep2">FAQ 관리</a></li>
+                        </ul>
+                    </div>                 
+                </li>
+            </ul>
+        </aside>
+        <!-- // nav -->
+
+        <!--container-->
+        <main id="container" class="container">
+            <div id="contents" class="contents">
+                <a href="javascript:history.back()" class="btn_back"><span class="blind">뒤로가기</span></a>
+                <!-- [D] breadcrumb -->
+                <nav class="breadcrumb_area">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb_item">
+                            <a href="/">
+                                <i class="fa-solid fa-house"></i>
+                                <span class="blind">home</span>
+                            </a>
+                        </li>
+                        <li class="breadcrumb_item" >
+                            <a href="#">포인트몰</a>
+                        </li>
+                        <li class="breadcrumb_item">
+                            내 쿠폰함
+                        </li>
+                    </ol>
+                </nav>
+                <!--// [D] breadcrumb -->
+                <div class="sub_tit">
+                    <h1 class="tit1">내 쿠폰함</h1>
+                </div>
+                <section class="sec">
+                    <ul class="coupon_cate">
+                        <!--[D] coupon_cate_btn 활성화 'on' class-->
+                        <li class="coupon_cate_item"><button class="coupon_cate_btn on">최근 3개월</button></li>
+                        <li class="coupon_cate_item"><button class="coupon_cate_btn">최근 6개월</button></li>
+                        <li class="coupon_cate_item"><button class="coupon_cate_btn">최근 1년</button></li>
+                    </ul>
+                </section>
+                <section class="sec mt30">
+                    <div class="sub_tit2 mb20 d_flex al_b">
+                        <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2>
+                        <form action="" class="d_flex _gap4 ml_auto">
+                            <input type="text" class="f_input ty_mid w_260" placeholder="상품명 / 브랜드명을 검색해주세요.">
+                            <button type="submit" class="f_btn ty_mid _key w_70">
+                                검색 <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <ul class="coupon_list">
+                        <li class="coupon_item col_item">
+                            <div class="coupon_deal">
+                                <div class="img_box">
+                                    <div class="img_box_inner">
+                                        <img src="../assets/images/common/gift_sample.webp" alt="">
+                                    </div>
+                                </div>
+                                <div class="txt_box">
+                                    <div class="tit">스타벅스</div>
+                                    <div class="desc">카페 아메리카노 T 2잔</div>
+                                    <div class="price"><b>99,000,000</b> P</div>
+                                </div>
+                            </div>
+                            <div class="coupon_info">
+                                <dl class="coupon_info_item">
+                                    <dt>유효기간</dt>
+                                    <dd>2024년 12년 31일</dd>
+                                </dl>
+                                <dl class="coupon_info_item">
+                                    <dt>쿠폰번호</dt>
+                                    <dd>                        
+                                        <span class="coupon_number">NO124AV785431</span> 
+                                        <button type="button" class="f_btn ty_xsmall _solidGrey pd10">복사</button>  
+                                    </dd>
+                                </dl>
+                                <dl class="coupon_info_item">
+                                    <dt>구매일</dt>
+                                    <dd>2024년 12년 31일</dd>
+                                </dl>
+                                <dl class="coupon_info_item">
+                                    <dt>쿠폰상태</dt>
+                                    <dd>미사용</dd>
+                                </dl>
+                            </div>
+                            <div class="coupon_btns">
+                                <button type="button" class="f_btn ty_small2 w_100 _key">재구매</button>
+                                <button type="button" class="f_btn ty_small2 w_100 _red">환불(취소)</button>
+                            </div>
+                        </li>
+                        <li class="coupon_item col_item">
+                            <div class="coupon_deal">
+                                <div class="img_box">
+                                    <div class="img_box_inner">
+                                        <img src="../assets/images/common/gift_sample.webp" alt="">
+                                    </div>
+                                </div>
+                                <div class="txt_box">
+                                    <div class="tit">스타벅스</div>
+                                    <div class="desc">카페 아메리카노 T 2잔</div>
+                                    <div class="price"><b>99,000,000</b> P</div>
+                                </div>
+                            </div>
+                            <div class="coupon_info">
+                                <dl class="coupon_info_item">
+                                    <dt>유효기간</dt>
+                                    <dd>2024년 12년 31일</dd>
+                                </dl>
+                                <dl class="coupon_info_item">
+                                    <dt>쿠폰번호</dt>
+                                    <dd>                        
+                                        <span class="coupon_number">NO124AV785431</span> 
+                                        <button type="button" class="f_btn ty_xsmall _solidGrey pd10">복사</button>  
+                                    </dd>
+                                </dl>
+                                <dl class="coupon_info_item">
+                                    <dt>구매일</dt>
+                                    <dd>2024년 12년 31일</dd>
+                                </dl>
+                                <dl class="coupon_info_item">
+                                    <dt>쿠폰상태</dt>
+                                    <dd>미사용</dd>
+                                </dl>
+                            </div>
+                            <div class="coupon_btns">
+                                <button type="button" class="f_btn ty_small2 w_100 _key">재구매</button>
+                                <button type="button" class="f_btn ty_small2 w_100 _red">환불(취소)</button>
+                            </div>
+                        </li>
+                        <li class="coupon_item col_item">
+                            <div class="coupon_deal">
+                                <div class="img_box">
+                                    <div class="img_box_inner">
+                                        <img src="../assets/images/common/gift_sample.webp" alt="">
+                                    </div>
+                                </div>
+                                <div class="txt_box">
+                                    <div class="tit">스타벅스</div>
+                                    <div class="desc">"부드러운 디저트" 카페 아메리카노 T 2잔 + 부드러운 생크림 카스텔라</div>
+                                    <div class="price"><b>99,000,000</b> P</div>
+                                </div>
+                            </div>
+                            <div class="coupon_info">
+                                <dl class="coupon_info_item">
+                                    <dt>유효기간</dt>
+                                    <dd>2024년 12년 31일</dd>
+                                </dl>
+                                <dl class="coupon_info_item">
+                                    <dt>쿠폰번호</dt>
+                                    <dd>
+                                        <span class="coupon_number">NO124AV7854AV78543131</span>                       
+                                        <button type="button" class="f_btn ty_xsmall _solidGrey pd10">복사</button>
+                                    </dd>
+                                </dl>
+                                <dl class="coupon_info_item">
+                                    <dt>구매일</dt>
+                                    <dd>2024년 12년 31일</dd>
+                                </dl>
+                                <dl class="coupon_info_item">
+                                    <dt>쿠폰상태</dt>
+                                    <dd>사용완료</dd>
+                                </dl>
+                            </div>
+                            <div class="coupon_btns">
+                                <button type="button" class="f_btn ty_small2 w_100 _key">재구매</button>
+                                <button type="button" class="f_btn ty_small2 w_100 _midGrey">삭제</button>
+                            </div>
+                        </li>
+                        <li class="coupon_item col_item">
+                            <div class="coupon_deal">
+                                <div class="img_box">
+                                    <div class="img_box_inner">
+                                        <img src="../assets/images/common/gift_sample.webp" alt="">
+                                    </div>
+                                </div>
+                                <div class="txt_box">
+                                    <div class="tit">스타벅스</div>
+                                    <div class="desc">"부드러운 디저트" 카페 아메리카노 T 2잔 + 부드러운 생크림 카스텔라</div>
+                                    <div class="price"><b>99,000,000</b> P</div>
+                                </div>
+                            </div>
+                            <div class="coupon_info">
+                                <dl class="coupon_info_item">
+                                    <dt>유효기간</dt>
+                                    <dd>2024년 12년 31일</dd>
+                                </dl>
+                                <dl class="coupon_info_item">
+                                    <dt>쿠폰번호</dt>
+                                    <dd>
+                                        <span class="coupon_number">NO124AV7854NO124AV785431NO124AV785431NO124AV78543131</span>                       
+                                        <button type="button" class="f_btn ty_xsmall _solidGrey pd10">복사</button>
+                                    </dd>
+                                </dl>
+                                <dl class="coupon_info_item">
+                                    <dt>구매일</dt>
+                                    <dd>2024년 12년 31일</dd>
+                                </dl>
+                                <dl class="coupon_info_item">
+                                    <dt>쿠폰상태</dt>
+                                    <dd>사용완료</dd>
+                                </dl>
+                            </div>
+                            <div class="coupon_btns">
+                                <button type="button" class="f_btn ty_small2 w_100 _key">재구매</button>
+                                <button type="button" class="f_btn ty_small2 w_100 _midGrey">삭제</button>
+                            </div>
+                        </li>
+                        <li class="coupon_item col_item">
+                            <div class="coupon_deal">
+                                <div class="img_box">
+                                    <div class="img_box_inner">
+                                        <img src="../assets/images/common/gift_sample.webp" alt="">
+                                    </div>
+                                </div>
+                                <div class="txt_box">
+                                    <div class="tit">스타벅스</div>
+                                    <div class="desc">"부드러운 디저트" 카페 아메리카노 T 2잔 + 부드러운 생크림 카스텔라</div>
+                                    <div class="price"><b>99,000,000</b> P</div>
+                                </div>
+                            </div>
+                            <div class="coupon_info">
+                                <dl class="coupon_info_item">
+                                    <dt>유효기간</dt>
+                                    <dd>2024년 12년 31일</dd>
+                                </dl>
+                                <dl class="coupon_info_item">
+                                    <dt>쿠폰번호</dt>
+                                    <dd>
+                                        <span class="coupon_number">NO124AV7854NO124AV785431NO124AV785431NO124AV78543131</span>                       
+                                        <button type="button" class="f_btn ty_xsmall _solidGrey pd10">복사</button>
+                                    </dd>
+                                </dl>
+                                <dl class="coupon_info_item">
+                                    <dt>구매일</dt>
+                                    <dd>2024년 12년 31일</dd>
+                                </dl>
+                                <dl class="coupon_info_item">
+                                    <dt>쿠폰상태</dt>
+                                    <dd>사용완료</dd>
+                                </dl>
+                            </div>
+                            <div class="coupon_btns">
+                                <button type="button" class="f_btn ty_small2 w_100 _key">재구매</button>
+                                <button type="button" class="f_btn ty_small2 w_100 _midGrey">삭제</button>
+                            </div>
+                        </li>
+                        <li class="coupon_item col_item">
+                            <div class="coupon_deal">
+                                <div class="img_box">
+                                    <div class="img_box_inner">
+                                        <img src="../assets/images/common/gift_sample.webp" alt="">
+                                    </div>
+                                </div>
+                                <div class="txt_box">
+                                    <div class="tit">스타벅스</div>
+                                    <div class="desc">"부드러운 디저트" 카페 아메리카노 T 2잔 + 부드러운 생크림 카스텔라</div>
+                                    <div class="price"><b>99,000,000</b> P</div>
+                                </div>
+                            </div>
+                            <div class="coupon_info">
+                                <dl class="coupon_info_item">
+                                    <dt>유효기간</dt>
+                                    <dd>2024년 12년 31일</dd>
+                                </dl>
+                                <dl class="coupon_info_item">
+                                    <dt>쿠폰번호</dt>
+                                    <dd>
+                                        <span class="coupon_number">NO124AV7854NO124AV785431NO124AV785431NO124AV78543131</span>                       
+                                        <button type="button" class="f_btn ty_xsmall _solidGrey pd10">복사</button>
+                                    </dd>
+                                </dl>
+                                <dl class="coupon_info_item">
+                                    <dt>구매일</dt>
+                                    <dd>2024년 12년 31일</dd>
+                                </dl>
+                                <dl class="coupon_info_item">
+                                    <dt>쿠폰상태</dt>
+                                    <dd>사용완료</dd>
+                                </dl>
+                            </div>
+                            <div class="coupon_btns">
+                                <button type="button" class="f_btn ty_small2 w_100 _key">재구매</button>
+                                <button type="button" class="f_btn ty_small2 w_100 _midGrey">삭제</button>
+                            </div>
+                        </li>
+                        <li class="coupon_item col_item">
+                            <div class="coupon_deal">
+                                <div class="img_box">
+                                    <div class="img_box_inner">
+                                        <img src="../assets/images/common/gift_sample.webp" alt="">
+                                    </div>
+                                </div>
+                                <div class="txt_box">
+                                    <div class="tit">스타벅스</div>
+                                    <div class="desc">"부드러운 디저트" 카페 아메리카노 T 2잔 + 부드러운 생크림 카스텔라</div>
+                                    <div class="price"><b>99,000,000</b> P</div>
+                                </div>
+                            </div>
+                            <div class="coupon_info">
+                                <dl class="coupon_info_item">
+                                    <dt>유효기간</dt>
+                                    <dd>2024년 12년 31일</dd>
+                                </dl>
+                                <dl class="coupon_info_item">
+                                    <dt>쿠폰번호</dt>
+                                    <dd>
+                                        <span class="coupon_number">NO124AV7854NO124AV785431NO124AV785431NO124AV78543131</span>                       
+                                        <button type="button" class="f_btn ty_xsmall _solidGrey pd10">복사</button>
+                                    </dd>
+                                </dl>
+                                <dl class="coupon_info_item">
+                                    <dt>구매일</dt>
+                                    <dd>2024년 12년 31일</dd>
+                                </dl>
+                                <dl class="coupon_info_item">
+                                    <dt>쿠폰상태</dt>
+                                    <dd>사용완료</dd>
+                                </dl>
+                            </div>
+                            <div class="coupon_btns">
+                                <button type="button" class="f_btn ty_small2 w_100 _key">재구매</button>
+                                <button type="button" class="f_btn ty_small2 w_100 _midGrey">삭제</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="paging_wrap">
+                        <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
+                        <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
+                        <ul class="paging_list">
+                            <li><span class="paging_btn current">1</span></li>
+                            <li><a href="" class="paging_btn">2</a></li>
+                            <li><a href="" class="paging_btn">3</a></li>
+                            <li><a href="" class="paging_btn">4</a></li>
+                            <li><a href="" class="paging_btn">5</a></li>
+                        </ul>
+                        <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
+                        <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
+                    </div>
+                </section>              
+            </div>
+            <!--[D] 환불(취소) 완료 팝업-->
+            <div class="layer_popup deal_confirm on">
+                <div class="layer_popup_inner">
+                    <div class="layer_popup_cont ty_deal">
+                        <button type="button" class="close_popup" onclick="close_popup(this)">
+                            <span class="blind">팝업 닫기</span>
+                        </button>
+                        <div class="deal_detail">
+                            <div class="deal_confirm">
+                                <div class="deal_confirm_txt fz_mid mt30">
+                                    ["부드러운 디저트" 카페 아메리카노 T 2잔 + 부드러운 생크림 카스텔라] 모바일 쿠폰은 <br> 
+                                    <span class="fc_red fwM">환불(취소)</span>되었습니다.
+                                </div>
+                            </div>
+                            <div class="btn_set taC">
+                                <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="close_popup(this)">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--//[D] 환불(취소) 완료 팝업-->
+        </main>
+        <!--//container-->
+        <!--footer-->
+        <footer class="footer">
+            <!-- <div class="footer_top">
+                <div class="inner">
+                    <ul class="footer_top_nav ">
+                        <li><a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a></li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="footer_logo">
+                <img src="../assets/images/common/logo_footer.svg" alt="KIC 코리아인스트루먼트(주)">
+            </div>
+            <div class="footer_info">
+                <ul class="footer_info_list">
+                    <li>코리아인스트루먼트(주)</li>
+                    <li><span class="bar"></span>사업자등록번호 : 101-81-45861</li>
+                    <li><span class="bar"></span>대표이사 : 정재호</li>
+                </ul>
+                <p class="copy">Copyright@KIC, Korea Instrument All Rights Reserved.</p>
+                <div class="contact">
+                    <b><i class="fa-solid fa-phone"></i> CONTACT US</b> 
+                    <span class="bar"></span>
+                    <span>1600 - 4245</span>
+                </div>
+            </div>
+            <div class="footer_right">
+                <div class="footer_right_btns">
+                    <a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a>
+                    <span class="bar"></span>
+                    <a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a>
+                </div>
+                <div class="footer_right_branch">
+                    <button class="btn_trigger">코리아인스트루먼트(주) 지점안내</button>
+                    <ul class="branch_list">
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=0" target="_blank">코리아인스트루먼트(주) 서울본사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=1" target="_blank">코리아인스트루먼트(주) 부산지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=2" target="_blank">코리아인스트루먼트(주) 대전지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=3" target="_blank">코리아인스트루먼트(주) 가평지안</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!--//footer-->
+    </div>
+    
+</body>
+</html>
