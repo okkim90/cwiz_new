@@ -20,6 +20,7 @@
         align-items: center;
         justify-content: center;
     }
+    
     &_cont {
         position: relative;
         background-color: #fff;
@@ -64,7 +65,13 @@
                 margin-top: 20px;
             }
         }
+        &.ty_deal {
+            width: 400px;
+            padding-bottom: 0;
+            
+        }
     }
+
 
     .sec {
         &:first-of-type {

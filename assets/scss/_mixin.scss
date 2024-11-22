@@ -39,7 +39,7 @@ $breakpoint-pcrm: 1700px;
     line-height: calc(($lineHeight * $line) / $line);
     
 
-    @if $auto ==auto {
+    @if $auto == auto {
         //영역 자동
         max-height: $lineHeight * $line;
     }

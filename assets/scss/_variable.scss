@@ -325,6 +325,15 @@ $inner: 1280px;
     flex-wrap: $wrap;
 }
 
+@mixin flex_col($col ,$gapX, $gapY){
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gapY $gapX;
+    .col_item {
+        width: calc((100% / $col) - ((($col - 1)/$col)*$gapX));
+    }
+} 
+
 
 .d_flex {
     display: flex;
@@ -403,6 +412,9 @@ $inner: 1280px;
 }
 .taC {
     text-align: center;
+}
+.td_u {
+    text-decoration: underline;
 }
 
 .fwB {
