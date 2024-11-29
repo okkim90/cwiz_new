@@ -8023,7 +8023,7 @@ input::-webkit-search-results-decoration {
   display: block;
   width: 260px;
   height: auto;
-  min-height: 90px;
+  height: 260px;
 }
 .img_box.ty_upload img {
   width: 100%;
