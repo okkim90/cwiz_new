@@ -5984,7 +5984,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.5em;
-  height: 3emem;
+  height: 3em;
 }
 
 .t_hidden_3 {
@@ -5995,7 +5995,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.5em;
-  height: 4.5emem;
+  height: 4.5em;
 }
 
 .t_hidden_4 {
@@ -6006,7 +6006,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.5em;
-  height: 6emem;
+  height: 6em;
 }
 
 .t_hidden_5 {
@@ -6017,7 +6017,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.5em;
-  height: 7.5emem;
+  height: 7.5em;
 }
 
 .t_hidden_6 {
@@ -6028,7 +6028,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.5em;
-  height: 9emem;
+  height: 9em;
 }
 
 .t_hidden_7 {
@@ -6039,7 +6039,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.5em;
-  height: 10.5emem;
+  height: 10.5em;
 }
 
 .t_hidden_8 {
@@ -6050,7 +6050,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.5em;
-  height: 12emem;
+  height: 12em;
 }
 
 .t_hidden_9 {
@@ -6061,7 +6061,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.5em;
-  height: 13.5emem;
+  height: 13.5em;
 }
 
 .t_hidden_10 {
@@ -6072,7 +6072,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.5em;
-  height: 15emem;
+  height: 15em;
 }
 
 /* noto-sans-kr-100 - korean_latin */
@@ -6826,7 +6826,7 @@ input::-webkit-search-results-decoration {
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 17px;
-  max-height: 34pxem;
+  max-height: 34px;
 }
 .header .btn_mall {
   position: absolute;
@@ -6964,23 +6964,44 @@ input::-webkit-search-results-decoration {
   line-height: 1;
 }
 .sidenav_top {
-  width: 200px;
-  margin: 0 auto;
   border-radius: 10px;
   overflow: hidden;
-  min-height: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 10px;
   flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  border: 1px solid #DDDDDD;
+  background-color: #fff;
+}
+.sidenav_top_wrap {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  margin: 10px;
+  margin-bottom: 0;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #DDDDDD;
 }
 .sidenav_top .img_box {
-  width: 130px;
-  min-height: 45px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.sidenav_top .img_box .ico_no_img {
+  position: absolute;
+  font-size: 36px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #ddd;
 }
 .sidenav_top .img_box img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -6999,11 +7020,24 @@ input::-webkit-search-results-decoration {
   top: 0;
   z-index: 10;
   color: #fff;
-  font-size: 30px;
+  font-size: 20px;
 }
-.sidenav .msg_box {
-  text-align: center;
+.sidenav .msg_box a:hover {
+  text-decoration: underline;
+}
+.sidenav .msg_box_name {
   font-size: 14px;
+}
+.sidenav .msg_box_name a {
+  word-break: break-all;
+}
+.sidenav .msg_box_company {
+  font-size: 13px;
+  color: #777;
+  margin-top: 3px;
+}
+.sidenav .msg_box_company a {
+  word-break: break-all;
 }
 .sidenav .msg_box b {
   word-break: break-all;
@@ -7037,7 +7071,7 @@ input::-webkit-search-results-decoration {
 }
 .sidenav .nav_item.on .nav_dep2_box {
   overflow: hidden;
-  max-height: 272px;
+  max-height: 400px;
   transition: all 0.25s ease;
 }
 .sidenav .nav_item.on .btn_dep1 {
@@ -9064,7 +9098,7 @@ input::-webkit-search-results-decoration {
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 32px;
-  max-height: 64pxem;
+  max-height: 64px;
   padding: 0 20px;
   font-size: 16px;
   word-break: break-all;
@@ -9269,7 +9303,7 @@ input::-webkit-search-results-decoration {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1.5;
+  line-height: 1.5em;
   max-height: 3em;
   word-break: break-all;
   margin-top: 6px;
@@ -9310,7 +9344,7 @@ input::-webkit-search-results-decoration {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1.5;
+  line-height: 1.5em;
   max-height: 3em;
   word-break: break-all;
   margin-top: 6px;
@@ -9487,7 +9521,7 @@ input::-webkit-search-results-decoration {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1.5;
+  line-height: 1.5em;
   height: 3em;
 }
 .coupon_deal .txt_box .price {
@@ -9683,7 +9717,7 @@ input::-webkit-search-results-decoration {
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 17px;
-  max-height: 34pxem;
+  max-height: 34px;
   padding: 0 20px;
   font-size: 12px;
   word-break: break-all;

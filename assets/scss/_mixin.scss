@@ -41,12 +41,12 @@ $breakpoint-pcrm: 1700px;
 
     @if $auto == auto {
         //영역 자동
-        max-height: $lineHeight * $line + em;
+        max-height: $lineHeight * $line ;
     }
 
     @else {
         //처음부터 영역잡히게
-        height: $lineHeight * $line + em;
+        height: $lineHeight * $line ;
     }
 }
 

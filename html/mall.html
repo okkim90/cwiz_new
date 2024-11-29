@@ -158,26 +158,20 @@
 
             <button type="button" class="btn_nav_toggle"><i class="fa-solid fa-chevron-left"></i></button>
             <!--[D] 회사로고 없을경우-->
-            <div class="sidenav_top">
+            <div class="sidenav_top_wrap">
+                <div class="sidenav_top">
+                    <div class="img_box">
+                        <i class="fa-solid fa-user ico_no_img"></i>
+                        <!-- <img src="../assets/images/common/Tesla_logo.png" alt=""> -->
+                    </div>
+                    <button type="button" class="btn_add_logo" onclick="open_popup('pop_logo')">
+                        <i class="fa-solid fa-image"></i>
+                    </button>
+                </div>
                 <div class="msg_box">
-                    안녕하세요. <br>
-                    <b>(주)피엔케이피부임상연구센터</b> <br> 
-                    <b>김영술</b>님
+                    <p class="msg_box_name"><a href=""><b>김영술</b></a>님 안녕하세요.</p>
+                    <p class="msg_box_company"><a href="">코리아인스트루먼트(주)</a></p>   
                 </div>
-                <button type="button" class="btn_add_logo"  onclick="open_popup('pop_logo')">
-                    <i class="fa-solid fa-image"></i>
-                </button>
-            </div>
-            
-
-            <!--[D] 회사로고 있는 경우-->
-            <div class="sidenav_top">
-                <div class="img_box">
-                    <img src="../assets/images/common/Tesla_logo.png" alt="">
-                </div>
-                <button type="button" class="btn_add_logo" onclick="open_popup('pop_logo')">
-                    <i class="fa-solid fa-image"></i>
-                </button>
             </div>
 
             <div class="layer_popup pop_logo" onclick="close_popup(this)">
