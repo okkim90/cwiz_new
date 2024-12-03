@@ -2621,8 +2621,9 @@
     li {
         list-style:decimal;
         list-style-position: inside;
+        line-height: 1.6;
         & + li {
-            margin-top: 0.2em;
+            margin-top: 0.4em;
         }
     }
 }
@@ -2640,9 +2641,15 @@
 }
 
 .list_bar {
+    &.ty_gap {
+        .list_bar_item + .list_bar_item {
+            margin-top: 0.4em;
+        }
+    }
     &_item {
         display: flex;
         align-items: flex-start;
+        line-height: 1.6;
         &::before {
             content:'-';
             margin-right: 0.4em;
@@ -3276,4 +3283,8 @@
         justify-content: center;
         gap: 0 8px;
     }
+}
+
+.list_num {
+
 }

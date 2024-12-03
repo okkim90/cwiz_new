@@ -8890,9 +8890,10 @@ input::-webkit-search-results-decoration {
 .ol li {
   list-style: decimal;
   list-style-position: inside;
+  line-height: 1.6;
 }
 .ol li + li {
-  margin-top: 0.2em;
+  margin-top: 0.4em;
 }
 
 .ol2_item {
@@ -8905,9 +8906,13 @@ input::-webkit-search-results-decoration {
   margin-top: 0.4em;
 }
 
+.list_bar.ty_gap .list_bar_item + .list_bar_item {
+  margin-top: 0.4em;
+}
 .list_bar_item {
   display: flex;
   align-items: flex-start;
+  line-height: 1.6;
 }
 .list_bar_item::before {
   content: "-";
@@ -10411,11 +10416,11 @@ input::-webkit-search-results-decoration {
   font-weight: 500;
   text-decoration: underline;
   color: #0085FF;
-  font-size: 12px;
 }
 .v_tbl .btn_t_link {
   font-size: inherit;
   text-decoration: none;
+  font-size: 12px;
 }
 .v_tbl .btn_t_link:hover {
   text-decoration: underline;
@@ -10424,6 +10429,7 @@ input::-webkit-search-results-decoration {
 .h_tbl .btn_t_link {
   font-size: inherit;
   text-decoration: none;
+  font-size: 12px;
 }
 .h_tbl .btn_t_link:hover {
   text-decoration: underline;
