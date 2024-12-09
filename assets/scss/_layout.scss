@@ -628,9 +628,7 @@
         &_dep2 {
             //visibility: hidden;
             &_box {
-                overflow: hidden;
-                max-height: 0;
-                //transition: all 0.1s ease;
+                display: none;
             }
             
             background-color: rgba($c_key, .05);
@@ -645,9 +643,7 @@
                 .nav_dep2 {
                     //visibility: visible;
                     &_box {
-                        overflow: hidden;
-                        max-height: 400px;
-                        transition: all 0.25s ease;
+                        display: block
                     }
                 }
                 .btn_dep1 {

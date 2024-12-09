@@ -7066,13 +7066,10 @@ input::-webkit-search-results-decoration {
   padding: 10px 0;
 }
 .sidenav .nav_dep2_box {
-  overflow: hidden;
-  max-height: 0;
+  display: none;
 }
 .sidenav .nav_item.on .nav_dep2_box {
-  overflow: hidden;
-  max-height: 400px;
-  transition: all 0.25s ease;
+  display: block;
 }
 .sidenav .nav_item.on .btn_dep1 {
   color: #FF7A00;
