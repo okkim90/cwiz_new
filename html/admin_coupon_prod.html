@@ -268,9 +268,9 @@
                             <li><a href="" class="btn_dep2">FAQ 관리</a></li>
                             <li><a href="" class="btn_dep2">사용 안내 관리</a></li>
                             <li><a href="" class="btn_dep2">포인트 관리</a></li>
-                            <li><a href="" class="btn_dep2">포인트몰 상품관리</a></li>
+                            <li><a href="" class="btn_dep2 on">포인트몰 상품관리</a></li>
                             <li><a href="" class="btn_dep2">포인트몰 점검관리</a></li>
-                            <li><a href="" class="btn_dep2 on">포인트몰 구매관리</a></li>
+                            <li><a href="" class="btn_dep2">포인트몰 구매관리</a></li>
                         </ul>
                     </div>                 
                 </li>
@@ -295,13 +295,13 @@
                             <a href="#">관리자</a>
                         </li>
                         <li class="breadcrumb_item">
-                            포인트몰 구매관리
+                            포인트몰 상품관리
                         </li>
                     </ol>
                 </nav>
                 <!--// [D] breadcrumb -->
                 <div class="sub_tit">
-                    <h1 class="tit1">포인트몰 구매관리</h1>
+                    <h1 class="tit1">포인트몰 상품관리</h1>
                 </div>
                 <section class="sec">
                     <form action="">
@@ -309,49 +309,49 @@
                             <table class="v_tbl">
                                 <colgroup>
                                     <col style="width: 120px;">
-                                    <col style="width: 35%;">
+                                    <col>
                                     <col style="width: 120px;">
                                     <col>
                                 </colgroup>
                                 <tbody>
                                     <tr>
-                                        <th>기간 조회</th>
-                                        <td colspan="3">
+                                        <th>카테고리</th>
+                                        <td>
                                             <div class="date_set">
                                                 <select name="" id="" class="f_select ty_small shrink0 w_100">
-                                                    <option value="" selected>쿠폰 발행일</option>
-                                                    <option value="">쿠폰사용일</option>
+                                                    <option value="" selected>전체</option>
+                                                    <option value="">카테고리명</option>
+                                                    <option value="">카테고리명</option>
+                                                    <option value="">카테고리명</option>
+                                                    <option value="">카테고리명</option>
                                                 </select>
-                                                <input type="text" class="f_input ty_small inp_date date_start" readonly="" id=""> ~
-                                                <input type="text" class="f_input ty_small inp_date date_end" readonly="" id="">
-                                                <button type="button" onclick="set_3m(this)" class="f_btn ty_xsmall _round _blue_op w_50">3개월</button>
-                                                <button type="button" onclick="set_6m(this)" class="f_btn ty_xsmall _round _navy_op w_50">6개월</button>
-                                                <button type="button" onclick="set_1y(this)" class="f_btn ty_xsmall _round _purple_op w_50">1년</button>
                                             </div>
                                         </td>
-                                    </tr>
-                                    <tr>
                                         <th>검색어</th>
                                         <td>
                                             <div class="d_flex _gap5">
                                                 <select name="" id="" class="f_select ty_small shrink0 w_100">
-                                                    <option value="" selected>아이디</option>
-                                                    <option value="">담당자명</option>
-                                                    <option value="">휴대폰번호</option>
-                                                    <option value="">쿠폰 번호</option>
-                                                    <option value="">쿠폰 상품명</option>
+                                                    <option value="" selected>상품명</option>
+                                                    <option value="">상품번호</option>
+                                                    <option value="">브랜드명</option>
                                                 </select>
                                                 <input type="text" class="f_input ty_small w_300">
                                             </div>
                                         </td>
-                                        <th>쿠폰 상태</th>
+                                    </tr>
+                                    <tr>
+                                        <th>판매 구분</th>
                                         <td>
                                             <div class="chk_list">
-                                                <label class="chk_item"><input type="radio" name="use" checked> 전체</label>
-                                                <label class="chk_item"><input type="radio" name="use"> 쿠폰 발행</label>
-                                                <label class="chk_item"><input type="radio" name="use"> 쿠폰 사용</label>
-                                                <label class="chk_item"><input type="radio" name="use"> 쿠폰 폐기</label>
-                                                <label class="chk_item"><input type="radio" name="use"> 쿠폰 사용중</label>
+                                                <label class="chk_item"><input type="checkbox" checked> 판매중</label>
+                                                <label class="chk_item"><input type="checkbox"> 판매중단</label>
+                                            </div>
+                                        </td>
+                                        <th>노출 여부</th>
+                                        <td>
+                                            <div class="chk_list">
+                                                <label class="chk_item"><input type="checkbox" checked> 노출</label>
+                                                <label class="chk_item"><input type="checkbox"> 비노출</label>
                                             </div>
                                         </td>
                                     </tr>
@@ -382,106 +382,73 @@
                         <table class="h_tbl tl_fixed">
                             <colgroup>
                                 <col style="width: 60px;">
-                                <col style="width: 100px;">
-                                <col style="width: 80px;">
-                                <col style="width: 100px;">
+                                <col style="width: 120px;">
                                 <col style="width: 120px;">
                                 <col>
-                                <col style="width: 90px;">
+                                <col>
+                                <col style="width: 100px;">
+                                <col style="width: 100px;">
                                 <col style="width: 80px;">
                                 <col style="width: 80px;">
                                 <col style="width: 80px;">
-                                <col style="width: 75px;">
-                                <col style="width: 70px;">
                             </colgroup>
                             <thead>
                                 <tr>
                                     <th class="th_fixed">NO</th>
-                                    <th class="th_fixed">아이디</th>
-                                    <th class="th_fixed">담당자명</th>
-                                    <th class="th_fixed">휴대폰 번호</th>
-                                    <th class="th_fixed">쿠폰 번호</th>
-                                    <th class="th_fixed">쿠폰 상품명</th>
-                                    <th class="th_fixed">쿠폰 구입금액</th>
-                                    <th class="th_fixed">쿠폰 발행일</th>
-                                    <th class="th_fixed"  style="z-index: 100;">쿠폰 상태
-                                        <div class="f_tooltip">
-                                            <i class="f_tooltip_ico fa-solid fa-circle-info" aria-hidden="true"></i>
-                                            <div class="f_tooltip_cont">
-                                                <div class="fwB">쿠폰상태 안내</div>
-                                                <ul class="list_dot mt6 no_gap">
-                                                    <li class="list_item">쿠폰 발행: 교환대기상태, 미사용</li>
-                                                    <li class="list_item">쿠폰 사용: 교환상태, 사용</li>
-                                                    <li class="list_item">쿠폰 폐기: 쿠폰발행취소상태</li>
-                                                    <li class="list_item">쿠폰 사용중: 교환상태, 사용중</li>
-                                                </ul>
-                                            </div>
-                                        </div> 
-                                    </th>
-                                    <th class="th_fixed">쿠폰 사용일</th>
-                                    <th class="th_fixed">쿠폰 재발송</th>
-                                    <th class="th_fixed">상세보기</th>
+                                    <th class="th_fixed">상품번호</th>
+                                    <th class="th_fixed">카테고리</th>
+                                    <th class="th_fixed">브랜드명</th>
+                                    <th class="th_fixed">상품명</th>
+                                    <th class="th_fixed">상품금액</th>
+                                    <th class="th_fixed">최초 등록일</th>
+                                    <th class="th_fixed">판매 구분</th>
+                                    <th class="th_fixed">상세 보기</th>
+                                    <th class="th_fixed">노출여부</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>9999</td>
-                                    <td>ralo***</td>
-                                    <td>장원영</td>
-                                    <td>010-1234-1234</td>
-                                    <td>98798796546</td>
-                                    <td class="ellipsisTooltip">스타벅스 아메리카노 스타벅스 아메리카노스타벅스 아메리카노</td>
-                                    <td>99,999,000</td>
+                                    <td>NO_GOODS</td>
+                                    <td>CATEGORY</td>
+                                    <td>NM_GOODS_COMPANY</td>
+                                    <td>NM_GOODS</td>
+                                    <td>CPN_PRICE</td>
                                     <td>2024-11-11</td>
-                                    <td>쿠폰사용중</td>
-                                    <td>2024-11-10</td>
-                                    <td><button type="button" class="f_btn ty_xsmall _round _key w_50">재발송</button></td>
+                                    <td>판매중단</td> 
                                     <td><a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a></td>
+                                    <td>
+                                        <label class="f_toggle ty_small">
+                                            <input type="checkbox" checked>
+                                            <span class="slider">
+                                                <div class="slider_txt false">비노출</div>
+                                                <div class="slider_txt true">노출</div>
+                                            </span>
+                                        </label>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>9999</td>
-                                    <td>ralo***</td>
-                                    <td>장원영</td>
-                                    <td>010-1234-1234</td>
-                                    <td>98798796546</td>
-                                    <td class="ellipsisTooltip">스타벅스 아메리카노 스타벅스 아메리카노스타벅스 아메리카노</td>
-                                    <td>99,999,000</td>
+                                    <td>NO_GOODS</td>
+                                    <td>CATEGORY</td>
+                                    <td>NM_GOODS_COMPANY</td>
+                                    <td>NM_GOODS</td>
+                                    <td>99,000,000</td>
                                     <td>2024-11-11</td>
-                                    <td>쿠폰사용중</td>
-                                    <td>2024-11-10</td>
-                                    <td><button type="button" class="f_btn ty_xsmall _round _key w_50">재발송</button></td>
+                                    <td>판매중단</td> 
                                     <td><a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a></td>
+                                    <td>
+                                        <label class="f_toggle ty_small">
+                                            <input type="checkbox" checked>
+                                            <span class="slider">
+                                                <div class="slider_txt false">비노출</div>
+                                                <div class="slider_txt true">노출</div>
+                                            </span>
+                                        </label>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>9999</td>
-                                    <td>ralo***</td>
-                                    <td>장원영</td>
-                                    <td>010-1234-1234</td>
-                                    <td>98798796546</td>
-                                    <td class="ellipsisTooltip">스타벅스 아메리카노 스타벅스 아메리카노스타벅스 아메리카노</td>
-                                    <td>99,999,000</td>
-                                    <td>2024-11-11</td>
-                                    <td>쿠폰사용중</td>
-                                    <td>2024-11-10</td>
-                                    <td><button type="button" class="f_btn ty_xsmall _round _key w_50">재발송</button></td>
-                                    <td><a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a></td>
-                                </tr>
-                                <tr>
-                                    <td>9999</td>
-                                    <td>ralo***</td>
-                                    <td>장원영</td>
-                                    <td>010-1234-1234</td>
-                                    <td>98798796546</td>
-                                    <td class="ellipsisTooltip">스타벅스 아메리카노 스타벅스 아메리카노스타벅스 아메리카노</td>
-                                    <td>99,999,000</td>
-                                    <td>2024-11-11</td>
-                                    <td>쿠폰사용중</td>
-                                    <td>2024-11-10</td>
-                                    <td><button type="button" class="f_btn ty_xsmall _round _key w_50">재발송</button></td>
-                                    <td><a href="" class="f_btn ty_xsmall _round _key_op"><i class="fa-solid fa-magnifying-glass"></i> 보기</a></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="12">
+                                    <td colspan="10">
                                         <div class="no_result_box ty_small" >
                                             <i class="fa-solid fa-file-circle-xmark" aria-hidden="true"></i>
                                             <p class="mt10">검색 결과가 없습니다.</p>

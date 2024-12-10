@@ -1950,9 +1950,15 @@
 }
 
 .list_dot {
+    &.no_gap {
+        .list_item + .list_item {
+            margin-top: 0;
+        }    
+    }
     .list_item {
         padding-left: 0.8em;
         position: relative;
+       
         & + .list_item {
             margin-top: 0.5em;
         }
