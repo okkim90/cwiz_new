@@ -2892,10 +2892,11 @@
 .sitemap {
     display: flex;
     padding-top: 20px;
-    gap: 30px;
+    gap: 50px 30px;
+    flex-wrap: wrap;
     &1 {
         &_item {
-            flex: 1;
+            width: calc((100% / 5) - (((5 - 1)/5)*30px));
             display: flex;
             flex-direction: column;
         }
@@ -2919,13 +2920,13 @@
                 background-position: center center;
                 margin-right: 8px;
                 
-                @for $i from 1 through 6 {
+                @for $i from 1 through 8 {
                     &.ty_menu#{$i}{
                         background-image: url(../images/common/ico_menu#{$i}.svg);
                     }
                 }
                 @at-root .sitemap1_item:hover & {
-                    @for $i from 1 through 6 {
+                    @for $i from 1 through 8 {
                         &.ty_menu#{$i}{
                             background-image: url(../images/common/ico_menu#{$i}_on.svg);
                         }
@@ -3063,11 +3064,11 @@
                 font-weight: 500;
             }
             .desc {
-                @include text-hidden(2, 1.5em, auto);
+                //@include text-hidden(2, 1.5em, auto);
                 word-break: break-all;
                 margin-top: 6px;
-                font-size: 15px;
-                //font-weight: 500;
+                font-size: 16px;
+                font-weight: 500;
             }
             .price {
                 margin-top: 6px;

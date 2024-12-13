@@ -9147,10 +9147,11 @@ input::-webkit-search-results-decoration {
 .sitemap {
   display: flex;
   padding-top: 20px;
-  gap: 30px;
+  gap: 50px 30px;
+  flex-wrap: wrap;
 }
 .sitemap1_item {
-  flex: 1;
+  width: calc(20% - 24px);
   display: flex;
   flex-direction: column;
 }
@@ -9191,6 +9192,12 @@ input::-webkit-search-results-decoration {
 .sitemap1_link .ico_dep1.ty_menu6 {
   background-image: url(../images/common/ico_menu6.svg);
 }
+.sitemap1_link .ico_dep1.ty_menu7 {
+  background-image: url(../images/common/ico_menu7.svg);
+}
+.sitemap1_link .ico_dep1.ty_menu8 {
+  background-image: url(../images/common/ico_menu8.svg);
+}
 .sitemap1_item:hover .sitemap1_link .ico_dep1.ty_menu1 {
   background-image: url(../images/common/ico_menu1_on.svg);
 }
@@ -9208,6 +9215,12 @@ input::-webkit-search-results-decoration {
 }
 .sitemap1_item:hover .sitemap1_link .ico_dep1.ty_menu6 {
   background-image: url(../images/common/ico_menu6_on.svg);
+}
+.sitemap1_item:hover .sitemap1_link .ico_dep1.ty_menu7 {
+  background-image: url(../images/common/ico_menu7_on.svg);
+}
+.sitemap1_item:hover .sitemap1_link .ico_dep1.ty_menu8 {
+  background-image: url(../images/common/ico_menu8_on.svg);
 }
 
 .sitemap2 {
@@ -9342,17 +9355,10 @@ input::-webkit-search-results-decoration {
   font-weight: 500;
 }
 .deal_detail .txt_box .desc {
-  width: 100%;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  line-height: 1.5em;
-  max-height: 3em;
   word-break: break-all;
   margin-top: 6px;
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 500;
 }
 .deal_detail .txt_box .price {
   margin-top: 6px;
