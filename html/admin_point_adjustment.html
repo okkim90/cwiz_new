@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Generator" content="KIC">
+    <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Description" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <title>교정마법사 CWIZ - CALIBRATION WIZARD</title>
+    <script src="https://kit.fontawesome.com/8f18490998.js" crossorigin="anonymous" ></script>
+    <script src="../assets/js/jquery-3.1.1.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/datepicker.css">
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+</head>
+<body>
+    <div id="skip-nav">
+        <a href="#container"></a>
+    </div>
+    
+    <div id="wrap" class="grid-container">
+        <!-- header -->
+        <header class="header">
+            <h1 class="logo"><a href=""><img src="../assets/images/common/logo.svg" alt=""></a></h1>
+            <div class="h_util">
+                <div class="h_util_sec h_user">
+                    <i class="fa-solid fa-user"></i><a href="" class="user_name">홍길동</a> 님 
+                </div>
+                <div class="h_util_sec h_point">
+                    <a href="" class="h_point_btn">
+                        <span class="h_point_ico">P</span>
+                        <span class="h_point_cont">129,005</span>
+                    </a>
+                </div>
+                <div class="h_util_sec h_btns">
+                    <!--[D] 알림(종) 활성화  'on' class 추가-->
+                    <button type="button" class="h_btn ty_notice on" onclick="f_alert_open();">
+                        <i class="fa-solid fa-bell"></i>
+                    </button>
+                    <a href="" class="h_btn ty_logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </div>
+                <div class="f_alert_box">
+                    <div class="f_alert_top">
+                        <h2 class="tit">알림</h2>
+                        <label class="f_toggle ml10">
+                            <input type="checkbox" class="alert_chk" onchange="f_alert_chk(this)" >
+                            <span class="slider">
+                                <div class="slider_txt false">전체</div>
+                                <div class="slider_txt true">미확인</div>
+                            </span>
+                        </label>
+                        <button type="button" class="f_alert_close ml_auto" onclick="f_alert_close()">
+                            <span class="blind">팝업 닫기</span>
+                        </button>
+                    </div>
+                    <ul class="f_alert_list">
+                        <!--[D] 이미 읽은 상태일 경우 'read' class 추가-->
+                        <li class="f_alert_item ">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 공지알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_notice.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item read">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 교정결과 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_cal.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item ">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 교정예정일 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_due.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item ">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 견적요청 승인 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_estimate.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item read">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 공지알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_notice.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 견적요청 승인 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_estimate.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item read">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 견적요청 승인 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_estimate.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!--// header -->
+        <!-- nav -->
+        <aside class="sidenav">
+
+            <button type="button" class="btn_nav_toggle"><i class="fa-solid fa-chevron-left"></i></button>
+             <div class="sidenav_top_wrap">
+                <div class="sidenav_top">
+                    <div class="img_box">
+                        <i class="fa-solid fa-user ico_no_img"></i>
+                        <!-- <img src="../assets/images/common/Tesla_logo.png" alt=""> -->
+                    </div>
+                    <button type="button" class="btn_add_logo" onclick="open_popup('pop_logo')">
+                        <i class="fa-solid fa-image"></i>
+                    </button>
+                </div>
+                <div class="msg_box">
+                    <p class="msg_box_name"><a href=""><b>김영술</b></a>님 안녕하세요.</p>
+                    <p class="msg_box_company"><a href="">코리아인스트루먼트(주)</a></p>   
+                </div>
+            </div>
+
+            <div class="layer_popup pop_logo" onclick="close_popup(this)">
+                <div class="layer_popup_inner">
+                    <div class="layer_popup_cont ty_small">
+                        <button type="button" class="close_popup" onclick="close_popup(this)">
+                            <span class="blind">팝업 닫기</span>
+                        </button>
+                        <div class="sub_tit">
+                            <h1 class="tit1">로고 이미지 등록</h1>
+                        </div>
+                        <form action="">
+                            <!--[D] 이미지 첨부 전 -->
+                            <div class="img_box ty_upload ty_logo">
+                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
+                                <label for="upload_eq_img" class="btn_img_upluad">
+                                    <i class="fa-solid fa-image"></i>
+                                    <p>이미지 첨부하기 (260 x 90)</p>
+                                </label>
+                            </div>
+                            <!--// [D] 이미지 첨부 전 -->
+                            
+                            <br><!--[D] 개발시 삭제-->
+
+                             <!--[D] 이미지 첨부 후 -->
+                            <div class="img_box ty_upload ty_logo">
+                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
+                                <div class="img_box_edit">
+                                    <label for="upload_eq_img" class="img_box_edit_btn"><i class="fa-solid fa-rotate"></i><span class="blind">수정</span></label>
+                                    <button type="button" class="img_box_edit_btn"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button>
+                                </div>
+                                <img src="../assets/images/common/Tesla_logo.png" alt="">
+                            </div>  
+                            <!--[D] 이미지 첨부 후 -->                
+                            <div class="btn_set mt20 taC">
+                                <input type="submit" class="f_btn ty_small _key w_80" value="등록">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <ul class="nav">
+                <li class="nav_item on">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu1"></i>교정이력</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2 on">교정 접수 내역</a></li>
+                            <li><a href="" class="btn_dep2">교정 결과 조회</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu2"></i>교정 단가 조회</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">교정 단가 조회</a></li>
+                        </ul>
+                    </div>       
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu3"></i>견적 요청</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">견적 요청 조회</a></li>
+                            <li><a href="" class="btn_dep2">견적 요청</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu4"></i>마이 페이지</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">내 정보</a></li>
+                            <li><a href="" class="btn_dep2">우리 장비</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu5"></i>고객 지원</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">공지사항</a></li>
+                            <li><a href="" class="btn_dep2">자료실</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu6"></i>관리자</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">회원 관리</a></li>
+                            <li><a href="" class="btn_dep2">공지사항 관리</a></li>
+                            <li><a href="" class="btn_dep2">자료실 관리</a></li>
+                        </ul>
+                    </div>                 
+                </li>
+            </ul>
+        </aside>
+        <!-- // nav -->
+
+        <!--container-->
+        <main id="container" class="container">
+            <div id="contents" class="contents">
+                <a href="javascript:history.back()" class="btn_back"><span class="blind">뒤로가기</span></a>
+                <!-- [D] breadcrumb -->
+                <nav class="breadcrumb_area">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb_item">
+                            <a href="/">
+                                <i class="fa-solid fa-house"></i>
+                                <span class="blind">home</span>
+                            </a>
+                        </li>
+                        <li class="breadcrumb_item" >
+                            <a href="#">마이페이지</a>
+                        </li>
+                        <li class="breadcrumb_item">
+                            포인트 정산관리
+                        </li>
+                    </ol>
+                </nav>
+                <!--// [D] breadcrumb -->
+                <div class="sub_tit">
+                    <h1 class="tit1">포인트 정산관리</h1>
+                </div>
+                <section class="sec">
+                    <div class="d_flex">
+                        <form action="">
+                            <div class="v_tbl_wrap">
+                                <table class="v_tbl">
+                                    <colgroup>
+                                        <col style="width: 120px;">
+                                        <col> 
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>정산월</th>
+                                            <td>
+                                                <div class="d_flex _gap5">
+                                                    <select name="" id="" class="f_select ty_small shrink0 w_100">
+                                                        <option value="">2025년</option>
+                                                    </select>
+                                                    <div class="d_flex _gap5 fw_w" >
+                                                        <label class="chk_btn ">
+                                                            <input type="radio" name="reception">
+                                                            <span class="f_btn _round ty_small w_50 ty_ol">1월</span>
+                                                        </label>
+                                                        <label class="chk_btn">
+                                                            <input type="radio" name="reception">
+                                                            <span class="f_btn _round ty_small w_50 ty_ol">2월</span>
+                                                        </label>
+                                                        <label class="chk_btn">
+                                                            <input type="radio" name="reception">
+                                                            <span class="f_btn _round ty_small w_50 ty_ol">3월</span>
+                                                        </label>
+                                                        <label class="chk_btn">
+                                                            <input type="radio" name="reception">
+                                                            <span class="f_btn _round ty_small w_50 ty_ol">4월</span>
+                                                        </label>
+                                                        <label class="chk_btn">
+                                                            <input type="radio" name="reception">
+                                                            <span class="f_btn _round ty_small w_50 ty_ol">5월</span>
+                                                        </label>
+                                                        <label class="chk_btn">
+                                                            <input type="radio" name="reception">
+                                                            <span class="f_btn _round ty_small w_50 ty_ol">6월</span>
+                                                        </label>
+                                                        <label class="chk_btn">
+                                                            <input type="radio" name="reception">
+                                                            <span class="f_btn _round ty_small w_50 ty_ol">7월</span>
+                                                        </label>
+                                                        <label class="chk_btn">
+                                                            <input type="radio" name="reception">
+                                                            <span class="f_btn _round ty_small w_50 ty_ol">8월</span>
+                                                        </label>
+                                                        <label class="chk_btn">
+                                                            <input type="radio" name="reception">
+                                                            <span class="f_btn _round ty_small w_50 ty_ol">9월</span>
+                                                        </label>
+                                                        <label class="chk_btn">
+                                                            <input type="radio" name="reception">
+                                                            <span class="f_btn _round ty_small w_50 ty_ol">10월</span>
+                                                        </label>
+                                                        <label class="chk_btn">
+                                                            <input type="radio" name="reception">
+                                                            <span class="f_btn _round ty_small w_50 ty_ol">11월</span>
+                                                        </label>
+                                                        <label class="chk_btn">
+                                                            <input type="radio" name="reception">
+                                                            <span class="f_btn _round ty_small w_50 ty_ol">12월</span>
+                                                        </label>
+                                                        <label class="chk_btn">
+                                                            <input type="radio" name="reception">
+                                                            <span class="f_btn _round ty_small w_50 ty_ol">전체</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>검색어</th>
+                                            <td>
+                                                <div class="d_flex _gap5">
+                                                    <select name="" id="" class="f_select ty_small shrink0 w_100">
+                                                        <option value="">담당자명</option>
+                                                        <option value="">아이디</option>
+                                                        <option value="">회사명</option>
+                                                        <option value="">쿠폰번호</option>
+                                                    </select>
+                                                    <input type="text" class="f_input ty_small w_300">
+                                                </div>
+                                            </td>   
+                                        </tr>
+                                    </tbody>
+                                </table> 
+                            </div>
+                            <div class="btn_set taC mt30">
+                                <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
+                                <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="reset(this)">초기화 <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i></button>
+                            </div>
+                        </form>   
+                    </div>
+                </section>
+                <section class="sec">
+                    <div class="mb30">
+                        <div class="sub_tit2 mb10">
+                            <h2 class="tit3"><span class="fc_key">2025년 01월</span>  정산 내역</h2> 
+                            <ul class="list_sepBar ty_small ml_auto fz_mid2">
+                                <li class="list_item">&#9632; 적립 </li>
+                                <li class="list_item fc_key">&#9632; 사용 </li>
+                            </ul>
+                        </div>
+                        <div class="ajmt_list">
+                            <div class="ajmt_item col_item">
+                                <strong class="tit">전체</strong>
+                                <div class="txt_box">
+                                    <div class="txt_item"><span class="txt_item_h">적립</span><b class="fc_black">412,340,000 P</b></div>                                
+                                    <div class="txt_item"><span class="txt_item_h">사용</span><b class="fc_key">323,023,000 P</b></div>
+                                </div>
+                            </div>
+                            <div class="ajmt_item col_item">
+                                <strong class="tit">서울본사 <span class="fc_grey fwM">(73.1%)</span></strong>
+                                <div class="txt_box">
+                                    <div class="txt_item"><span class="txt_item_h">적립</span><b class="fc_black">145,900 P</b> </div>                                
+                                    <div class="txt_item"><span class="txt_item_h">사용</span><b class="fc_key">123,012 P</b></div>
+                                </div>
+                            </div>
+                            <div class="ajmt_item col_item">
+                                <strong class="tit">부산지사 <span class="fc_grey fwM">(20.5%)</span></strong>
+                                <div class="txt_box">
+                                    <div class="txt_item"><span class="txt_item_h">적립</span><b class="fc_black">145,900 P</b> </div>                                
+                                    <div class="txt_item"><span class="txt_item_h">사용</span><b class="fc_key">-</b></div>
+                                </div>
+                            </div>
+                            <div class="ajmt_item col_item">
+                                <strong class="tit">대전지사 <span class="fc_grey fwM">(6.4%)</span></strong>
+                                <div class="txt_box">
+                                    <div class="txt_item"><span class="txt_item_h">적립</span> <b class="fc_black">145,900 P</b> </div>                                
+                                    <div class="txt_item"><span class="txt_item_h">사용</span><b class="fc_key">-</b></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub_tit2 mb10 d_flex al_b">
+                        <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2> 
+                        <select name="" id="" class="f_select ty_small w_80 ml20">
+                            <option value="">30개</option>
+                            <option value="">50개</option>
+                            <option value="">100개</option>
+                            <option value="">200개</option>
+                            <option value="">전체</option>
+                        </select>
+                        <div class="btn_set ml_auto">
+                            <button type="button" class="f_btn ty_small _key ml_auto w_120" onclick="open_popup('pop_excel')">정산 파일 업로드</button>
+                            <button type="button" class="f_btn ty_small _green w_120">엑셀 다운 받기</button>
+                        </div>                       
+                    </div>
+                    <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
+                        <table class="h_tbl">
+                            <colgroup>
+                                <col style="width: 60px;">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col style="width: 100px;">
+                                <col style="width: 100px;">
+                                <col >
+                                <col >
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="th_fixed">NO</th>
+                                    <th class="th_fixed">아이디</th>
+                                    <th class="th_fixed">담당자명</th>
+                                    <th class="th_fixed">회사명</th>
+                                    <th class="th_fixed">쿠폰 번호</th>
+                                    <th class="th_fixed">쿠폰 구입금액</th>
+                                    <th class="th_fixed">쿠폰 구입일</th>
+                                    <th class="th_fixed">쿠폰 사용일</th>
+                                    <th class="th_fixed">비고</th>
+                                    <th class="th_fixed">정산 확인</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>9999</td>
+                                    <td>ralo***</td>
+                                    <td>장원영</td>
+                                    <td>보영상사</td>
+                                    <td>224661573218</td>
+                                    <td>20,000</td>
+                                    <td>2025-01-02</td>
+                                    <td><span class="fc_red fwM">2025-01-09</span></td>
+                                    <td><span class="fc_red fwM">만료</span></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>9999</td>
+                                    <td>ralo***</td>
+                                    <td>장원영</td>
+                                    <td>보영상사</td>
+                                    <td>224661573218</td>
+                                    <td>20,000</td>
+                                    <td>2025-01-02</td>
+                                    <td><span class="fc_red fwM">2025-01-09</span></td>
+                                    <td><span class="fc_red fwM">만료</span></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>9999</td>
+                                    <td>ralo***</td>
+                                    <td>장원영</td>
+                                    <td>보영상사</td>
+                                    <td>224661573218</td>
+                                    <td>20,000</td>
+                                    <td>2025-01-02</td>
+                                    <td>2025-01-09</td>
+                                    <td></td>
+                                    <td><span class="fc_red fwM">확인요망</span></td>
+                                </tr>
+                                <tr>
+                                    <td>9999</td>
+                                    <td>ralo***</td>
+                                    <td>장원영</td>
+                                    <td>보영상사</td>
+                                    <td>224661573218</td>
+                                    <td>20,000</td>
+                                    <td>2025-01-02</td>
+                                    <td>2025-01-09</td>
+                                    <td></td>
+                                    <td><span class="fc_red fwM">확인요망</span></td>
+                                </tr>
+                                <tr>
+                                    <td>9999</td>
+                                    <td>ralo***</td>
+                                    <td>장원영</td>
+                                    <td>보영상사</td>
+                                    <td>224661573218</td>
+                                    <td>20,000</td>
+                                    <td>2025-01-02</td>
+                                    <td><span class="fc_red">2025-01-09</span></td>
+                                    <td><span class="fc_red">만료</span></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>9999</td>
+                                    <td>ralo***</td>
+                                    <td>장원영</td>
+                                    <td>보영상사</td>
+                                    <td>224661573218</td>
+                                    <td>20,000</td>
+                                    <td>2025-01-02</td>
+                                    <td>2025-01-09</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>9999</td>
+                                    <td>ralo***</td>
+                                    <td>장원영</td>
+                                    <td>보영상사</td>
+                                    <td>224661573218</td>
+                                    <td>20,000</td>
+                                    <td>2025-01-02</td>
+                                    <td>2025-01-09</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>          
+                                    <td colspan="10">
+                                        <div class="no_result_box">
+                                            <i class="fa-solid fa-file-circle-xmark"></i>
+                                            <p class="mt10">검색 결과가 없습니다.</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="paging_wrap">
+                        <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
+                        <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
+                        <ul class="paging_list">
+                            <li><span class="paging_btn current">1</span></li>
+                            <li><a href="" class="paging_btn">2</a></li>
+                            <li><a href="" class="paging_btn">3</a></li>
+                            <li><a href="" class="paging_btn">4</a></li>
+                            <li><a href="" class="paging_btn">5</a></li>
+                        </ul>
+                        <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
+                        <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <!--//container-->
+        <!--footer-->
+        <footer class="footer">
+            <!-- <div class="footer_top">
+                <div class="inner">
+                    <ul class="footer_top_nav ">
+                        <li><a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a></li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="footer_logo">
+                <img src="../assets/images/common/logo_footer.svg" alt="KIC 코리아인스트루먼트(주)">
+            </div>
+            <div class="footer_info">
+                <ul class="footer_info_list">
+                    <li>코리아인스트루먼트(주)</li>
+                    <li><span class="bar"></span>사업자등록번호 : 101-81-45861</li>
+                    <li><span class="bar"></span>대표이사 : 정재호</li>
+                </ul>
+                <p class="copy">Copyright@KIC, Korea Instrument All Rights Reserved.</p>
+                <div class="contact">
+                    <b><i class="fa-solid fa-phone"></i> CONTACT US</b> 
+                    <span class="bar"></span>
+                    <span>1600 - 4245</span>
+                </div>
+            </div>
+            <div class="footer_right">
+                <div class="footer_right_btns">
+                    <a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a>
+                    <span class="bar"></span>
+                    <a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a>
+                </div>
+                <div class="footer_right_branch">
+                    <button class="btn_trigger">코리아인스트루먼트(주) 지점안내</button>
+                    <ul class="branch_list">
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=0" target="_blank">코리아인스트루먼트(주) 서울본사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=1" target="_blank">코리아인스트루먼트(주) 부산지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=2" target="_blank">코리아인스트루먼트(주) 대전지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=3" target="_blank">코리아인스트루먼트(주) 가평지안</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!--//footer-->
+    </div>
+    <!-- [팝업] 계측기 엑셀 등록 -->
+    <div class="layer_popup pop_excel" onclick="close_popup(this)">
+        <div class="layer_popup_inner">
+            <div class="layer_popup_cont ty_small">
+                    <button type="button" class="close_popup" onclick="close_popup(this)">
+                        <span class="blind" >팝업 닫기</span>
+                    </button>
+                    <div class="sub_tit">
+                        <h1 class="tit1">정산 파일 업로드</h1>
+                    </div>
+                    <form action="">
+                        <div class="excel_upload_box">
+                            <!--[D] 실제 input file-->
+                            <input type="file" id="file_excel" onchange="fileExcel(this)" class="input_file_excel" accept=".xls,.xlsx" required>
+                            
+                            <label for="file_excel" class="excel_upload_default">
+                                <i><img src="../assets/images/common/ico_excel.svg" alt=""></i>
+                                <p class="mt4">※ 엑셀 파일만 업로드 가능합니다.</p>
+                            </label>
+                            <div class="excel_upload_on">
+                                <button type="button" onclick=" fileExcelDel(this)" class="btn_del2"><span class="blind">파일삭제</span></button>
+                                <span class="file_name"></span>
+                            </div>
+                        </div>                      
+                        <div class="btn_set mt20 taC">
+                            <input type="submit" class="f_btn ty_small _key w_80 btn_excel_submit disabled" value="정산">
+                        </div>
+                    </form>
+                    <script>
+                        function fileExcel(target){
+                            let $this = $(target);
+                            let $parent = $this.parents('.excel_upload_box');
+                            let $fileName = $parent.find('.file_name');
+                            let $btnSubmit = $('.btn_excel_submit');
+                            let $val = $this.val();
+                            if($val){
+                                $parent.addClass('file_on');
+                                $fileName.text($val);
+                                //console.log($val );
+                                $btnSubmit.removeClass('disabled')
+                            }else{
+                                $parent.removeClass('file_on');
+                                $fileName.text('');
+                                $btnSubmit.addClass('disabled')
+                            }
+                        }
+                        function fileExcelDel(target){
+                            let $this = $(target);
+                            let $parent = $this.parents('.excel_upload_box');
+                            let $fileName = $parent.find('.file_name');
+                            let $inputFile = $parent.find('.input_file_excel');
+                            let $btnSubmit = $('.btn_excel_submit');
+                            $inputFile.val(null);
+                            
+                            if(!$inputFile.val()){
+                                $parent.removeClass('file_on');
+                                $fileName.text(null);
+                                $btnSubmit.addClass('disabled')
+                            }                            
+                        }
+                    </script>
+            </div>
+        </div>
+    </div>
+    <!--// [팝업] 계측기 엑셀 등록 -->
+</body>
+</html>

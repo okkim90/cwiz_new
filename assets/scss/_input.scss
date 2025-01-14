@@ -406,6 +406,9 @@
             // &:hover {
             //     background-color: darken($c_key, 6%);
             // }
+            &.ty_ol {
+                color: #fff;
+            }
         }
         &:checked ~ .inp_date {
             display: block;
@@ -429,7 +432,17 @@
         &:hover {
             background-color: darken(#ccc, 4%);
         }
+        &.ty_ol {
+            background-color: #fff ;
+            color: $c_key;
+            border: 1px solid $c_key;
+            &:hover {
+                background-color: lighten($c_key , 44%);
+            }
+        }
     }
+
+    
 }
 
 

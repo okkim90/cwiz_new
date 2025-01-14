@@ -3011,8 +3011,8 @@
                 //padding: 12px;
             }
             img {
-                width: 100%;
-                height: 100%;
+                max-width: 100%;
+                max-height: 100%;
                 border-radius: 8px;
                 object-fit: contain;
             }
@@ -3050,8 +3050,8 @@
             border-radius: 8px;
             text-align: center;
             img {
-                width: 260px;
-                height: 260px;
+                width: 250px;
+                height: 250px;
                 object-fit: contain;
             }
         }
@@ -3287,6 +3287,43 @@
     }
 }
 
-.list_num {
-
+.ajmt_list {
+    display: flex;
+    gap: 0 20px;
+    .ajmt_item {
+        .tit {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .txt_box {
+            display: flex;
+           
+            font-weight: 500; 
+            // display: inline-flex;
+            // flex-direction: column;
+            //text-align: left;
+            gap: 10px;
+            .txt_item {
+                flex: 1;
+                background-color: #fff;
+                border: 1px solid $c_line;
+                padding: 6px;
+                border-radius: 4px;
+                font-size: 15px;
+                &_h {
+                    display: block;
+                    margin-bottom: 2px;
+                    color: $c_grey;
+                    font-size: 13px;
+                }
+            }
+        }
+        text-align: center;
+        flex: 1;
+        padding: 10px 16px;
+        border-radius: 8px;
+        background-color: $c_bg;
+        border: 1px solid $c_line;
+    }
 }
