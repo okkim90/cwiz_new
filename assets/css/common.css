@@ -10151,6 +10151,11 @@ input::-webkit-search-results-decoration {
   font-size: 13px;
 }
 
+.dm_wrap {
+  padding: 30px 30px 50px;
+  background-color: #fff;
+}
+
 .layer_popup {
   position: fixed;
   left: 0;
