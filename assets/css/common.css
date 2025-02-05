@@ -10156,6 +10156,22 @@ input::-webkit-search-results-decoration {
   background-color: #fff;
 }
 
+.cal_detail_wrap {
+  position: relative;
+}
+.cal_detail_wrap .cal_detail_box {
+  position: absolute;
+  width: 800px;
+  right: 0;
+  top: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 .layer_popup {
   position: fixed;
   left: 0;
@@ -11486,6 +11502,24 @@ input::-webkit-search-results-decoration {
   content: "\f422";
 }
 
+.btn_toggle {
+  font-size: 12px;
+  font-weight: bold;
+  color: #0085FF;
+}
+.btn_toggle:hover {
+  text-decoration: underline;
+}
+.btn_toggle::after {
+  content: "\f078";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: bold;
+  margin-left: 4px;
+}
+.btn_toggle.on::after {
+  content: "\f077";
+}
+
 .tabs {
   display: flex;
   border-bottom: 1px solid #DDDDDD;
@@ -11619,6 +11653,9 @@ input::-webkit-search-results-decoration {
   cursor: default;
   background-color: #fff;
 }
+.h_tbl.no_bg tr:hover {
+  background-color: #fff;
+}
 .h_tbl thead.th_fixed {
   position: sticky;
   top: 0px;
@@ -11669,6 +11706,9 @@ input::-webkit-search-results-decoration {
 }
 .h_tbl tbody tr.no_hv:hover {
   cursor: default;
+}
+.h_tbl tbody tr.no_bg:hover {
+  background-color: #fff;
 }
 .h_tbl tbody tr.bg_bg_grey2:hover {
   background-color: #f4f4f4;

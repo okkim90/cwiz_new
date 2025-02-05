@@ -3336,4 +3336,21 @@
     background-color: #fff;
 }
 
+.cal_detail_wrap {
+    position: relative;
+    .cal_detail_box {
+        position: absolute;
+        width: 800px;
+        right: 0;
+        top: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 6px;
+        box-shadow: 0 0 10px rgba(#000, .2);
+        
+    }
+}
+
 // 계측기 통합관리 //

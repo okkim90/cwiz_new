@@ -101,6 +101,11 @@
             background-color: #fff
         }
     }
+    &.no_bg {
+        tr:hover {
+            background-color: #fff
+        }
+    }
     thead {
         &.th_fixed {
             position: sticky;
@@ -167,7 +172,11 @@
                     cursor: default;
                 }
             }
-           
+            &.no_bg {
+                &:hover {
+                    background-color: #fff;
+                }
+            }
             
             &.bg_bg_grey2 {
                 &:hover { 

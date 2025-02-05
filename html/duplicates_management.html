@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../assets/css/datepicker.css">
     <link rel="stylesheet" href="../assets/css/common.min.css">
 </head>
-<body>
+<body style="min-width: 1400px;">
     <div id="wrap">
         <div class="dm_wrap">
             <div class="sub_tit">
@@ -210,7 +210,7 @@
                     <div class="sub_tit2 mb10 d_flex al_b">
                         <h2 class="tit4"><b>검색 결과 :</b> 4건</h2>   
                     </div>
-                    <div class="h_tbl_wrap y_scroll_area" style="max-height: 280px;">
+                    <div class="h_tbl_wrap">
                         <table class="h_tbl tl_fixed">
                             <colgroup>
                                 <col style="width: 100px;">
@@ -219,6 +219,7 @@
                                 <col>
                                 <col style="width: 100px;">
                                 <col>
+                                <col style="width: 100px;">
                                 <col style="width: 100px;">
                                 <col style="width: 100px;">
                                 <col style="width: 100px;">
@@ -234,6 +235,7 @@
                                     <th class="th_fixed">교정분야</th>
                                     <th class="th_fixed">사내/외 구분</th>
                                     <th class="th_fixed">기준금액</th>
+                                    <th class="th_fixed">등록 장비</th>
                                     <th class="th_fixed">최근 교정일자</th>
                                     <th class="th_fixed">선택</th>
                                 </tr>
@@ -248,6 +250,7 @@
                                     <td>복합형상</td>
                                     <td>사내</td>
                                     <td>14,000</td>
+                                    <td><button type="button" class="btn_toggle">5개</button></td>
                                     <td>2025-02-04</td>
                                     <td><button type="button" class="f_btn ty_small _key w_60">선택</button></td>
                                 </tr>
@@ -260,6 +263,7 @@
                                     <td>복합형상</td>
                                     <td>사내</td>
                                     <td>14,000</td>
+                                    <td><button type="button" class="btn_toggle">5개</button></td>
                                     <td>2025-02-04</td>
                                     <td><button type="button" class="f_btn ty_small _key w_60">선택</button></td>
                                 </tr>
@@ -272,9 +276,78 @@
                                     <td>복합형상</td>
                                     <td>사내</td>
                                     <td>14,000</td>
+                                    <td><button type="button" class="btn_toggle on">5개</button></td>
                                     <td>2025-02-04</td>
                                     <td><button type="button" class="f_btn ty_small _key w_60">선택</button></td>
                                 </tr>
+                                <!--[D] 등록장비 정보 행 활성화 -->
+                                <tr class="bg_bg_grey2">
+                                    <td colspan="11">
+                                        <div class="pa10 w_800 ml_auto">
+                                            <div class="h_tbl_wrap ">
+                                                <table class="h_tbl tl_fixed no_bg">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>기기번호</th>
+                                                            <th>교정번호</th>
+                                                            <th>교정일자</th>
+                                                            <th>업체명</th>
+                                                            <th>교정금액</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td rowspan="3">ADBCD</td>
+                                                            <td>25000123-2</td>
+                                                            <td>2025-02-02</td>
+                                                            <td>보영상사</td>
+                                                            <td>10,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>24000222-6</td>
+                                                            <td>2024-02-02</td>
+                                                            <td>보영상사</td>
+                                                            <td>9,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>24000222-6</td>
+                                                            <td>2024-02-02</td>
+                                                            <td>보영상사</td>
+                                                            <td>9,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td rowspan="3">ADBCD</td>
+                                                            <td>25000123-2</td>
+                                                            <td>2025-02-02</td>
+                                                            <td>보영상사</td>
+                                                            <td>10,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>24000222-6</td>
+                                                            <td>2024-02-02</td>
+                                                            <td>보영상사</td>
+                                                            <td>9,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>24000222-6</td>
+                                                            <td>2024-02-02</td>
+                                                            <td>보영상사</td>
+                                                            <td>9,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td rowspan="3">ADBCD</td>
+                                                            <td>25000123-2</td>
+                                                            <td>2025-02-02</td>
+                                                            <td>보영상사</td>
+                                                            <td>10,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!--[D] 등록장비 정보 행 활성화 // -->
                                 <tr>
                                     <td>표준</td>
                                     <td class="ellipsisTooltip">계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
@@ -284,11 +357,82 @@
                                     <td>복합형상</td>
                                     <td>사내</td>
                                     <td>14,000</td>
+                                    <td>
+                                        <button type="button" class="btn_toggle on">5개</button>
+                                    </td>
                                     <td>2025-02-04</td>
                                     <td><button type="button" class="f_btn ty_small _key w_60">선택</button></td>
                                 </tr>
+                                <!--[D] 등록장비 정보 행 활성화 -->
+                                <tr class="bg_bg_grey2">
+                                    <td colspan="11">
+                                        <div class="pa10 w_800 ml_auto">
+                                            <div class="h_tbl_wrap ">
+                                                <table class="h_tbl tl_fixed no_bg">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>기기번호</th>
+                                                            <th>교정번호</th>
+                                                            <th>교정일자</th>
+                                                            <th>업체명</th>
+                                                            <th>교정금액</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td rowspan="3">ADBCD</td>
+                                                            <td>25000123-2</td>
+                                                            <td>2025-02-02</td>
+                                                            <td>보영상사</td>
+                                                            <td>10,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>24000222-6</td>
+                                                            <td>2024-02-02</td>
+                                                            <td>보영상사</td>
+                                                            <td>9,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>24000222-6</td>
+                                                            <td>2024-02-02</td>
+                                                            <td>보영상사</td>
+                                                            <td>9,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td rowspan="3">ADBCD</td>
+                                                            <td>25000123-2</td>
+                                                            <td>2025-02-02</td>
+                                                            <td>보영상사</td>
+                                                            <td>10,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>24000222-6</td>
+                                                            <td>2024-02-02</td>
+                                                            <td>보영상사</td>
+                                                            <td>9,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>24000222-6</td>
+                                                            <td>2024-02-02</td>
+                                                            <td>보영상사</td>
+                                                            <td>9,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td rowspan="3">ADBCD</td>
+                                                            <td>25000123-2</td>
+                                                            <td>2025-02-02</td>
+                                                            <td>보영상사</td>
+                                                            <td>10,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!--[D] 등록장비 정보 행 활성화 // -->
                                 <tr>
-                                    <td colspan="10">
+                                    <td colspan="11">
                                         <div class="no_result_box" style="height: 160px;">
                                             <i class="fa-solid fa-file-circle-xmark"></i>
                                             <p class="mt10">검색 결과가 없습니다.</p>
