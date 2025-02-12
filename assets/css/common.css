@@ -10566,6 +10566,9 @@ input::-webkit-search-results-decoration {
   padding: 20px;
   font-size: 13px;
 }
+.f_search_list li + li {
+  border-top: 1px dotted #DDDDDD;
+}
 .f_search_item {
   cursor: pointer;
   padding: 5px 6px;
@@ -10592,9 +10595,6 @@ input::-webkit-search-results-decoration {
 }
 .f_search_item .del_item:hover {
   background-color: rgba(0, 0, 0, 0.05);
-}
-.f_search_item + .f_search_item {
-  border-top: 1px dotted #DDDDDD;
 }
 .f_search_item b {
   color: #FF7A00;

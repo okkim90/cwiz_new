@@ -153,6 +153,9 @@
             padding: 20px;
             font-size: 13px;
         }
+        li + li {
+            border-top: 1px dotted $c_line;
+        }
     }
 
     &_item {
@@ -182,9 +185,7 @@
                 background-color: rgba(#000, .05);
             }
         }
-        & + & {
-            border-top: 1px dotted $c_line;
-        }
+        
         b {
             color: $c_key;
             font-weight: 500;
