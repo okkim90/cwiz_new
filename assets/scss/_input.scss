@@ -100,6 +100,14 @@
         border-radius: 0 0 4px 4px;
         overflow: hidden;
         background-color: #fff;
+        &.ty2 {
+            width: 100%;
+            
+        }
+        &.ty_right {
+            left: auto;
+            right: 0;
+        }
     }
     &_list {
         max-height: 200px;
@@ -121,20 +129,72 @@
             background-color: $c_bg_grey;
             //border-left: 1px solid transparent;
         }
-        
+        &_bot {
+            border-top: 1px solid $c_line;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            padding: 0 8px;
+            
+            .btn_close {
+                margin-left: auto;
+                font-size: 12px;
+                height: 20px;
+                color: #666;
+                font-weight: 500;
+                &:hover {
+                    color: #000;
+                }
+            }
+            
+        }
+        .no_item {
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+        }
     }
+
     &_item {
         cursor: pointer;
-        padding: 5px 10px;
+        padding: 5px 6px;
         white-space: nowrap;
         color: #666;
         font-size: 12px;
+        @at-root .f_search_list_wrap.ty2 & {
+            display: flex;
+        
+            min-width: 0;
+        }
+        
+        .del_item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            margin-left: auto;
+            margin-right: -4px;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            border-radius: 3px;
+            &:hover {
+                background-color: rgba(#000, .05);
+            }
+        }
         & + & {
             border-top: 1px dotted $c_line;
         }
         b {
             color: $c_key;
             font-weight: 500;
+        }
+        .txt {
+            width: 100%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            min-width: 0;
         }
         
         &:hover {
