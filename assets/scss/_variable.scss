@@ -323,6 +323,15 @@ $inner: 1280px;
     .pa#{$z} {
         padding: #{$z}px
     }
+    .f_input {
+        &.pl#{$z} {
+            padding-left: #{$z}px  !important;
+        }
+        &.pr#{$z} {
+            padding-right: #{$z}px !important;
+        }
+    }
+
     .bd_radius#{$z} {
         border-radius: #{$z}px
     }

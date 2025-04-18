@@ -20,6 +20,24 @@
     height: 18px;
     background: url(../images/common/ico_del4.svg) no-repeat center center;
 }
+.btn_del_input {
+    width: 20px;
+    height: 20px;
+    &::after {
+        font-size: 16px;
+        content: '\f057';
+        font-family: "Font Awesome 6 Pro";
+        font-weight: bold;
+        color: #393939;
+    }
+    @at-root .input_box & {
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        margin-top: -10px;
+    }
+}
+
 .btn_back {
     width: 40px;
     height: 40px;

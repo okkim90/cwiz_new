@@ -5,6 +5,7 @@
     grid-template-columns: 260px 1fr;
     //grid-template-rows: 50px 1fr 50px;
     grid-template-areas:
+      "topBanner topBanner"
       "sidenav header"
       "sidenav main"
       "sidenav footer"
@@ -15,6 +16,26 @@
         .sidenav {
             transform: translateX(-260px);
         }
+    }
+}
+.topBanner {
+    grid-area: topBanner;
+    height: 70px;
+    background-color: $c_key;
+    position: relative;
+    &_close {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(#000,.1);
+        border-radius: 50%;
+        right: 30px;
+        top: 50%;
+        margin-top: -20px;
+        background-image: url(../images/common/ico_close.svg);
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center center;
     }
 }
 .header {
@@ -1289,6 +1310,11 @@
             width: calc(100%/4);
         }
         
+    }
+    &_input {
+        padding: 6px 10px;
+        border-bottom: 1px solid $c_line;
+        background-color: $c_bg;
     }
     .tit {
         display: block;
@@ -3354,3 +3380,61 @@
 }
 
 // 계측기 통합관리 //
+
+
+
+.cal_select {
+    
+
+    &_item {
+        border-bottom: 1px dotted $c_line;
+        // &:first-of-type {
+        //     border-top: 1px dotted $c_line;
+        // }
+    }
+
+    &_btn {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        
+        .txt_box {
+            display: block;
+            width: 100%;
+            position: relative;
+            padding: 6px 15px;
+            &:hover {
+                background-color: lighten($c_blue, 46%);
+            }
+            b {
+                color: $c_key;
+            }
+        }
+        input[type="radio"] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            opacity: 0;
+            
+            &:checked ~ .txt_box {
+                background-color: lighten($c_blue, 40%);
+            }
+        }
+        input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            & ~ .txt_box {
+                padding-left: 36px;
+            }
+            &:checked ~ .txt_box {
+                background-color: lighten($c_blue, 38%);
+            }
+        }
+    }
+}
