@@ -32,10 +32,10 @@
                     <li class="tabs_item">
                         <a href="./duplicates_management.html" class="tabs_btn">중복 계측기</a>
                     </li>
-                    <li class="tabs_item on">
+                    <li class="tabs_item ">
                         <a href="./duplicates_management2.html" class="tabs_btn">계측기 관리</a>
                     </li>
-                    <li class="tabs_item">
+                    <li class="tabs_item on">
                         <a href="./duplicates_management3.html" class="tabs_btn">승인 요청</a>
                     </li>
                 </ul>
@@ -53,16 +53,6 @@
                                         <col>
                                     </colgroup>
                                     <tr>
-                                        <th>교정 분야</th>
-                                        <td>
-                                            <select name="" id="" class="f_select ty_small w_300">
-                                                <option value="">Select option</option>
-                                                <option value="">Select option</option>
-                                                <option value="">Select option</option>
-                                                <option value="">Select option</option>
-                                                <option value="">Select option</option>
-                                            </select>
-                                        </td>
                                         <th>지사</th>
                                         <td>
                                             <div class="chk_list">
@@ -71,12 +61,15 @@
                                                 <label class="chk_item"><input type="radio" name="use2"> 대전지사</label>
                                             </div>
                                         </td>
-                                        <th>노출여부</th>
-                                        <td>
-                                            <div class="chk_list">
-                                                <label class="chk_item"><input type="checkbox" checked> 노출</label>
-                                                <label class="chk_item"><input type="checkbox" checked> 비노출</label>
-                                            </div>
+                                        <th>교정 분야</th>
+                                        <td colspan="3">
+                                            <select name="" id="" class="f_select ty_small w_300">
+                                                <option value="">Select option</option>
+                                                <option value="">Select option</option>
+                                                <option value="">Select option</option>
+                                                <option value="">Select option</option>
+                                                <option value="">Select option</option>
+                                            </select>
                                         </td>
                                     </tr>
                                     <tr>
@@ -213,7 +206,7 @@
                                                 </div>     
                                             </div>
                                         </td>
-                                        <th>형식</th>
+                                        <th>형식 (영문)</th>
                                         <td>
                                             <div class="f_search mw_300" >
                                                 <input type="text" class="f_input ty_small w100" onfocus="f_search_focus(this)" onkeyup="f_search_toggle(this)" placeholder="검색어를 입력해주세요">
@@ -281,6 +274,17 @@
                                             </div>
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <th>상태</th>
+                                        <td colspan="5">
+                                            <div class="chk_list">
+                                                <label class="chk_item"><input type="radio" name="status" checked> 전체</label>
+                                                <label class="chk_item"><input type="radio" name="status"> 대기</label>
+                                                <label class="chk_item"><input type="radio" name="status"> 완료</label>
+                                                <label class="chk_item"><input type="radio" name="status"> 반려</label>
+                                            </div>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table> 
                             <div class="btn_set taC mt30">
@@ -304,157 +308,80 @@
                         <table class="h_tbl tl_fixed">
                             <colgroup>
                                 <col style="width: 50px;">
-                                <col style="width: 50px;">
-                                <col style="width: 100px;">
+                                <col>
+                                <col>
+                                <col>
                                 <col>
                                 <col>
                                 <col>
                                 <col style="width: 100px;">
                                 <col>
-                                <col style="width: 100px;">
-                                <col style="width: 100px;">
-                                <col style="width: 100px;">
-                                <col style="width: 100px;">
-                                <col style="width: 100px;">
+                                <col style="width: 80px;">
+                                <col style="width: 80px;">
+                                <col style="width: 80px;">
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th class="th_fixed"><label class="chk_item"><input type="checkbox" name="" class="tr_chk_all" onchange="checkAll(this)"></label></th>
                                     <th class="th_fixed">No</th>
-                                    <th class="th_fixed">표준구분</th>
-                                    <th class="th_fixed">계측기명 
-                                        <div class="col_sort">
-                                            <button class="btn_sort ty_up "></button>
-                                            <button class="btn_sort ty_down on"></button>
-                                        </div>
-                                    </th>
-                                    <th class="th_fixed">제조사
-                                        <div class="col_sort">
-                                            <button class="btn_sort ty_up on"></button>
-                                            <button class="btn_sort ty_down"></button>
-                                        </div>
-                                    </th>
-                                    <th class="th_fixed">형식
-                                        <div class="col_sort">
-                                            <button class="btn_sort ty_up on"></button>
-                                            <button class="btn_sort ty_down"></button>
-                                        </div>
-                                    </th>
+                                    <th class="th_fixed">계측기명 (국문)</th>
+                                    <th class="th_fixed">계측기명 (영문)</th>
+                                    <th class="th_fixed">제조사 (국문)</th>
+                                    <th class="th_fixed">제조사 (영문)</th>
+                                    <th class="th_fixed">형식 (국문)</th>
+                                    <th class="th_fixed">형식 (영문)</th>
                                     <th class="th_fixed">분류코드</th>
                                     <th class="th_fixed">교정분야</th>
-                                    <th class="th_fixed">사내/외 구분</th>
-                                    <th class="th_fixed">기준금액</th>
-                                    <th class="th_fixed">노출</th>
-                                    <th class="th_fixed">최근 교정일자
-                                        <div class="col_sort">
-                                            <button class="btn_sort ty_up on"></button>
-                                            <button class="btn_sort ty_down"></button>
-                                        </div>
-                                    </th>
-                                    <th class="th_fixed">수정일자
-                                        <div class="col_sort">
-                                            <button class="btn_sort ty_up "></button>
-                                            <button class="btn_sort ty_down on"></button>
-                                        </div>
-                                    </th>
+                                    <th class="th_fixed">최근 기준금액</th>
+                                    <th class="th_fixed">등록</th>
+                                    <th class="th_fixed">검토 여부</th>
                                 </tr>
                             </thead>
-                            <tbody> 
+                            <tbody>  
                                 <!--[D] 행 활성화 'on' class-->
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></td>
+                                <tr class="cursor_pointer on">
                                     <td>9999</td>
-                                    <td>표준</td>
                                     <td class="ellipsisTooltip">계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
-                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
-                                    <td class="ellipsisTooltip">형식노출</td>
+                                    <td class="ellipsisTooltip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, ut!</td>
+                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명</td>
+                                    <td class="ellipsisTooltip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, ut!</td>
+                                    <td class="ellipsisTooltip">600 (0.01) mm</td>
+                                    <td class="ellipsisTooltip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, ut!</td>
                                     <td>10214123</td>
-                                    <td>복합형상</td>
-                                    <td>사내</td>
-                                    <td>14,000</td>
-                                    <td>
-                                        <label class="f_toggle">
-                                            <input type="checkbox" checked>
-                                            <span class="slider">
-                                                <div class="slider_txt false">비노출</div>
-                                                <div class="slider_txt true">노출</div>
-                                            </span>
-                                        </label>
-                                    </td>
-                                    <td>2025-02-04</td>
-                                    <td>2025-02-04</td>
+                                    <td>교정분야 교정분야 교정분야</td>
+                                    <td>999,999,000</td>
+                                    <td>홍길동</td>
+                                    <td><b class="fc_blue">완료</b></td>
                                 </tr>   
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></td>
+                                <tr class="cursor_pointer">
                                     <td>9999</td>
-                                    <td>표준</td>
                                     <td class="ellipsisTooltip">계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
-                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
-                                    <td class="ellipsisTooltip">형식노출</td>
+                                    <td class="ellipsisTooltip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, ut!</td>
+                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명</td>
+                                    <td class="ellipsisTooltip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, ut!</td>
+                                    <td class="ellipsisTooltip">600 (0.01) mm</td>
+                                    <td class="ellipsisTooltip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, ut!</td>
                                     <td>10214123</td>
-                                    <td>복합형상</td>
-                                    <td>사내</td>
-                                    <td>14,000</td>
-                                    <td>
-                                        <label class="f_toggle">
-                                            <input type="checkbox" checked>
-                                            <span class="slider">
-                                                <div class="slider_txt false">비노출</div>
-                                                <div class="slider_txt true">노출</div>
-                                            </span>
-                                        </label>
-                                    </td>
-                                    <td>2025-02-04</td>
-                                    <td>2025-02-04</td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></td>
+                                    <td>교정분야 교정분야 교정분야</td>
+                                    <td>999,999,000</td>
+                                    <td>홍길동</td>
+                                    <td><b class="fc_red">반려</b></td>
+                                </tr>   
+                                <tr class="cursor_pointer">
                                     <td>9999</td>
-                                    <td>표준</td>
                                     <td class="ellipsisTooltip">계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
-                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
-                                    <td class="ellipsisTooltip">형식노출</td>
+                                    <td class="ellipsisTooltip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, ut!</td>
+                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명</td>
+                                    <td class="ellipsisTooltip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, ut!</td>
+                                    <td class="ellipsisTooltip">600 (0.01) mm</td>
+                                    <td class="ellipsisTooltip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, ut!</td>
                                     <td>10214123</td>
-                                    <td>복합형상</td>
-                                    <td>사내</td>
-                                    <td>14,000</td>
-                                    <td>
-                                        <label class="f_toggle">
-                                            <input type="checkbox">
-                                            <span class="slider">
-                                                <div class="slider_txt false">비노출</div>
-                                                <div class="slider_txt true">노출</div>
-                                            </span>
-                                        </label>
-                                    </td>
-                                    <td>2025-02-04</td>
-                                    <td>2025-02-04</td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></td>
-                                    <td>9999</td>
-                                    <td>표준</td>
-                                    <td class="ellipsisTooltip">계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
-                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
-                                    <td class="ellipsisTooltip">형식노출</td>
-                                    <td>10214123</td>
-                                    <td>복합형상</td>
-                                    <td>사내</td>
-                                    <td>14,000</td>
-                                    <td>
-                                        <label class="f_toggle">
-                                            <input type="checkbox">
-                                            <span class="slider">
-                                                <div class="slider_txt false">비노출</div>
-                                                <div class="slider_txt true">노출</div>
-                                            </span>
-                                        </label>
-                                    </td>
-                                    <td>2025-02-04</td>
-                                    <td>2025-02-04</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="13">
+                                    <td>교정분야 교정분야 교정분야</td>
+                                    <td>999,999,000</td>
+                                    <td>홍길동</td>
+                                    <td>대기</td>
+                                </tr>   
+                                <tr class="cursor_pointer">
+                                    <td colspan="12">
                                         <div class="no_result_box" style="height: 160px;">
                                             <i class="fa-solid fa-file-circle-xmark"></i>
                                             <p class="mt10">검색 결과가 없습니다.</p>
@@ -478,11 +405,7 @@
                         <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
                     </div> 
                 </section>
-                <section class="sec mt20">
-                    <div class="sub_tit2 mb10 d_flex al_b">
-                        <h2 class="tit4"><b>계측기 정보</b></h2>   
-                        <p class="fc_red ml_auto">※ 수정 항목을 선택해주세요.</p>
-                    </div>
+                <section class="sec mt40">
                     <form action="">
                         <div class="v_tbl_wrap">
                             <table class="v_tbl tl_fixed">
@@ -496,62 +419,89 @@
                                         <col>
                                     </colgroup>
                                     <tr>
-                                        <th><label class="chk_item"><input type="checkbox" name=""> 계측기명 (국문)</label></th>
+                                        <th>계측기명 (국문)</th>
                                         <td>
-                                            <input type="text" class="f_input ty_small w_300">
+                                            <input type="text" class="f_input ty_small w_300" value="계측기명~~~">
                                         </td>
-                                        <th><label class="chk_item"><input type="checkbox" name=""> 제조사 (국문)</label></th>
+                                        <th>제조사 (국문)</th>
                                         <td>
-                                            <input type="text" class="f_input ty_small w_300">
+                                            <input type="text" class="f_input ty_small w_300" value="제조사명~~~">
                                         </td>
-                                        <th><label class="chk_item"><input type="checkbox" name=""> 형식 (국문)</label></th>
+                                        <th>형식 (국문)</th>
                                         <td>
-                                            <input type="text" class="f_input ty_small w_300">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th><label class="chk_item"><input type="checkbox" name=""> 계측기명 (영문)</label></th>
-                                        <td>
-                                            <input type="text" class="f_input ty_small w_300">
-                                        </td>
-                                        <th><label class="chk_item"><input type="checkbox" name=""> 제조사 (영문)</label></th>
-                                        <td>
-                                            <input type="text" class="f_input ty_small w_300">
-                                        </td>
-                                        <th><label class="chk_item"><input type="checkbox" name=""> 형식 (영문)</label></th>
-                                        <td>
-                                            <input type="text" class="f_input ty_small w_300">
+                                            <input type="text" class="f_input ty_small w_300" value="형식명~~~">
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th><label class="chk_item"><input type="checkbox" name="">분류코드</label></th>
+                                        <th>계측기명 (영문)</th>
                                         <td>
-                                            <div class="d_flex _gapX6 w_180">
+                                            <input type="text" class="f_input ty_small w_300" value="Lorem ipsum dolor sit amet">
+                                        </td>
+                                        <th>제조사 (영문)</th>
+                                        <td>
+                                            <input type="text" class="f_input ty_small w_300" value="Lorem ipsum dolor sit amet">
+                                        </td>
+                                        <th>형식 (영문)</th>
+                                        <td>
+                                            <input type="text" class="f_input ty_small w_300" value="Lorem ipsum dolor sit amet">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>분류코드</th>
+                                        <td>
+                                            <div class="d_flex _gapX6 w_250">
                                                 <input type="text" class="f_input ty_small w100" value="10214" readonly>
-                                                <button type="button" class="f_btn ty_small _key w_60">검색</button>
+                                                <button type="button" class="f_btn ty_small _key w_60 shrink0">검색</button>
+                                                <button type="button" class="f_btn ty_small _solidGrey w_60 shrink0">초기화</button>
                                             </div>
                                         </td>
-                                        <th><label class="chk_item"><input type="checkbox" name="">기준금액</label></th>
-                                        <td><input type="text" class="f_input ty_small w_180" value="14,000" readonly></td>
-                                        <th><label class="chk_item"><input type="checkbox" name="">형식</label></th>
+                                        <th>사내/외 구분</th>
                                         <td>
                                             <div class="chk_list">
                                                 <label class="chk_item"><input type="radio" name="type" checked> 사내교정품목</label>
                                                 <label class="chk_item"><input type="radio" name="type"> 사외교정품목</label>
                                             </div>
                                         </td>
+                                        <th>기준금액</th>
+                                        <td><input type="text" class="f_input ty_small w_180" value="14,000" readonly></td>
                                     </tr>
                                     <tr>
-                                        <th><label class="chk_item"><input type="checkbox" name="">노출 설정</label></th>
-                                        <td colspan="5">
-                                            <label class="f_toggle">
-                                                <input type="checkbox">
-                                                <span class="slider">
-                                                    <div class="slider_txt false">비노출</div>
-                                                    <div class="slider_txt true">노출</div>
-                                                </span>
-                                            </label>
+                                        <th>등록</th>
+                                        <td>안유진 (2025-04-24 15:22)</td>
+                                        <th>요청 구분</th>
+                                        <td>등록</td>
+                                        <th>상태</th>
+                                        <td>
+                                            <div class="chk_list">
+                                                <label class="chk_item"><input type="radio" name="status2" value="대기" checked> 대기</label>
+                                                <label class="chk_item"><input type="radio" name="status2" value="완료"> 완료</label>
+                                                <label class="chk_item"><input type="radio" name="status2" value="반려"> 반려</label>
+                                            </div>
+                                            <!--[D] 반려 체크시 노출-->
+                                            <input type="text" class="f_input ty_small w100 mt6 companion_input" placeholder="반려 사유를 입력해주세요." style="display: none;" required>
+
+                                            <!--[D] UI 확인용 스크립트-->
+                                            <script>    
+                                                const companion_input = document.querySelector('.companion_input');
+                                                const radios = document.querySelectorAll('input[name="status2"]');
+                                                radios.forEach(radio => {
+                                                    radio.addEventListener('change',()=>{
+                                                        if(radio.value === '반려' && radio.checked){
+                                                            companion_input.style.display = 'block'
+                                                        }else{
+                                                            companion_input.style.display = 'none'
+                                                        }
+                                                    })
+                                                })   
+                                            </script>
                                         </td>
+                                    </tr>
+                                    <tr>
+                                        <th>메모</th>
+                                        <td colspan="2">
+                                            <textarea name="" id="" placeholder="메모를 입력해주세요." class="f_ta ty_small "></textarea>
+                                        </td>
+                                        <td colspan="3"></td>
                                     </tr>
                                 </tbody>
                             </table> 
