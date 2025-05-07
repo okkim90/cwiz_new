@@ -6870,6 +6870,9 @@ body {
   letter-spacing: -0.4px;
   overflow-x: auto;
 }
+body.noScroll {
+  overflow: hidden;
+}
 
 article,
 aside,

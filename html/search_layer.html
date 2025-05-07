@@ -359,50 +359,60 @@
                                             </div>
                                             <div class="search_details_sec">
                                                 <strong class="tit">제조사</strong>
+                                                <!--[D] 계측기명 선택시 검색 input 노출-->
+                                                <!---->
+                                                <div class="search_details_input">
+                                                    <div class="input_box">
+                                                        <input type="text" class="f_input ty_mid w100 pr35" placeholder="제조사를 입력해주세요.">
+                                                        <!--[D] 검색어 입렵됐을 때 -->
+                                                        <button type="button" class="btn_del_input" onclick="" style="display:none;"></button>
+                                                    </div>     
+                                                </div>
+                                                <!---->
                                                 <div class="list_wrap">
                                                     <ul class="cal_select_list ">
-                                                        <!-- [D] 교정분야 선택 전 -->
+                                                        <!-- [D] 제조사 선택 전 -->
                                                         <li>
                                                             <div class="no_result_box" style="height: 319px;">
                                                                 <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                                                                <p class="mt10">계측기명을 선택해주세요.</p>
+                                                                <p class="mt10">제조사를 선택해주세요.</p>
                                                             </div>
                                                         </li>
-                                                        <!--// [D] 교정분야 선택 전 -->
+                                                        <!--// [D] 제조사 선택 전 -->
                                                         <li class="cal_select_item">
                                                             <label class="cal_select_btn">
-                                                                <input type="radio" name="dep2" >
-                                                                <span class="txt_box ellipsisTooltip fwB">전체</span>
+                                                                <input type="radio" name="dep1">
+                                                                <span class="txt_box ellipsisTooltip"><b>디지털</b> 어쩌구 어쩌구 어쩌구</span>
                                                             </label>
                                                         </li>
                                                         <li class="cal_select_item">
                                                             <label class="cal_select_btn">
-                                                                <input type="radio" name="dep2">
-                                                                <span class="txt_box ellipsisTooltip">제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 </span>
+                                                                <input type="radio" name="dep1">
+                                                                <span class="txt_box ellipsisTooltip"><b>디지털</b> 어쩌구</span>
                                                             </label>
                                                         </li>
                                                         <li class="cal_select_item">
                                                             <label class="cal_select_btn">
-                                                                <input type="radio" name="dep2">
-                                                                <span class="txt_box ellipsisTooltip">제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 </span>
+                                                                <input type="radio" name="dep1">
+                                                                <span class="txt_box ellipsisTooltip">어쩌구 <b>디지털</b> 어쩌구 어쩌구 어쩌구</span>
                                                             </label>
                                                         </li>
                                                         <li class="cal_select_item">
                                                             <label class="cal_select_btn">
-                                                                <input type="radio" name="dep2">
-                                                                <span class="txt_box ellipsisTooltip">제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 </span>
+                                                                <input type="radio" name="dep1">
+                                                                <span class="txt_box ellipsisTooltip">어쩌구 <b>디지털</b> 어쩌구 저쩌구어쩌구 저쩌구어쩌구 저쩌구어쩌구 저쩌구어쩌구 저쩌구</span>
                                                             </label>
                                                         </li>
                                                         <li class="cal_select_item">
                                                             <label class="cal_select_btn">
-                                                                <input type="radio" name="dep2">
-                                                                <span class="txt_box ellipsisTooltip">제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 </span>
+                                                                <input type="radio" name="dep1">
+                                                                <span class="txt_box ellipsisTooltip"><b>디지털</b> 어쩌구 어쩌구 어쩌구어쩌구 어쩌구 어쩌구어쩌구 어쩌구 어쩌구어쩌구 어쩌구 어쩌구</span>
                                                             </label>
                                                         </li>
                                                         <li class="cal_select_item">
                                                             <label class="cal_select_btn">
-                                                                <input type="radio" name="dep2">
-                                                                <span class="txt_box ellipsisTooltip">제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 제조사 이름 </span>
+                                                                <input type="radio" name="dep1">
+                                                                <span class="txt_box ellipsisTooltip">어쩌구 저쩌구어쩌구 저쩌구어쩌구 <b>디지털</b></span>
                                                             </label>
                                                         </li>
                                                     </ul>
@@ -416,7 +426,7 @@
                                                         <li>
                                                             <div class="no_result_box" style="height: 319px;">
                                                                 <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                                                                <p class="mt10">제조사를 선택해주세요.</p>
+                                                                <p class="mt10">형식을 선택해주세요.</p>
                                                             </div>
                                                         </li>
                                                         <!--// [D] 계측기 선택 전 -->
