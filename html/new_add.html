@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Generator" content="KIC">
+    <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Description" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <title>교정마법사 CWIZ - CALIBRATION WIZARD</title>
+    <script src="https://kit.fontawesome.com/8f18490998.js" crossorigin="anonymous" ></script>
+    <script src="../assets/js/jquery-3.1.1.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/datepicker.css">
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+</head>
+<body>
+    <div id="skip-nav">
+        <a href="#container"></a>
+    </div>
+    
+    <div id="wrap" class="grid-container">
+        <!-- header -->
+        <header class="header">
+            <h1 class="logo"><a href=""><img src="../assets/images/common/logo.svg" alt=""></a></h1>
+            <div class="h_util">
+                <div class="h_util_sec h_user">
+                    <i class="fa-solid fa-user"></i><a href="" class="user_name">홍길동</a> 님 
+                </div>
+                <div class="h_util_sec h_point">
+                    <a href="" class="h_point_btn">
+                        <span class="h_point_ico">P</span>
+                        <span class="h_point_cont">129,005</span>
+                    </a>
+                </div>
+                <div class="h_util_sec h_btns">
+                    <!--[D] 알림(종) 활성화  'on' class 추가-->
+                    <button type="button" class="h_btn ty_notice on" onclick="f_alert_open();">
+                        <i class="fa-solid fa-bell"></i>
+                    </button>
+                    <a href="" class="h_btn ty_logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </div>
+                <div class="f_alert_box">
+                    <div class="f_alert_top">
+                        <h2 class="tit">알림</h2>
+                        <label class="f_toggle ml10">
+                            <input type="checkbox" class="alert_chk" onchange="f_alert_chk(this)" >
+                            <span class="slider">
+                                <div class="slider_txt false">전체</div>
+                                <div class="slider_txt true">미확인</div>
+                            </span>
+                        </label>
+                        <button type="button" class="f_alert_close ml_auto" onclick="f_alert_close()">
+                            <span class="blind">팝업 닫기</span>
+                        </button>
+                    </div>
+                    <ul class="f_alert_list">
+                        <!--[D] 이미 읽은 상태일 경우 'read' class 추가-->
+                        <li class="f_alert_item ">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 공지알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_notice.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item read">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 교정결과 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_cal.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item ">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 교정예정일 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_due.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item ">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 견적요청 승인 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_estimate.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item read">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 공지알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_notice.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 견적요청 승인 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_estimate.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="f_alert_item read">
+                            <a href="" class="f_alert_link">
+                                <!--[D] 차기 견적요청 승인 알림 아이콘-->
+                                <i><img src="../assets/images/common/ico_alert_estimate.svg" alt=""></i>
+                                <div class="txt_box">
+                                    <span class="date">2023년 3월 10일</span>
+                                    <div class="desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet cum itaque explicabo sequi ad nihil beatae quidem. Quam, doloribus ad.
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!--// header -->
+        <!-- nav -->
+        <aside class="sidenav">
+
+            <button type="button" class="btn_nav_toggle"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="sidenav_top_wrap">
+                <div class="sidenav_top">
+                    <div class="img_box">
+                        <i class="fa-solid fa-user ico_no_img"></i>
+                        <!-- <img src="../assets/images/common/Tesla_logo.png" alt=""> -->
+                    </div>
+                    <button type="button" class="btn_add_logo" onclick="open_popup('pop_logo')">
+                        <i class="fa-solid fa-image"></i>
+                    </button>
+                </div>
+                <div class="msg_box">
+                    <p class="msg_box_name"><a href=""><b>김영술</b></a>님 안녕하세요.</p>
+                    <p class="msg_box_company"><a href="">코리아인스트루먼트(주)</a></p>   
+                </div>
+            </div>
+
+            <div class="layer_popup pop_logo" onclick="close_popup(this)">
+                <div class="layer_popup_inner">
+                    <div class="layer_popup_cont ty_small">
+                        <button type="button" class="close_popup" onclick="close_popup(this)">
+                            <span class="blind">팝업 닫기</span>
+                        </button>
+                        <div class="sub_tit">
+                            <h1 class="tit1">로고 이미지 등록</h1>
+                        </div>
+                        <form action="">
+                            <!--[D] 이미지 첨부 전 -->
+                            <div class="img_box ty_upload ty_logo">
+                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
+                                <label for="upload_eq_img" class="btn_img_upluad">
+                                    <i class="fa-solid fa-image"></i>
+                                    <p>이미지 첨부하기 (260 x 90)</p>
+                                </label>
+                            </div>
+                            <!--// [D] 이미지 첨부 전 -->
+                            
+                            <br><!--[D] 개발시 삭제-->
+
+                                <!--[D] 이미지 첨부 후 -->
+                            <div class="img_box ty_upload ty_logo">
+                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
+                                <div class="img_box_edit">
+                                    <label for="upload_eq_img" class="img_box_edit_btn"><i class="fa-solid fa-rotate"></i><span class="blind">수정</span></label>
+                                    <button type="button" class="img_box_edit_btn"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button>
+                                </div>
+                                <img src="../assets/images/common/Tesla_logo.png" alt="">
+                            </div>  
+                            <!--[D] 이미지 첨부 후 -->                
+                            <div class="btn_set mt20 taC">
+                                <input type="submit" class="f_btn ty_small _key w_80" value="등록">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <ul class="nav">
+                <li class="nav_item on">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu1"></i>교정이력</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2 on">교정 접수 내역</a></li>
+                            <li><a href="" class="btn_dep2">교정 결과 조회</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu2"></i>교정 단가 조회</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">교정 단가 조회</a></li>
+                        </ul>
+                    </div>       
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu3"></i>견적 요청</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">견적 요청 조회</a></li>
+                            <li><a href="" class="btn_dep2">견적 요청</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu4"></i>마이 페이지</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">내 정보</a></li>
+                            <li><a href="" class="btn_dep2">우리 장비</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu5"></i>고객 지원</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">공지사항</a></li>
+                            <li><a href="" class="btn_dep2">자료실</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu6"></i>관리자</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">회원 관리</a></li>
+                            <li><a href="" class="btn_dep2">공지사항 관리</a></li>
+                            <li><a href="" class="btn_dep2">자료실 관리</a></li>
+                        </ul>
+                    </div>                 
+                </li>
+            </ul>
+        </aside>
+        <!-- // nav -->
+
+        <!--container-->
+        <main id="container" class="container">
+            <div id="contents" class="contents">
+                <a href="javascript:history.back()" class="btn_back"><span class="blind">뒤로가기</span></a>
+                <div class="sub_tit">
+                    <h1 class="tit1">계측기 검색</h1>
+                </div>
+                <div class="tabs_wrap"> 
+                    <ul class="tabs">
+                        <li class="tabs_item on">
+                            <button class="tabs_btn" onclick="tabs(this,0)">전체목록</button>
+                        </li>
+                        <li class="tabs_item">
+                            <button class="tabs_btn" onclick="tabs(this,1)">우리장비</button>
+                        </li>
+                    </ul>
+                    <div class="tabs_cont on">
+                        <section class="sec mt0">
+                            <div class="search_details col3">  
+                                <div class="search_details_sec ty2">
+                                    <strong class="tit">제조사</strong>
+                                    <div class="search_details_input">
+                                        <div class="input_box">
+                                            <input type="text" class="f_input ty_mid w100 pr35" placeholder="제조사를 검색해주세요.">
+                                            <!--[D] 검색어 입렵됐을 때 -->
+                                            <button type="button" class="btn_del_input" onclick="" style="display:none;"></button>
+                                        </div>     
+                                    </div>
+                                    <div class="list_wrap">
+                                        <ul class="cal_select_list ">
+                                            <!-- [D] 제조사 선택 전 -->
+                                            <li>
+                                                <div class="no_result_box" style="height: 210px;">
+                                                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                                                    <p class="mt10">제조사를 입력해주세요.</p>
+                                                </div>
+                                            </li>
+                                            <!--// [D] 제조사 선택 전 -->
+                                            <li class="cal_select_item">
+                                                <label class="cal_select_btn">
+                                                    <input type="radio" name="dep1">
+                                                    <span class="txt_box ellipsisTooltip"><b>디지털</b> 어쩌구 어쩌구 어쩌구</span>
+                                                </label>
+                                            </li>
+                                            <li class="cal_select_item">
+                                                <label class="cal_select_btn">
+                                                    <input type="radio" name="dep1">
+                                                    <span class="txt_box ellipsisTooltip"><b>디지털</b> 어쩌구</span>
+                                                </label>
+                                            </li>
+                                            <li class="cal_select_item">
+                                                <label class="cal_select_btn">
+                                                    <input type="radio" name="dep1">
+                                                    <span class="txt_box ellipsisTooltip">어쩌구 <b>디지털</b> 어쩌구 어쩌구 어쩌구</span>
+                                                </label>
+                                            </li>
+                                            <li class="cal_select_item">
+                                                <label class="cal_select_btn">
+                                                    <input type="radio" name="dep1">
+                                                    <span class="txt_box ellipsisTooltip">어쩌구 <b>디지털</b> 어쩌구 저쩌구어쩌구 저쩌구어쩌구 저쩌구어쩌구 저쩌구어쩌구 저쩌구</span>
+                                                </label>
+                                            </li>
+                                            <li class="cal_select_item">
+                                                <label class="cal_select_btn">
+                                                    <input type="radio" name="dep1">
+                                                    <span class="txt_box ellipsisTooltip"><b>디지털</b> 어쩌구 어쩌구 어쩌구어쩌구 어쩌구 어쩌구어쩌구 어쩌구 어쩌구어쩌구 어쩌구 어쩌구</span>
+                                                </label>
+                                            </li>
+                                            <li class="cal_select_item">
+                                                <label class="cal_select_btn">
+                                                    <input type="radio" name="dep1">
+                                                    <span class="txt_box ellipsisTooltip">어쩌구 저쩌구어쩌구 저쩌구어쩌구 <b>디지털</b></span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="search_details_sec ty2">
+                                    <strong class="tit">형식</strong>
+                                    <div class="search_details_input">
+                                        <div class="input_box">
+                                            <!--[D] 계측기명 선택시 검색 input disabled 제거 -->
+                                            <input type="text" class="f_input ty_mid w100 pr35 " placeholder="형식을 검색해주세요." disabled>
+                                            <!--[D] 검색어 입렵됐을 때 -->
+                                            <button type="button" class="btn_del_input" onclick="" style="display:none;"></button>
+                                        </div>     
+                                    </div>
+                                    <div class="list_wrap">
+                                        <ul class="cal_select_list ">
+                                            <!-- [D] 제조사 선택 전 -->
+                                            <li>
+                                                <div class="no_result_box" style="height: 210px;">
+                                                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                                                    <p class="mt10">제조사를 선택해주세요.</p>
+                                                </div>
+                                            </li>
+                                            <!--// [D] 제조사 선택 전 -->
+                                            <li class="cal_select_item">
+                                                <label class="cal_select_btn">
+                                                    <input type="radio" name="dep1">
+                                                    <span class="txt_box ellipsisTooltip"><b>디지털</b> 어쩌구 어쩌구 어쩌구</span>
+                                                </label>
+                                            </li>
+                                            <li class="cal_select_item">
+                                                <label class="cal_select_btn">
+                                                    <input type="radio" name="dep1">
+                                                    <span class="txt_box ellipsisTooltip"><b>디지털</b> 어쩌구</span>
+                                                </label>
+                                            </li>
+                                            <li class="cal_select_item">
+                                                <label class="cal_select_btn">
+                                                    <input type="radio" name="dep1">
+                                                    <span class="txt_box ellipsisTooltip">어쩌구 <b>디지털</b> 어쩌구 어쩌구 어쩌구</span>
+                                                </label>
+                                            </li>
+                                            <li class="cal_select_item">
+                                                <label class="cal_select_btn">
+                                                    <input type="radio" name="dep1">
+                                                    <span class="txt_box ellipsisTooltip">어쩌구 <b>디지털</b> 어쩌구 저쩌구어쩌구 저쩌구어쩌구 저쩌구어쩌구 저쩌구어쩌구 저쩌구</span>
+                                                </label>
+                                            </li>
+                                            <li class="cal_select_item">
+                                                <label class="cal_select_btn">
+                                                    <input type="radio" name="dep1">
+                                                    <span class="txt_box ellipsisTooltip"><b>디지털</b> 어쩌구 어쩌구 어쩌구어쩌구 어쩌구 어쩌구어쩌구 어쩌구 어쩌구어쩌구 어쩌구 어쩌구</span>
+                                                </label>
+                                            </li>
+                                            <li class="cal_select_item">
+                                                <label class="cal_select_btn">
+                                                    <input type="radio" name="dep1">
+                                                    <span class="txt_box ellipsisTooltip">어쩌구 저쩌구어쩌구 저쩌구어쩌구 <b>디지털</b></span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="search_details_sec ty2 dep2">
+                                    <strong class="tit">계측기명</strong>
+                                    <div class="list_wrap">
+                                        <ul class="cal_select_list ">
+                                            <!-- [D] 계측기 선택 전 -->
+                                            <li>
+                                                <div class="no_result_box" style="height: 259px;">
+                                                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                                                    <p class="mt10">형식을 선택해주세요.</p>
+                                                </div>
+                                            </li>
+                                            <!--// [D] 계측기 선택 전 -->
+                                            <li class="cal_select_item">
+                                                <label class="cal_select_btn">
+                                                    <input type="radio" name="dep3">
+                                                    <span class="txt_box fwB ellipsisTooltip">전체</span>
+                                                </label>
+                                            </li>
+                                            <li class="cal_select_item">
+                                                <label class="cal_select_btn">
+                                                    <input type="radio" name="dep3">
+                                                    <span class="txt_box ellipsisTooltip">형식 내용 형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용</span>
+                                                </label>
+                                            </li>
+                                            <li class="cal_select_item">
+                                                <label class="cal_select_btn">
+                                                    <input type="radio" name="dep3">
+                                                    <span class="txt_box ellipsisTooltip">형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용</span>
+                                                </label>
+                                            </li>
+                                            <li class="cal_select_item">
+                                                <label class="cal_select_btn">
+                                                    <input type="radio" name="dep3">
+                                                    <span class="txt_box ellipsisTooltip">형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용</span>
+                                                </label>
+                                            </li>
+                                            <li class="cal_select_item">
+                                                <label class="cal_select_btn">
+                                                    <input type="radio" name="dep3">
+                                                    <span class="txt_box ellipsisTooltip">형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용형식 내용</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> 
+                        </section>
+                        <div class="sec_wrap d_flex _gap30">
+                            <section class="sec" style="width: 40%;">
+                                <div class="sub_tit2" style="height: 36px;">
+                                    <div class="tit3"><b> 1. 접수 내역 :</b> 9,999건</div>
+                                    <select name="" id="" class="f_select ty_small w_80 ml20">
+                                        <option value="">30개</option>
+                                        <option value="">50개</option>
+                                        <option value="">100개</option>
+                                        <option value="">200개</option>
+                                        <option value="">전체</option>
+                                    </select>
+                                    <div class="d_flex ml_auto ai_t">
+                                        <button type="submit" class="f_btn _key ty_mid w_80">담기 &nbsp; <i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                                <div class="chk_wrap card2_wrap">
+                                    <div class="card2_wrap_top">
+                                        <label class="chk_all_btn"><input type="checkbox" class="chk_all" onchange="chk_row_all(this)"> 전체선택</label> 
+                                    </div>    
+                                    <ul class="card2_list" style="height: 303px;">          
+                                        <li class="card2_item chk_row">
+                                            <div class="card2_inner">
+                                                <div class="card2_row ty_flex">
+                                                    <input type="checkbox" class="row_chk">
+                                                    <ul class="list_sepBar fz_small">
+                                                        <li class="list_item ">FLUKE</li>
+                                                        <li class="list_item">87V</li>
+                                                        <li class="list_item fwB">디지털 멀티미터</li>
+                                                    </ul> 
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="card2_item chk_row">
+                                            <div class="card2_inner">
+                                                <div class="card2_row ty_flex">
+                                                    <input type="checkbox" class="row_chk">
+                                                    <ul class="list_sepBar fz_small">
+                                                        <li class="list_item ">FLUKE</li>
+                                                        <li class="list_item">87V</li>
+                                                        <li class="list_item fwB">디지털 멀티미터</li>
+                                                    </ul> 
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="card2_item chk_row">
+                                            <div class="card2_inner">
+                                                <div class="card2_row ty_flex">
+                                                    <input type="checkbox" class="row_chk">
+                                                    <ul class="list_sepBar fz_small">
+                                                        <li class="list_item ">FLUKE</li>
+                                                        <li class="list_item">87V</li>
+                                                        <li class="list_item fwB">디지털 멀티미터</li>
+                                                    </ul> 
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="card2_item chk_row">
+                                            <div class="card2_inner">
+                                                <div class="card2_row ty_flex">
+                                                    <input type="checkbox" class="row_chk">
+                                                    <ul class="list_sepBar fz_small">
+                                                        <li class="list_item ">FLUKE</li>
+                                                        <li class="list_item">87V</li>
+                                                        <li class="list_item fwB">디지털 멀티미터</li>
+                                                    </ul> 
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="paging_wrap mt15">
+                                    <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
+                                    <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
+                                    <ul class="paging_list">
+                                        <li><span class="paging_btn current">1</span></li>
+                                        <li><a href="" class="paging_btn">2</a></li>
+                                        <li><a href="" class="paging_btn">3</a></li>
+                                        <li><a href="" class="paging_btn">4</a></li>
+                                        <li><a href="" class="paging_btn">5</a></li>
+                                    </ul>
+                                    <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
+                                    <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
+                                </div>
+                            </section>
+                            <section class="sec flex1">
+                                <div class="sub_tit2">
+                                    <div class="tit3"><b> 2. 교정 장바구니 :</b> 9,999건</div>
+                                    <select name="" id="" class="f_select ty_small w_80 ml20">
+                                        <option value="">30개</option>
+                                        <option value="">50개</option>
+                                        <option value="">100개</option>
+                                        <option value="">200개</option>
+                                        <option value="">전체</option>
+                                    </select>
+                                    <div class="btn_set ml_auto ai_b">
+                                        <p>
+                                            <i class="fa-solid fa-circle-info fz_mid fc_key mr5"></i>출고 요청은 결제 완료건만 가능합니다.
+                                        </p>
+                                        <button type="button" class="f_btn ty_mid _key ty_arrow w_100">접수 하기</button>
+                                    </div>
+                                </div>
+                                <div class="no_result_box ty_bg">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <p class="mt10">접수건을 선택해주세요.</p>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="tabs_cont">
+                        <section class="sec mt0">
+                            <div class="v_tbl_wrap">
+                                <table class="v_tbl tl_auto">
+                                    <tbody>
+                                        <colgroup>
+                                            <col style="width: 12%;">
+                                            <col>
+                                            <col style="width: 12%;">
+                                            <col>
+                                            <col style="width: 12%;">
+                                            <col style="width: 255px;">
+                                        </colgroup>
+                                        <tr>
+                                            <th>최근 교정일</th>
+                                            <td colspan="5">
+                                                <div class="date_set" style="flex-wrap: wrap;">
+                                                    <input type="text" class="f_input ty_small inp_date date_start" readonly> ~
+                                                    <input type="text" class="f_input ty_small inp_date date_end" readonly> 
+                                                    <button type="button" onclick="set_1m(this)" class="f_btn ty_xsmall _round _blue_op w_50">1개월</button>
+                                                    <button type="button" onclick="set_3m(this)" class="f_btn ty_xsmall _round _navy_op w_50">3개월</button>
+                                                    <button type="button" onclick="set_6m(this)" class="f_btn ty_xsmall _round _purple_op w_50">6개월</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>계측기명</th>
+                                            <td><input type="text" class="f_input ty_small w100"></td>
+                                            <th>제조사</th>
+                                            <td><input type="text" class="f_input ty_small w100"></td>
+                                            <th>형식</th>
+                                            <td><input type="text" class="f_input ty_small w100"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>기기번호</th>
+                                            <td><input type="text" class="f_input ty_small w100"></td>
+                                            <th>CMI 번호</th>
+                                            <td><input type="text" class="f_input ty_small w100"></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table> 
+                                <div class="btn_set taC mt30">
+                                    <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
+                                    <button type="button" class="f_btn ty_mid _solidGrey w_100">초기화 <i class="fa-solid fa-arrows-rotate"></i></button>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="sec">
+                            <div class="sub_tit2 mb10 d_flex al_b">
+                                <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2>
+                                <select name="" id="" class="f_select ty_small w_80 ml20">
+                                    <option value="">10개</option>
+                                    <option value="">30개</option>
+                                    <option value="">50개</option>
+                                    <option value="">100개</option>
+                                </select>
+                            </div>
+                            <div class="h_tbl_wrap y_scroll_area" style="max-height: 280px;">
+                                <table class="h_tbl tl_fixed">
+                                    <colgroup>
+                                        <col style="width: 40px;">
+                                        <col style="width: 80px;">
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col style="width: 100px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class="th_fixed"><input type="checkbox" name="" class="tr_chk_all" onchange="checkAll(this)"></label></th>
+                                            <th class="th_fixed">CMI No</th>
+                                            <th class="th_fixed">계측기명</th>
+                                            <th class="th_fixed">제조사</th>
+                                            <th class="th_fixed">형식</th>
+                                            <th class="th_fixed">기기번호</th>
+                                            <th class="th_fixed">차기 교정일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="7">
+                                                <div class="no_result_box" style="height: 160px;">
+                                                    <i class="fa-solid fa-file-circle-xmark"></i>
+                                                    <p class="mt10">검색 결과가 없습니다.</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="chk_tr">
+                                            <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                            <td>123456</td>
+                                            <td class="ellipsisTooltip">계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
+                                            <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
+                                            <td class="ellipsisTooltip">형식노출</td>
+                                            <td class="ellipsisTooltip">기기번호노출</td>
+                                            <td>2023-11-12</td>
+                                        </tr>
+                                        <tr class="chk_tr">
+                                            <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                            <td>123456</td>
+                                            <td class="ellipsisTooltip">계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
+                                            <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
+                                            <td class="ellipsisTooltip">형식노출</td>
+                                            <td class="ellipsisTooltip">기기번호노출</td>
+                                            <td>2023-11-12</td>
+                                        </tr>
+                                        <tr class="chk_tr">
+                                            <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                            <td>123456</td>
+                                            <td class="ellipsisTooltip">계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
+                                            <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
+                                            <td class="ellipsisTooltip">형식노출</td>
+                                            <td class="ellipsisTooltip">기기번호노출</td>
+                                            <td>2023-11-12</td>
+                                        </tr>
+                                        <tr class="chk_tr">
+                                            <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                            <td>123456</td>
+                                            <td class="ellipsisTooltip">계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
+                                            <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
+                                            <td class="ellipsisTooltip">형식노출</td>
+                                            <td class="ellipsisTooltip">기기번호노출</td>
+                                            <td>2023-11-12</td>
+                                        </tr>
+                                        <tr class="chk_tr">
+                                            <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                            <td>123456</td>
+                                            <td class="ellipsisTooltip">계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기계측기명 계측기명 계측기</td>
+                                            <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명제조사명제조사명제조사명사명</td>
+                                            <td class="ellipsisTooltip">형식노출</td>
+                                            <td class="ellipsisTooltip">기기번호노출</td>
+                                            <td>2023-11-12</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="paging_wrap mt20">
+                                <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
+                                <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
+                                <ul class="paging_list">
+                                    <li><span class="paging_btn current">1</span></li>
+                                    <li><a href="" class="paging_btn">2</a></li>
+                                    <li><a href="" class="paging_btn">3</a></li>
+                                    <li><a href="" class="paging_btn">4</a></li>
+                                    <li><a href="" class="paging_btn">5</a></li>
+                                </ul>
+                                <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
+                                <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
+                            </div>
+                            <div class="btn_set taC mt30">
+                                <input type="submit" value="선택" class="f_btn ty_mid _key w_100">
+                                <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="close_popup(this)">닫기</button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                
+            </div>
+        </main>
+    
+        <!--footer-->
+        <footer class="footer">
+            <!-- <div class="footer_top">
+                <div class="inner">
+                    <ul class="footer_top_nav ">
+                        <li><a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a></li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="footer_logo">
+                <img src="../assets/images/common/logo_footer.svg" alt="KIC 코리아인스트루먼트(주)">
+            </div>
+            <div class="footer_info">
+                <ul class="footer_info_list">
+                    <li>코리아인스트루먼트(주)</li>
+                    <li><span class="bar"></span>사업자등록번호 : 101-81-45861</li>
+                    <li><span class="bar"></span>대표이사 : 정재호</li>
+                </ul>
+                <p class="copy">Copyright@KIC, Korea Instrument All Rights Reserved.</p>
+                <div class="contact">
+                    <b><i class="fa-solid fa-phone"></i> CONTACT US</b> 
+                    <span class="bar"></span>
+                    <span>1600 - 4245</span>
+                </div>
+            </div>
+            <div class="footer_right">
+                <div class="footer_right_btns">
+                    <a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a>
+                    <span class="bar"></span>
+                    <a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a>
+                </div>
+                <div class="footer_right_branch">
+                    <button class="btn_trigger">코리아인스트루먼트(주) 지점안내</button>
+                    <ul class="branch_list">
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=0" target="_blank">코리아인스트루먼트(주) 서울본사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=1" target="_blank">코리아인스트루먼트(주) 부산지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=2" target="_blank">코리아인스트루먼트(주) 대전지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=3" target="_blank">코리아인스트루먼트(주) 가평지안</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!--//footer-->
+
+    </div>
+     <!--[D] 리스트 체크 스크립트 (사용 안하면 삭제해주세요.)-->
+     <script>
+        const row_chk = document.querySelectorAll('.row_chk');
+        row_chk.forEach((e)=>{
+            e.addEventListener('click',(event)=>{
+                event.stopPropagation();
+            });
+            if(e.type == 'radio'){
+                let name = e.name;
+                let chk_siblings = document.querySelectorAll(`.row_chk[name=${name}]`);
+                e.addEventListener('change',(event)=>{
+                    chk_siblings.forEach((el)=>{
+                        el.closest('.chk_row').classList.remove('on');
+                    });
+                    if(e.checked){
+                        event.currentTarget.closest('.chk_row').classList.add('on');
+                    }
+                })
+            }else{
+                e.addEventListener('change',(event)=>{
+                    let chk_wrap = e.closest('.chk_wrap');
+                    let chk_all = chk_wrap.querySelector('.chk_all');
+                    if(e.checked){
+                        e.closest('.chk_row').classList.add('on');
+                    }else{
+                        e.closest('.chk_row').classList.remove('on');
+                        chk_all.checked = false;
+                    }
+                })
+            }
+        });
+
+        function chk_row_all(target){
+            let chk_wrap = target.closest('.chk_wrap');
+            if(target.checked){
+                chk_wrap.querySelectorAll('.row_chk').forEach((e)=>{
+                    e.checked = true;
+                    e.closest('.chk_row').classList.add('on');
+                });
+            }else{
+                chk_wrap.querySelectorAll('.row_chk').forEach((e)=>{
+                    e.checked = false;
+                    e.closest('.chk_row').classList.remove('on');
+                });
+            }
+        }
+
+        const chk_row = document.querySelectorAll('.chk_row');
+        chk_row.forEach((e)=>{
+            if(e.querySelector('.row_chk')){
+                e.addEventListener('click',(event)=>{
+                    event.currentTarget.querySelector('.row_chk').click();
+                });
+            }
+            
+        });
+    </script>
+</body>
+</html>

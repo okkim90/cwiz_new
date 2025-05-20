@@ -84,6 +84,14 @@
     &.changing {
         overflow: hidden;
     }
+    &.ty_mid {
+        font-size: 13px;
+        thead th, tbody td {
+            padding: 5px 10px;
+            height: 2.9em;
+        }
+    }
+
     &.ty_big {
         font-size: 13px;
         thead th, tbody td {

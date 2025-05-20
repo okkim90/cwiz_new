@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Generator" content="KIC">
+    <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <meta name="Description" content="코리아인스트루먼트(주) 교정관리 시스템">
+    <title>코리아인스트루먼트(주) 계측기 통홥 관리</title>
+    <script src="https://kit.fontawesome.com/8f18490998.js" crossorigin="anonymous" ></script>
+    <script src="../assets/js/jquery-3.1.1.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/datepicker.css">
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+</head>
+<body style="min-width: 1500px;">
+    <div id="wrap">
+        <div class="cwiz_data_inner">
+            <div class="sub_tit">
+                <h1 class="tit1">CWIZ 계측기 관리</h1>
+            </div>
+            <ul class="tabs flex1">
+                <li class="tabs_item w_auto w_200 ">
+                    <a href="./cwiz_data_1.html" class="tabs_btn">제조사명 관리</a>
+                </li>
+                <li class="tabs_item w_auto w_200 ">
+                    <a href="./cwiz_data_2.html" class="tabs_btn">계측기명 관리</a>
+                </li>
+                <li class="tabs_item w_auto w_200 on">
+                    <a href="./cwiz_data_3.html" class="tabs_btn">계측기 조회</a>
+                </li>
+            </ul>
+            <section class="sec mt0">
+                <form action="">
+                    <div class="v_tbl_wrap">
+                        <table class="v_tbl tl_fixed">
+                            <tbody>
+                                <colgroup>
+                                    <col style="width: 180px;">
+                                    <col>
+                                    <col style="width: 180px;">
+                                    <col>
+                                    <col style="width: 180px;">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th>계측기명 (국문)</th>
+                                    <td>
+                                        <div class="f_search mw_300" >
+                                            <input type="text" class="f_input ty_small w100" onfocus="f_search_focus(this)" onkeyup="f_search_toggle(this)" placeholder="검색어를 입력해주세요">    
+                                            <div class="f_search_list_wrap ty2">
+                                                <!--[D] 자동완성 리스트-->
+                                                <ul class="f_search_list f_search_auto">
+                                                    <!-- 자동완성 X -->
+                                                    <li class="pa10 taC">직접입력</li>
+                                                    <!--// 자동완성 X -->
+
+                                                    <!-- 자동완성 O -->
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">222222<b>Lorem</b> iercitationem quis</span></li>
+                                                    <li class="f_search_item"><span class="txt">333333<b>Lorem</b> ipsum dolor sit am</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <!--// 자동완성 O -->
+                                                </ul>
+                                                <!--[D] 자동완성 리스트 //-->
+                                                <div class="f_search_list_bot">
+                                                    <button type="button" class="btn_close" onclick="f_search_close(this)">닫기</button>
+                                                </div>
+                                            </div>                            
+                                        </div>
+                                    </td>
+                                    <th>제조사 (국문)</th>
+                                    <td>
+                                        <div class="f_search mw_300" >
+                                            <input type="text" class="f_input ty_small w100" onfocus="f_search_focus(this)" onkeyup="f_search_toggle(this)" placeholder="검색어를 입력해주세요">
+                                            
+                                            <div class="f_search_list_wrap ty2">
+
+                                                 <!--[D] 자동완성 리스트-->
+                                                 <ul class="f_search_list f_search_auto">
+                                                    <!-- 자동완성 X -->
+                                                    <li class="pa10 taC">직접입력</li>
+                                                    <!--// 자동완성 X -->
+
+                                                    <!-- 자동완성 O -->
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">222222<b>Lorem</b> iercitationem quis</span></li>
+                                                    <li class="f_search_item"><span class="txt">333333<b>Lorem</b> ipsum dolor sit am</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <!--// 자동완성 O -->
+                                                </ul>
+                                                <!--[D] 자동완성 리스트 //-->
+
+                                                <div class="f_search_list_bot">
+                                                    <button type="button" class="btn_close" onclick="f_search_close(this)">닫기</button>
+                                                </div>
+                                            </div>     
+                                        </div>
+                                    </td>
+                                    <th>형식 (국문)</th>
+                                    <td>
+                                        <div class="f_search mw_300" >
+                                            <input type="text" class="f_input ty_small w100" onfocus="f_search_focus(this)" onkeyup="f_search_toggle(this)" placeholder="검색어를 입력해주세요">
+                                            
+                                            <div class="f_search_list_wrap ty2">
+                                                 <!--[D] 자동완성 리스트-->
+                                                 <ul class="f_search_list f_search_auto">
+                                                    <!-- 자동완성 X -->
+                                                    <li class="pa10 taC">직접입력</li>
+                                                    <!--// 자동완성 X -->
+
+                                                    <!-- 자동완성 O -->
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">222222<b>Lorem</b> iercitationem quis</span></li>
+                                                    <li class="f_search_item"><span class="txt">333333<b>Lorem</b> ipsum dolor sit am</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <!--// 자동완성 O -->
+                                                </ul>
+                                                <!--[D] 자동완성 리스트 //-->
+
+                                                <div class="f_search_list_bot">
+                                                    <button type="button" class="btn_close" onclick="f_search_close(this)">닫기</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>계측기명 (영문)</th>
+                                    <td>
+                                        <div class="f_search mw_300" >
+                                            <input type="text" class="f_input ty_small w100" onfocus="f_search_focus(this)" onkeyup="f_search_toggle(this)" placeholder="검색어를 입력해주세요">    
+                                            <div class="f_search_list_wrap ty2">
+                                                <!--[D] 자동완성 리스트-->
+                                                <ul class="f_search_list f_search_auto">
+                                                    <!-- 자동완성 X -->
+                                                    <li class="pa10 taC">직접입력</li>
+                                                    <!--// 자동완성 X -->
+
+                                                    <!-- 자동완성 O -->
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">222222<b>Lorem</b> iercitationem quis</span></li>
+                                                    <li class="f_search_item"><span class="txt">333333<b>Lorem</b> ipsum dolor sit am</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <!--// 자동완성 O -->
+                                                </ul>
+                                                <!--[D] 자동완성 리스트 //-->
+                                                <div class="f_search_list_bot">
+                                                    <button type="button" class="btn_close" onclick="f_search_close(this)">닫기</button>
+                                                </div>
+                                            </div>                            
+                                        </div>
+                                    </td>
+                                    <th>제조사 (영문)</th>
+                                    <td>
+                                        <div class="f_search mw_300" >
+                                            <input type="text" class="f_input ty_small w100" onfocus="f_search_focus(this)" onkeyup="f_search_toggle(this)" placeholder="검색어를 입력해주세요">
+                                            
+                                            <div class="f_search_list_wrap ty2">
+
+                                                 <!--[D] 자동완성 리스트-->
+                                                 <ul class="f_search_list f_search_auto">
+                                                    <!-- 자동완성 X -->
+                                                    <li class="pa10 taC">직접입력</li>
+                                                    <!--// 자동완성 X -->
+
+                                                    <!-- 자동완성 O -->
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">222222<b>Lorem</b> iercitationem quis</span></li>
+                                                    <li class="f_search_item"><span class="txt">333333<b>Lorem</b> ipsum dolor sit am</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <!--// 자동완성 O -->
+                                                </ul>
+                                                <!--[D] 자동완성 리스트 //-->
+
+                                                <div class="f_search_list_bot">
+                                                    <button type="button" class="btn_close" onclick="f_search_close(this)">닫기</button>
+                                                </div>
+                                            </div>     
+                                        </div>
+                                    </td>
+                                    <th>형식 (영문)</th>
+                                    <td>
+                                        <div class="f_search mw_300" >
+                                            <input type="text" class="f_input ty_small w100" onfocus="f_search_focus(this)" onkeyup="f_search_toggle(this)" placeholder="검색어를 입력해주세요">
+                                            
+                                            <div class="f_search_list_wrap ty2">
+                                                 <!--[D] 자동완성 리스트-->
+                                                 <ul class="f_search_list f_search_auto">
+                                                    <!-- 자동완성 X -->
+                                                    <li class="pa10 taC">직접입력</li>
+                                                    <!--// 자동완성 X -->
+
+                                                    <!-- 자동완성 O -->
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">222222<b>Lorem</b> iercitationem quis</span></li>
+                                                    <li class="f_search_item"><span class="txt">333333<b>Lorem</b> ipsum dolor sit am</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <!--// 자동완성 O -->
+                                                </ul>
+                                                <!--[D] 자동완성 리스트 //-->
+
+                                                <div class="f_search_list_bot">
+                                                    <button type="button" class="btn_close" onclick="f_search_close(this)">닫기</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                        <div class="btn_set taC mt20">    
+                            <button type="button" class="f_btn ty_mid _solidGrey w_100">초기화 <i class="fa-solid fa-arrows-rotate"></i></button>
+                            <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <section class="sec mt40">
+                <div class="sub_tit2 mb10 d_flex al_b">
+                    <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2>
+                    <select name="" id="" class="f_select ty_small w_80 ml20">
+                        <option value="">10개</option>
+                        <option value="">30개</option>
+                        <option value="">50개</option>
+                        <option value="">100개</option>
+                    </select>
+                    <div class="btn_set ml_auto">
+                        <button type="button" class="f_btn ty_mid _key w_100" onclick="open_popup('pop_addNew')">신규 등록</button>
+                        <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="open_popup('pop_multiEdit')">일괄 수정</button>
+                        <button type="button" class="f_btn ty_mid _red w_100">일괄 삭제</button>
+                        <button type="button" class="f_btn ty_mid _green w_130">
+                            엑셀 다운받기 <i class="fa-solid fa-file-arrow-down"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="h_tbl_wrap y_scroll_area" style="max-height: 476px;">
+                    <table class="h_tbl tl_fixed">
+                        <colgroup>
+                            <col style="width: 40px;">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col style="width: 60px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="th_fixed"><input type="checkbox" name="" class="tr_chk_all" onchange="checkAll(this)"></label></th>
+                                <th class="th_fixed">계측기명(국문)</th>
+                                <th class="th_fixed">계측기명(영문)</th>
+                                <th class="th_fixed">제조사(국문)</th>
+                                <th class="th_fixed">제조사(영문)</th>
+                                <th class="th_fixed">형식(국문)</th>
+                                <th class="th_fixed">형식(영문)</th>
+                                <th class="th_fixed">연관검색어</th>
+                                <th class="th_fixed">확인</th>
+                            </tr>
+                        </thead>
+                        <tbody>    
+                            <tr>
+                                <td colspan="9">
+                                    <div class="no_result_box ty_big" >
+                                        <i class="fa-solid fa-file-circle-xmark" aria-hidden="true"></i>
+                                        <p class="mt10">검색 결과가 없습니다.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="chk_tr">
+                                <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        계측기명  
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        Lorem ipsum dolor sit amet. 
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        제조사명 국문
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        Lorem ipsum dolor sit amet. 
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        형식 국문
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        Lorem ipsum dolor sit amet. 
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
+                                    </div>
+                                </td>
+                                <td>
+                                    <button type="button" onclick="event.stopPropagation(); open_popup('pop_edit')" class="f_btn ty_small w_60 _solidGrey">보기</button>
+                                </td>
+                            </tr>
+                            <tr class="chk_tr">
+                                <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        계측기명  계측기명  계측기명  계측기명  계측기명  계측기명  
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. 
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        제조사명 국문제조사명 국문제조사명 국문제조사명 국문제조사명 국문
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. 
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        형식 국문형식 국문형식 국문형식 국문형식 국문문형식 국문
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. 
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
+                                    </div>
+                                </td>
+                                <td>
+                                    <button type="button" onclick="event.stopPropagation(); open_popup('pop_edit')" class="f_btn ty_small w_60 _solidGrey">보기</button>
+                                </td>
+                            </tr>
+                            <tr class="chk_tr">
+                                <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        계측기명  
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        Lorem ipsum dolor sit amet. 
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        제조사명 국문
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        Lorem ipsum dolor sit amet. 
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        형식 국문
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        Lorem ipsum dolor sit amet. 
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
+                                    </div>
+                                </td>
+                                <td>
+                                    <button type="button" onclick="event.stopPropagation(); open_popup('pop_edit')" class="f_btn ty_small w_60 _solidGrey">보기</button>
+                                </td>
+                            </tr>
+                            <tr class="chk_tr">
+                                <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        계측기명  
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        Lorem ipsum dolor sit amet. 
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        제조사명 국문
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        Lorem ipsum dolor sit amet. 
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        형식 국문
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        Lorem ipsum dolor sit amet. 
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
+                                    </div>
+                                </td>
+                                <td>
+                                    <button type="button" onclick="event.stopPropagation(); open_popup('pop_edit')" class="f_btn ty_small w_60 _solidGrey">보기</button>
+                                </td>
+                            </tr>
+                            <tr class="chk_tr">
+                                <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        계측기명  
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        Lorem ipsum dolor sit amet. 
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        제조사명 국문
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        Lorem ipsum dolor sit amet. 
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        형식 국문
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        Lorem ipsum dolor sit amet. 
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="f_hint_box">
+                                        다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
+                                    </div>
+                                </td>
+                                <td>
+                                    <button type="button" onclick="event.stopPropagation(); open_popup('pop_edit')" class="f_btn ty_small w_60 _solidGrey">보기</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="paging_wrap mt20">
+                    <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
+                    <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
+                    <ul class="paging_list">
+                        <li><span class="paging_btn current">1</span></li>
+                        <li><a href="" class="paging_btn">2</a></li>
+                        <li><a href="" class="paging_btn">3</a></li>
+                        <li><a href="" class="paging_btn">4</a></li>
+                        <li><a href="" class="paging_btn">5</a></li>
+                    </ul>
+                    <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
+                    <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
+                </div> 
+            </section>
+        </div> 
+    </div>
+
+    <!--[D] [POPUP] 계측기 신규 등록-->
+    <div class="layer_popup pop_addNew">
+        <div class="layer_popup_inner">
+            <div class="layer_popup_cont" style="width: 520px;">
+                <button type="button" class="close_popup" onclick="close_popup(this)">
+                    <span class="blind">팝업 닫기</span>
+                </button>
+                <div class="sub_tit2">
+                    <h1 class="tit2">계측기 신규 등록</h1>
+                </div>
+                <table class="v_tbl">
+                    <colgroup>
+                        <col style="width:140px">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <label>
+                                    <i class="ico_required"></i> 계측기명(국문)
+                                </label>
+                            </th>
+                            <td>
+                                <input type="text" class="f_input ty_small w100" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>
+                                    계측기명(영문)
+                                </label>
+                            </th>
+                            <td>
+                                <input type="text" class="f_input ty_small w100">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>
+                                    <i class="ico_required"></i> 제조사명(국문)
+                                </label>
+                            </th>
+                            <td>
+                                <input type="text" class="f_input ty_small w100" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>
+                                    제조사명(영문)
+                                </label>
+                            </th>
+                            <td>
+                                <input type="text" class="f_input ty_small w100">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>
+                                    <i class="ico_required"></i> 형식(국문)
+                                </label>
+                            </th>
+                            <td>
+                                <input type="text" class="f_input ty_small w100" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>
+                                    형식(영문)
+                                </label>
+                            </th>
+                            <td>
+                                <input type="text" class="f_input ty_small w100">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>
+                                    연관 검색어
+                                </label>
+                            </th>
+                            <td>
+                                <textarea name="" id="" class="f_ta ty_small resize_y" style="height: 120px;" placeholder="※ 연관 검색어는 (,)콤마로 구분됩니다."></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="btn_set taC mt20">
+                    <button type="button" onclick="close_popup(this)" class="f_btn ty_mid _solidGrey w_100">닫기</button>
+                    <button type="button" class="f_btn ty_mid _key w_100">등록</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//[D] [POPUP] 계측기 신규 등록-->
+
+    <!--[D] [POPUP] 계측기 정보 수정-->
+    <div class="layer_popup pop_edit">
+        <div class="layer_popup_inner">
+            <div class="layer_popup_cont" style="width: 520px;">
+                <button type="button" class="close_popup" onclick="close_popup(this)">
+                    <span class="blind">팝업 닫기</span>
+                </button>
+                <div class="sub_tit2">
+                    <h1 class="tit2">계측기 정보 수정</h1>
+                </div>
+                <table class="v_tbl">
+                    <colgroup>
+                        <col style="width:140px">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <label>
+                                    <i class="ico_required"></i> 계측기명(국문)
+                                </label>
+                            </th>
+                            <td>
+                                <input type="text" class="f_input ty_small w100" value="Lorem ipsum dolor sit amet." required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>
+                                    계측기명(영문)
+                                </label>
+                            </th>
+                            <td>
+                                <input type="text" class="f_input ty_small w100" value="Lorem ipsum dolor sit amet.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>
+                                    <i class="ico_required"></i> 제조사명(국문)
+                                </label>
+                            </th>
+                            <td>
+                                <input type="text" class="f_input ty_small w100" value="Lorem ipsum dolor sit amet." required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>
+                                    제조사명(영문)
+                                </label>
+                            </th>
+                            <td>
+                                <input type="text" class="f_input ty_small w100" value="Lorem ipsum dolor sit amet.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>
+                                    <i class="ico_required"></i> 형식(국문)
+                                </label>
+                            </th>
+                            <td>
+                                <input type="text" class="f_input ty_small w100" value="Lorem ipsum dolor sit amet." required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>
+                                    형식(영문)
+                                </label>
+                            </th>
+                            <td>
+                                <input type="text" class="f_input ty_small w100" value="Lorem ipsum dolor sit amet.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>
+                                    연관 검색어
+                                </label>
+                            </th>
+                            <td>
+                                <textarea name="" id="" class="f_ta ty_small resize_y" style="height: 120px;" placeholder="※ 연관 검색어는 (,)콤마로 구분됩니다.">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, perferendis!</textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="btn_set taC mt20">
+                    <button type="button" onclick="close_popup(this)" class="f_btn ty_mid _solidGrey w_100">닫기</button>
+                    <button type="button" class="f_btn ty_mid _red w_100">삭제</button>
+                    <button type="button" class="f_btn ty_mid _key w_100">수정</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//[D] [POPUP] 계측기 정보 수정-->
+
+     <!--[D] [POPUP] 계측기 정보 일괄 수정-->
+     <div class="layer_popup pop_multiEdit">
+        <div class="layer_popup_inner">
+            <div class="layer_popup_cont" style="width: 520px;">
+                <button type="button" class="close_popup" onclick="close_popup(this)">
+                    <span class="blind">팝업 닫기</span>
+                </button>
+                <div class="sub_tit2">
+                    <h1 class="tit2">계측기 정보 일괄 수정</h1>
+                </div>
+                <table class="v_tbl">
+                    <colgroup>
+                        <col style="width:140px">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <label>
+                                    <input type="checkbox"> 계측기명(국문)
+                                </label>
+                            </th>
+                            <td>
+                                <input type="text" class="f_input ty_small w100" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>
+                                    <input type="checkbox"> 계측기명(영문)
+                                </label>
+                            </th>
+                            <td>
+                                <input type="text" class="f_input ty_small w100">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>
+                                    <input type="checkbox"> 제조사명(국문)
+                                </label>
+                            </th>
+                            <td>
+                                <input type="text" class="f_input ty_small w100" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>
+                                    <input type="checkbox"> 제조사명(영문)
+                                </label>
+                            </th>
+                            <td>
+                                <input type="text" class="f_input ty_small w100">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>
+                                    <input type="checkbox"> 형식(국문)
+                                </label>
+                            </th>
+                            <td>
+                                <input type="text" class="f_input ty_small w100" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>
+                                    <input type="checkbox"> 형식(영문)
+                                </label>
+                            </th>
+                            <td>
+                                <input type="text" class="f_input ty_small w100">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>
+                                    <input type="checkbox"> 연관 검색어
+                                </label>
+                            </th>
+                            <td>
+                                <textarea name="" id="" class="f_ta ty_small resize_y" style="height: 120px;" placeholder="※ 연관 검색어는 (,)콤마로 구분됩니다."></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="btn_set taC mt20">
+                    <button type="button" onclick="close_popup(this)" class="f_btn ty_mid _solidGrey w_100">닫기</button>
+                    <button type="button" class="f_btn ty_mid _key w_100">수정</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//[D] [POPUP] 계측기 신규 등록-->
+
+    <!--[D] 툴팁-->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const containers = document.querySelectorAll('.f_hint_box');
+            let currentTooltip = null;
+            let updateTooltipPosition = null;
+
+            containers.forEach(container => {
+                const isEllipsis = () => container.scrollWidth > container.clientWidth;
+
+                container.addEventListener('mouseenter', () => {
+                    if (!isEllipsis()) return;
+
+                    if (currentTooltip) {
+                        currentTooltip.remove();
+                        currentTooltip = null;
+                    }
+
+                    currentTooltip = document.createElement('div');
+                    currentTooltip.className = 'f_hint';
+                    currentTooltip.textContent = container.innerText.trim();
+                    document.body.appendChild(currentTooltip);
+
+                    updateTooltipPosition = (e) => {
+                        const tooltipRect = currentTooltip.getBoundingClientRect();
+                        const viewportWidth = window.innerWidth;
+                        const viewportHeight = window.innerHeight;
+                        const scrollX = window.scrollX || window.pageXOffset;
+                        const scrollY = window.scrollY || window.pageYOffset;
+                        const mouseX = e.clientX + scrollX;
+                        const mouseY = e.clientY + scrollY;
+
+                        // 툴팁 위치: 마우스 근처 (마우스 아래쪽에 표시)
+                        let top = mouseY + 15;
+                        let left = mouseX;
+
+                        // 화면 상단/하단 벗어남 방지
+                        if (top + tooltipRect.height > scrollY + viewportHeight) {
+                            top = mouseY - tooltipRect.height - 15;
+                            currentTooltip.style.setProperty('--arrow-top', 'initial');
+                            currentTooltip.style.setProperty('--arrow-bottom', '100%');
+                            currentTooltip.style.setProperty('--border-top-color', 'transparent');
+                            currentTooltip.style.setProperty('--border-bottom-color', '#222');
+                        } else {
+                            currentTooltip.style.setProperty('--arrow-top', '100%');
+                            currentTooltip.style.setProperty('--arrow-bottom', 'initial');
+                            currentTooltip.style.setProperty('--border-top-color', '#222');
+                            currentTooltip.style.setProperty('--border-bottom-color', 'transparent');
+                        }
+
+                        // 화면 좌우 벗어남 방지
+                        if (left + tooltipRect.width > scrollX + viewportWidth) {
+                            left = scrollX + viewportWidth - tooltipRect.width - 10;
+                        } else if (left < scrollX + 10) {
+                            left = scrollX + 10;
+                        }
+
+                        // 화살표 위치: 마우스 X 좌표에 맞춤
+                        const arrowLeft = Math.min(
+                            Math.max(mouseX - left, 10),
+                            tooltipRect.width - 10
+                        );
+
+                        currentTooltip.style.top = `${top}px`;
+                        currentTooltip.style.left = `${left}px`;
+                        currentTooltip.style.setProperty('--arrow-left', `${arrowLeft}px`);
+                        currentTooltip.classList.add('visible');
+                    };
+
+                    // 마우스 이동 및 스크롤 이벤트 등록
+                    container.addEventListener('mousemove', updateTooltipPosition);
+                    window.addEventListener('scroll', updateTooltipPosition, true);
+                });
+
+                container.addEventListener('mouseleave', () => {
+                    if (currentTooltip) {
+                        currentTooltip.remove();
+                        currentTooltip = null;
+                    }
+                    if (updateTooltipPosition) {
+                        container.removeEventListener('mousemove', updateTooltipPosition);
+                        window.removeEventListener('scroll', updateTooltipPosition, true);
+                        updateTooltipPosition = null;
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!--[D] 검색창 js ui확인용-->
+    <script>
+        function f_search_focus(target){
+            const f_search = target.closest('.f_search');
+            document.querySelectorAll('.f_search').forEach(e=>{
+                e.classList.remove('on')
+            });
+            f_search.classList.add('on');
+        }
+        function f_search_close(target){
+            const f_search = target.closest('.f_search');
+            f_search.classList.remove('on');
+        }
+        function f_search_toggle(target){
+            const f_search = target.closest('.f_search');
+            const f_search_recent = f_search.querySelector('.f_search_recent');
+            const f_search_auto = f_search.querySelector('.f_search_auto');
+            f_search.classList.add('on');
+            let keyVal = target.value;
+            if(keyVal == ''){
+                //f_search_recent.style.display = 'block';
+                f_search_auto.style.display = 'none';
+            }else{
+                //f_search_recent.style.display = 'none';
+                f_search_auto.style.display = 'block';
+            }
+        } 
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.f_search')) {
+                document.querySelectorAll('.f_search').forEach(e=>{
+                    e.classList.remove('on')
+                })
+            }
+        });
+    </script>
+</body>
+</html>

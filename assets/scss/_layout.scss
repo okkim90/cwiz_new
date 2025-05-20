@@ -1303,6 +1303,9 @@
         flex: 1;
         flex-shrink: 0;
         border-left: 1px solid $c_line;
+        &.ty2 {
+            height: 300px;
+        }
         @at-root .col3 & {
             width: calc(100%/3);
         }
@@ -3438,3 +3441,57 @@
         }
     }
 }
+
+
+.cwiz_data_inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px 30px 50px;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.label_search {
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 1px solid $c_line;
+    border-top: 1px solid $c_line;
+    &_item {
+        input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+        width: calc(100%/11);
+        box-sizing: border-box;
+        text-align: center;
+        cursor: pointer;
+        flex-shrink: 0;
+        position: relative;
+        
+        border-right: 1px solid $c_line;
+        border-bottom: 1px solid $c_line;
+
+        .label_cont {
+            line-height: 28px;
+            white-space: nowrap;
+            font-size: 13px;
+            font-weight: 500;
+            user-select: none;
+        }
+        input.hidden:checked ~ .label_cont {
+            background-color: lighten($c_key , 6%) ;
+            color: #fff;
+            font-weight: bold;
+        }
+    }
+}
+.edit_box {
+    box-shadow: 0 0 10px rgba(#000, .2);
+    position: sticky;
+    top: 110px;
+    left: 0;
+    padding: 20px 15px;
+}
+

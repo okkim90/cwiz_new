@@ -284,6 +284,10 @@
     &.taR {
         justify-content: flex-end;
     }
+    &.jc_sb {
+        justify-content: space-between;
+    }
+
     .btn_set {
         &.pos_left {
             margin-right: auto;
