@@ -175,6 +175,16 @@
     }
     tbody {
         tr {
+            &.alert_row {
+                background-color: #fff;
+                &:hover {
+                    background-color: rgba($c_red, .1);
+                }
+                td {
+                    background-color: rgba($c_red, .2);
+                    animation: 1s alert_row ease infinite;
+                }
+            }
             &.no_hv {
                 &:hover {
                     cursor: default;
@@ -353,3 +363,14 @@
     background-color: rgba($c_key,.15);
 }
 
+@keyframes alert_row {
+    0% {
+        background-color: rgba($c_red, .12);
+    }
+    50% {
+        background-color: rgba($c_red, .2);
+    }
+    100% {
+        background-color: rgba($c_red, .12);
+    }
+}

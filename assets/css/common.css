@@ -12081,6 +12081,16 @@ input::-webkit-search-results-decoration {
 .h_tbl tfoot tr:last-child th, .h_tbl tfoot tr:last-child td {
   border-bottom: none;
 }
+.h_tbl tbody tr.alert_row {
+  background-color: #fff;
+}
+.h_tbl tbody tr.alert_row:hover {
+  background-color: rgba(255, 92, 92, 0.1);
+}
+.h_tbl tbody tr.alert_row td {
+  background-color: rgba(255, 92, 92, 0.2);
+  animation: 1s alert_row ease infinite;
+}
 .h_tbl tbody tr.no_hv:hover {
   cursor: default;
 }
@@ -12225,6 +12235,17 @@ input::-webkit-search-results-decoration {
   background-color: rgba(255, 122, 0, 0.15);
 }
 
+@keyframes alert_row {
+  0% {
+    background-color: rgba(255, 92, 92, 0.12);
+  }
+  50% {
+    background-color: rgba(255, 92, 92, 0.2);
+  }
+  100% {
+    background-color: rgba(255, 92, 92, 0.12);
+  }
+}
 .card_list {
   display: flex;
   flex-wrap: wrap;
