@@ -12085,7 +12085,7 @@ input::-webkit-search-results-decoration {
   background-color: #fff;
 }
 .h_tbl tbody tr.alert_row:hover {
-  background-color: rgba(255, 92, 92, 0.1);
+  background-color: rgba(255, 92, 92, 0.06);
 }
 .h_tbl tbody tr.alert_row td {
   background-color: rgba(255, 92, 92, 0.2);
