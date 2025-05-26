@@ -11771,6 +11771,32 @@ input::-webkit-search-results-decoration {
   line-height: 1;
 }
 
+.btn_chk2 {
+  display: inline-flex;
+  cursor: pointer;
+}
+.btn_chk2 .txt {
+  padding: 0 10px;
+  border-radius: 13px;
+  font-size: 13px;
+  border: 1px solid #FF7A00;
+  color: #FF7A00;
+  font-weight: 500;
+  height: 26px;
+  display: flex;
+  align-items: center;
+}
+.btn_chk2 input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.btn_chk2 input[type=checkbox]:checked ~ .txt {
+  background-color: #FF7A00;
+  color: #fff;
+}
+
 .btn_tooltip {
   transition: all 0.1s ease-in-out;
   opacity: 0;
@@ -12669,8 +12695,9 @@ input::-webkit-search-results-decoration {
   white-space: normal;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.2s 0.2s ease, visibility 0.2s 0.2s ease;
+  transition: opacity 0.2s 0.5s ease, visibility 0.2s 0.2s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  word-break: break-all;
 }
 .f_hint.visible {
   opacity: 1;

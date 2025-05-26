@@ -513,6 +513,36 @@
     }
 }
 
+.btn_chk2 {
+    display: inline-flex;
+    
+   
+    
+    cursor: pointer;
+    .txt {
+        padding: 0 10px;
+        
+        border-radius: 13px;
+        font-size: 13px;
+        border: 1px solid $c_key;
+        color: $c_key;
+        font-weight: 500;
+        height: 26px;
+        display: flex;
+        align-items: center;
+    }
+    input[type='checkbox'] {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        &:checked ~ .txt {
+            background-color: $c_key;
+            color: #fff;
+            
+        }
+    }
+}
 
 .btn_tooltip {
     transition: all .1s ease-in-out;
