@@ -3496,6 +3496,10 @@
 }
 
 .cwiz_data_bot {
+    display: none;
+    &.on {
+        display: block;
+    }
     position: fixed;
     max-width: 1600px;
     width: 100%;
@@ -3508,6 +3512,7 @@
     background-color: #fff;
     border-radius: 12px 12px 0 0;
     box-shadow: 0 0 16px rgba(#000, .3);
+
     .h_tbl thead {
         th {
             height: 2.4em;

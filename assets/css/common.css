@@ -10444,6 +10444,7 @@ input::-webkit-search-results-decoration {
 }
 
 .cwiz_data_bot {
+  display: none;
   position: fixed;
   max-width: 1600px;
   width: 100%;
@@ -10456,6 +10457,9 @@ input::-webkit-search-results-decoration {
   background-color: #fff;
   border-radius: 12px 12px 0 0;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+}
+.cwiz_data_bot.on {
+  display: block;
 }
 .cwiz_data_bot .h_tbl thead th {
   height: 2.4em;
