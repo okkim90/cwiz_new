@@ -439,8 +439,256 @@
                 </section>
             </div>
             <!--// [D] 제조사명 관리 -->
+
+            <div class="cwiz_data_bot">
+                <div class="sub_tit2 mb10">
+                    <h2 class="tit3">계측기 상세 정보</h2>
+                    <button type="button" class="btn_close" onclick=""></button>
+                </div>
+                <div class="h_tbl_wrap y_scroll_area" style="max-height: 320px;">
+                    <table class="h_tbl ty_small tl_fixed">
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead class="th_fixed">
+                            <tr>
+                                <th>계측기명 (국문)</th>
+                                <th>계측기명 (영문)</th>
+                                <th>제조사 (국문)</th>
+                                <th>제조사 (영문)</th>
+                                <th>형식 (국문)</th>
+                                <th>형식 (영문)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div> 
     </div>
+    <!--[D] 툴팁-->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentTooltip = null;
+            let updateTooltipPosition = null;
+
+            // 툴팁 이벤트 핸들러 설정 함수
+            function setupTooltip(container) {
+                const isEllipsis = () => container.scrollWidth > container.clientWidth;
+
+                // 기존 이벤트 리스너 제거 (중복 방지)
+                container.removeEventListener('mouseenter', handleMouseEnter);
+                container.removeEventListener('mouseleave', handleMouseLeave);
+
+                function handleMouseEnter() {
+                    if (!isEllipsis()) return;
+
+                    if (currentTooltip) {
+                        currentTooltip.remove();
+                        currentTooltip = null;
+                    }
+
+                    currentTooltip = document.createElement('div');
+                    currentTooltip.className = 'f_hint';
+                    currentTooltip.textContent = container.innerText.trim();
+                    document.body.appendChild(currentTooltip);
+
+                    updateTooltipPosition = (e) => {
+                        const tooltipRect = currentTooltip.getBoundingClientRect();
+                        const viewportWidth = window.innerWidth;
+                        const viewportHeight = window.innerHeight;
+                        const scrollX = window.scrollX || window.pageXOffset;
+                        const scrollY = window.scrollY || window.pageYOffset;
+                        const mouseX = e.clientX + scrollX;
+                        const mouseY = e.clientY + scrollY;
+
+                        // 툴팁 위치: 마우스 근처 (마우스 아래쪽에 표시)
+                        let top = mouseY + 15;
+                        let left = mouseX;
+
+                        // 화면 상단/하단 벗어남 방지
+                        if (top + tooltipRect.height > scrollY + viewportHeight) {
+                            top = mouseY - tooltipRect.height - 5;
+                            currentTooltip.style.setProperty('--arrow-top', 'initial');
+                            currentTooltip.style.setProperty('--arrow-bottom', '100%');
+                            currentTooltip.style.setProperty('--border-top-color', 'transparent');
+                            currentTooltip.style.setProperty('--border-bottom-color', '#222');
+                        } else {
+                            currentTooltip.style.setProperty('--arrow-top', '100%');
+                            currentTooltip.style.setProperty('--arrow-bottom', 'initial');
+                            currentTooltip.style.setProperty('--border-top-color', '#222');
+                            currentTooltip.style.setProperty('--border-bottom-color', 'transparent');
+                        }
+
+                        // 화면 좌우 벗어남 방지
+                        if (left + tooltipRect.width > scrollX + viewportWidth) {
+                            left = scrollX + viewportWidth - tooltipRect.width - 10;
+                        } else if (left < scrollX + 10) {
+                            left = scrollX + 10;
+                        }
+
+                        // 화살표 위치: 마우스 X 좌표에 맞춤
+                        const arrowLeft = Math.min(
+                            Math.max(mouseX - left, 10),
+                            tooltipRect.width - 10
+                        );
+
+                        currentTooltip.style.top = `${top}px`;
+                        currentTooltip.style.left = `${left}px`;
+                        currentTooltip.style.setProperty('--arrow-left', `${arrowLeft}px`);
+                        currentTooltip.classList.add('visible');
+                    };
+
+                    container.addEventListener('mousemove', updateTooltipPosition);
+                    window.addEventListener('scroll', updateTooltipPosition, true);
+                }
+
+                function handleMouseLeave() {
+                    if (currentTooltip) {
+                        currentTooltip.remove();
+                        currentTooltip = null;
+                    }
+                    if (updateTooltipPosition) {
+                        container.removeEventListener('mousemove', updateTooltipPosition);
+                        window.removeEventListener('scroll', updateTooltipPosition, true);
+                        updateTooltipPosition = null;
+                    }
+                }
+
+                container.addEventListener('mouseenter', handleMouseEnter);
+                container.addEventListener('mouseleave', handleMouseLeave);
+            }
+
+            // 초기 컨테이너에 툴팁 설정
+            document.querySelectorAll('.f_hint_box').forEach(setupTooltip);
+
+            // MutationObserver로 동적 변경 감지
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach(mutation => {
+                    // 새로운 노드 추가 감지
+                    if (mutation.type === 'childList') {
+                        mutation.addedNodes.forEach(node => {
+                            if (node.nodeType === 1 && node.classList.contains('f_hint_box')) {
+                                setupTooltip(node);
+                            }
+                            // 자식 노드에서 .ellipsis-container 찾기
+                            node.querySelectorAll?.('.f_hint_box').forEach(setupTooltip);
+                        });
+                    }
+                    // 텍스트 변경 감지
+                    if (mutation.type === 'characterData' && mutation.target.parentElement) {
+                        const container = mutation.target.parentElement.closest('.f_hint_box');
+                        if (container) {
+                            setupTooltip(container); // 텍스트 변경 시 툴팁 재설정
+                        }
+                    }
+                });
+            });
+
+            // body 또는 특정 컨테이너 감시
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true,
+                characterData: true
+            });
+        });
+    </script>
+
+
     <!--[D] 검색창 js ui확인용-->
     <script>
         function f_search_focus(target){

@@ -827,14 +827,18 @@
     <!--[D] 툴팁-->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const containers = document.querySelectorAll('.f_hint_box');
             let currentTooltip = null;
             let updateTooltipPosition = null;
 
-            containers.forEach(container => {
+            // 툴팁 이벤트 핸들러 설정 함수
+            function setupTooltip(container) {
                 const isEllipsis = () => container.scrollWidth > container.clientWidth;
 
-                container.addEventListener('mouseenter', () => {
+                // 기존 이벤트 리스너 제거 (중복 방지)
+                container.removeEventListener('mouseenter', handleMouseEnter);
+                container.removeEventListener('mouseleave', handleMouseLeave);
+
+                function handleMouseEnter() {
                     if (!isEllipsis()) return;
 
                     if (currentTooltip) {
@@ -862,7 +866,7 @@
 
                         // 화면 상단/하단 벗어남 방지
                         if (top + tooltipRect.height > scrollY + viewportHeight) {
-                            top = mouseY - tooltipRect.height - 15;
+                            top = mouseY - tooltipRect.height - 5;
                             currentTooltip.style.setProperty('--arrow-top', 'initial');
                             currentTooltip.style.setProperty('--arrow-bottom', '100%');
                             currentTooltip.style.setProperty('--border-top-color', 'transparent');
@@ -893,12 +897,11 @@
                         currentTooltip.classList.add('visible');
                     };
 
-                    // 마우스 이동 및 스크롤 이벤트 등록
                     container.addEventListener('mousemove', updateTooltipPosition);
                     window.addEventListener('scroll', updateTooltipPosition, true);
-                });
+                }
 
-                container.addEventListener('mouseleave', () => {
+                function handleMouseLeave() {
                     if (currentTooltip) {
                         currentTooltip.remove();
                         currentTooltip = null;
@@ -908,10 +911,47 @@
                         window.removeEventListener('scroll', updateTooltipPosition, true);
                         updateTooltipPosition = null;
                     }
+                }
+
+                container.addEventListener('mouseenter', handleMouseEnter);
+                container.addEventListener('mouseleave', handleMouseLeave);
+            }
+
+            // 초기 컨테이너에 툴팁 설정
+            document.querySelectorAll('.f_hint_box').forEach(setupTooltip);
+
+            // MutationObserver로 동적 변경 감지
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach(mutation => {
+                    // 새로운 노드 추가 감지
+                    if (mutation.type === 'childList') {
+                        mutation.addedNodes.forEach(node => {
+                            if (node.nodeType === 1 && node.classList.contains('f_hint_box')) {
+                                setupTooltip(node);
+                            }
+                            // 자식 노드에서 .ellipsis-container 찾기
+                            node.querySelectorAll?.('.f_hint_box').forEach(setupTooltip);
+                        });
+                    }
+                    // 텍스트 변경 감지
+                    if (mutation.type === 'characterData' && mutation.target.parentElement) {
+                        const container = mutation.target.parentElement.closest('.f_hint_box');
+                        if (container) {
+                            setupTooltip(container); // 텍스트 변경 시 툴팁 재설정
+                        }
+                    }
                 });
+            });
+
+            // body 또는 특정 컨테이너 감시
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true,
+                characterData: true
             });
         });
     </script>
+
 
     <!--[D] 검색창 js ui확인용-->
     <script>

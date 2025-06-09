@@ -10438,9 +10438,44 @@ input::-webkit-search-results-decoration {
 .edit_box {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   position: sticky;
-  top: 110px;
+  top: 30px;
   left: 0;
   padding: 20px 15px;
+}
+
+.cwiz_data_bot {
+  position: fixed;
+  max-width: 1600px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  z-index: 99;
+  box-sizing: border-box;
+  padding: 15px 20px 30px;
+  background-color: #fff;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+}
+.cwiz_data_bot .h_tbl thead th {
+  height: 2.4em;
+}
+.cwiz_data_bot .h_tbl tbody td {
+  height: 2.4em;
+}
+.cwiz_data_bot .btn_close {
+  position: absolute;
+  background-image: url(../images/common/ico_close.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 30px;
+  height: 30px;
+  right: 14px;
+  top: 10px;
+  opacity: 0.6;
+}
+.cwiz_data_bot .btn_close:hover {
+  opacity: 1;
 }
 
 .layer_popup {
