@@ -232,6 +232,9 @@
         tr.on {
             background-color: rgba(rgb(249, 246, 61), .16);
         }
+        tr.disable {
+            background-color: #eaeaea;
+        }
         td {
             padding: 5px;
             border: 1px solid $c_line;

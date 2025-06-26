@@ -12187,6 +12187,9 @@ input::-webkit-search-results-decoration {
 .h_tbl tbody tr.on {
   background-color: rgba(249, 246, 61, 0.16);
 }
+.h_tbl tbody tr.disable {
+  background-color: #eaeaea;
+}
 .h_tbl tbody td {
   padding: 5px;
   border: 1px solid #DDDDDD;
