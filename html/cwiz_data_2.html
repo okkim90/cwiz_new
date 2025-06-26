@@ -160,577 +160,437 @@
                     });
                 </script>
             </section>
-            <div class="sec_wrap d_flex mt20 _gap30">
-                <section class="sec" style="width: 68%;">        
-                    <div class="sub_tit2 mb10 d_flex al_b">
-                        <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2> 
-                        <button type="button" class="f_btn ty_small _green w_110 ml_auto">
-                            엑셀 다운받기 <i class="fa-solid fa-file-arrow-down"></i>
-                        </button>
-                    </div>
-                    <div class="h_tbl_wrap y_scroll_area" style="max-height: 800px;">
-                        <table class="h_tbl ty_mid tl_fixed">
-                            <colgroup>
-                                <col style="width: 50px;">
-                                <col>
-                                <col>
-                                <col>
-                                <col style="width: 80px;">
-                            </colgroup>
-                            <thead class="th_fixed">
-                                <tr>
-                                    <th><input type="checkbox" name="" class="tr_chk_all" onchange="checkAll(this)"></label></th>
-                                    <th>
-                                        <div class="d_flex ty_col ai_c">
-                                            <div class="mb5">계측기명 (국문)</div> 
-                                            <div class="f_search mw_300" >
-                                                <input type="text" class="f_input ty_small w100" onfocus="f_search_focus(this)" onkeyup="f_search_toggle(this)" placeholder="검색어를 입력해주세요">     
-                                                <div class="f_search_list_wrap ty2">
-                                                     <!--[D] 자동완성 리스트-->
-                                                     <ul class="f_search_list f_search_auto">
-                                                        <!-- 자동완성 X -->
-                                                        <li class="pa10 taC">직접입력</li>
-                                                        <!--// 자동완성 X -->
+           
+            <section class="sec mt30">        
+                <div class="sub_tit2 mb10 d_flex al_b">
+                    <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2> 
+                </div>
+                <div class="h_tbl_wrap y_scroll_area" style="max-height: 310px;">
+                    <table class="h_tbl ty_mid tl_fixed">
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col style="width: 100px;">
+                            <col style="width: 100px;">
+                            <col style="width: 100px;">
+                            <col style="width: 100px;">
+                        </colgroup>
+                        <thead class="th_fixed">
+                            <tr>
+                                <th>
+                                    <div class="d_flex ty_col ai_c">
+                                        <div class="mb5">제조사 (국문)</div> 
+                                        <div class="f_search mw_300" >
+                                            <input type="text" class="f_input ty_small w100" onfocus="f_search_focus(this)" onkeyup="f_search_toggle(this)" placeholder="검색어를 입력해주세요">     
+                                            <div class="f_search_list_wrap ty2">
+                                                    <!--[D] 자동완성 리스트-->
+                                                    <ul class="f_search_list f_search_auto">
+                                                    <!-- 자동완성 X -->
+                                                    <li class="pa10 taC">직접입력</li>
+                                                    <!--// 자동완성 X -->
 
-                                                        <!-- 자동완성 O -->
-                                                        <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
-                                                        <li class="f_search_item"><span class="txt">222222<b>Lorem</b> iercitationem quis</span></li>
-                                                        <li class="f_search_item"><span class="txt">333333<b>Lorem</b> ipsum dolor sit am</span></li>
-                                                        <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
-                                                        <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
-                                                        <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
-                                                        <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
-                                                        <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
-                                                        <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
-                                                        <!--// 자동완성 O -->
-                                                    </ul>
-                                                    <!--[D] 자동완성 리스트 //-->
+                                                    <!-- 자동완성 O -->
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">222222<b>Lorem</b> iercitationem quis</span></li>
+                                                    <li class="f_search_item"><span class="txt">333333<b>Lorem</b> ipsum dolor sit am</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <!--// 자동완성 O -->
+                                                </ul>
+                                                <!--[D] 자동완성 리스트 //-->
 
-                                                    <div class="f_search_list_bot">
-                                                        <button type="button" class="btn_close" onclick="f_search_close(this)">닫기</button>
-                                                    </div>
-                                                </div>     
-                                            </div>
+                                                <div class="f_search_list_bot">
+                                                    <button type="button" class="btn_close" onclick="f_search_close(this)">닫기</button>
+                                                </div>
+                                            </div>     
                                         </div>
-                                    </th>
-                                    <th>
-                                        <div class="d_flex ty_col ai_c">
-                                            <div class="mb5">계측기명 (영문)</div> 
-                                            <div class="f_search mw_300" >
-                                                <input type="text" class="f_input ty_small w100" onfocus="f_search_focus(this)" onkeyup="f_search_toggle(this)" placeholder="검색어를 입력해주세요">     
-                                                <div class="f_search_list_wrap ty2">
-                                                     <!--[D] 자동완성 리스트-->
-                                                     <ul class="f_search_list f_search_auto">
-                                                        <!-- 자동완성 X -->
-                                                        <li class="pa10 taC">직접입력</li>
-                                                        <!--// 자동완성 X -->
-
-                                                        <!-- 자동완성 O -->
-                                                        <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
-                                                        <li class="f_search_item"><span class="txt">222222<b>Lorem</b> iercitationem quis</span></li>
-                                                        <li class="f_search_item"><span class="txt">333333<b>Lorem</b> ipsum dolor sit am</span></li>
-                                                        <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
-                                                        <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
-                                                        <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
-                                                        <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
-                                                        <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
-                                                        <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
-                                                        <!--// 자동완성 O -->
-                                                    </ul>
-                                                    <!--[D] 자동완성 리스트 //-->
-
-                                                    <div class="f_search_list_bot">
-                                                        <button type="button" class="btn_close" onclick="f_search_close(this)">닫기</button>
-                                                    </div>
-                                                </div>     
-                                            </div>
-                                        </div>
-                                    </th>
-                                    <th>연관 검색어</th>
-                                    <th>상태</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <td colspan="5">
-                                    <div class="no_result_box ty_small" >
-                                        <i class="fa-solid fa-file-circle-xmark" aria-hidden="true"></i>
-                                        <p class="mt10">검색 결과가 없습니다.</p>
                                     </div>
+                                </th>
+                                <th>
+                                    <div class="d_flex ty_col ai_c">
+                                        <div class="mb5">제조사 (영문)</div> 
+                                        <div class="f_search mw_300" >
+                                            <input type="text" class="f_input ty_small w100" onfocus="f_search_focus(this)" onkeyup="f_search_toggle(this)" placeholder="검색어를 입력해주세요">     
+                                            <div class="f_search_list_wrap ty2">
+                                                    <!--[D] 자동완성 리스트-->
+                                                    <ul class="f_search_list f_search_auto">
+                                                    <!-- 자동완성 X -->
+                                                    <li class="pa10 taC">직접입력</li>
+                                                    <!--// 자동완성 X -->
+
+                                                    <!-- 자동완성 O -->
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">222222<b>Lorem</b> iercitationem quis</span></li>
+                                                    <li class="f_search_item"><span class="txt">333333<b>Lorem</b> ipsum dolor sit am</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <li class="f_search_item"><span class="txt">11112<b>Lorem</b>ipsum dolor sit amet</span></li>
+                                                    <!--// 자동완성 O -->
+                                                </ul>
+                                                <!--[D] 자동완성 리스트 //-->
+
+                                                <div class="f_search_list_bot">
+                                                    <button type="button" class="btn_close" onclick="f_search_close(this)">닫기</button>
+                                                </div>
+                                            </div>     
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>상태</th>
+                                <th>등록장비</th>
+                                <th>교정이력</th>
+                                <th>최근 교정일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <td colspan="6">
+                                <div class="no_result_box ty_small" >
+                                    <i class="fa-solid fa-file-circle-xmark" aria-hidden="true"></i>
+                                    <p class="mt10">검색 결과가 없습니다.</p>
+                                </div>
+                            </td>
+                            <!--[D] 행 활성화 'on' class-->
+                            <tr class="chk_tr on">
+                                <td class="taL">YAMAMOTO ELECTRIC WORKS</td>
+                                <td class="taL">YAMAMOTO ELECTRIC WORKS</td>
+                                <td><span class="fwM">미완료</span></td>
+                                <td><span class="fwM">999</span></td>
+                                <td><span class="fwM">999</span></td>
+                                <td><span class="fwM">2024-12-02</span></td>
+                            </tr>
+                            <tr class="chk_tr">
+                                <td class="taL">YAMAMOTO ELECTRIC WORKS</td>
+                                <td class="taL">YAMAMOTO ELECTRIC WORKS</td>
+                                <td><span class="fwM">미완료</span></td>
+                                <td><span class="fwM">999</span></td>
+                                <td><span class="fwM">999</span></td>
+                                <td><span class="fwM">2024-12-02</span></td>
+                            </tr>
+                            <tr class="chk_tr">
+                                <td class="taL">YAMAMOTO ELECTRIC WORKS</td>
+                                <td class="taL">YAMAMOTO ELECTRIC WORKS</td>
+                                <td><span class="fwM">미완료</span></td>
+                                <td><span class="fwM">999</span></td>
+                                <td><span class="fwM">999</span></td>
+                                <td><span class="fwM">2024-12-02</span></td>
+                            </tr>
+                            <tr class="chk_tr">
+                                <td class="taL">YAMAMOTO ELECTRIC WORKS</td>
+                                <td class="taL">YAMAMOTO ELECTRIC WORKS</td>
+                                <td><span class="fwM">미완료</span></td>
+                                <td><span class="fwM">999</span></td>
+                                <td><span class="fwM">999</span></td>
+                                <td><span class="fwM">2024-12-02</span></td>
+                            </tr>
+                            <tr class="chk_tr">
+                                <td class="taL">YAMAMOTO ELECTRIC WORKS</td>
+                                <td class="taL">YAMAMOTO ELECTRIC WORKS</td>
+                                <td><span class="fwM">미완료</span></td>
+                                <td><span class="fwM">999</span></td>
+                                <td><span class="fwM">999</span></td>
+                                <td><span class="fwM">2024-12-02</span></td>
+                            </tr>
+                            <tr class="chk_tr">
+                                <td class="taL">YAMAMOTO ELECTRIC WORKS</td>
+                                <td class="taL">YAMAMOTO ELECTRIC WORKS</td>
+                                <td><span class="fwM">미완료</span></td>
+                                <td><span class="fwM">999</span></td>
+                                <td><span class="fwM">999</span></td>
+                                <td><span class="fwM">2024-12-02</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="sec mt30">
+                <div class="sub_tit2 mb10 d_flex al_b">
+                    <h2 class="tit3">계측기 상세 정보</h2> 
+                    <button type="button" class="f_btn ty_mid w_100 _key ml_auto">완료 처리</button>
+                </div>
+                <div class="h_tbl_wrap y_scroll_area" style="max-height: 450px;">
+                    <table class="h_tbl ty_mid tl_fixed">
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col style="width: 100px;">
+                            <col style="width: 100px;">
+                            <col style="width: 100px;">
+                        </colgroup>
+                        <thead class="th_fixed">
+                            <tr>
+                                <th>계측기명 (국문)</th>
+                                <th>계측기명 (영문)</th>
+                                <th>형식 (국문)</th>
+                                <th>형식 (영문)</th>
+                                <th>교정 이력</th>
+                                <th>최근 교정일</th>
+                                <th>노출 설정</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="브리넬 경도 기준시편">
                                 </td>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE 
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM">미완료</span></td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게이지(FANDRIVESHAFTMEASURE)
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE FANDRIVESHAFTMEASURE
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM fc_blue">완료</span></td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게이지(FANDRIVESHAFTMEASURE)
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE FANDRIVESHAFTMEASURE
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM fc_lightGrey">보류</span></td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게이지(FANDRIVESHAFTMEASURE)
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE FANDRIVESHAFTMEASURE
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM">미완료</span></td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게이지(FANDRIVESHAFTMEASURE)
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE FANDRIVESHAFTMEASURE
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM fc_blue">완료</span></td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게이지(FANDRIVESHAFTMEASURE)
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE FANDRIVESHAFTMEASURE
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM fc_lightGrey">보류</span></td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게이지(FANDRIVESHAFTMEASURE)
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE FANDRIVESHAFTMEASURE
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM">미완료</span></td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게이지(FANDRIVESHAFTMEASURE)
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE FANDRIVESHAFTMEASURE
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM fc_blue">완료</span></td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게이지(FANDRIVESHAFTMEASURE)
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE FANDRIVESHAFTMEASURE
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM fc_lightGrey">보류</span></td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게이지(FANDRIVESHAFTMEASURE)
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE FANDRIVESHAFTMEASURE
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM">미완료</span></td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게이지(FANDRIVESHAFTMEASURE)
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE FANDRIVESHAFTMEASURE
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM fc_blue">완료</span></td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게이지(FANDRIVESHAFTMEASURE)
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE FANDRIVESHAFTMEASURE
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM fc_lightGrey">보류</span></td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게이지(FANDRIVESHAFTMEASURE)
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE FANDRIVESHAFTMEASURE
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM">미완료</span></td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게이지(FANDRIVESHAFTMEASURE)
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE FANDRIVESHAFTMEASURE
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM">미완료</span></td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게이지(FANDRIVESHAFTMEASURE)
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE FANDRIVESHAFTMEASURE
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM">미완료</span></td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게이지(FANDRIVESHAFTMEASURE)
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE FANDRIVESHAFTMEASURE
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM">미완료</span></td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게이지(FANDRIVESHAFTMEASURE)
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE FANDRIVESHAFTMEASURE
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM">미완료</span></td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게이지(FANDRIVESHAFTMEASURE)
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE FANDRIVESHAFTMEASURE
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM">미완료</span></td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게이지(FANDRIVESHAFTMEASURE)
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE FANDRIVESHAFTMEASURE
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM">미완료</span></td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게이지(FANDRIVESHAFTMEASURE)
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE FANDRIVESHAFTMEASURE
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM">미완료</span></td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게이지(FANDRIVESHAFTMEASURE)
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE FANDRIVESHAFTMEASURE
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM fc_blue">완료</span></td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지다이얼게이지다이얼게이지(FANDRIVESHAFTMEASURE)
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            FANDRIVESHAFTMEASURE FANDRIVESHAFTMEASURE
-                                        </div>
-                                    </td>
-                                    <td class="taL">
-                                        <div class="f_hint_box">
-                                            다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가다이얼게이지, 게이지, 검색용 단어 추가  다이얼게이지, 게이지, 검색용 단어 추가 
-                                        </div>
-                                    </td>
-                                    <td><span class="fwM fc_lightGrey">보류</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-                <section class="sec flex1">
-                    <div class="edit_box bd_box bd_radius8">
-                        <div class="sub_tit2 mb10"><h2 class="tit2">계측기명 변경</h2></div>
-                        <table class="v_tbl">
-                            <colgroup>
-                                <col style="width:140px">
-                                <col>
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th>
-                                        <label>
-                                            <input type="checkbox">
-                                            계측기명(국문)
-                                        </label>
-                                    </th>
-                                    <td>
-                                        <input type="text" class="f_input ty_mid w100">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <label>
-                                            <input type="checkbox">
-                                            계측기명(영문)
-                                        </label>
-                                    </th>
-                                    <td>
-                                        <input type="text" class="f_input ty_mid w100">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <label>
-                                            <input type="checkbox">
-                                            연관 검색어
-                                        </label>
-                                    </th>
-                                    <td>
-                                        <textarea name="" id="" class="f_ta ty_mid resize_y" style="height: 160px;" placeholder="※ 연관 검색어는 (,)콤마로 구분됩니다."></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="btn_set taC mt20">
-                            <button type="button" class="f_btn ty_mid _lightGrey mr_auto w_100">보류</button>
-                            <button type="button" class="f_btn ty_mid _blue w_100">완료</i></button>
-                            <button type="button" class="f_btn ty_mid _key w_100">수정</button>
-                        </div>
-                    </div>
-                </section>
-            </div>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="Brinell hardness standard test piece">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="HBW-300">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="HBW-300">
+                                </td>
+                                <td>999</td>
+                                <td>2025-12-02</td>
+                                <td>
+                                    <label class="f_toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="slider">
+                                            <div class="slider_txt false">비노출</div>
+                                            <div class="slider_txt true">노출</div>
+                                        </span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="브리넬 경도 기준시편">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="Brinell hardness standard test piece">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="HBW-300">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="HBW-300">
+                                </td>
+                                <td>999</td>
+                                <td>2025-12-02</td>
+                                <td>
+                                    <label class="f_toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="slider">
+                                            <div class="slider_txt false">비노출</div>
+                                            <div class="slider_txt true">노출</div>
+                                        </span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="브리넬 경도 기준시편">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="Brinell hardness standard test piece">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="HBW-300">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="HBW-300">
+                                </td>
+                                <td>999</td>
+                                <td>2025-12-02</td>
+                                <td>
+                                    <label class="f_toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="slider">
+                                            <div class="slider_txt false">비노출</div>
+                                            <div class="slider_txt true">노출</div>
+                                        </span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="브리넬 경도 기준시편">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="Brinell hardness standard test piece">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="HBW-300">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="HBW-300">
+                                </td>
+                                <td>999</td>
+                                <td>2025-12-02</td>
+                                <td>
+                                    <label class="f_toggle">
+                                        <input type="checkbox" >
+                                        <span class="slider">
+                                            <div class="slider_txt false">비노출</div>
+                                            <div class="slider_txt true">노출</div>
+                                        </span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="브리넬 경도 기준시편">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="Brinell hardness standard test piece">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="HBW-300">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="HBW-300">
+                                </td>
+                                <td>999</td>
+                                <td>2025-12-02</td>
+                                <td>
+                                    <label class="f_toggle">
+                                        <input type="checkbox">
+                                        <span class="slider">
+                                            <div class="slider_txt false">비노출</div>
+                                            <div class="slider_txt true">노출</div>
+                                        </span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="브리넬 경도 기준시편">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="Brinell hardness standard test piece">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="HBW-300">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="HBW-300">
+                                </td>
+                                <td>999</td>
+                                <td>2025-12-02</td>
+                                <td>
+                                    <label class="f_toggle">
+                                        <input type="checkbox">
+                                        <span class="slider">
+                                            <div class="slider_txt false">비노출</div>
+                                            <div class="slider_txt true">노출</div>
+                                        </span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="브리넬 경도 기준시편">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="Brinell hardness standard test piece">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="HBW-300">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="HBW-300">
+                                </td>
+                                <td>999</td>
+                                <td>2025-12-02</td>
+                                <td>
+                                    <label class="f_toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="slider">
+                                            <div class="slider_txt false">비노출</div>
+                                            <div class="slider_txt true">노출</div>
+                                        </span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="브리넬 경도 기준시편">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="Brinell hardness standard test piece">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="HBW-300">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="HBW-300">
+                                </td>
+                                <td>999</td>
+                                <td>2025-12-02</td>
+                                <td>
+                                    <label class="f_toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="slider">
+                                            <div class="slider_txt false">비노출</div>
+                                            <div class="slider_txt true">노출</div>
+                                        </span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="브리넬 경도 기준시편">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="Brinell hardness standard test piece">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="HBW-300">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="HBW-300">
+                                </td>
+                                <td>999</td>
+                                <td>2025-12-02</td>
+                                <td>
+                                    <label class="f_toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="slider">
+                                            <div class="slider_txt false">비노출</div>
+                                            <div class="slider_txt true">노출</div>
+                                        </span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="브리넬 경도 기준시편">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="Brinell hardness standard test piece">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="HBW-300">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_mid w100" value="HBW-300">
+                                </td>
+                                <td>999</td>
+                                <td>2025-12-02</td>
+                                <td>
+                                    <label class="f_toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="slider">
+                                            <div class="slider_txt false">비노출</div>
+                                            <div class="slider_txt true">노출</div>
+                                        </span>
+                                    </label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
             <!--// [D] 계측기명 관리 -->
         </div> 
     </div>
