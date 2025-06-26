@@ -160,7 +160,8 @@
                     });
                 </script>
             </section>
-             <section class="sec mt30">        
+           
+            <section class="sec mt30">        
                 <div class="sub_tit2 mb10 d_flex al_b">
                     <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2> 
                 </div>
@@ -308,167 +309,289 @@
                     </table>
                 </div>
             </section>
-            <div class="sec_wrap d_flex mt30 _gap30">
-                <section class="sec" style="width: 72%;">        
-                   <div class="sub_tit2 mb10 d_flex al_b">
-                        <h2 class="tit3">계측기 상세 정보</h2> 
-                        <button type="button" class="f_btn ty_mid w_140 _blue ml_auto">제조사 완료 처리</button>
-                    </div>
-                    <div class="h_tbl_wrap y_scroll_area" style="max-height: 600px;">
-                        <table class="h_tbl ty_small tl_fixed">
-                            <colgroup>
-                                <col style="width: 40px;">
-                                <col style="width: 17%;">
-                                <col style="width: 17%;">
-                                <col>
-                                <col>
-                                <col style="width: 60px;">
-                                <col style="width: 80px;">
-                            </colgroup>
-                            <thead class="th_fixed">
-                                <tr>
-                                    <th><input type="checkbox" name="" class="tr_chk_all" onchange="checkAll(this)"></label></th>
-                                    <th>형식(국문)
-                                        <div class="col_sort">
-                                            <button class="btn_sort ty_up on"></button>
-                                            <button class="btn_sort ty_down"></button>
-                                        </div>
-                                    </th>
-                                    <th>형식(영문)
-                                        <div class="col_sort">
-                                            <button class="btn_sort ty_up on"></button>
-                                            <button class="btn_sort ty_down"></button>
-                                        </div>
-                                    </th>
-                                    <th>계측기명 (국문) 
-                                        <div class="col_sort">
-                                            <button class="btn_sort ty_up on"></button>
-                                            <button class="btn_sort ty_down"></button>
-                                        </div>
-                                    </th>
-                                    <th>계측기명 (영문)
-                                        <div class="col_sort">
-                                            <button class="btn_sort ty_up on"></button>
-                                            <button class="btn_sort ty_down"></button>
-                                        </div>
-                                    </th>
-                                    <th>교정이력</th>
-                                    <th>최근교정일</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <td colspan="7">
-                                    <div class="no_result_box ty_small" >
-                                        <i class="fa-solid fa-file-circle-xmark" aria-hidden="true"></i>
-                                        <p class="mt10">검색 결과가 없습니다.</p>
-                                    </div>
+            <section class="sec mt30">
+                <div class="sub_tit2 mb10 d_flex al_b">
+                    <h2 class="tit3">계측기 상세 정보</h2> 
+                    <button type="button" class="f_btn ty_mid w_100 _key ml_auto">완료 처리</button>
+                </div>
+                <div class="h_tbl_wrap y_scroll_area" style="max-height: 550px;">
+                    <table class="h_tbl ty_mid tl_fixed">
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col style="width: 100px;">
+                            <col style="width: 100px;">
+                            <col style="width: 100px;">
+                        </colgroup>
+                        <thead class="th_fixed">
+                            <tr>
+                                <th>계측기명 (국문)</th>
+                                <th>계측기명 (영문)</th>
+                                <th>형식 (국문)</th>
+                                <th>형식 (영문)</th>
+                                <th>교정 이력</th>
+                                <th>최근 교정일</th>
+                                <th>노출 설정</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="브리넬 경도 기준시편">
                                 </td>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td>HBW-300</td>
-                                    <td>HBW-300</td>
-                                    <td>브리넬 경도 기준시편</td>
-                                    <td>Brinell hardness standard test piece</td>
-                                    <td>999</td>
-                                    <td>2025-12-02</td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td>HBW-300</td>
-                                    <td>HBW-300</td>
-                                    <td>브리넬 경도 기준시편</td>
-                                    <td>Brinell hardness standard test piece</td>
-                                    <td>999</td>
-                                    <td>2025-12-02</td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td>HBW-300</td>
-                                    <td>HBW-300</td>
-                                    <td>브리넬 경도 기준시편</td>
-                                    <td>Brinell hardness standard test piece</td>
-                                    <td>999</td>
-                                    <td>2025-12-02</td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td>HBW-300</td>
-                                    <td>HBW-300</td>
-                                    <td>브리넬 경도 기준시편</td>
-                                    <td>Brinell hardness standard test piece</td>
-                                    <td>999</td>
-                                    <td>2025-12-02</td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td>HBW-300</td>
-                                    <td>HBW-300</td>
-                                    <td>브리넬 경도 기준시편</td>
-                                    <td>Brinell hardness standard test piece</td>
-                                    <td>999</td>
-                                    <td>2025-12-02</td>
-                                </tr>
-                                <tr class="chk_tr">
-                                    <td><label class="chk_item"><input type="checkbox" name="" class="tr_chk"></label></td>
-                                    <td>HBW-300</td>
-                                    <td>HBW-300</td>
-                                    <td>브리넬 경도 기준시편</td>
-                                    <td>Brinell hardness standard test piece</td>
-                                    <td>999</td>
-                                    <td>2025-12-02</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-                <section class="sec flex1">
-                    <div class="edit_box bd_box bd_radius8">
-                        <div class="sub_tit2 mb10"><h2 class="tit2">계측기명 변경</h2></div>
-                        <table class="v_tbl">
-                            <colgroup>
-                                <col style="width:110px">
-                                <col>
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th>형식(국문)</th>
-                                    <td>
-                                        <input type="text" class="f_input ty_mid w100">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>형식(영문)</th>
-                                    <td>
-                                        <input type="text" class="f_input ty_mid w100">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>계측기명(국문)</th>
-                                    <td>
-                                        <input type="text" class="f_input ty_mid w100">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>계측기명(영문)</th>
-                                    <td>
-                                        <input type="text" class="f_input ty_mid w100">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>연관 검색어</th>
-                                    <td>
-                                        <textarea name="" id="" class="f_ta ty_mid resize_y" style="height: 120px;" placeholder="※ 연관 검색어는 (,)콤마로 구분됩니다."></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="btn_set taC mt20">
-                            <button type="button" class="f_btn ty_mid _lightGrey mr_auto w_100">보류</button>
-                            <button type="button" class="f_btn ty_mid _key w_100">수정</button>
-                        </div>
-                    </div>
-                </section>
-            </div>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="Brinell hardness standard test piece">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="HBW-300">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="HBW-300">
+                                </td>
+                                <td>999</td>
+                                <td>2025-12-02</td>
+                                <td>
+                                    <label class="f_toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="slider">
+                                            <div class="slider_txt false">비노출</div>
+                                            <div class="slider_txt true">노출</div>
+                                        </span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="브리넬 경도 기준시편">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="Brinell hardness standard test piece">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="HBW-300">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="HBW-300">
+                                </td>
+                                <td>999</td>
+                                <td>2025-12-02</td>
+                                <td>
+                                    <label class="f_toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="slider">
+                                            <div class="slider_txt false">비노출</div>
+                                            <div class="slider_txt true">노출</div>
+                                        </span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="브리넬 경도 기준시편">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="Brinell hardness standard test piece">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="HBW-300">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="HBW-300">
+                                </td>
+                                <td>999</td>
+                                <td>2025-12-02</td>
+                                <td>
+                                    <label class="f_toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="slider">
+                                            <div class="slider_txt false">비노출</div>
+                                            <div class="slider_txt true">노출</div>
+                                        </span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="브리넬 경도 기준시편">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="Brinell hardness standard test piece">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="HBW-300">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="HBW-300">
+                                </td>
+                                <td>999</td>
+                                <td>2025-12-02</td>
+                                <td>
+                                    <label class="f_toggle">
+                                        <input type="checkbox">
+                                        <span class="slider">
+                                            <div class="slider_txt false">비노출</div>
+                                            <div class="slider_txt true">노출</div>
+                                        </span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="브리넬 경도 기준시편">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="Brinell hardness standard test piece">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="HBW-300">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="HBW-300">
+                                </td>
+                                <td>999</td>
+                                <td>2025-12-02</td>
+                                <td>
+                                    <label class="f_toggle">
+                                        <input type="checkbox">
+                                        <span class="slider">
+                                            <div class="slider_txt false">비노출</div>
+                                            <div class="slider_txt true">노출</div>
+                                        </span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="브리넬 경도 기준시편">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="Brinell hardness standard test piece">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="HBW-300">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="HBW-300">
+                                </td>
+                                <td>999</td>
+                                <td>2025-12-02</td>
+                                <td>
+                                    <label class="f_toggle">
+                                        <input type="checkbox">
+                                        <span class="slider">
+                                            <div class="slider_txt false">비노출</div>
+                                            <div class="slider_txt true">노출</div>
+                                        </span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="브리넬 경도 기준시편">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="Brinell hardness standard test piece">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="HBW-300">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="HBW-300">
+                                </td>
+                                <td>999</td>
+                                <td>2025-12-02</td>
+                                <td>
+                                    <label class="f_toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="slider">
+                                            <div class="slider_txt false">비노출</div>
+                                            <div class="slider_txt true">노출</div>
+                                        </span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="브리넬 경도 기준시편">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="Brinell hardness standard test piece">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="HBW-300">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="HBW-300">
+                                </td>
+                                <td>999</td>
+                                <td>2025-12-02</td>
+                                <td>
+                                    <label class="f_toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="slider">
+                                            <div class="slider_txt false">비노출</div>
+                                            <div class="slider_txt true">노출</div>
+                                        </span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="브리넬 경도 기준시편">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="Brinell hardness standard test piece">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="HBW-300">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="HBW-300">
+                                </td>
+                                <td>999</td>
+                                <td>2025-12-02</td>
+                                <td>
+                                    <label class="f_toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="slider">
+                                            <div class="slider_txt false">비노출</div>
+                                            <div class="slider_txt true">노출</div>
+                                        </span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="브리넬 경도 기준시편">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="Brinell hardness standard test piece">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="HBW-300">
+                                </td>
+                                <td>
+                                    <input type="text" class="f_input ty_small w100" value="HBW-300">
+                                </td>
+                                <td>999</td>
+                                <td>2025-12-02</td>
+                                <td>
+                                    <label class="f_toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="slider">
+                                            <div class="slider_txt false">비노출</div>
+                                            <div class="slider_txt true">노출</div>
+                                        </span>
+                                    </label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
             <!--// [D] 계측기명 관리 -->
         </div> 
     </div>
