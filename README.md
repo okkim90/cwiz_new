@@ -1,4 +1,4 @@
-# CMS
+# CWIZ_NEW
 
 ## 📌 개요  
 `CWIZ_NEW`는 HTML, SCSS, JavaScript 기반의 웹 프로젝트로, 웹페이지 콘텐츠 관리 및 사이트 구성에 활용할 수 있는 구조를 제공합니다.  
